@@ -1,6 +1,6 @@
 html {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: lightgreen;
+    background-color: #709FDC;
     height: 100vh;
 }
 
@@ -14,12 +14,15 @@ h1 {
     margin: auto;
 }
 
+h2, h3, h4, h5, h6 {
+    color: white;
+}
 ol {
     li {
         padding: 10px;
         a {
             font-size: 2em;
-            color: tomato;
+            color: white;
             align-self: center;
         }
     }
@@ -47,11 +50,11 @@ ol li::before {
   font-size: 3rem;
   margin-right: 0.5rem;
   line-height: 1;
-  color: lightslategray;
+  color: #FFCA2D;
 }
 
 footer {
-    background-color: aquamarine;
+    background-color: #1C2A49;
     padding: 10px;
     text-align: center;
     ul {
