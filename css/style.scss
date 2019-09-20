@@ -4,6 +4,19 @@ html {
     height: 100vh;
 }
 
+.main-page {
+    text-align: center;
+    padding: .5em;
+    a {
+        font-size: 2em;
+        text-decoration: none;
+        color: white;
+        &:hover {
+            color: darkorange;
+        }
+    }
+}
+
 h1 {
     text-align: center;
     font-size: 1em;
@@ -31,21 +44,21 @@ ol {
 
 ol {
   list-style: none;
-  counter-reset: my-awesome-counter;
+  counter-reset: customCounter;
   display: flex;
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
 }
 ol li {
-  counter-increment: my-awesome-counter;
+  counter-increment: customCounter;
   display: flex;
   width: 50%;
   font-size: 0.8rem;
   margin-bottom: 0.5rem;
 }
 ol li::before {
-  content: counter(my-awesome-counter);
+  content: counter(customCounter);
   font-weight: bold;
   font-size: 3rem;
   margin-right: 0.5rem;
