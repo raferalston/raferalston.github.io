@@ -30,6 +30,25 @@ h1 {
 h2, h3, h4, h5, h6 {
     color: white;
 }
+.additional {
+    padding: 1em;
+    margin: 1em;
+    background-color: white;
+    a {
+        font-size: 2em;
+        color: black;
+        padding: 1em;
+        &:hover {
+            color: darkorange;
+        }
+    }    
+}
+.important {
+    color: rgb(211, 19, 51);
+    font-size: 1.95em;
+    padding: 1em;
+}
+
 ol {
     li {
         padding: 10px;
@@ -40,6 +59,7 @@ ol {
         }
     }
 }
+
 
 
 ol {
@@ -70,6 +90,7 @@ footer {
     background-color: #1C2A49;
     padding: 10px;
     text-align: center;
+    margin: 1em;
     ul {
         list-style: none;
         display: flex;
