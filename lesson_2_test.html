@@ -15,10 +15,36 @@
     <div>
         <mark>Подсказка!</mark>
         <p>Шифр был придуман древнеримским <i>Диктатором!</i></p>
-        <h2>lxxtw://vejivepwxsr.kmxlyf.ms/oiwev.lxqp</h2>
+        <h2></h2>
     </div>
     <div>
         <mark><strong>Разгадай загадку и узнай шифр</strong></mark>
+        <form action="" id="quizForm">
+            <input type="text">
+            <input type="submit" value="Ответ" id="secret">
+        </form>
+        <p id="answer"></p>
+        <h5 style="display: none">НАСТОЯЩИЙ ОТВЕТ: 666</h5>
     </div>
 </body>
+
+
+<script>
+
+document.querySelector('form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    var x = document.getElementById("quizForm");
+    const answ = x.elements[0].value;
+    // ЕСЛИ ПОДСМОТРЕЛ ТУТ ТО НАСТОЯЩИЙ ОТВЕТ
+    // 666
+    if (answ === 'загадкавека') {
+        const text = 'Поздравляю это верный ответ! Настоящий шифр = 999 &#9989; Но это не точно... попробуй F12'
+        document.getElementById("answer").innerHTML = text;
+    } else {
+        const text = 'Неа, попробуй еще разок &#9940;'
+        document.getElementById("answer").innerHTML = text;        
+    }
+});
+
+</script>
 </html>
