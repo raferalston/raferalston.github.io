@@ -24,7 +24,7 @@
             <input type="submit" value="Ответ" id="secret">
         </form>
         <p id="answer"></p>
-        <h5 style="display: none">НАСТОЯЩИЙ ОТВЕТ: 666</h5>
+        <h5 style="display: none">НАСТОЯЩИЙ ОТВЕТ: 12345</h5>
     </div>
 </body>
 
@@ -36,7 +36,7 @@ document.querySelector('form').addEventListener('submit', (e) => {
     var x = document.getElementById("quizForm");
     const answ = x.elements[0].value;
     // ЕСЛИ ПОДСМОТРЕЛ ТУТ ТО НАСТОЯЩИЙ ОТВЕТ
-    // 666
+    // 12345
     if (answ === 'загадкавека') {
         const text = 'Поздравляю это верный ответ! Настоящий шифр = 999 &#9989; Но это не точно... попробуй F12'
         document.getElementById("answer").innerHTML = text;
