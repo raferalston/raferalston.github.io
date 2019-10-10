@@ -30,11 +30,19 @@ h1 {
 h2, h3, h4, h5, h6 {
     color: white;
 }
+
+p {
+    font-size: large;
+    color: darkred;
+    background-color: #fff;
+    padding: .5em;
+}
 .additional {
     padding: 1em;
     margin: 0 1em;
     background-color: white;
     a {
+        display: block;
         font-size: 2em;
         color: black;
         padding: 1em;
