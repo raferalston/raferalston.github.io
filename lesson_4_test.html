@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Задание на дом - Отгадайте загадку и воссоздайте html структуру странички</title>
+</head>
+<style>
+    table tr td {
+        border: black 2px solid;
+        padding: 1em;
+        font-size: 1em;
+        cursor: pointer;
+        font-weight: 700;
+    }
+    table tr td:active {
+        background-color: rgb(137, 190, 39);
+        color: white;
+    }
+    .screen {
+        border: green 2px solid;
+        width: 150px;
+        height: 50px;
+    }
+    .screen span {
+        font-size: 1.25em;
+    }
+</style>
+<body>
+    <h1>Загадка!</h1>
+    <mark>Я гадал число, попробуй его расшифровать! А также попробуй создать точно такую же страничку =)</mark>
+    <div>
+        <table id="safe">
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+            </tr>
+        </table>
+        <button>Ввести пароль</button>
+        <div class="screen">
+            <b>Ввод: <span id="safescreen"></span></b>
+        </div>
+    </div>
+    <div>
+        <strong>Подсказка: </strong>
+        <small>Шифр был придуман древнеримским <i>Диктатором!</i></small>
+    </div>
+</body>
+
+
+<script>
+        var table = document.getElementById("safe");
+        var safeScreen = '';
+        if (table != null) {
+            for (var i = 0; i < table.rows.length; i++) {
+                for (var j = 0; j < table.rows[i].cells.length; j++)
+                    table.rows[i].cells[j].onclick = function () {
+                        tableText(this);
+                    };
+            }
+        }
+
+        function tableText(tableCell) {
+            var screen = document.getElementById("safescreen");
+            var numb = tableCell.innerHTML;
+            if (safeScreen.length < 5) {
+                safeScreen += numb;
+                screen.innerHTML = safeScreen;
+            }
+        }
+
+</script>
+</html>
