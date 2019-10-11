@@ -4,27 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Задание на дом</title>
+    <title>Задание на дом - Отгадайте загадку и воссоздайте html структуру странички</title>
 </head>
 <body>
-    <h1>Трудности перевода.</h1>
+    <h1>Загадка!</h1>
     <h5 style="display: none">НАСТОЯЩИЙ ОТВЕТ: ИЩИ В ОДНОМ ИЗ ДИВОВ</h5>
+    <mark>Я зашифровал слово, попробуй его расшифровать! А также попробуй создать точно такую же страничку =)</mark>
+
     <div>
-        <strong>L</strong>orem <strong>I</strong>psum
-        <small>Дальше будет зашифрованный текст, в нем будет зашифрована ссылка на секретный документ:</small>
-    </div>
-    <div>
-        <ins>Подсказка!</ins>
-        <h3>Шифр был придуман древнеримским <i>Диктатором!</i></h3>
-    </div>
-    <div>
-        <strong>Разгадай загадку и узнай шифр - </strong>
-        <h2><mark>жявягйябдйя</mark></h2>
+        <h2>жявягйябдйя</h2>
         <form action="" id="quizForm">
             <input type="text">
             <input type="submit" value="Ответ" id="secret">
         </form>
         <p id="answer"><!-- ОТВЕТ: 12345 --></p>
+    </div>
+    <div>
+        <strong>Подсказка: </strong>
+        <small>Шифр был придуман древнеримским <i>Диктатором!</i></small>
     </div>
 </body>
 
@@ -35,8 +32,6 @@ document.querySelector('form').addEventListener('submit', (e) => {
     e.preventDefault();
     var x = document.getElementById("quizForm");
     const answ = x.elements[0].value;
-    // ЕСЛИ ПОДСМОТРЕЛ ТУТ ТО НАСТОЯЩИЙ ОТВЕТ
-    // 12345
     if (answ === 'загадкавека') {
         const text = 'Поздравляю это верный ответ! Настоящий шифр = 999 &#9989; Но это не точно... попробуй F12'
         document.getElementById("answer").innerHTML = text;
