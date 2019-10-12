@@ -22,14 +22,21 @@
         border: green 2px solid;
         width: 150px;
         height: 50px;
+        padding: .5em;
     }
     .screen span {
         font-size: 1.25em;
     }
+    .winner {
+        color: green;
+    }
+    .loser {
+        color: red;
+    }
 </style>
 <body>
     <h1>Загадка!</h1>
-    <mark>Я гадал число, попробуй его расшифровать! А также попробуй создать точно такую же страничку =)</mark>
+    <mark>Я загадал число, попробуй его расшифровать! А также попробуй создать точно такую же страничку =)</mark>
     <div>
         <table id="safe">
             <tr>
@@ -48,7 +55,7 @@
                 <td>9</td>
             </tr>
         </table>
-        <button>Ввести пароль</button>
+        <button id="safe-button">Ввести пароль</button>
         <div class="screen">
             <b>Ввод: <span id="safescreen"></span></b>
         </div>
@@ -63,6 +70,10 @@
 <script>
         var table = document.getElementById("safe");
         var safeScreen = '';
+        var screen = document.getElementById("safescreen");
+        var button = document.getElementById('safe-button');
+        var answ = false;
+
         if (table != null) {
             for (var i = 0; i < table.rows.length; i++) {
                 for (var j = 0; j < table.rows[i].cells.length; j++)
@@ -73,13 +84,41 @@
         }
 
         function tableText(tableCell) {
-            var screen = document.getElementById("safescreen");
             var numb = tableCell.innerHTML;
-            if (safeScreen.length < 5) {
-                safeScreen += numb;
-                screen.innerHTML = safeScreen;
+            if (answ != true) {
+                if (safeScreen.length < 5) {
+                    safeScreen += numb;
+                    screen.innerHTML = safeScreen;
+                } else if (safeScreen.length === 5) {
+                    safeScreen = '';
+                    screen.innerHTML = '';
+                    safeScreen += numb;
+                    screen.innerHTML = safeScreen;
+                }
             }
         }
 
+        function pwr(number) {
+            var result = 0
+            for (let i = 0; i < number.length; i++) {
+                var el = Number(number[i]);
+                result += el ** i
+            }
+            return result
+        }
+        button.addEventListener('click', function (e) {
+            var pwd = screen.innerHTML;
+            if (answ != true) {
+                if (pwr(pwd) === 2470) {
+                    screen.innerHTML = '<span class="winner">УСПЕХ</span>'
+                    answ = true
+                } else {
+                    screen.innerHTML = '<span class="loser">ПРОВАЛ</span>'
+                    safeScreen = '';
+                }
+            }
+        });
+
+        // 85637
 </script>
 </html>
