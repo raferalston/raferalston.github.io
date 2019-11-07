@@ -37,8 +37,8 @@
 }
 return result
 }
-        button.addEventListener('click', function (e) {
-        let link = 'pos_work.html'
+    button.addEventListener('click', function (e) {
+    let link = 'pos_work.html'
     var pwd = screen.innerHTML;
             if (answ != true) {
                 if (pwr(pwd) === 2470) {
@@ -48,7 +48,7 @@ return result
                 } else {
         screen.innerHTML = '<span class="loser">ПРОВАЛ</span>'
                     safeScreen = '';
-}
+    }
 }
 });
 
