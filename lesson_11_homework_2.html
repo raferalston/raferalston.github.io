@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Анимация</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #78a8bc;
+            overflow: hidden;
+            margin: 0;
+        }
+        .container {
+            font-size: 1em;
+            color: white;
+            animation: slideIn forwards 1s ease-in-out;
+        }
+        @keyframes slideIn {
+            80% {
+                font-size: 3em;
+                padding: 2em;
+            }
+            100% {
+                padding: 1.85em;
+                font-size: 2.75em;
+                background-color: darkslateblue;
+                border-radius: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    Привет мир!
+</div>
+</body>
+
+</html>
