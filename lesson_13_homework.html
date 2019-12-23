@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Звездопад</title>
+    <style>
+    body {
+        margin: 0;
+        overflow-x: hidden;
+    }
+    .top {
+        overflow-x: hidden;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url('img/night.jpg');
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .bottom {
+        overflow-x: hidden;
+        height: 100vh;
+        display: block;
+        background-image: url('img/night_flip.png');
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+    }    
+    @keyframes falling_down {
+        0% {
+            top: -5px;
+        }        
+        20% {
+            top: 190vh;
+        }
+        100% {
+            top: 190vh;
+        }
+    }  
+    .star {
+        position: absolute;
+        background-color: white;
+        top: 0;
+    }
+    .star:nth-child(1) {
+        width: 3px;
+        height: 3px;
+        left: 4vw;
+        animation: falling_down 7s .2s linear infinite;
+    }
+    .star:nth-child(2) {
+        width: 3px;
+        height: 3px;
+        left: 14vw;
+        animation: falling_down 7.5s 5s linear infinite;
+    }
+    .star:nth-child(3) {
+        width: 3px;
+        height: 3px;
+        left: 44vw;
+        animation: falling_down 6.5s 2s linear infinite;
+    }
+    .star:nth-child(4) {
+        width: 3px;
+        height: 3px;
+        left: 62vw;
+        animation: falling_down 6s .9s linear infinite;
+    }
+    .star:nth-child(5) {
+        width: 3px;
+        height: 3px;
+        left: 82vw;
+        animation: falling_down 5.75s 1s linear infinite;
+    }                   
+    .title {
+        padding: 2em;
+        font-size: 2em;
+        font-weight: 900;
+        color: white;
+        background-color: darkslategrey;
+        width: 100%;
+        text-align: center;
+        z-index: 9999;
+        position: absolute;
+        top: 100vh;
+        transform: translateY(-50%);
+    } 
+    </style>
+</head>
+<body>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="top"></div>
+    <div class="title">СДЕЛАЙ САМ! НЕ ПОДСМАТРИВАЙ В КОНСОЛЬ РАЗРАБОТЧИКА!</div>
+    <div class="bottom"></div>
+</body>
+</html>
