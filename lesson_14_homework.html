@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Создать сайт</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .container-column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .flex-center {
+            justify-content: center;
+            align-items: center;
+        }
+
+        .flex-around {
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .vh100 {
+            height: 100vh;
+        }
+
+        .top-section {
+            background-image: url('img/background_top.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 0 0;
+        }
+
+        .top-section>h1 {
+            white-space: nowrap;
+            padding: .5em;
+            font-size: 6em;
+            color: #f3ff66;
+            font-family: sans-serif;
+        }
+
+        .top-section>.container {
+            width: 80%;
+            margin: 5%;
+        }
+
+        .top-section>.container>.item {
+            color: white;
+            padding: 1em;
+            margin: 1em;
+        }
+
+        .top-section>.button {
+            background-color: #f3ff66;
+            padding: 1.5em 4.5em;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            color: black;
+            font-weight: 900;
+        }
+
+        .mid-section {
+            padding: 2em 1em;
+        }
+
+        .bottom-section {
+            background-image: url('img/background_bot.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 0 0;
+            flex-flow: row wrap;
+        }
+
+        .bottom-section>.planet {
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            background-color: #070511;
+            height: 455px;
+            width: 455px;
+            border-radius: 50%;
+            margin: 0 1em;
+        }
+
+        .planet:nth-of-type(1) {
+            background-image: url('img/mercury.png');
+        }
+
+        .planet:nth-of-type(2) {
+            background-image: url('img/venus.png');
+        }
+
+        .planet:nth-of-type(3) {
+            background-image: url('img/earth.png');
+        }
+
+        .planet:nth-of-type(4) {
+            background-image: url('img/mars.png');
+        }
+
+        .planet:nth-of-type(5) {
+            background-image: url('img/jupiter.png');
+        }
+
+        .planet:nth-of-type(6) {
+            background-image: url('img/neptune.png');
+        }
+
+        .planet>h4 {
+            text-align: center;
+            font-size: 2em;
+            color: #f3ff66;
+            background-color: black;
+            padding: .25em;
+            border-radius: 10px;
+        }
+
+        @media (max-width: 1500px) {
+            .bottom-section {
+                height: auto;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .top-section>h1 {
+                font-size: 5em;
+            }
+
+            .bottom-section>.planet {
+                height: 375px;
+                width: 375px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .top-section>h1 {
+                font-size: 4em;
+            }
+
+            .bottom-section>.planet {
+                height: 300px;
+                width: 300px;
+            }
+
+            .top-section>.container>.item {
+                padding: .75em;
+                margin: .75em;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .top-section>h1 {
+                font-size: 2.5em;
+            }
+
+            .top-section>.container {
+                flex-flow: row wrap;
+            }
+
+            .top-section>.container>.item {
+                padding: .25em;
+                margin: .25em;
+            }
+
+            .bottom-section>.planet {
+                height: 255px;
+                width: 255px;
+            }
+        }
+
+        .button {
+            box-shadow: 1px 1px 0 0 darkorange,
+                2px 2px 0 0 darkorange,
+                2px 3px 0 0 darkorange,
+                3px 4px 0 0 darkorange,
+                3px 5px 0 0 darkorange;
+            transition: all ease .05s;
+        }
+
+        .button:active {
+            box-shadow: 0 0;
+            transform: translate(3px, 5px);
+        }
+
+        .planet {
+            transition: background-position ease 1.5s,
+                box-shadow ease 1.5s;
+        }
+
+        .planet:hover {
+            box-shadow: 0px 0px 10px 5px gray;
+            background-position: 20px 20px;
+        }
+
+        .blink {
+            animation: blink 1.25s .5s linear forwards;
+            opacity: 0;
+        }
+
+        @keyframes blink {
+            0% {
+                color: white;
+            }
+            15% {
+                opacity: .15;
+            }
+            90% {
+                opacity: 1;
+            }
+            95% {
+                opacity: .15;
+            }
+            100% {
+                color: white;
+                opacity: 1;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="top-section vh100 container-column flex-center">
+        <h1>
+            <span class="blink">H</span>ELLO W<span class="blink">O</span>RLD</h1>
+        <div class="container flex-center">
+            <div class="item">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil unde doloribus sed
+                voluptas sequi. Nesciunt nam a unde perspiciatis tenetur? Ducimus debitis, obcaecati amet non quam
+                officia fugit illo placeat?</div>
+            <div class="item">Laborum non distinctio deleniti minus, facere provident saepe quis dicta consectetur
+                accusantium sunt labore dolorem fugit. Veniam iste quod sed accusamus odit, vitae aperiam dignissimos
+                dicta? Ea reiciendis deleniti labore!</div>
+            <div class="item">Ipsam ea dolorum accusantium fuga ut nobis animi, sint accusamus totam expedita vel
+                voluptatum, quod voluptates distinctio ab eum? Recusandae similique odit commodi facere repellat sint
+                corporis? Quo, mollitia cupiditate.</div>
+        </div>
+        <a class="button" href="#bottom">
+            BUTTON
+        </a>
+    </div>
+
+    <div class="mid-section container-column flex-center">
+        <h1>Lorem</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, incidunt quaerat sunt perferendis quia fuga
+            atque
+            dolorem quod soluta voluptates ratione eius architecto placeat voluptatibus unde voluptatum labore officiis
+            tempore!
+        </p>
+    </div>
+
+    <div class="bottom-section vh100 container flex-around" id="bottom">
+        <div class="planet container flex-center">
+            <h4>
+                Mercury
+            </h4>
+        </div>
+        <div class="planet container flex-center">
+            <h4>
+                Venus
+            </h4>
+        </div>
+        <div class="planet container flex-center">
+            <h4>
+                Earth
+            </h4>
+        </div>
+        <div class="planet container flex-center">
+            <h4>
+                Mars
+            </h4>
+        </div>
+        <div class="planet container flex-center">
+            <h4>
+                Jupiter
+            </h4>
+        </div>
+        <div class="planet container flex-center">
+            <h4>
+                Neptune
+            </h4>
+        </div>
+    </div>
+
+</body>
+
+</html>
