@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    body {
+        display: flex;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #424478;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    h1 {
+        font-family: 'LLPixel';
+        color: white;
+        font-size: 100px;
+        margin: .25em;
+        align-self: flex-start;
+    }
+    .knights {
+        height: 45%;
+        width: 100%;
+        position: relative;
+    }
+    .left {
+        background-image: url('img/knights/kn_1.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position-x: left;
+        height: 100%;
+        width: 25%;
+        animation: onloadLeft 1s linear;
+        position: absolute;
+        left: 10%;
+    }
+    .right {
+        background-image: url('img/knights/kn_2.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position-x: right;
+        height: 100%;
+        width: 25%;
+        animation: onloadRight 1s linear;
+        position: absolute;
+        right: 10%;
+    }
+    .download {
+        font-family: 'Cartoons 123';
+        font-size: 60px;
+        border: 5px solid white;
+        color: white;
+        padding: .25em;
+        margin-bottom: 1em;
+        cursor: pointer;
+    }
+
+    @keyframes onloadLeft {
+        0% {
+            opacity: 0;
+            left: -400px;
+        }
+
+        100% {
+            opacity: 1;
+            left: 10%;
+        }
+    }
+    @keyframes onloadRight {
+        0% {
+            opacity: 0;
+            right: -400px;
+        }
+
+        100% {
+            opacity: 1;
+            right: 10%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <h1>LITTLE KINGDOM</h1>
+    <div class="knights">
+        <div class="left">
+
+        </div>
+        <div class="right">
+
+        </div>
+    </div>
+    <div class="download">DOWNLOAD</div>
+</body>
+</html>
