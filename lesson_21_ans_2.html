@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="css/style.css" rel="stylesheet">
+    <title>Ответ на 2 задание 21 урок
+    </title>
+</head>
+
+<body>
+    <img src="img/l21_a2.png" alt="">
+    <script>
+        let name = prompt('Введите имя персонажа и мы проверим подходит ли оно вам: ');
+
+        if (name.length === 0) {
+            alert('Вы не ввели имя!')
+        } else if (name.length < 3) {
+            alert('Оно слишком короткое, попробуйте ввести больше чем ' + name.length + ' символов')
+        } else if (name.length > 3 && name.length < 7) {
+            alert(name + ' это имя идеально вам подходит!')
+        } else {
+            alert('Оно слишком длинное, попробуйте ввести меньше чем ' + name.length + ' символов')
+        }
+
+    </script>
+</body>
+
+</html>
