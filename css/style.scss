@@ -118,14 +118,10 @@ ol li::before {
 
 footer {
     background-color: #1C2A49;
-    padding: 10px;
     text-align: center;
     ul {
         list-style: none;
         display: flex;
         justify-content: center;
-        li {
-            padding: 10px;
-        }
     }
 }
