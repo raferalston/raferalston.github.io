@@ -123,5 +123,12 @@ footer {
         list-style: none;
         display: flex;
         justify-content: center;
+        padding: 0;
+        li {
+            a {
+                display: inline-block;
+                margin: .25em .25em;
+            }
+        }
     }
 }
