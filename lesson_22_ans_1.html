@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="css/style.css" rel="stylesheet">
+    <title>Ответ на 1 задание 22 урок
+    </title>
+</head>
+
+<body>
+    <img src="img/l22_a1.png" alt="">
+    <script>
+        
+        let riddle = 'Чем можно поделиться только один раз?'
+        let answer = 'секретом'
+
+        alert('Попробуй отгадай загадку - ' + riddle)
+
+        let guess = ''
+        while (guess !== answer) {
+            guess = prompt('Ваш ответ: ').toLowerCase()
+            if (guess !== answer) {
+                alert('Ответ неверный, попробуй еще раз...')
+            }
+        }
+        alert(guess + ' это правильный ответ! Молодец')
+
+
+    </script>
+</body>
+
+</html>
