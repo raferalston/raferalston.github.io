@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="css/style.css" rel="stylesheet">
+    <title>Ответ на 3 задание 23 урок
+    </title>
+</head>
+
+<body>
+    <img src="img/l23_a3.png" alt="">
+
+    <script>
+        
+        let reverseString = function (string) {
+            let tmp = ''
+            for (let i = string.length; i > 0; i--) {
+                tmp += string[i - 1]
+            }
+            return tmp
+        }
+
+        let userInput = prompt('Введите текст и я переверну его: ')
+
+        alert('Результат: ' + reverseString(userInput))
+
+    </script>
+</body>
+
+</html>
