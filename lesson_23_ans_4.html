@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="css/style.css" rel="stylesheet">
+    <title>Ответ на 4 задание 23 урок
+    </title>
+</head>
+
+<body>
+    <img src="img/l23_a4.png" alt="">
+
+    <script>
+    
+
+        let pizzaCount = function (pizza, people) {
+            let party = ''
+            let food = ''
+            for (let i = 0; i < people; i++) {
+                party += '😛'
+            }
+            for (let i = 0; i < pizza; i++) {
+                food += '🍕'
+            }
+            return [party, food]
+        }
+
+        let peopleInput = Number(prompt('Сколько будет человек: '))
+        let pizzaInput = Number(prompt('Сколько будет пицц: '))
+
+        let people = pizzaCount(pizzaInput, peopleInput)[0]
+        let food = pizzaCount(pizzaInput, peopleInput)[1]
+
+        alert('Будет людей - '+ people + ' и пицц - ' + food)
+
+    </script>
+</body>
+
+</html>
