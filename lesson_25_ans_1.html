@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ответ на 1 задание 23 урок
+    </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/sketchy/bootstrap.min.css">
+    <style>
+        .game {
+            font-size: 4em;
+        }
+        .info {
+            font-size: 2em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid text-center bg-dark">
+        <h1 class="text-white mb-0">Hangman game</h1>
+    </div>
+    <div class="row justify-content-center align-items-center vh-100 bg-info">
+        <div class="info container text-center mb-0">
+            <div class="info" id="info">Hello</div>
+        </div>    
+        <div class="main container text-center">
+            <div class="game" id="game"></div>
+        </div>
+    </div>
+    <script>
+        let gameInput = document.querySelector('#game');
+        let info = document.querySelector('#info');
+
+        let words = ['abs'];
+
+        let word = words[Math.floor(Math.random() * words.length)];
+
+        let template = [];
+
+        for (let i = 0; i < word.length; i++) {
+            template.push('_');    
+        }
+
+        let remainLetters = word.length
+
+        gameInput.textContent = template.join(' ')
+        info.textContent = 'Привет я загадал слово состоящее из ' + remainLetters + ' букв, попробуй угадай!'
+        
+        while (remainLetters > 0) {
+
+            let guess = prompt('Введите букву: ').toLowerCase();
+
+            if (guess === null) {
+                break;
+            } else if (guess.length !== 1) {
+                info.textContent = 'Введите одну букву!'
+            } else {
+                for (const key in word) {
+                    if (template[key] !== guess) {
+                        if (word[key] === guess) {
+                            template[key] = guess;
+                            remainLetters--;
+                        }
+                    }
+                }
+            }
+        }
+
+        // alert(template.join(" "));
+        // alert("Молодец это правильный ответ " + word);
+        
+    </script>
+</body>
+
+</html>
