@@ -1,74 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="css/style.css" rel="stylesheet">
     <title>Flexbox</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet">
     <style>
-        table, th, td {
-        border: 1px solid black;
-        padding: 1em;
-        }        
-        th {
-            background-color: white;
-        }
-        .h {
-            background-color: tomato;
-            color: white;
-        }
+    table {
+        max-width: 1200px;
+    }
     </style>
 </head>
 
 <body>
     <h1>Flexbox</h1>
-        <ol>
-            <li style="display: block;">
-                <h2><a href="flex_example.html">Домашнее задание 1</a></h2>
-                <h2>Используемые css свойства:</h2>
-                <table style="margin-left: 1.5em;">
+    <ol>
+        <li style="display: block;">
+            <h2><a href="flex_example.html">Домашнее задание 1</a></h2>
+            <h4>Используемые css свойства:</h4>
+            <table class="ml-3 mr-3 table table-sm table-bordered table-dark table-hover">
+                <thead>
                     <tr>
-                        <th class="h">Свойство</th>
-                        <th class="h">Значение</th>
+                        <th scope="col">#</th>
+                        <th scope="col">Свойство</th>
+                        <th scope="col">Значение</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>display</td>
+                        <td>flex</td>
                     </tr>
                     <tr>
-                        <th>display</th>
-                        <th>flex</th>
+                        <th scope="row">2</th>
+                        <td>flex-direction</td>
+                        <td>column</td>
                     </tr>
                     <tr>
-                        <th>flex-direction</th>
-                        <th>column</th>
+                        <th scope="row">3</th>
+                        <td>flex-basis</td>
+                        <td>20%</td>
                     </tr>
                     <tr>
-                        <th>flex-basis</th>
-                        <th>20%</th>
+                        <th scope="row">4</th>
+                        <td>text-align</td>
+                        <td>center</td>
                     </tr>
-                    <tr>
-                        <th>text-align</th>
-                        <th>center</th>
-                    </tr>
-                </table>
-            </li>
-            <li style="display: block;">
-                <div>
-                    <h2><a href="homework_2.html">Домашнее задание 2</a></h2>
-                </div>
-            </li>
-            <li style="display: block;">
-                <h2>Полезные сокращения для Visual Studio Code</h2>
-                <div style="margin: 0 5px 0 0;">
-                    <img src="img/vsc_short_1.png" alt="1">
-                </div>
-                <div>
-                    <img src="img/vsc_short_2.png" alt="2">
-                </div>
-                <div>
-                    <img src="img/vsc_short_3.png" alt="4">
-                </div>
-            </li>
-        </ol>    
+                </tbody>
+            </table>
+        </li>
+        <li style="display: block;">
+            <div>
+                <h2><a href="homework_2.html">Домашнее задание 2</a></h2>
+            </div>
+        </li>
+        <li style="display: block;">
+            <h2>Полезные сокращения для Visual Studio Code</h2>
+            <div style="margin: 0 5px 0 0;">
+                <img src="img/vsc_short_1.png" alt="1">
+            </div>
+            <div>
+                <img src="img/vsc_short_2.png" alt="2">
+            </div>
+            <div>
+                <img src="img/vsc_short_3.png" alt="4">
+            </div>
+        </li>
+    </ol>    
     <div class="additional">
         <h2 class="important">Полезные ссылки:</h2>
         <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">flexbox - руководство (на английском)</a>

@@ -9,17 +9,13 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="css/style.css" rel="stylesheet">
     <style>
-        table > thead > tr > th {
-            font-size: .75em;
-        }
-        table > tbody > tr > td, table > tbody > tr > th {
-            font-size: .5em;
-        }
-        caption {
-            background-color: #fff;
-            padding: .25em;
-            font-size: .675em;
-        }
+    table {
+        max-width: 1200px;
+    }
+    caption {
+        background-color: #fff;
+        padding: .5em;
+    }
     </style>
 </head>
 
@@ -27,8 +23,8 @@
     <h1>Управление элементами на HTML странице, DOM часть 1</h1>
     <ol>
         <li style="display: block;">
-            <h2>Cвойства и методы DOM дерева
-            <table class="table table-sm table-bordered table-dark table-hover">
+            <h2>Cвойства и методы DOM дерева</h2>
+            <table class="ml-3 table table-sm table-bordered table-dark table-hover">
                 <caption class="text-danger">Все написанное капсом (заглавными буквами), является заранее выбранным объектом в DOM дереве</caption>
                 <thead>
                     <tr>
