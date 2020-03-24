@@ -5,9 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="css/style.css" rel="stylesheet">
     <title>Управление элементами на HTML странице, DOM часть 1</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet">
     <style>
+        table > thead > tr > th {
+            font-size: .75em;
+        }
+        table > tbody > tr > td, table > tbody > tr > th {
+            font-size: .5em;
+        }
+        caption {
+            background-color: #fff;
+            padding: .25em;
+            font-size: .675em;
+        }
     </style>
 </head>
 
@@ -15,18 +27,131 @@
     <h1>Управление элементами на HTML странице, DOM часть 1</h1>
     <ol>
         <li style="display: block;">
-            <h2>Создайте программу, которая предлагает купить слона
-            </h2>
-            <img src="img/l23_a1.gif" alt="вопрос 1" style="display: block; padding: .15em 0;">
+            <h2>Cвойства и методы DOM дерева
+            <table class="table table-sm table-bordered table-dark table-hover">
+                <caption class="text-danger">Все написанное капсом (заглавными буквами), является заранее выбранным объектом в DOM дереве</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Как вызвать</th>
+                        <th scope="col">Что делает</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>document.all</td>
+                        <td>HTML коллекция со всеми элементами на странице</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>document.title</td>
+                        <td>title документа</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>document.head (body)</td>
+                        <td>HTML выбранной части</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>document.URL</td>
+                        <td>Ссылка в адресной строке</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td>document.forms</td>
+                        <td>Все формы в документе</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">6</th>
+                        <td>document.ELEMENT.innerHTML</td>
+                        <td>Изменить HTML элемента</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">7</th>
+                        <td>document.ELEMENT.textContent</td>
+                        <td>Изменить текст у элемента</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">8</th>
+                        <td>document.getElementById('ID')</td>
+                        <td>Найти элемент по ID (вернет 1 элемент)</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">9</th>
+                        <td>document.getElementsByClassName('CLASS')</td>
+                        <td>Найти элементы по class (вернет массив с элементами)</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">10</th>
+                        <td>document.getElementsByTagName('TAG')</td>
+                        <td>Найти элементы по тегу (вернет массив с элементами)</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">11</th>
+                        <td>document.querySelector('SELECTOR')</td>
+                        <td>Найти элемент по селектору (вернет 1 элемент). Например: .class, #id, tag</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">12</th>
+                        <td>document.querySelectorAll('SELECTOR')</td>
+                        <td>Найти элементы по селектору (вернет массив с элементами). Например: .class, #id, tag</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">13</th>
+                        <td>SELECTED_ELEMENT.style</td>
+                        <td>Изменить стиль у выбранного элемента. Например: element.style.color = 'red'</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">14</th>
+                        <td>SELECTED_ELEMENT.parentNode</td>
+                        <td>Найти родительский элемент у выбранного</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">15</th>
+                        <td>SELECTED_ELEMENT.children</td>
+                        <td>Найти все вложенные в этот элемент теги</td>
+                    </tr>
+                </tbody>
+            </table>
+        </li>
+        <li style="display: block;">
+            <h2>Сгенерируйте с помощью js страницу</h2>
+            <img src="img/l24_q1.png" alt="" width="400">
+            <img src="img/l24_q1_2.png" alt="" width="400">
+            <img src="img/l24_q1_3.png" alt="" width="400">
+            <img src="img/l24_q1_4.png" alt="" width="400">
+            <img src="img/l24_q1_5.png" alt="" width="400">
             <h4>
-                <a href="lesson_23_ans_1.html" target="_blank" rel="noopener noreferrer">Попробовать</a>
+                <a href="lesson_24_ans_1.html" target="_blank" rel="noopener noreferrer">Попробовать</a>
             </h4>
         </li>
     </ol>
 
     <div class="additional">
         <h2 class="important">Что почитать:</h2>
+        <a href="https://learn.javascript.ru/dom-nodes" target="_blank" rel="noopener noreferrer">DOM дерево</a>
+        <a href="https://developer.mozilla.org/ru/docs/Web/API/Document" target="_blank" rel="noopener noreferrer">Все свойства, методы - document</a>
         <h2 class="important">Где потренироваться:</h2>
+        <a href="https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_datatypes1" target="_blank" rel="noopener noreferrer">Определите верно типы данных</a>
+        <a href="https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_dom_html1">Упражнение #1</a>
+        <a href="https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_dom_html2">Упражнение #2</a>
+        <a href="https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_dom_html3">Упражнение #3</a>
+        <a href="https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_dom_html4">Упражнение #4</a>
+        <a href="https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_dom_html5">Упражнение #5</a>
+        <a href="https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_dom_html6">Упражнение #6</a>
+        <a href="https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_dom_html7">Упражнение #7</a>
+        <a href="https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_dom_html8">Упражнение #8</a>
+        <h2 class="important">Предыдущие js уроки</h2>
+        <a href="lesson_17_adv.html">Урок 17</a>
+        <a href="lesson_18_adv.html">Урок 18</a>
+        <a href="lesson_19_adv.html">Урок 19</a>
+        <a href="lesson_20_adv.html">Урок 20</a>
+        <a href="lesson_21_adv.html">Урок 21</a>
+        <a href="lesson_22_adv.html">Урок 22</a>
+        <a href="lesson_23_adv.html">Урок 23</a>
+
     </div>
     <footer>
         <h5>
