@@ -35,7 +35,7 @@
                 <div class="input-group">
                     <input type="text" class="form-control form-control-lg">
                     <div class="input-group-prepend">
-                        <button class="btn btn-danger" type="submit">Button</button>
+                        <button class="btn btn-danger" type="submit">Ввод</button>
                     </div>
                 </div>
             </form>
@@ -61,7 +61,7 @@
         let remainLetters = word.length
 
         gameInput.textContent = template.join(' ')
-        info.textContent = 'Привет, я загадал слово состоящее из ' + remainLetters + ' букв, попробуй угадай!'
+        info.textContent = 'Привет, я загадал слово состоящее из ' + remainLetters + ' букв. Попробуй угадай!'
 
         let form = document.querySelector('form');
 
@@ -71,7 +71,7 @@
             event.preventDefault();
             let input = document.querySelector('input[type="text"]');
             if (input.value.length !== 1) {
-                notification.textContent = 'Введите 1 букву!'
+                notification.textContent = 'Введите 1 букву!';
             } else {
                 notification.textContent = ''
                 hangman(input.value.toLowerCase());
@@ -80,6 +80,7 @@
         }
 
         function hangman(input) {
+            match = false
             for (const key in word) {
                 if (template[key] !== input) {
                     if (word[key] === input) {
@@ -90,8 +91,12 @@
                             info.textContent = 'Поздравляю, вы победили!';
                             form.remove()
                         }
+                        match = true
                     } 
                 }
+            }
+            if (!match) {
+                notification.textContent = 'Буквы ' + input + ' не осталось в слове';
             }
         }
 
