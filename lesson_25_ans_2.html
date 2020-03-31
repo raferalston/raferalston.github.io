@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ответ на 2 задание 25 урок
+    </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/sketchy/bootstrap.min.css">
+    <style>
+        body {
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .game {
+            font-size: 4em;
+        }
+        .info {
+            font-size: 2em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid text-center bg-danger">
+        <h1 class="text-white mb-0">Hangman game</h1>
+    </div>
+    <div class="row justify-content-center align-items-center vh-100 bg-warning">
+        <div class="info container text-center mb-0">
+            <div class="info" id="info"></div>
+            <form action="">
+                <div class="input-group">
+                    <input type="text" class="form-control form-control-lg">
+                    <div class="input-group-prepend">
+                        <button class="btn btn-danger" type="submit">Ввод</button>
+                    </div>
+                </div>
+            </form>
+            <div class="notification" id="notification"></div>
+        </div>    
+        <div class="main container text-center">
+            <div class="game" id="game"></div>
+        </div>
+    </div>
+    <script>
+        let gameInput = document.querySelector('#game');
+        let info = document.querySelector('#info');
+        let notification = document.querySelector('#notification');
+
+        let words = ['melon', 'banana', 'apple', 'дом', 'машина'];
+        let word = words[Math.floor(Math.random() * words.length)];
+        let template = [];
+
+        for (let i = 0; i < word.length; i++) {
+            template.push('_');    
+        }
+
+        let remainLetters = word.length
+
+        gameInput.textContent = template.join(' ')
+        info.textContent = 'Привет, я загадал слово состоящее из ' + remainLetters + ' букв. Попробуй угадай!'
+
+        let form = document.querySelector('form');
+
+        form.addEventListener('submit', guess);
+
+        function guess(event) {
+            event.preventDefault();
+            let input = document.querySelector('input[type="text"]');
+            if (input.value.length !== 1) {
+                notification.textContent = 'Введите 1 букву!';
+            } else {
+                notification.textContent = ''
+                hangman(input.value.toLowerCase());
+            }
+            input.value = ''
+        }
+
+        function hangman(input) {
+            match = false
+            for (const key in word) {
+                if (template[key] !== input) {
+                    if (word[key] === input) {
+                        template[key] = input;
+                        remainLetters--;
+                        gameInput.textContent = template.join(' ')
+                        if (remainLetters === 0) {
+                            info.textContent = 'Поздравляю, вы победили!';
+                            form.remove()
+                        }
+                        match = true
+                    } 
+                }
+            }
+            if (!match) {
+                notification.textContent = 'Буквы ' + input + ' не осталось в слове';
+            }
+        }
+
+    </script>
+</body>
+
+</html>
