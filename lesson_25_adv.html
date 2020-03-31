@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Управление элементами на HTML странице, DOM часть 2</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+    table {
+        max-width: 1200px;
+    }
+    caption {
+        background-color: #fff;
+        padding: .5em;
+    }
+    </style>
+</head>
+
+<body>
+    <h1>Управление элементами на HTML странице, DOM часть 2</h1>
+    <ol>
+        <li style="display: block;">
+            <h2>Cвойства и методы DOM дерева</h2>
+            <table class="ml-3 table table-sm table-bordered table-dark table-hover">
+                <caption class="text-danger">Все написанное капсом (заглавными буквами), является заранее выбранным объектом в DOM дереве</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Как вызвать</th>
+                        <th scope="col">Что делает</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>document.createElement('TAG')</td>
+                        <td>Создание тега</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>SELECTED_ELEMENT.className</td>
+                        <td>Добавление класса к элементу</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>                        
+                        <td>SELECTED_ELEMENT.id</td>
+                        <td>Добавление id к элементу</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>SELECTED_ELEMENT.setAttribute('NAME', 'VALUE')</td>
+                        <td>Добавление атрибута к элементу</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td>document.createTextNode('TEXT')</td>
+                        <td>Создание текста</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">6</th>
+                        <td>SELECTED_ELEMENT.insertBefore(ELEMENT, REFERENCE NODE)</td>
+                        <td>Добавление элемента в структуру</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">7</th>
+                        <td>SELECTED_ELEMENT.appendChild(ELEMENT)</td>
+                        <td>Добавление элемента в структуру</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">8</th>
+                        <td>SELECTED_ELEMENT.append(ELEMENT)</td>
+                        <td>Добавление элемента в структуру</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">9</th>
+                        <td>SELECTED_ELEMENT.removeChild(ELEMENT)</td>
+                        <td>Удаление элемента из структуры</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">10</th>
+                        <td>SELECTED_ELEMENT.remove(ELEMENT)</td>
+                        <td>Удаление элемента из структуры</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">11</th>
+                        <td>SELECTED_ELEMENT.addEventListener('EVENT', FUNCTION)</td>
+                        <td>Добавление прослушки события к элементу</td>
+                    </tr>
+                </tbody>
+            </table>
+        </li>
+        <li style="display: block;">
+            <h2>Создайте страничку, которая меняет цвет в зависимости от положения курсора мышки на экране</h2>
+            <img src="img/l25_q1.gif" alt="" width="500">
+            <h4>
+                <a href="lesson_25_ans_1.html" target="_blank" rel="noopener noreferrer">Попробовать</a>
+            </h4>
+        </li>
+        <li style="display: block;">
+            <h2>Создайте страничку c игрой виселица</h2>
+            <img src="img/l25_q2.png" alt="" width="500">
+            <h4>
+                <a href="lesson_25_ans_2.html" target="_blank" rel="noopener noreferrer">Попробовать</a>
+            </h4>
+        </li>
+    </ol>
+
+    <div class="additional">
+        <h2 class="important">Что почитать:</h2>
+
+        <h2 class="important">Где потренироваться:</h2>
+
+        <h2 class="important">Предыдущие js уроки</h2>
+        <a href="lesson_17_adv.html">Урок 17</a>
+        <a href="lesson_18_adv.html">Урок 18</a>
+        <a href="lesson_19_adv.html">Урок 19</a>
+        <a href="lesson_20_adv.html">Урок 20</a>
+        <a href="lesson_21_adv.html">Урок 21</a>
+        <a href="lesson_22_adv.html">Урок 22</a>
+        <a href="lesson_23_adv.html">Урок 23</a>
+
+    </div>
+    <footer>
+        <h5>
+            Если возникнут вопросы можно написать их нам -
+        </h5>
+        <ul>
+            <li>
+                <a href="https://t.me/kidkod" target="_blank">
+                    <img src="/img/telegram.png" class="social-icon" alt="телеграм">
+                </a>
+            </li>
+            <li>
+                <a href="https://vk.com/kidkodschool" target="_blank" class="vk-desktop">
+                    <img src="/img/vk.png" class="social-icon" alt="вконтакте">
+                </a>
+            </li>
+        </ul>
+    </footer>
+</body>
+
+</html>
