@@ -7,7 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Ответ на 2 задание 25 урок
     </title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/sketchy/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/sketchy/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/minty/bootstrap.min.css">
     <style>
         body {
             height: 100vh;
@@ -21,28 +22,36 @@
         .info {
             font-size: 2em;
         }
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+        .container form {
+            width: 200px;
+            align-self: center;
+        }
     </style>
 </head>
 
 <body>
-    <div class="container-fluid text-center bg-danger">
+    <div class="container-fluid text-center bg-primary p-3">
         <h1 class="text-white mb-0">Hangman game</h1>
     </div>
-    <div class="row justify-content-center align-items-center vh-100 bg-warning">
-        <div class="info container text-center mb-0">
-            <div class="info" id="info"></div>
+    <div class="row justify-content-center align-items-center vh-100">
+        <div class="info container text-center mb-0 text-dark">
+            <div class="info mb-3" id="info"></div>
             <form action="">
                 <div class="input-group">
                     <input type="text" class="form-control form-control-lg">
                     <div class="input-group-prepend">
-                        <button class="btn btn-danger" type="submit">Ввод</button>
+                        <button class="btn btn-success" type="submit">Enter</button>
                     </div>
                 </div>
             </form>
             <div class="notification" id="notification"></div>
         </div>    
         <div class="main container text-center">
-            <div class="game" id="game"></div>
+            <div class="game text-danger" id="game"></div>
         </div>
     </div>
     <script>
@@ -87,13 +96,13 @@
                         template[key] = input;
                         remainLetters--;
                         gameInput.textContent = template.join(' ')
-                        if (remainLetters === 0) {
-                            info.textContent = 'Поздравляю, вы победили!';
-                            form.remove()
-                        }
                         match = true
                     } 
                 }
+            }
+            if (remainLetters === 0) {
+                info.textContent = 'Поздравляю, вы победили!';
+                form.remove()
             }
             if (!match) {
                 notification.textContent = 'Буквы ' + input + ' не осталось в слове';
