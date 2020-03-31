@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ответ на 2 задание 25 урок
+    </title>
+    <style>
+        body {
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        div {
+            width: 50vw;
+            height: 50vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+            color: white;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            cursor: pointer;
+            transition: all ease .25s;
+        }
+        .box1 {
+            background-color: #28c7fa;
+        }
+        .box2 {
+            background-color: #775ada;
+        }
+        .box3 {
+            background-color: #002651;
+        }
+        .box4 {
+            background-color: #ff304f;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">Click me!</div>
+    <div class="box2">Click me!</div>
+    <div class="box3">Click me!</div>
+    <div class="box4">Click me!</div>
+    <script>
+        let boxes = document.getElementsByTagName('div');
+
+        function boxClicked(event) {
+            event.target.textContent = 'Dont click anymore!';
+            event.target.style.backgroundColor = 'tomato';
+        }
+
+        for (let i = 0; i < boxes.length; i++) {
+            let element = boxes[i];
+            element.addEventListener('click', boxClicked);
+        }
+    </script>
+</body>
+
+</html>
