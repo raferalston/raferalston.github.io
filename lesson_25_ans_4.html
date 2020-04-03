@@ -21,6 +21,7 @@
             color: black;
             font-size: 5em;
             transition: text-shadow ease .15s;
+            transition: border-bottom ease .15s;
             cursor: pointer;
         }
         span:hover {
@@ -43,9 +44,9 @@
         <span>L</span>
         <span>O</span>
         <div style="text-align: center;">
-            <h1>
-                <a href="/lesson_25_ans_4.html" style="color:black" download>Скачать ответ</a>
-            </h1>
+            <h5>
+                <a href="lesson_25_ans_4_ans.html" target="_blank" rel="noopener noreferrer">Ответ</a>
+            </h5>
         </div>
     </h1>
     <script>
@@ -79,7 +80,7 @@
             let element = event.target;
             let selected = element.style.borderBottom
             if (!selected) {
-                element.style.borderBottom = '5px solid red';
+                element.style.borderBottom = '15px solid red';
             } else {
                 element.style.borderBottom = '';
             }
