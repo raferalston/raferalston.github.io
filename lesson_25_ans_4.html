@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ответ на 3 задание 25 урок
+    </title>
+    <style>
+        body {
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        span {
+            color: black;
+            font-size: 5em;
+            transition: text-shadow ease .15s;
+            cursor: pointer;
+        }
+        span:hover {
+            text-shadow: 
+                1px 1px 0 black,
+                2px 2px 0 black,
+                3px 3px 0 black,
+                4px 4px 0 black,
+                5px 5px 0 black,
+                6px 6px 0 black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        <span>H</span>
+        <span>E</span>
+        <span>L</span>
+        <span>L</span>
+        <span>O</span>
+    </h1>
+    <script>
+        let body = document.querySelector('body');
+        let word = document.querySelectorAll('span');
+
+        body.addEventListener('mousemove', changeColor);
+        for (let i = 0; i < word.length; i++) {
+            const element = word[i];
+            element.addEventListener('click', changeDirection);
+        }
+
+        function changeColor(event) {
+            let w = window.innerWidth;
+            let h = window.innerHeight;
+            let mouseX = event.clientX / (w / 255);
+            let mouseY = event.clientY / (h / 255);
+            let r = mouseX;
+            let g = mouseY;
+            let b = 80;
+            for (let i = 0; i < word.length; i++) {
+                const element = word[i];
+                element.style.color = 'rgb(' + r + ',' + g + ',' + b + ')';
+                r += r * 0.25;
+                g += r * 0.25;
+                b += r * 0.05;
+            }
+        }
+
+        function changeDirection(event) {
+            let element = event.target;
+            let selected = element.style.borderBottom
+            if (!selected) {
+                element.style.borderBottom = '5px solid red';
+            } else {
+                element.style.borderBottom = '';
+            }
+        }
+    </script>
+</body>
+
+</html>
