@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movement</title>
+    <style>
+        body {
+            height: 100vh;
+            background-color: #f4fa9c;
+            cursor: none;
+            overflow: hidden;
+        }
+        #ball {
+            width: 50px;
+            height: 50px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #fc5185;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div id="ball"></div>
+
+    <script>
+        let ball = document.querySelector('#ball');
+
+        document.addEventListener('mousemove', moveEvent);
+
+        function moveEvent(event) {
+            ball.style.top = event.pageY - ball.clientHeight / 2 + 'px';
+            ball.style.left = event.pageX - ball.clientWidth / 2 + 'px';
+        }
+    </script>
+</body>
+</html>

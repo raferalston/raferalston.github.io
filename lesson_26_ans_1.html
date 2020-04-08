@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clicker</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all ease .25s;
+        }
+        #game_box {
+            height: 500px;
+            width: 500px;
+            background-color: #4056F4;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            align-items: center;
+        }
+        #score {
+            width: 50%;
+            background-color: white;
+            text-align: center;
+        }
+        #clicker {
+            background-color: #CE2D4F;
+            cursor: pointer;
+            transition: all ease 0.25s;
+        }
+        #clicker h1 {
+            white-space: nowrap;
+            color: white;
+            padding: 1em;
+        }
+        .gameOver {
+            font-size: 4em;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="game_box">
+        <div id="score">
+            <h2>score: <span id="count">0</span></h2>
+        </div>
+        <div id="clicker"><h1>
+            Click on me: <span>0</span> times!
+        </h1></div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
