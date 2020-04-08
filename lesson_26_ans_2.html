@@ -19,6 +19,16 @@
             left: 0;
             background-color: #fc5185;
             border-radius: 50%;
+            z-index: 2;
+        }
+        #dot {
+            width: 50px;
+            height: 50px;
+            position: fixed;
+            background-color: #ff004c;
+            border-radius: 50%;
+            z-index: 2;
+            transform: translate(-50%, -50%);
         }
     </style>
 </head>
@@ -27,12 +37,25 @@
 
     <script>
         let ball = document.querySelector('#ball');
+        let body = document.querySelector('body');
 
         document.addEventListener('mousemove', moveEvent);
+        document.addEventListener('click', clickEvent)
 
         function moveEvent(event) {
             ball.style.top = event.pageY - ball.clientHeight / 2 + 'px';
             ball.style.left = event.pageX - ball.clientWidth / 2 + 'px';
+        }
+
+        function clickEvent(event) {
+            let posX = event.clientX;
+            let posY = event.clientY;
+            console.log(posX, posY)
+            let el = document.createElement('div');
+            el.id = 'dot';
+            el.style.top = posY + "px";
+            el.style.left = posX + "px";
+            body.append(el);
         }
     </script>
 </body>
