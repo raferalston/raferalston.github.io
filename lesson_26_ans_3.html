@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text parallax</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .parallax {
+            height: 100vh;
+            background-color: #071e3d;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .cont {
+            height: 2000px;
+            background-color: #278ea5;
+        }
+        h1 {
+            color: white;
+            font-size: 4em;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        span {
+            position: relative;
+        }
+
+        #line {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            height: 10px;
+            background-color: #feff89;
+        }
+    </style>
+</head>
+<body>
+    <div class="parallax">
+        <h1 id="text">
+            <span>Text</span>
+            <span>Parallax</span>
+        </h1>
+        <div id="line"></div>
+    </div>
+    <div class="cont"></div>
+    <script>
+        let wordOne = document.querySelector('#text span:nth-child(1)');
+        let wordTwo = document.querySelector('#text span:nth-child(2)');
+        let line = document.querySelector('#line');
+
+        window.addEventListener('scroll', scrollEvent);
+
+        let linePosition = line.offsetLeft;
+
+        function scrollEvent(event) {
+            let scrollY = window.scrollY;
+
+            wordOne.style.top = scrollY * 0.25 + "px";
+            wordTwo.style.top = -scrollY * 0.25 + "px";
+
+            line.style.left = linePosition + (scrollY * 0.35) + "px";
+        }
+    </script>
+</body>
+</html>
