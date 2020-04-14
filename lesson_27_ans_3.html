@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Like activation</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+        }
+
+        button {
+            padding: 1em;
+            font-size: 2em;
+            cursor: pointer;
+            border: 0;
+            border-radius: 10px;
+            background-color: yellow;
+        }
+
+        button:active {
+            background-color: lightgreen;
+        }
+
+        span {
+            position: absolute;
+            background-image: url('img/heart.png');
+            background-size: cover;
+            pointer-events: none;
+            width: 50px;
+            height: 50px;
+            transform: translate(-50%, -50%);
+            animation: likes 2s linear infinite;
+        }
+
+        @keyframes likes {
+            0% {
+                transform: translate(-50%, -50%);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(-50%, -1000%);
+                opacity: 0;
+            }
+        }
+
+        button.clickMe {
+            animation: clickMe 1s linear infinite;
+        }
+
+        @keyframes clickMe {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <button>Activate 👍</button>
+
+    <script>
+
+        let button = document.querySelector('button');
+        let status = false;
+
+        button.addEventListener('click', clickEvent);
+
+        let setInt = setInterval(clickMe, 2000);
+        let remInt = setInterval(removeClickMe, 3000);
+
+        function clickEvent(event) {
+            if (!status) {
+                status = true;
+                likeActivation(status);
+            } else {
+                status = false;
+                likeActivation(status);
+            }
+        }
+
+        function likeActivation(status) {
+            if (status) {
+                document.addEventListener('mousemove', mouseEvent);
+                button.style.backgroundColor = 'lightgreen';
+                button.className = '';
+                clearInterval(setInt);
+                clearInterval(remInt);
+            } else {
+                document.removeEventListener('mousemove', mouseEvent);
+                button.style.backgroundColor = 'yellow';
+                setInt = setInterval(clickMe, 2000);
+                remInt = setInterval(removeClickMe, 3000);
+            }
+        }
+
+        function mouseEvent(event) {
+            let body = document.querySelector('body');
+            let heart = document.createElement('span');
+            let x = event.clientX;
+            let y = event.clientY;
+
+            heart.style.left = x + 'px';
+            heart.style.top = y + 'px';
+
+            let size = Math.random() * 100;
+            heart.style.width = size + "px";
+            heart.style.height = size + "px";
+
+            body.appendChild(heart);
+
+            setTimeout(heartRemove, 1800, heart)
+        }
+
+        function heartRemove(h) {
+            h.remove();
+        }
+
+        function clickMe() {
+            button.className = 'clickMe';
+        }
+
+        function removeClickMe() {
+            button.className = '';
+        }
+    </script>
+</body>
+</html>
