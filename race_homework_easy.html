@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Race</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            height: 100vh;
+            background-color: #f7f7f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        #road {
+            height: 80%;
+            width: 100%;
+            background-color: #43d8c9;
+        }
+        .track-line {
+            position: fixed;
+            top: 0;
+            width: 4px;
+            height: 80vh;
+            background-color: rgb(175, 171, 171);
+        }
+        #status {
+            height: 20%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #status > #bar {
+            width: 50%;
+            height: 80%;
+            border-radius: 15px;
+            background-color: #95389e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            color: white;
+            transition: all ease .25s;
+        }
+        #bar > h2 {
+            width: 100%;
+        }
+
+        #speedmeter {
+            width: 90%;
+            height: 100px;
+            background-color: white;
+            position: relative;
+            left: 0;
+            bottom: 0;
+            border-radius: 5px;
+        }
+        #speedmeter > span {
+            position: absolute;
+            bottom: 0;
+            height: 40px;
+            width: 5px;
+            z-index: 1;
+            background-color: #f0f0f0;
+        }
+        #speedmeter > #meter {
+            position: absolute;
+            bottom: 0;
+            height: 50px;
+            width: 5px;
+            background-color: #000;
+            transition: all ease .15s;
+            z-index: 2;
+        }
+        #speedmeter > #info {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: white;
+            transition: all ease .15s;
+            color: black;
+            padding: .25em 1em;
+        }
+        #speedmeter > #info > h2 {
+            margin: 0;
+        }
+        #speedmeter > span:nth-of-type(1) {
+            left: 10%;
+        }
+        #speedmeter > span:nth-of-type(2) {
+            left: 20%;
+        }
+        #speedmeter > span:nth-of-type(3) {
+            left: 30%;
+        }
+        #speedmeter > span:nth-of-type(4) {
+            left: 40%;
+        }
+        #speedmeter > span:nth-of-type(5) {
+            left: 50%;
+        }
+        #speedmeter > span:nth-of-type(6) {
+            left: 60%;
+        }
+        #speedmeter > span:nth-of-type(7) {
+            left: 70%;
+        }
+        #speedmeter > span:nth-of-type(8) {
+            left: 80%;
+        }
+        #speedmeter > span:nth-of-type(9) {
+            left: 90%;
+        }
+        .boat {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            margin: 1em 0;
+            transition: all ease .05s;
+        }
+
+        .boat > h3 {
+            color: #fff;
+        }
+
+        .boat.winner {
+            top: 70%;
+            left: 50% !important;
+            transform: translate(-50%, -50%);
+            position: absolute;
+        }
+        .boat.winner::before {
+            content: '👑Победитель!👑';
+            position: absolute;
+            top: -50%;
+            left: 50%;
+            white-space: nowrap;
+            font-size: 2em;
+            transform: translate(-50%, -50%);
+        }
+        
+        #start_screen {
+            height: 100vh;
+            width: 100vw;
+            position: fixed;
+            top: 0;
+            background-color: rgba(248, 225, 244, 0.85);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        form input {
+            padding: .5em;
+            margin: .5em;
+        }
+        form h1 {
+            padding: .25em 1em;
+            text-align: center;
+        }
+        form input[type=submit] {
+            border: 0;
+            background-color: #202040;
+            padding: 1.25em 2.75em;
+            color: white;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="start_screen">
+        <form action="">
+            <h1>Введите количество участников гонки (макс 8)</h1>
+            <input type="text" id="">
+            <input type="submit" value="OK">
+        </form>
+    </div>
+    <div id="road"></div>
+    <div id="status">
+        <div id="bar">
+            <div id="leader"><h2>Лидер гонки</h2></div>
+            <div id="speedmeter">
+                <div id="info"><h2>Скорость: 0 км/ч</h2></div>
+                <div id="meter"></div>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // INIT DATA
+        let road = document.querySelector('#road');
+        let status = document.querySelector('#status');
+        let bar = document.querySelector('#bar');
+        let startScreen = document.querySelector('#start_screen');
+        let meter = document.querySelector('#meter');
+        let info = document.querySelector('#info');
+        let leaderInfo = document.querySelector('#leader');
+        let gameStatus = false;
+        let participants = 0;
+        let boats = [];
+        let colors = ['darkred', 'yellowgreen', 'burlywood', 'goldenrod', 'indigo', 'pink', 'lightseagreen', 'tomato'];
+        let names = ['Chaste', 'Capers', 'Devlin', 'Prosperity', 'Corona', 'Vamoose', 'Legacy', 'Ocean']
+        let boatSize = 100;
+        let leader = null;
+        let gameLoop = null;
+
+
+        // INIT SCREEN
+        let input = document.querySelector('form');
+
+        input.addEventListener('submit', submitEvent);
+
+        function submitEvent(event) {
+            event.preventDefault();
+            let data = event.target[0].value;
+            if (data > 0 && data < 9) {
+                participants = data;
+                event.target[0].value = '';
+                startGame()
+            } else {
+                event.target[0].value = '';
+            }
+        }
+
+        function startGame() {
+            buildTrack();
+            gameStatus = true;
+            startScreen.remove();
+        }
+        
+        // START GAME LOOP
+        let checkGameStart = setInterval(checkEvent, 30);
+
+        function checkEvent() {
+            if (gameStatus) {
+                createParticipants()
+                gameLoop = setInterval(game, 30);
+                gameStatus = false;
+                clearInterval(checkGameStart);
+            }
+        }
+
+        // INIT TRACK
+        function buildTrack() {
+            let line = 80;
+            let trackLen = road.clientWidth / line;
+            let linePos = 0;
+            for (let index = 0; index < trackLen; index++) {
+                let l = document.createElement('div');
+                l.classList = 'track-line';
+                l.style.left = linePos + "px";
+                linePos += line;
+                road.append(l);
+            }
+        }
+        function createParticipants() {
+            for (let i = 0; i < participants; i++) {
+                let name = names.pop();
+                let color = colors.pop();
+                let size = boatSize;
+                let boat = new Boat(name, color, size);
+                boat.create();
+                boats.push(boat);
+            }
+        }
+
+        // MAIN GAME LOOP
+        function game() {
+            for (let i = 0; i < boats.length; i++) {
+                // select boat
+                let b = boats[i]
+                // move boat forward
+                b.move();
+                // check leader
+                if (!leader) {
+                    leader = b;
+                } else if (leader.posX < b.posX) {
+                    leader = b;
+                }
+                updateLeader(leader)
+                // check end game
+                if (b.checkCollision()) {
+                    clearInterval(gameLoop);
+                    b.winner();
+                    break
+                }
+            }
+        }
+        // visually change the leader
+        function updateLeader(leader) {
+            leaderInfo.innerHTML = '<h2>Лидер: ' + leader.name + '</h2>';
+            info.innerHTML = '<h2>Скорость: ' + parseInt(leader.speed * 10) + ' км/ч</h2>';
+            meter.style.left = (road.clientWidth / 100 * leader.speed) * 5 + "px";
+            bar.style.backgroundColor = leader.color;
+        }
+
+        // Boat object
+        let Boat = function(name, color, size) {
+            this.boat = null;
+            this.name = name;
+            this.color = color;
+            this.width = size;
+            this.height = size / 2;
+            this.posX = 0;
+            this.speed = 5;
+
+            this.create = function() {
+                this.boat = document.createElement('div');
+                this.boat.className = 'boat';
+                this.boat.style.width = this.width + "px";
+                this.boat.style.height = this.height + "px";
+                this.boat.style.backgroundColor = this.color;
+                this.boat.innerHTML = '<h3>' + this.name + '</h3>';
+
+                road.append(this.boat);
+            }
+
+            this.move = function() {
+                this.speed = Math.random() * (6 - 3) + 1;
+                this.posX += this.speed;
+                this.boat.style.left = this.posX + "px";
+            }
+
+            this.checkCollision = function() {
+                if (this.posX + this.width > road.clientWidth) {
+                    return true
+                }
+                return false
+            }
+
+            this.winner = function() {
+                this.boat.className = 'boat winner';
+            }
+        }
+
+    </script>
+</body>
+</html>
