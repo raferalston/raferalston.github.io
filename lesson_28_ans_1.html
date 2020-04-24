@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal window</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-color: #482ff7;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+        }
+
+        #modal {
+            position: fixed;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(131, 24, 131, 0.829);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button {
+            border: 0;
+            color: #fdfdfd;
+            font-size: 2em;
+            font-weight: bold;
+            padding: 1em 1.75em;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        button#close {
+            background-color: #fc5185;
+        }
+        button#open {
+            background-color: #22eaaa;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat non deserunt aperiam assumenda rem, saepe aliquam perspiciatis molestiae amet atque recusandae tempora, quidem nobis, id et. Id repudiandae exercitationem officia.</h1>
+    <button id="open">ADD MODAL</button>
+    <div id="modal">
+        <button id="close">REMOVE MODAL</button>
+    </div>
+    <script>
+        let body = document.querySelector('body');
+        let modal = document.querySelector('#modal');
+        let closeButton = document.querySelector('#close');
+        let openButton = document.querySelector('#open');
+
+        closeButton.addEventListener('click', closeEvent);
+        openButton.addEventListener('click', openEvent);
+
+        function closeEvent(event) {
+            modal.remove();
+        }
+        function openEvent(event) {
+            body.append(modal);
+        }
+    </script>
+</body>
+</html>
