@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Canvas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+    table {
+        max-width: 1200px;
+    }
+    caption {
+        background-color: #fff;
+        padding: .5em;
+    }
+    </style>
+</head>
+
+<body>
+    <h1>Canvas</h1>
+    <ol>
+        <li style="display: block;">
+            <h2>Javascript методы и функции используемые в заданиях</h2>
+            <table class="ml-3 table table-sm table-bordered table-dark table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Как вызвать</th>
+                        <th scope="col">Что делает</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>ctx = canvas.getContext("2d")</td>
+                        <td>Метод предназначенный для визуализации рисования на холсте</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>ctx.fillRect(x, y, w, h)</td>
+                        <td>Создание сплошного прямоугольника</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>ctx.fillStyle = 'color'</td>
+                        <td>Выбор цвета для заполнения фигур</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>ctx.strokeRect(x, y, w, h)</td>
+                        <td>Создание полого прямоугольника</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td>ctx.strokeStyle = 'color'</td>
+                        <td>Выбор цвета для границы у фигур</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">6</th>
+                        <td>ctx.clearRect(x, y, w, h)</td>
+                        <td>Удаление прямоугольной формы из холста</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">7</th>
+                        <td>ctx.font = '30px Arial'</td>
+                        <td>Выбор шрифта</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">8</th>
+                        <td>ctx.fillText('Text', x, y)</td>
+                        <td>Создание сплошного текста на холсте</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">9</th>
+                        <td>ctx.strokeText('Text', x, y)</td>
+                        <td>Создание полого текста на холсте</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">10</th>
+                        <td>ctx.beginPath()</td>
+                        <td>Начать рисовать пользовательскую фигуру</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">11</th>
+                        <td>ctx.moveTo(x, y)</td>
+                        <td>Передвинуть точку для начала рисования (не рисуя)</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">12</th>
+                        <td>ctx.lineTo(x, y)</td>
+                        <td>Передвинуть точку для рисования (рисуя)</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">13</th>
+                        <td>ctx.stroke()</td>
+                        <td>Заливаем путь цветом</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">14</th>
+                        <td>ctx.fill()</td>
+                        <td>Заливаем пользовательскую фигуру цветом</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">15</th>
+                        <td>ctx.closePath()</td>
+                        <td>Автоматически завершаем пользовательскую фигуру</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">16</th>
+                        <td>ctx.closePath()</td>
+                        <td>Автоматически завершаем пользовательскую фигуру</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">17</th>
+                        <td>ctx.arc(x, y, radius, startAngle, endAngle)</td>
+                        <td>Создание формы дуга (круг можно создать следующим образом: <b>ctx.arc(100, 100, 40, 0, Math.PI * 2)</b></td>
+                    </tr>
+                </tbody>
+            </table>
+        </li>
+        <li style="display: block;">
+            <h2>Создайте "мир" с физической моделью столкновений</h2>
+            <h4>
+                <img src="img/l29_q1.gif" alt="" width="400">
+                <a href="lesson_29_ans_1.html" target="_blank" rel="noopener noreferrer">Попробовать</a>
+            </h4>
+        </li>
+        <li style="display: block;">
+            <h2>Создайте аналог paint</h2>
+            <h4>
+                <img src="img/l29_q2.gif" alt="" width="400">
+                <a href="lesson_29_ans_2.html" target="_blank" rel="noopener noreferrer">Попробовать</a>
+            </h4>
+        </li>
+    </ol>  
+
+    <div class="additional">
+        <h2 class="important">Что почитать:</h2>
+        <a href="https://developer.mozilla.org/ru/docs/Web/API/Canvas_API/Tutorial" target="_blank" rel="noopener noreferrer">Руководство по canvas</a>
+        <a href="https://www.w3schools.com/html/html5_canvas.asp" target="_blank" rel="noopener noreferrer">Практика canvas #1</a>
+        <a href="https://www.w3schools.com/graphics/canvas_drawing.asp" target="_blank" rel="noopener noreferrer">Практика canvas #2</a>
+        <a href="https://developer.mozilla.org/en-US/docs/Games/Techniques/2D_collision_detection" target="_blank" rel="noopener noreferrer">Физическая модель столкновений в javascript</a>
+        <h2 class="important">Предыдущие js уроки</h2>
+            <a href="lesson_17_adv.html">Урок 17</a>
+            <a href="lesson_18_adv.html">Урок 18</a>
+            <a href="lesson_19_adv.html">Урок 19</a>
+            <a href="lesson_20_adv.html">Урок 20</a>
+            <a href="lesson_21_adv.html">Урок 21</a>
+            <a href="lesson_22_adv.html">Урок 22</a>
+            <a href="lesson_23_adv.html">Урок 23</a>
+            <a href="lesson_24_adv.html">Урок 24</a>
+            <a href="lesson_25_adv.html">Урок 25</a>
+            <a href="lesson_26_adv.html">Урок 26</a>
+            <a href="lesson_27_adv.html">Урок 27</a>
+            <a href="lesson_28_adv.html">Урок 28</a>
+    </div>
+    <footer>
+        <h5>
+            Если возникнут вопросы можно написать их нам -
+        </h5>
+        <ul>
+            <li>
+                <a href="https://t.me/kidkod" target="_blank">
+                    <img src="/img/telegram.png" class="social-icon" alt="телеграм">
+                </a>
+            </li>
+            <li>
+                <a href="https://vk.com/kidkodschool" target="_blank" class="vk-desktop">
+                    <img src="/img/vk.png" class="social-icon" alt="вконтакте">
+                </a>
+            </li>
+        </ul>
+    </footer>
+</body>
+
+</html>
