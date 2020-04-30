@@ -1,133 +1,56 @@
-<!DOCTYPE HTML>
-<html>
-    <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chess board</title>
     <style>
         body {
-            margin: 0px;
-            padding: 0px;
+            margin: 0;
+            padding: 0;
             height: 100vh;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
             background-color: #252423;
         }
-        canvas {
+
+        #canvas {
             background-color: #fdfff5;
             border-radius: 5px;
         }
-        #colors {
-            display: flex;
-        }
-
-        #colors > div {
-            width: 40px;
-            height: 40px;
-            opacity: .5;
-            border: 2px solid white;
-            border-radius: 5px;
-        }
-        #red {
-            background-color: red;
-        }
-        #green {
-            background-color:green
-        }
-        #blue {
-            background-color: blue;
-        }
-
-        #clear {
-            border: 0;
-            background-color: #007fff;
-            font-size: 1.25em;
-            color: white;
-            font-weight: bold;
-            border: 2px solid white;
-            border-radius: 5px;
-        }
-        
     </style>
 </head>
 <body>
-    <div id="colors">
-        <div id="red"></div>
-        <div id="green"></div>
-        <div id="blue"></div>
-        <button id="clear">clear</button>
-    </div>
-  	<div id="paint">
-  		<canvas id="canvas" width="600" height="600"></canvas>
-	</div>
+
+    <canvas id="canvas" width="400" height="400"></canvas>
+
     <script>
-        // INITITALIZATION.
+
         let canvas = document.querySelector('#canvas');
-        let ctx = canvas.getContext('2d');
-        let painting = document.querySelector('#paint');
-        let mouse = {x: 0, y: 0};
-        let colorsDiv = document.querySelectorAll('#colors > div');
-        let defaultColor = 'red';
-        
-        colorsDiv[0].style.opacity = 1;
+        let ctx = canvas.getContext("2d");
+        let x = canvas.clientWidth / 10;
+        let y = canvas.clientHeight / 10;
+        let c = 1;
 
-        for (let i = 0; i < colorsDiv.length; i++) {
-            const element = colorsDiv[i];
-            element.addEventListener('click', clickEvent)
-        }
-
-        function clickEvent(event) {
-            let selectedColor = event.target.id;
-            ctx.strokeStyle = selectedColor;
-            for (let i = 0; i < colorsDiv.length; i++) {
-                const el = colorsDiv[i];
-                if (selectedColor === el.id) {
-                    el.style.opacity = 1;
+        for (let i = 0; i < 10; i++) {
+            for (let j = 0; j < 10; j++) {
+                if (c % 2 === 0) {
+                    ctx.fillStyle = 'grey';
+                    c -= 1;
                 } else {
-                    el.style.opacity = 0.5;
+                    ctx.fillStyle = 'white';
+                    c += 1;
                 }
+                ctx.fillRect(x*j, y*i, x, y);
             }
-        }
-
-        canvas.addEventListener('mousemove', moveEvent); 
-        
-        function moveEvent(event) {
-            mouse.x = event.offsetX;
-            mouse.y = event.offsetY;
-        }
-
-        // SETUP FOR PAINTBRUSH
-        ctx.lineWidth = 5;
-        ctx.lineJoin = 'round';
-        ctx.lineCap = 'round';
-        ctx.strokeStyle = defaultColor;
-
-        canvas.addEventListener('mousedown', mouseDown);
-
-        function mouseDown(event) {
-            ctx.beginPath();
-            ctx.moveTo(mouse.x, mouse.y);
-            canvas.addEventListener('mousemove', onPaint);
-        }
-        
-        canvas.addEventListener('mouseup', mouseUp);
-        
-        function mouseUp(event) {
-            canvas.removeEventListener('mousemove', onPaint);
-        }
-        
-        function onPaint() {
-            ctx.lineTo(mouse.x, mouse.y);
-            ctx.stroke();
-        };
-
-        // EXTRA - CLEAR
-        let clearButton = document.querySelector('#clear');
-        clearButton.addEventListener('click', clearEvent);
-
-        function clearEvent() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            if (c % 2 === 0) {
+                c -= 1;
+            } else {
+                c += 1;
+            }
         }
 
     </script>
 </body>
-</html>            
+</html>
