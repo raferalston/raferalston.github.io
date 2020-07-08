@@ -10,7 +10,7 @@
     <link href="css/style.css" rel="stylesheet">
     <style>
     table {
-        max-width: 1200px;
+        /* max-width: 1200px; */
     }
     caption {
         background-color: #fff;
@@ -29,10 +29,103 @@
 </head>
 
 <body>
-    <h1>Чек-лист перед загрузкой в интернет</h1>
-    
+    <h1 class="bg-warning text-dark">Чек-лист перед загрузкой в интернет (без хостинга)</h1>
+    <table class="m-0 table table-sm table-bordered table-dark table-hover">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Проверка</th>
+                <th scope="col">Описание</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Микро-ошибки</td>
+                <td>
+                    <a href="https://chrome.google.com/webstore/detail/html-validator/mpbelhhnfhfjnaehkcnnaknldmnocglk" target="_blank" rel="noopener noreferrer">HTML-валидатор</a>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Изображения</td>
+                <td>
+                    Смотрим, все ли изображения корректно загружаются
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Ссылки</td>
+                <td>
+                    Проверяем, все ли ссылки работают
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Обратная связь</td>
+                <td>
+                    Обязательная секция для любого сайта
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">4</th>
+                <td>Мобильные устройства</td>
+                <td>
+                    Проверяем корректное отображение сайта на всех устройствах
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">5</th>
+                <td>Chrome - Lighthouse</td>
+                <td>
+                    Используем lighthouse для мобильных и стационарных устройств
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">6</th>
+                <td>Кросс-браузерный тест</td>
+                <td>
+                    Проверяем работоспособность сайта на всех современных браузерах -
+                    <a href="https://www.w3counter.com/globalstats.php" target="_blank" rel="noopener noreferrer">список браузеров</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>    
+    <h1 class="bg-warning text-dark">Чек-лист перед загрузкой в интернет (с хостингом)</h1>
+    <table class="m-0 table table-sm table-bordered table-dark table-hover">
+        <caption class="text-danger">Обращайтесь в службу поддержки хостинга для более подробного руководства</caption>
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Проверка</th>
+                <th scope="col">Описание</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Коректность URL</td>
+                <td>
+                    Проверяем перенаправления на нужные нам страницы
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>robots.txt</td>
+                <td>
+                    <a href="https://support.google.com/webmasters/answer/6062608?hl=ru" target="_blank" rel="noopener noreferrer">Что такое robots.txt</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>    
     <h1>Ресурсы для создания сайта</h1>
-    <h2><a href="https://sprinthost.ru/s33951" target="_blank" rel="noopener noreferrer">Хостинг</a></h2>
+    <h2><a href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/Publishing_your_website" target="_blank" rel="noopener noreferrer">Руководство - Публикация веб-страницы в сети</a></h2>
+    <h2><a href="https://sprinthost.ru/s33951" target="_blank" rel="noopener noreferrer">Хостинг используемый нами</a></h2>
+    <h2><a href="https://compressjpeg.com" target="_blank" rel="noopener noreferrer">Сжимаем jpeg</a></h2>
+    <h2><a href="https://compresspng.com/" target="_blank" rel="noopener noreferrer">Сжимаем png</a></h2>
+    <h2><a href="https://squoosh.app/editor" target="_blank" rel="noopener noreferrer">Сжимаем изображения</a></h2>
+    <h2><a href="https://resizeimage.net/" target="_blank" rel="noopener noreferrer">Изменяем размер (соотношение сторон) для изображений</a></h2>
+    <h2><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images" target="_blank" rel="noopener noreferrer">Используем картинки правильно (тег picture)</a></h2>
 
 
     <div class="additional">
