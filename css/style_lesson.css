@@ -526,7 +526,7 @@ ol li img {
 .additional .stuff a:hover {
   -webkit-box-shadow: 1px 10px 20px rgba(0, 0, 0, 0.15);
           box-shadow: 1px 10px 20px rgba(0, 0, 0, 0.15);
-  color: #fff;
+  color: #e41749;
 }
 
 .additional .task {
