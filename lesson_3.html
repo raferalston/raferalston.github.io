@@ -5,70 +5,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style_lesson.css" rel="stylesheet">
     <title>Основы CSS #1</title>
 </head>
 
 <body>
-    <h1>Создать страницу и применить все известные вам стили</h1>
+    <h1 class="title">Создать страницу и применить все известные вам стили</h1>
     <ol>
-        <li> 
-            <img src="img/css_1.png" alt="Пробуем стили">
+        <li>
+            <h2>HTML структура и контент</h2>
+            <img src="img/css_1.png" alt="Пробуем стили" width="600">
         </li>
         <li>
             <h2>Задание, нарисовать макет вашего сайта</h2>
-            <img src="img/wireframe.png" alt="Мега макет">
+            <img src="img/wireframe.png" alt="Мега макет" width="600">
         </li>
     </ol>
     <div class="additional">
         <h2 class="important">Полезные ссылки:</h2>
-        <a href="https://www.w3schools.com/cssref/pr_font_font-size.asp" target="_blank">Значения для размера шрифта</a>
-        <a href="https://www.w3schools.com/cssref/css_colors.asp" target="_blank">Список цветов</a>
-        <a href="https://www.w3schools.com/Css/css_colors.asp" target="_blank">css - color</a>
-        <a href="https://www.w3schools.com/css/css_margin.asp" target="_blank">Внешний отступ</a>
-        <a href="https://www.w3schools.com/css/css_padding.asp" target="_blank">Внутренний отступ</a>
-        <a href="https://nikomedvedev.ru/other/vscodeshortcuts/hotkeys.html" target="_blank">Горячие клавиши для Visual Studio Code</a>
+        <div class="stuff">
+            <a href="https://www.w3schools.com/cssref/pr_font_font-size.asp" target="_blank">Значения для размера шрифта</a>
+            <a href="https://www.w3schools.com/cssref/css_colors.asp" target="_blank">Список цветов</a>
+            <a href="https://www.w3schools.com/Css/css_colors.asp" target="_blank">css - color</a>
+            <a href="https://www.w3schools.com/css/css_margin.asp" target="_blank">Внешний отступ</a>
+            <a href="https://www.w3schools.com/css/css_padding.asp" target="_blank">Внутренний отступ</a>
+            <a href="https://nikomedvedev.ru/other/vscodeshortcuts/hotkeys.html" target="_blank">Горячие клавиши для Visual Studio Code</a>
+        </div>
         <h2 class="important">Что почитать:</h2>
-        <a href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like">Каким должен быть ваш веб-сайт</a>
+        <div class="stuff">
+            <a href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like">Каким должен быть ваш веб-сайт</a>
+        </div>
         <h2 class="important">Где потренироваться:</h2>
-        <h2 class="important" style="color: black;">CSS</h2>
-        <a href="https://www.w3schools.com/html/exercise.asp?filename=exercise_html_css1">Задание #1</a>
-        <a href="https://www.w3schools.com/html/exercise.asp?filename=exercise_html_css2">Задание #2</a>
-        <a href="https://www.w3schools.com/html/exercise.asp?filename=exercise_html_css3">Задание #3</a>
-        <a href="https://www.w3schools.com/html/exercise.asp?filename=exercise_html_css4">Задание #4</a>
-        <h2 class="important" style="color: black;">Margin (Внешний отступ)</h2>
-        <a href="https://www.w3schools.com/css/exercise.asp?filename=exercise_margin1">Задание #1</a>
-        <a href="https://www.w3schools.com/css/exercise.asp?filename=exercise_margin2">Задание #2</a>
-        <a href="https://www.w3schools.com/css/exercise.asp?filename=exercise_margin3">Задание #3</a>
-        <a href="https://www.w3schools.com/css/exercise.asp?filename=exercise_margin4">Задание #4</a>
-        <h2 class="important" style="color: black;">Padding (Внутренний отступ)</h2>
-        <a href="https://www.w3schools.com/css/exercise.asp?filename=exercise_padding1">Задание #1</a>
-        <a href="https://www.w3schools.com/css/exercise.asp?filename=exercise_padding2">Задание #2</a>
-        <a href="https://www.w3schools.com/css/exercise.asp?filename=exercise_padding3">Задание #3</a>
-        <h2 class="important" style="color: black;">Border (Граница)</h2>
-
-        <a href="https://www.w3schools.com/css/exercise.asp?filename=exercise_border1">Задание #1</a>
-        <a href="https://www.w3schools.com/css/exercise.asp?filename=exercise_border2">Задание #2</a>
-        <a href="https://www.w3schools.com/css/exercise.asp?filename=exercise_border3">Задание #3</a>
-        <a href="https://www.w3schools.com/css/exercise.asp?filename=exercise_border4">Задание #4</a>
+        <h2 class="task">CSS</h2>
+        <div class="stuff">
+            <a href="https://www.w3schools.com/html/exercise.asp?filename=exercise_html_css1">Задание #1</a>
+            <a href="https://www.w3schools.com/html/exercise.asp?filename=exercise_html_css2">Задание #2</a>
+            <a href="https://www.w3schools.com/html/exercise.asp?filename=exercise_html_css3">Задание #3</a>
+            <a href="https://www.w3schools.com/html/exercise.asp?filename=exercise_html_css4">Задание #4</a>
+        </div>
+        <h2 class="task">Margin (Внешний отступ)</h2>
+        <div class="stuff">
+            <a href="https://www.w3schools.com/css/exercise.asp?filename=exercise_margin1">Задание #1</a>
+            <a href="https://www.w3schools.com/css/exercise.asp?filename=exercise_margin2">Задание #2</a>
+            <a href="https://www.w3schools.com/css/exercise.asp?filename=exercise_margin3">Задание #3</a>
+            <a href="https://www.w3schools.com/css/exercise.asp?filename=exercise_margin4">Задание #4</a>
+        </div>
+        <h2 class="task">Padding (Внутренний отступ)</h2>
+        <div class="stuff">
+            <a href="https://www.w3schools.com/css/exercise.asp?filename=exercise_padding1">Задание #1</a>
+            <a href="https://www.w3schools.com/css/exercise.asp?filename=exercise_padding2">Задание #2</a>
+            <a href="https://www.w3schools.com/css/exercise.asp?filename=exercise_padding3">Задание #3</a>
+        </div>
+        <h2 class="task">Border (Граница)</h2>
+        <div class="stuff">
+            <a href="https://www.w3schools.com/css/exercise.asp?filename=exercise_border1">Задание #1</a>
+            <a href="https://www.w3schools.com/css/exercise.asp?filename=exercise_border2">Задание #2</a>
+            <a href="https://www.w3schools.com/css/exercise.asp?filename=exercise_border3">Задание #3</a>
+            <a href="https://www.w3schools.com/css/exercise.asp?filename=exercise_border4">Задание #4</a>
+        </div>
     </div>
-    <footer>
-        <h5>
-            Если возникнут вопросы можно написать их нам -
-        </h5>
-        <ul>
-            <li>
-                <a href="https://t.me/kidkod" target="_blank">
-                    <img src="/img/telegram.png" class="social-icon" alt="телеграм">
-                </a>
-            </li>
-            <li>
-                <a href="https://vk.com/kidkodschool" target="_blank" class="vk-desktop">
-                    <img src="/img/vk.png" class="social-icon" alt="вконтакте">
-                </a>
-            </li>
-        </ul>
-    </footer>
+    <div class="footer">
+        <h5>Связь с преподавателем:</h5>
+        <div class="links">
+            <a href="https://t.me/kidkod" target="_blank">
+                <img src="/img/telegram.png" class="social-icon" alt="телеграм">
+            </a>
+            <a href="https://vk.com/kidkodschool" target="_blank" class="vk-desktop">
+                <img src="/img/vk.png" class="social-icon" alt="вконтакте">
+            </a>
+        </div>
+    </div>
 </body>
 
 </html>

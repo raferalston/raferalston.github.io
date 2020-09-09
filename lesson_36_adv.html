@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Создаем сайт - портфолио</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style_lesson.css" rel="stylesheet">
     <style>
     table {
         /* max-width: 1200px; */
@@ -16,20 +16,12 @@
         background-color: #fff;
         padding: .5em;
     }
-    h2 > a{
-        color: white;
-    }
-    .container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-    }
+
     </style>
 </head>
 
 <body>
-    <h1 class="bg-warning text-dark">Чек-лист перед загрузкой в интернет (без хостинга)</h1>
+    <h1 class="title">Чек-лист перед загрузкой в интернет (без хостинга)</h1>
     <table class="m-0 table table-sm table-bordered table-dark table-hover">
         <thead>
             <tr>
@@ -91,7 +83,7 @@
             </tr>
         </tbody>
     </table>    
-    <h1 class="bg-warning text-dark">Чек-лист перед загрузкой в интернет (с хостингом)</h1>
+    <h1 class="title">Чек-лист перед загрузкой в интернет (с хостингом)</h1>
     <table class="m-0 table table-sm table-bordered table-dark table-hover">
         <caption class="text-danger">Обращайтесь в службу поддержки хостинга для более подробного руководства</caption>
         <thead>
@@ -118,54 +110,83 @@
             </tr>
         </tbody>
     </table>    
-    <h1>Полезные плагины для VS Code</h1>
-    <h2 class="bg-info m-0">
-        css/js minifier
-        <div>
-            <img src="img/l36_1.png" alt="minifier">
-        </div></h2>
-    <h2 class="bg-info m-0">
-        Sass compiler
-        <div>
+    <h1 class="title">Полезные плагины для VS Code</h1>
+    <ol>
+        <li>
+            <h2>
+                css/js minifier</h2>
+
+                <img src="img/l36_1.png" alt="minifier">
+        </li>
+        <li>
+
+            <h2>
+                Sass compiler
+            </h2>
             <img src="img/l36_2.png" alt="compiler">
-        </div></h2>
-    <h2 class="bg-info m-0">
-        Live server
-        <div>
+
+        </li>
+        <li>
+            <h2>
+                Live server
+            </h2>
             <img src="img/l36_3.png" alt="server">
-        </div></h2>
-    <h1>Ресурсы для создания сайта</h1>
-    <h2><a href="https://compressjpeg.com" target="_blank" rel="noopener noreferrer">Сжимаем jpeg</a></h2>
-    <h2><a href="https://compresspng.com/" target="_blank" rel="noopener noreferrer">Сжимаем png</a></h2>
-    <h2><a href="https://squoosh.app/editor" target="_blank" rel="noopener noreferrer">Сжимаем изображения</a></h2>
-    <h2><a href="https://resizeimage.net/" target="_blank" rel="noopener noreferrer">Изменяем размер (соотношение сторон) для изображений</a></h2>
-    <h2><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images" target="_blank" rel="noopener noreferrer">Используем картинки правильно (тег picture)</a></h2>
-    <h2><a href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/Publishing_your_website" target="_blank" rel="noopener noreferrer">Руководство - Публикация веб-страницы в сети</a></h2>
-    <h2><a href="https://sprinthost.ru/s33951" target="_blank" rel="noopener noreferrer">Хостинг используемый нами</a></h2>
+
+        </li>
+    </ol>
+
+    <h1 class="title">Ресурсы для создания сайта</h1>
+    <ol>
+        <li>
+            <h2><a href="https://compressjpeg.com" target="_blank" rel="noopener noreferrer">Сжимаем jpeg</a></h2>
+
+        </li>
+        <li>
+            <h2><a href="https://compresspng.com/" target="_blank" rel="noopener noreferrer">Сжимаем png</a></h2>
+
+        </li>
+        <li>
+            <h2><a href="https://squoosh.app/editor" target="_blank" rel="noopener noreferrer">Сжимаем изображения</a></h2>
+
+        </li>
+        <li>
+            <h2><a href="https://resizeimage.net/" target="_blank" rel="noopener noreferrer">Изменяем размер (соотношение сторон) для изображений</a></h2>
+
+        </li>
+        <li>
+            <h2><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images" target="_blank" rel="noopener noreferrer">Используем картинки правильно (тег picture)</a></h2>
+
+        </li>
+        <li>
+            <h2><a href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/Publishing_your_website" target="_blank" rel="noopener noreferrer">Руководство - Публикация веб-страницы в сети</a></h2>
+
+        </li>
+        <li>
+            <h2><a href="https://sprinthost.ru/s33951" target="_blank" rel="noopener noreferrer">Хостинг используемый нами</a></h2>
+
+        </li>
+    </ol>
 
 
     <div class="additional">
         <h2 class="important">Что почитать:</h2>
-        <a href="assets/responsive.pdf" target="_blank" rel="noopener noreferrer">Книга - Отзывчивый веб-дизайн</a>
-        <a href="assets/krug.pdf" target="_blank" rel="noopener noreferrer">Книга - Не заставляйте меня думать</a>
+        <div class="stuff">
+
+            <a href="assets/responsive.pdf" target="_blank" rel="noopener noreferrer">Книга - Отзывчивый веб-дизайн</a>
+            <a href="assets/krug.pdf" target="_blank" rel="noopener noreferrer">Книга - Не заставляйте меня думать</a>
+        </div>
     </div>
-    <footer>
-        <h5>
-            Если возникнут вопросы можно написать их нам -
-        </h5>
-        <ul>
-            <li>
-                <a href="https://t.me/kidkod" target="_blank">
-                    <img src="/img/telegram.png" class="social-icon" alt="телеграм">
-                </a>
-            </li>
-            <li>
-                <a href="https://vk.com/kidkodschool" target="_blank" class="vk-desktop">
-                    <img src="/img/vk.png" class="social-icon" alt="вконтакте">
-                </a>
-            </li>
-        </ul>
-    </footer>
+    <div class="footer">
+        <h5>Связь с преподавателем:</h5>
+        <div class="links">
+            <a href="https://t.me/kidkod" target="_blank">
+                <img src="/img/telegram.png" class="social-icon" alt="телеграм">
+            </a>
+            <a href="https://vk.com/kidkodschool" target="_blank" class="vk-desktop">
+                <img src="/img/vk.png" class="social-icon" alt="вконтакте">
+            </a>
+        </div>
+    </div>
 </body>
 
 </html>

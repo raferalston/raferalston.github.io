@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Управление элементами на HTML странице, DOM часть 2</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style_lesson.css" rel="stylesheet">
     <style>
     table {
         max-width: 1200px;
@@ -20,11 +20,11 @@
 </head>
 
 <body>
-    <h1>Управление элементами на HTML странице, DOM часть 2</h1>
+    <h1 class="title">Управление элементами на HTML странице, DOM часть 2</h1>
     <ol>
-        <li style="display: block;">
+        <li>
             <h2>Cвойства и методы DOM дерева</h2>
-            <table class="ml-3 table table-sm table-bordered table-dark table-hover">
+            <table class=" table table-sm table-bordered table-dark table-hover">
                 <caption class="text-danger">Все написанное капсом (заглавными буквами), является заранее выбранным объектом в DOM дереве</caption>
                 <thead>
                     <tr>
@@ -92,38 +92,40 @@
                 </tbody>
             </table>
         </li>
-        <li style="display: block;">
+        <li>
             <h2>Создайте страничку, которая меняет цвет в зависимости от положения курсора мышки на экране</h2>
             <img src="img/l25_q1.gif" alt="" width="500">
-            <h4>
+            <h2>
                 <a href="lesson_25_ans_1.html" target="_blank" rel="noopener noreferrer">Попробовать</a>
-            </h4>
+            </h2>
         </li>
-        <li style="display: block;">
+        <li>
             <h2>Создайте страничку, которая отслеживает нажатие по элементам, а также меняет им текст и цвет</h2>
             <img src="img/l25_q3.gif" alt="" width="500">
-            <h4>
+            <h2>
                 <a href="lesson_25_ans_3.html" target="_blank" rel="noopener noreferrer">Попробовать</a>
-            </h4>
+            </h2>
         </li>
-        <li style="display: block;">
+        <li>
             <h2>Создайте страничку, которая отслеживает положение курсора мыши, а также нажатие на элемент</h2>
             <img src="img/l25_q4.gif" alt="" width="500">
-            <h4>
+            <h2>
                 <a href="lesson_25_ans_4.html" target="_blank" rel="noopener noreferrer">Попробовать</a>
-            </h4>
+            </h2>
         </li>
-        <li style="display: block;">
+        <li>
             <h2>Создайте страничку c игрой виселица</h2>
             <img src="img/l25_q2.png" alt="" width="500">
-            <h4>
+            <h2>
                 <a href="lesson_25_ans_2.html" target="_blank" rel="noopener noreferrer">Попробовать</a>
-            </h4>
+            </h2>
         </li>
     </ol>
 
     <div class="additional">
         <h2 class="important">Что почитать:</h2>
+        <div class="stuff">
+
             <a href="https://learn.javascript.ru/modifying-document#sozdanie-elementa" target="_blank" rel="noopener noreferrer">Создание элемента</a>
             <a href="https://learn.javascript.ru/modifying-document#metody-vstavki" target="_blank" rel="noopener noreferrer">Добавление элемента</a>
             <a href="https://learn.javascript.ru/modifying-document#udalenie-uzlov" target="_blank" rel="noopener noreferrer">Удаление элемента</a>
@@ -131,33 +133,31 @@
             <a href="https://learn.javascript.ru/mouse-clicks" target="_blank" rel="noopener noreferrer">События мышки</a>
             <a href="https://learn.javascript.ru/keyboard-events" target="_blank" rel="noopener noreferrer">События клавиатуры</a>
             <a href="https://developer.mozilla.org/ru/docs/Web/API/EventTarget/addEventListener" target="_blank" rel="noopener noreferrer">Отслеживание событий</a>
+        </div>
         <h2 class="important">Предыдущие js уроки</h2>
-        <a href="lesson_17_adv.html">Урок 17</a>
-        <a href="lesson_18_adv.html">Урок 18</a>
-        <a href="lesson_19_adv.html">Урок 19</a>
-        <a href="lesson_20_adv.html">Урок 20</a>
-        <a href="lesson_21_adv.html">Урок 21</a>
-        <a href="lesson_22_adv.html">Урок 22</a>
-        <a href="lesson_23_adv.html">Урок 23</a>
-        <a href="lesson_24_adv.html">Урок 24</a>
+        <div class="stuff">
+
+            <a href="lesson_17_adv.html">Урок 17</a>
+            <a href="lesson_18_adv.html">Урок 18</a>
+            <a href="lesson_19_adv.html">Урок 19</a>
+            <a href="lesson_20_adv.html">Урок 20</a>
+            <a href="lesson_21_adv.html">Урок 21</a>
+            <a href="lesson_22_adv.html">Урок 22</a>
+            <a href="lesson_23_adv.html">Урок 23</a>
+            <a href="lesson_24_adv.html">Урок 24</a>
+        </div>
     </div>
-    <footer>
-        <h5>
-            Если возникнут вопросы можно написать их нам -
-        </h5>
-        <ul>
-            <li>
-                <a href="https://t.me/kidkod" target="_blank">
-                    <img src="/img/telegram.png" class="social-icon" alt="телеграм">
-                </a>
-            </li>
-            <li>
-                <a href="https://vk.com/kidkodschool" target="_blank" class="vk-desktop">
-                    <img src="/img/vk.png" class="social-icon" alt="вконтакте">
-                </a>
-            </li>
-        </ul>
-    </footer>
+    <div class="footer">
+        <h5>Связь с преподавателем:</h5>
+        <div class="links">
+            <a href="https://t.me/kidkod" target="_blank">
+                <img src="/img/telegram.png" class="social-icon" alt="телеграм">
+            </a>
+            <a href="https://vk.com/kidkodschool" target="_blank" class="vk-desktop">
+                <img src="/img/vk.png" class="social-icon" alt="вконтакте">
+            </a>
+        </div>
+    </div>
 </body>
 
 </html>

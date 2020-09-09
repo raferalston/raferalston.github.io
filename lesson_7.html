@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style_lesson.css" rel="stylesheet">
     <title>Flexbox и :hover</title>
     <style>
 
@@ -13,52 +13,49 @@
 </head>
 
 <body>
+    <h1 class="title">:hover эффект и flex элемент</h1>
     <ol>
-        <h1>:hover эффект и flex элемент</h1>
-        <h1 style="background-color: crimson; font-size: 2em; color: white;">Изучить прошедшие уроки, на следующем занятии будет итоговый тест для курса - Начинающий веб-дизайнер!</h1>
         <li>
-            <h4><a href="navbar_7.html">Домашнее задание 1</a></h4>
+            <h2><a href="navbar_7.html">Домашнее задание #1</a></h2>
         </li>
         <li>
-            <a href="https://flexboxfroggy.com/#ru">flexbox тренажер</a>
+            <h2>
+                <a href="https://flexboxfroggy.com/#ru">flexbox тренажер</a>
+            </h2>
         </li>
-
-
-        
     </ol>
+    <h1 class="title">Изучить прошедшие уроки, на следующем занятии будет тест</h1>
+
     <div class="additional">
         <h2 class="important">Полезные ссылки:</h2>
-        <a href="https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions" target="_blank">CSS - переходы</a>
-        <a href="https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Box_Model/Box-shadow_generator">Генератор css теней</a>
-        <a href="http://angrytools.com/css-generator/border/">Еще один генератор css теней</a>
-        <a href="https://tuhub.ru/posts/flexbox-complete-guide" target="_blank">flexbox - руководство (на русском)</a>
-        <a href="http://htmlbook.ru/css/hover">:hover эффект</a>
+        <div class="stuff">
+            <a href="https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions" target="_blank">CSS - переходы</a>
+            <a href="https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Box_Model/Box-shadow_generator">Генератор css теней</a>
+            <a href="http://angrytools.com/css-generator/border/">Еще один генератор css теней</a>
+            <a href="https://tuhub.ru/posts/flexbox-complete-guide" target="_blank">flexbox - руководство (на русском)</a>
+            <a href="http://htmlbook.ru/css/hover">:hover эффект</a>
+        </div>
         <h2 class="important">Что почитать:</h2>
-        <a href="lesson_1.html">Урок 1</a>
-        <a href="lesson_2.html">Урок 2</a>
-        <a href="lesson_3.html">Урок 3</a>
-        <a href="lesson_4.html">Урок 4</a>
-        <a href="lesson_5.html">Урок 5</a>
-        <a href="lesson_6.html">Урок 6</a>
+            <div class="stuff">
+                <a href="lesson_1.html">Урок 1</a>
+                <a href="lesson_2.html">Урок 2</a>
+                <a href="lesson_3.html">Урок 3</a>
+                <a href="lesson_4.html">Урок 4</a>
+                <a href="lesson_5.html">Урок 5</a>
+                <a href="lesson_6.html">Урок 6</a>
+            </div>
     </div>
-    <footer>
-        <h5>
-            Если возникнут вопросы можно написать их нам -
-        </h5>
-        <ul>
-
-            <li>
-                <a href="https://t.me/kidkod" target="_blank">
-                    <img src="/img/telegram.png" class="social-icon" alt="телеграм">
-                </a>
-            </li>
-            <li>
-                <a href="https://vk.com/kidkodschool" target="_blank" class="vk-desktop">
-                    <img src="/img/vk.png" class="social-icon" alt="вконтакте">
-                </a>
-            </li>
-        </ul>
-    </footer>
+    <div class="footer">
+        <h5>Связь с преподавателем:</h5>
+        <div class="links">
+            <a href="https://t.me/kidkod" target="_blank">
+                <img src="/img/telegram.png" class="social-icon" alt="телеграм">
+            </a>
+            <a href="https://vk.com/kidkodschool" target="_blank" class="vk-desktop">
+                <img src="/img/vk.png" class="social-icon" alt="вконтакте">
+            </a>
+        </div>
+    </div>
 </body>
 
 </html>

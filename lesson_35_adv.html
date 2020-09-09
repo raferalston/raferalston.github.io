@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Создаем сайт - портфолио</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style_lesson.css" rel="stylesheet">
     <style>
     table {
         max-width: 1200px;
@@ -16,57 +16,69 @@
         background-color: #fff;
         padding: .5em;
     }
-    h2 > a{
-        color: white;
-    }
-    .container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-    }
+
     </style>
 </head>
 
 <body>
-    <h1 style="background-color: tomato;">Сверстать сайт для разрешений - 1920/768/360 пикселей</h1>
-    <div class="container">
-        <img src="img/35_tablet.png" alt="adobexd" width="500" height="750">
-        <img src="img/35_phone.png" alt="adobexd" width="500" height="750">
+    <h1 class="title">Сверстать сайт для разрешений - 1920/768/360 пикселей</h1>
+    <ol>
+        <li>
+            <img src="img/35_tablet.png" alt="adobexd" width="500" height="750">
+
+        </li>
+        <li>
+            <img src="img/35_phone.png" alt="adobexd" width="500" height="750">
+
+        </li>
+    </ol>
     </div>
 
-    <h1>Ресурсы для создания сайта</h1>
-        <h2><a href="https://careerfoundry.com/en/blog/ui-design/ui-element-glossary/" target="_blank" rel="noopener noreferrer">32 элемента в современном веб-дизайне</a></h2>
-        <h2><a href="https://bennettfeely.com/clippy/" target="_blank" rel="noopener noreferrer">Генератор clip-path</a></h2>
-        <h2><a href="https://github.com/wrongakram/sass-mediaqueries/blob/master/src/breakpoints/breakpoints.scss" target="_blank" rel="noopener noreferrer">Адаптивные точки для scss</a></h2>
-        <h2><a href="https://sass-guidelin.es/#architecture" target="_blank" rel="noopener noreferrer">Архитектура sass проектов</a></h2>
-        <h2><a href="https://github.com/HugoGiraudel/sass-boilerplate/tree/master/stylesheets" target="_blank" rel="noopener noreferrer">Пример организации архитектуры sass</a></h2>
+    <h1 class="title">Ресурсы для создания сайта</h1>
+    <ol>
+        <li>
+            <h2><a href="https://careerfoundry.com/en/blog/ui-design/ui-element-glossary/" target="_blank" rel="noopener noreferrer">32 элемента в современном веб-дизайне</a></h2>
+
+        </li>
+        <li>
+            <h2><a href="https://bennettfeely.com/clippy/" target="_blank" rel="noopener noreferrer">Генератор clip-path</a></h2>
+
+        </li>
+        <li>
+            <h2><a href="https://github.com/wrongakram/sass-mediaqueries/blob/master/src/breakpoints/breakpoints.scss" target="_blank" rel="noopener noreferrer">Адаптивные точки для scss</a></h2>
+
+        </li>
+        <li>
+            <h2><a href="https://sass-guidelin.es/#architecture" target="_blank" rel="noopener noreferrer">Архитектура sass проектов</a></h2>
+
+        </li>
+        <li>
+            <h2><a href="https://github.com/HugoGiraudel/sass-boilerplate/tree/master/stylesheets" target="_blank" rel="noopener noreferrer">Пример организации архитектуры sass</a></h2>
+
+        </li>
     </ol>
 
 
     <div class="additional">
         <h2 class="important">Что почитать:</h2>
-        <a href="https://jazzteam.org/ru/technical-articles/overview-of-approaches-and-css-frameworks-for-adaptive-web-page-layout/" target="_blank" rel="noopener noreferrer">Адаптивная верстка</a>
-        <a href="assets/responsive.pdf" target="_blank" rel="noopener noreferrer">Книга - Отзывчивый веб-дизайн</a>
-        <a href="assets/krug.pdf" target="_blank" rel="noopener noreferrer">Книга - Не заставляйте меня думать</a>
+        <div class="stuff">
+
+            <a href="https://jazzteam.org/ru/technical-articles/overview-of-approaches-and-css-frameworks-for-adaptive-web-page-layout/" target="_blank" rel="noopener noreferrer">Адаптивная верстка</a>
+            <a href="assets/responsive.pdf" target="_blank" rel="noopener noreferrer">Книга - Отзывчивый веб-дизайн</a>
+            <a href="assets/krug.pdf" target="_blank" rel="noopener noreferrer">Книга - Не заставляйте меня думать</a>
+        </div>
     </div>
-    <footer>
-        <h5>
-            Если возникнут вопросы можно написать их нам -
-        </h5>
-        <ul>
-            <li>
-                <a href="https://t.me/kidkod" target="_blank">
-                    <img src="/img/telegram.png" class="social-icon" alt="телеграм">
-                </a>
-            </li>
-            <li>
-                <a href="https://vk.com/kidkodschool" target="_blank" class="vk-desktop">
-                    <img src="/img/vk.png" class="social-icon" alt="вконтакте">
-                </a>
-            </li>
-        </ul>
-    </footer>
+    <div class="footer">
+        <h5>Связь с преподавателем:</h5>
+        <div class="links">
+            <a href="https://t.me/kidkod" target="_blank">
+                <img src="/img/telegram.png" class="social-icon" alt="телеграм">
+            </a>
+            <a href="https://vk.com/kidkodschool" target="_blank" class="vk-desktop">
+                <img src="/img/vk.png" class="social-icon" alt="вконтакте">
+            </a>
+        </div>
+    </div>
 </body>
 
 </html>

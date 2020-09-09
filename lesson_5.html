@@ -5,30 +5,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style_lesson.css" rel="stylesheet">
     <title>Добавляем домашнюю работу на свой сайт</title>
 </head>
 
 <body>
-    <h1>Инструкция как выложить сайт в интернет</h1>
-    <h2 style="background-color: tomato; padding: 1em; text-align: center;"><a href="how_deploy.html" style="color: white;">Инструкция</a></h2> 
-    <h1>Что нужно сделать на сайте</h1>
+    <h1 class="title">Инструкция как выложить сайт в интернет</h1>
+    <ol>
+        <li>
+            <h2><a href="how_deploy.html">Ссылка на инструкцию</a></h2> 
+        </li>
+    </ol>
+    <h1 class="title">Что нужно сделать на сайте</h1>
     <ol>
         <li> 
-            <a href="lesson_2_test.html">Задание 1 - Создать точную копию этой страницы</a>
+            <h2>
+                <a href="lesson_2_test.html">Задание 1 - Создать точную копию этой страницы</a>
+            </h2>
         </li>
-        <li style="display: block;">
-            <h2 style="margin-right: 1em;">Задание 2 - Применяем css к страничке</h2>
-            <img src="img/css_1.png" alt="Применяем css">
+        <li>
+            <h2>Задание 2 - Применяем css к страничке</h2>
+            <img src="img/css_1.png" alt="Применяем css" width="800">
         </li>
-        <li style="display: block;">
-            <h2 style="margin-right: 1em;">Задание 3 - Строим html структуру вашей странички</h2>
-            <img src="img/html_struct_code.png" alt="Применяем css">
+        <li>
+            <h2>Задание 3 - Строим html структуру вашей странички</h2>
+            <img src="img/html_struct_code.png" alt="Применяем css" width="800">
         </li>
-        <li style="display: block;">
-            <h2 style="margin-right: 1em;">Задание 4 - Расположите элементы в указанном порядке</h2>           
-            <img src="img/pos_work.png" alt="Позиционирование">
-            <h5><a href="lesson_5_test.html" style="color: darkred; background-color: #fff; margin-left: 1em;">Разгадай шифр и получи подсказку</a></h5>
+        <li>
+            <h2>Задание 4 - Расположите элементы в указанном порядке</h2>           
+            <img src="img/pos_work.png" alt="Позиционирование" width="400">
+            <h2><a href="lesson_5_test.html">Разгадай шифр и получи подсказку</a></h2>
         </li>
         <li>
             <h2>Как создать ссылки на задания</h2>
@@ -37,35 +43,34 @@
     </ol>
     <div class="additional">
         <h2 class="important">Полезные ссылки:</h2>
-        <a href="https://developer.mozilla.org/ru/docs/Web/CSS/position" target="_blank">Позиционирование элементов на страничке</a>
-        <a href="https://html5book.ru/html-tags/">Список HTML тегов</a>
-        <a href="https://htmlacademy.ru/courses/297/run/1">Класс для элемента</a>
+        <div class="stuff">
+            <a href="https://developer.mozilla.org/ru/docs/Web/CSS/position" target="_blank">Позиционирование элементов на страничке</a>
+            <a href="https://html5book.ru/html-tags/">Список HTML тегов</a>
+            <a href="https://htmlacademy.ru/courses/297/run/1">Класс для элемента</a>
+        </div>
         <h2 class="important">Что почитать:</h2>
-        <a href="https://html5book.ru/sozdanie-html-form/">Как создать форму</a>
+        <div class="stuff">
+            <a href="https://html5book.ru/sozdanie-html-form/">Как создать форму</a>
+        </div>
         <h2 class="important">Где потренироваться:</h2>
-        <h2 class="important" style="color: black;">Позиционирование элементов на странице</h2>
-
-        <a href="https://www.w3schools.com/css/exercise.asp?filename=exercise_positioning1">Задание #1</a>
-        <a href="https://www.w3schools.com/css/exercise.asp?filename=exercise_positioning2">Задание #2</a>
-        <a href="https://www.w3schools.com/css/exercise.asp?filename=exercise_positioning3">Задание #3</a>
+        <h2 class="task">Позиционирование элементов на странице</h2>
+        <div class="stuff">
+            <a href="https://www.w3schools.com/css/exercise.asp?filename=exercise_positioning1">Задание #1</a>
+            <a href="https://www.w3schools.com/css/exercise.asp?filename=exercise_positioning2">Задание #2</a>
+            <a href="https://www.w3schools.com/css/exercise.asp?filename=exercise_positioning3">Задание #3</a>
+        </div>
     </div>
-    <footer>
-        <h5>
-            Если возникнут вопросы можно написать их нам - (и последняя цифра в шифре 7)
-        </h5>
-        <ul>
-            <li>
-                <a href="https://t.me/kidkod" target="_blank">
-                    <img src="/img/telegram.png" class="social-icon" alt="телеграм">
-                </a>
-            </li>
-            <li>
-                <a href="https://vk.com/kidkodschool" target="_blank" class="vk-desktop">
-                    <img src="/img/vk.png" class="social-icon" alt="вконтакте">
-                </a>
-            </li>
-        </ul>
-    </footer>
+    <div class="footer">
+        <h5>Связь с преподавателем:</h5>
+        <div class="links">
+            <a href="https://t.me/kidkod" target="_blank">
+                <img src="/img/telegram.png" class="social-icon" alt="телеграм">
+            </a>
+            <a href="https://vk.com/kidkodschool" target="_blank" class="vk-desktop">
+                <img src="/img/vk.png" class="social-icon" alt="вконтакте">
+            </a>
+        </div>
+    </div>
 </body>
 
 </html>

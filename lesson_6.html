@@ -6,21 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Flexbox</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style_lesson.css" rel="stylesheet">
     <style>
     table {
-        max-width: 1200px;
+        max-width: 600px;
     }
     </style>
 </head>
 
 <body>
-    <h1>Flexbox</h1>
+    <h1 class="title">Flexbox</h1>
     <ol>
-        <li style="display: block;">
-            <h2><a href="flex_example.html">Домашнее задание 1</a></h2>
-            <h4>Используемые css свойства:</h4>
-            <table class="ml-3 mr-3 table table-sm table-bordered table-dark table-hover">
+        <li>
+            <h2><a href="flex_example.html" style="margin-bottom: 10px">Домашнее задание #1</a></h2>
+            <h4 style="margin-bottom: 10px">Используемые css свойства:</h4>
+            <table class="ml-0 mr-3 table table-sm table-bordered table-dark table-hover">
                 <thead>
                     <tr>
                         <th scope="col">#</th>
@@ -52,51 +52,49 @@
                 </tbody>
             </table>
         </li>
-        <li style="display: block;">
+        <li>
             <div>
-                <h2><a href="homework_2.html">Домашнее задание 2</a></h2>
+                <h2><a href="homework_2.html">Ссылка на домашнее задание #2</a></h2>
             </div>
         </li>
-        <li style="display: block;">
+        <li>
             <h2>Полезные сокращения для Visual Studio Code</h2>
-            <div style="margin: 0 5px 0 0;">
-                <img src="img/vsc_short_1.png" alt="1">
+            <div>
+                <img src="img/vsc_short_1.png" alt="1" width="400">
             </div>
             <div>
-                <img src="img/vsc_short_2.png" alt="2">
+                <img src="img/vsc_short_2.png" alt="2" width="400">
             </div>
             <div>
-                <img src="img/vsc_short_3.png" alt="4">
+                <img src="img/vsc_short_3.png" alt="4" width="400">
             </div>
         </li>
     </ol>    
     <div class="additional">
         <h2 class="important">Полезные ссылки:</h2>
-        <a href="https://www.w3schools.com/css/css3_flexbox.asp" target="_blank" rel="noopener noreferrer">Все о flex</a>
-        <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">flexbox - руководство (на английском)</a>
-        <a href="https://tuhub.ru/posts/flexbox-complete-guide" target="_blank">flexbox - руководство (на русском)</a>
-        <a href="https://www.w3schools.com/csSref/playit.asp?filename=playcss_align-content&preval=center">Выравнивание предметов в flex-контейнере</a>
-        <a href="https://www.w3schools.com/cssref/pr_text_text-align.asp">Выравнивание текста</a>    
+        <div class="stuff">
+            <a href="https://www.w3schools.com/css/css3_flexbox.asp" target="_blank" rel="noopener noreferrer">Все о flex</a>
+            <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">flexbox - руководство (на английском)</a>
+            <a href="https://tuhub.ru/posts/flexbox-complete-guide" target="_blank">flexbox - руководство (на русском)</a>
+            <a href="https://www.w3schools.com/csSref/playit.asp?filename=playcss_align-content&preval=center">Выравнивание предметов в flex-контейнере</a>
+            <a href="https://www.w3schools.com/cssref/pr_text_text-align.asp">Выравнивание текста</a>    
+        </div>
         <h2 class="important">Что почитать:</h2>
-        <a href="https://www.w3schools.com/cssref/pr_class_display.asp" target="_blank">Отображение элемента (display)</a>
+        <div class="stuff">
+            <a href="https://www.w3schools.com/cssref/pr_class_display.asp" target="_blank">Отображение элемента (display)</a>
+        </div>
     </div>
-    <footer>
-        <h5>
-            Если возникнут вопросы можно написать их нам -
-        </h5>
-        <ul>
-            <li>
-                <a href="https://t.me/kidkod" target="_blank">
-                    <img src="/img/telegram.png" class="social-icon" alt="телеграм">
-                </a>
-            </li>
-            <li>
-                <a href="https://vk.com/kidkodschool" target="_blank" class="vk-desktop">
-                    <img src="/img/vk.png" class="social-icon" alt="вконтакте">
-                </a>
-            </li>
-        </ul>
-    </footer>
+    <div class="footer">
+        <h5>Связь с преподавателем:</h5>
+        <div class="links">
+            <a href="https://t.me/kidkod" target="_blank">
+                <img src="/img/telegram.png" class="social-icon" alt="телеграм">
+            </a>
+            <a href="https://vk.com/kidkodschool" target="_blank" class="vk-desktop">
+                <img src="/img/vk.png" class="social-icon" alt="вконтакте">
+            </a>
+        </div>
+    </div>
 </body>
 
 </html>

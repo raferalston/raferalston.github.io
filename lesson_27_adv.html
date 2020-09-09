@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Интерактивные программы</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style_lesson.css" rel="stylesheet">
     <style>
     table {
         max-width: 1200px;
@@ -20,11 +20,11 @@
 </head>
 
 <body>
-    <h1>Интерактивные программы</h1>
+    <h1 class="title">Интерактивные программы</h1>
     <ol>
-        <li style="display: block;">
+        <li>
             <h2>Javascript функции используемые в заданиях</h2>
-            <table class="ml-3 table table-sm table-bordered table-dark table-hover">
+            <table class="table table-sm table-bordered table-dark table-hover">
                 <caption class="text-danger">Все написанное капсом (заглавными буквами), является заранее выбранным объектом</caption>
                 <thead>
                     <tr>
@@ -62,52 +62,66 @@
                 </tbody>
             </table>
         </li>
-        <li style="display: block;">
+        <li>
             <h2>Создайте игру "Pirate Treasure" - Простой вариант</h2>
-            <h4>
+            <h2>
                 <img src="img/l27_q1.gif" alt="" width="500">
+            </h2>
+            <h2>
+
                 <a href="pirate_treasure_3_easy.html" target="_blank" rel="noopener noreferrer">Попробовать</a>
-            </h4>
+            </h2>
         </li>
         <li>
             <h2>Создайте игру "Pirate Treasure" - Сложный вариант</h2>
-            <h4>
+            <h2>
                 <img src="img/l27_q2.gif" alt="" width="500">
+            </h2>
+            <h2>
+
                 <a href="pirate_treasure_3_hard.html" target="_blank" rel="noopener noreferrer">Попробовать</a>
-            </h4>
+            </h2>
         </li>
         <li>
             <h2>Создайте страницу используя setInterval, setTImeout</h2>
-            <h4>
+            <h2>
                 <img src="img/l27_q3.gif" alt="" width="500">
+            </h2>
+            <h2>
+
                 <a href="lesson_27_ans_3.html" target="_blank" rel="noopener noreferrer">Попробовать</a>
-            </h4>
+            </h2>
         </li>
         <li>
             <h2>Ссылки на файлы для игры и задания</h2>
-            <h4>
+            <h2>
                 <a href="img/map.jpg" download>Карта для "Pirate Treasure"</a>
-            </h4>
-            <h4>
+            </h2>
+            <h2>
                 <a href="img/treasure.png" download>Сундук для "Pirate Treasure"</a>
-            </h4>
-            <h4>
+            </h2>
+            <h2>
                 <a href="img/adventurer.png" download>Игрок для "Pirate Treasure"</a>
-            </h4>
-            <h4>
+            </h2>
+            <h2>
                 <a href="img/pirate.png" download>Пират для "Pirate Treasure"</a>
-            </h4>
-            <h4>
+            </h2>
+            <h2>
                 <a href="img/heart.png" download>Сердце для задания</a>
-            </h4>
+            </h2>
         </li>
     </ol>  
 
     <div class="additional">
         <h2 class="important">Что почитать:</h2>
-        <a href="https://learn.javascript.ru/settimeout-setinterval" target="_blank" rel="noopener noreferrer">setInterval/setTimeout</a>
-        <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Math/random" target="_blank" rel="noopener noreferrer">Выбор случайного числа</a>
+        <div class="stuff">
+
+            <a href="https://learn.javascript.ru/settimeout-setinterval" target="_blank" rel="noopener noreferrer">setInterval/setTimeout</a>
+            <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Math/random" target="_blank" rel="noopener noreferrer">Выбор случайного числа</a>
+        </div>
         <h2 class="important">Предыдущие js уроки</h2>
+        <div class="stuff">
+
             <a href="lesson_17_adv.html">Урок 17</a>
             <a href="lesson_18_adv.html">Урок 18</a>
             <a href="lesson_19_adv.html">Урок 19</a>
@@ -118,24 +132,19 @@
             <a href="lesson_24_adv.html">Урок 24</a>
             <a href="lesson_25_adv.html">Урок 25</a>
             <a href="lesson_26_adv.html">Урок 26</a>
+        </div>
     </div>
-    <footer>
-        <h5>
-            Если возникнут вопросы можно написать их нам -
-        </h5>
-        <ul>
-            <li>
-                <a href="https://t.me/kidkod" target="_blank">
-                    <img src="/img/telegram.png" class="social-icon" alt="телеграм">
-                </a>
-            </li>
-            <li>
-                <a href="https://vk.com/kidkodschool" target="_blank" class="vk-desktop">
-                    <img src="/img/vk.png" class="social-icon" alt="вконтакте">
-                </a>
-            </li>
-        </ul>
-    </footer>
+    <div class="footer">
+        <h5>Связь с преподавателем:</h5>
+        <div class="links">
+            <a href="https://t.me/kidkod" target="_blank">
+                <img src="/img/telegram.png" class="social-icon" alt="телеграм">
+            </a>
+            <a href="https://vk.com/kidkodschool" target="_blank" class="vk-desktop">
+                <img src="/img/vk.png" class="social-icon" alt="вконтакте">
+            </a>
+        </div>
+    </div>
 </body>
 
 </html>
