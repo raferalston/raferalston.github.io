@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Анимация</title>
+    <style>
+        body {
+            height: 100vh;
+            background-color: #43dde6;
+            overflow: hidden;
+            margin: 0;
+        }
+
+        span {
+            position: absolute;
+            left: -25px;
+            top: 50%;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background-color: #faee1c;
+        }
+
+        span:nth-child(1) {
+            animation: fly 8s 3.75s ease-in-out infinite;
+        }
+        span:nth-child(2) {
+            animation: fly 12s 1.75s ease-in-out infinite;
+        }
+        span:nth-child(3) {
+            animation: fly 18s .75s ease-in-out infinite;
+        }
+        span:nth-child(4) {
+            animation: fly 11s 7.75s ease-in-out infinite;
+        }
+        span:nth-child(5) {
+            animation: fly 7s 2.25s ease-in-out infinite;
+        }
+        span:nth-child(6) {
+            animation: fly 5s 4.75s ease-in-out infinite;
+        }
+        @keyframes fly {
+            0% {
+                left: -25px;
+                top: 50%;
+            }
+            25% {
+                top: 40%;
+            }
+            50% {
+                top: 55%;
+            }
+            75% {
+                top: 35%;
+            }
+            100% {
+                left: 100%;
+                top: 50%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+</body>
+
+</html>
