@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>html/css</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            background-color: #363434;
+        }
+
+        h1 {
+            font-family: fantasy;
+            color: #fff;
+            font-size: 3em;
+        }
+        .picture-1, .picture-2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+        }
+
+        .picture-2 {
+            background-color: #fd0054;
+            color: #fff;
+        }
+        .picture-1 > img, .picture-2 > img {
+            width: 20%;
+        }
+
+        .picture-1 > span, .picture-2 > span {
+            padding: 0 2em;
+            font-size: 1.5em;
+        }
+        button {
+            font-size: 1.25em;
+            background-color: #ffd717;
+            border: 0;
+            border-radius: 5px;
+            cursor: pointer;
+            padding: 1em 1.5em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Название</h1>
+    <div>
+        <div class="picture-1">
+            <img src="img/lesson_8_1.jpg" alt="Тут будет первая картинка">
+            <span>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt modi tempore eligendi minus recusandae. Unde sint
+                pariatur placeat, vel quae reiciendis labore doloribus, error provident vero quia. Itaque, sint facere.
+            </span>
+        </div>
+        <div class="picture-2">
+            <span>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt modi tempore eligendi minus recusandae. Unde sint
+                pariatur placeat, vel quae reiciendis labore doloribus, error provident vero quia. Itaque, sint facere.
+            </span>
+            <img src="img/lesson_8_2.jpg" alt="Тут будет вторая картинка">
+        </div>
+    </div>
+    <div>
+        <button>Кнопка</button>
+    </div>
+</body>
+</html>
