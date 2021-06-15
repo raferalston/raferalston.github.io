@@ -446,6 +446,10 @@ html, body {
   color: darkorange;
 }
 
+a:hover {
+  color: #fff591;
+}
+
 ol li {
   list-style-type: decimal;
   margin: .75em .75em .75em 1.5em;

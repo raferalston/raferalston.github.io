@@ -68,6 +68,11 @@ html, body {
         }
     }
 }
+a {
+    &:hover {
+        color: #fff591;
+    }
+}
 ol {
     li {
         list-style-type: decimal;
