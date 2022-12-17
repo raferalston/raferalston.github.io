@@ -1,0 +1,385 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+    background-color: #ff304f;
+}
+
+body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #faee1c;
+    border-radius: 10px;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #002651;
+    background-image: url(assets/bg_pattern.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.window {
+    height: 550px;
+    width: 550px;
+    position: relative;
+    background-image: url(assets/bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+}
+
+.me {
+    display: inline-block;
+    position: absolute;
+    width: 125px;
+    height: 200px;
+}
+
+.enemy {
+    display: none;
+    position: absolute;
+    width: 155px;
+    height: 239px;
+}
+.health {
+    position: absolute;
+    font-size: 90px;
+    color: #faee1c;
+    text-shadow: #ff304f 2px 2px;
+    font-family: 'Oswald', sans-serif;
+
+}
+.fireball {
+    display: inline-block;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    /* background-color: #ff304f; */
+    background-image: url(assets/cake.png);
+    background-position: 0 0;
+    background-size: contain;
+    border-radius: 50%;
+    z-index: 9999;
+    transition: all ease .1s;
+}
+
+.music-player {
+    display: inline-block;
+    position: absolute;
+    z-index: 1;
+    width: 60px;
+    height: 90px;
+    bottom: 0;
+    left: 130px;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    background-image: url(assets/music/pngwin.png);
+    background-position: 0 15px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.music-player::before {
+    content: '';
+    position: absolute;
+    background-color: #28c7fa;
+    font-size: 0px;
+    left: 0;
+    width: 0;
+    top: -80px;
+    transition: all ease .25s;
+}
+
+.music-player.active::before {
+    content: 'Включить музыку - press P';
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 24px;
+    width: 200px;
+    box-shadow: 5px 5px 0 0 #005c7a;
+}
+
+.notes {
+    display: inline-block;
+    position: absolute;
+    z-index: 1;
+    width: 225px;
+    height: 125px;
+    bottom: 0;
+    right: 0;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    background-image: url(assets/computer.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.notes::before {
+    content: '';
+    position: absolute;
+    background-color: #28c7fa;
+    font-size: 0px;
+    left: 0;
+    width: 0;
+    top: -50px;
+    transition: all ease .25s;
+}
+
+.notes.active::before {
+    content: 'Прочитать сообщение? Press X';
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 24px;
+    width: 200px;
+    box-shadow: 5px 5px 0 0 #005c7a;
+}
+
+.me {
+    background-image: url(assets/myself/idle.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    will-change: background-position;
+    animation-timing-function: steps(4);
+    animation-iteration-count: infinite;
+    animation-duration: 1.25s;
+    animation-delay: -2.5s;
+    z-index: 2;
+}
+
+.enemy {
+    background-image: url(assets/necromancer/aging.png);
+
+    /* background-color: red; */
+    background-size: contain;
+    background-repeat: no-repeat;
+    will-change: background-position;
+    background-position-y: 30px;
+    /* animation-timing-function: steps(4); */
+    /* animation-iteration-count: infinite; */
+    /* animation-duration: 1.25s; */
+    /* animation-delay: -2.5s; */
+    /* z-index: 2; */
+}
+
+@keyframes idle {
+    100% {
+        background-position: -800px 0;
+    }
+}
+
+@keyframes run {
+    100% {
+        background-position: -1225px 0;
+    }
+}
+
+.me.idle {
+    animation-name: idle;
+}
+
+.me.jump {
+    animation-name: idle;
+    animation-duration: 0.75s;
+    background-image: url(assets/myself/jump.png);
+}
+
+.me.run {
+    animation-name: run;
+    animation-duration: 0.75s;
+    animation-timing-function: steps(6);
+    background-image: url(assets/myself/run.png);
+}
+
+.title {
+    display: inline-block;
+    margin: 20px;
+}
+
+.title > h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+    color: #fff;
+    margin: 0 auto;
+    letter-spacing: 5px;
+    border-right: 5px solid #ff304f;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    animation:
+        typing 1.75s steps(60, end),
+        caret .75s step-end infinite;
+}
+.subtitle > h2 {
+    font-family: 'Oswald', sans-serif;
+    color: #fff;
+    white-space: nowrap;
+    display: inline-block;
+    font-size: 20px;   
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: #ff304f;
+    }
+}
+
+.subtitle {
+    margin-left: 20px;
+}
+
+.subtitle p {
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    color: #fff;
+}
+
+.cv-section-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Oswald', sans-serif;
+}
+
+.cv-section-wrapper h1,
+.cv-section-wrapper h2,
+.cv-section-wrapper .text {
+    border-bottom: 0;
+    margin: 20px;
+    position: relative;
+    z-index: 2;
+}
+.cv-section-wrapper .text {
+    font-size: 22px;
+}
+
+.cv-section {
+    margin: 60px 0
+}
+
+.cv-section-wrapper h1::before,
+.cv-section-wrapper h2::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    bottom: 0;
+    transition: all ease 1.25s;
+    background-color: #ff304f;
+    height: 3px;
+    border-radius: 5px;
+    z-index: -1;
+}
+
+.cv-section-wrapper h1::after,
+.cv-section-wrapper h2::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    bottom: -5px;
+    left: 5px;
+    transition: all ease 1.25s;
+    background-color: #faee1c;
+    height: 3px;
+    border-radius: 5px;
+}
+
+.cv-section-wrapper h1.active::before,
+.cv-section-wrapper h2.active::before,
+.cv-section-wrapper h1.active::after,
+.cv-section-wrapper h2.active::after {
+    width: 100%;
+}
+
+.music-box {
+    display: none;
+}
+.music-box.show {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    height: 125px;
+    width: 150px;
+    background-color: #28c7fa;
+    border-radius: 5px;
+    box-shadow: 5px 5px 0 0 #faee1c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease .15s;
+}
+.music-box:active {
+    box-shadow: 0 0;
+    transform: translate(5px, 5px);
+}
+.music-box > .control {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.music-box.active > .control {
+    background-image: url(assets/icons/play.png);
+}
+.music-box > .control {
+    background-image: url(assets/icons/pause.png);
+}
+
+.ending {
+    font-size: 40px;
+    color: #faee1c;
+    text-shadow: #ff304f 2px 2px;
+    max-width: 400px;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+}
+
+.hit {
+    font-size: 29px;
+    color: #faee1c;
+    text-shadow: #ff304f 2px 2px;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    position: absolute;
+    opacity: 1;
+    top: 54%;
+    left: 23%;
+    transform: translateX(-50%);
+    animation: fade 0.7s forwards;
+}
+
+@keyframes fade {
+    to {
+        opacity: 0;
+    }
+} 
