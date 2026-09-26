@@ -1,163 +1,383 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Управление элементами на HTML странице, DOM часть 2</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="css/style_lesson.css" rel="stylesheet">
-    <style>
-    table {
-        max-width: 1200px;
-    }
-    caption {
-        background-color: #fff;
-        padding: .5em;
-    }
-    </style>
+    <title>Урок 25. DOM, часть 2: события — домашнее задание · КИДКОД</title>
+    <meta name="description" content="Страница начинает слушать пользователя: клики, движения мыши, нажатия клавиш. А мы создаём и удаляем элементы на лету.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%90%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link href="assets/kk.css?v=1" rel="stylesheet">
+    <script>try{var t=localStorage.getItem('kkw:theme');if(t)document.documentElement.setAttribute('data-theme',JSON.parse(t))}catch(e){}</script>
 </head>
-
 <body>
-    <h1 class="title">Управление элементами на HTML странице, DOM часть 2</h1>
-    <ol>
-        <li>
-            <h2>Cвойства и методы DOM дерева</h2>
-            <table class=" table table-sm table-bordered table-dark table-hover">
-                <caption class="text-danger">Все написанное капсом (заглавными буквами), является заранее выбранным объектом в DOM дереве</caption>
-                <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Как вызвать</th>
-                        <th scope="col">Что делает</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>document.createElement('TAG')</td>
-                        <td>Создание тега</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>SELECTED_ELEMENT.className</td>
-                        <td>Добавление класса к элементу</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>                        
-                        <td>SELECTED_ELEMENT.id</td>
-                        <td>Добавление id к элементу</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">4</th>
-                        <td>SELECTED_ELEMENT.setAttribute('NAME', 'VALUE')</td>
-                        <td>Добавление атрибута к элементу</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">5</th>
-                        <td>document.createTextNode('TEXT')</td>
-                        <td>Создание текста</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">6</th>
-                        <td>SELECTED_ELEMENT.insertBefore(ELEMENT, REFERENCE NODE)</td>
-                        <td>Добавление элемента в структуру</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">7</th>
-                        <td>SELECTED_ELEMENT.appendChild(ELEMENT)</td>
-                        <td>Добавление элемента в структуру</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">8</th>
-                        <td>SELECTED_ELEMENT.append(ELEMENT)</td>
-                        <td>Добавление элемента в конец (после последнего потомка)</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">9</th>
-                        <td>SELECTED_ELEMENT.removeChild(ELEMENT)</td>
-                        <td>Удаление элемента из структуры</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">10</th>
-                        <td>SELECTED_ELEMENT.remove(ELEMENT)</td>
-                        <td>Удаление узла из структуры</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">11</th>
-                        <td>SELECTED_ELEMENT.addEventListener('EVENT', FUNCTION)</td>
-                        <td>Добавление прослушки события к элементу</td>
-                    </tr>
-                </tbody>
-            </table>
-        </li>
-        <li>
-            <h2>Создайте страничку, которая меняет цвет в зависимости от положения курсора мышки на экране</h2>
-            <img src="img/l25_q1.gif" alt="" width="500">
-            <h2>
-                <a href="lesson_25_ans_1.html" target="_blank" rel="noopener noreferrer">Попробовать</a>
-            </h2>
-        </li>
-        <li>
-            <h2>Создайте страничку, которая отслеживает нажатие по элементам, а также меняет им текст и цвет</h2>
-            <img src="img/l25_q3.gif" alt="" width="500">
-            <h2>
-                <a href="lesson_25_ans_3.html" target="_blank" rel="noopener noreferrer">Попробовать</a>
-            </h2>
-        </li>
-        <li>
-            <h2>Создайте страничку, которая отслеживает положение курсора мыши, а также нажатие на элемент</h2>
-            <img src="img/l25_q4.gif" alt="" width="500">
-            <h2>
-                <a href="lesson_25_ans_4.html" target="_blank" rel="noopener noreferrer">Попробовать</a>
-            </h2>
-        </li>
-        <li>
-            <h2>Создайте страничку c игрой виселица</h2>
-            <img src="img/l25_q2.png" alt="" width="500">
-            <h2>
-                <a href="lesson_25_ans_2.html" target="_blank" rel="noopener noreferrer">Попробовать</a>
-            </h2>
-        </li>
-    </ol>
 
-    <div class="additional">
-        <h2 class="important">Что почитать:</h2>
-        <div class="stuff">
+<header class="site-header">
+    <div class="wrap">
+        <a class="logo" href="index.html" aria-label="КИДКОД — на главную">
+            <span class="logo-mark">&lt;/&gt;</span>
+            <span>КИДКОД<small>домашние задания · Web</small></span>
+        </a>
+        <nav class="nav" aria-label="Основная навигация">
+            <a href="index.html#basic" class="hide-sm">HTML и CSS</a>
+            <a href="index.html#js" class="hide-sm">JavaScript</a>
+            <a href="index.html#project" class="hide-sm">Проект</a>
+            <button class="icon-btn theme-btn" type="button" aria-label="Сменить тему"><span class="moon">🌙</span><span class="sun">☀️</span></button>
+        </nav>
+    </div>
+</header>
 
-            <a href="https://learn.javascript.ru/modifying-document#sozdanie-elementa" target="_blank" rel="noopener noreferrer">Создание элемента</a>
-            <a href="https://learn.javascript.ru/modifying-document#metody-vstavki" target="_blank" rel="noopener noreferrer">Добавление элемента</a>
-            <a href="https://learn.javascript.ru/modifying-document#udalenie-uzlov" target="_blank" rel="noopener noreferrer">Удаление элемента</a>
-            <a href="https://learn.javascript.ru/introduction-browser-events" target="_blank" rel="noopener noreferrer">Браузерные события</a>
-            <a href="https://learn.javascript.ru/mouse-clicks" target="_blank" rel="noopener noreferrer">События мышки</a>
-            <a href="https://learn.javascript.ru/keyboard-events" target="_blank" rel="noopener noreferrer">События клавиатуры</a>
-            <a href="https://developer.mozilla.org/ru/docs/Web/API/EventTarget/addEventListener" target="_blank" rel="noopener noreferrer">Отслеживание событий</a>
+
+<main>
+<section class="lesson-hero"><div class="wrap">
+<div class="crumbs"><a href="index.html">Главная</a><span>›</span><a href="index.html#js">Продвинутый web-дизайнер</a><span>›</span><span>Урок 25</span></div>
+<h1>Управление элементами на странице. DOM, часть 2</h1>
+<p class="lead">Страница начинает слушать пользователя: клики, движения мыши, нажатия клавиш. А мы создаём и удаляем элементы на лету.</p>
+<div class="chips"><span class="chip">📋 Заданий: 7</span><span class="chip">✅ С автопроверкой: 6</span><span class="chip">✨ Новых: 3</span></div>
+</div></section>
+<div class="wrap lesson-layout">
+<aside class="side"><div class="side-card" data-lesson-progress><h4>Прогресс</h4><div class="bar"><i></i></div><span class="cnt">0 из 0</span> выполнено</div><div class="side-card"><h4>Содержание</h4><nav class="toc"><a class="sec" href="#sec-0">Свойства и методы DOM-дерева</a><a class="sec" href="#sec-1">Задания</a><a href="#task-1"><span class="n">1</span><span>Цвет от положения мыши</span></a><a href="#task-2"><span class="n">2</span><span>Клик меняет блок</span></a><a href="#task-3"><span class="n">3</span><span>HELLO: мышь и клики</span></a><a href="#task-4"><span class="n">4</span><span>Игра «Виселица»</span></a><a href="#task-5"><span class="n">5</span><span>Счётчик кликов</span></a><a href="#task-6"><span class="n">6</span><span>Список дел</span></a><a href="#task-7"><span class="n">7</span><span>Тёмная тема</span></a><a class="sec" href="#links">Полезные ссылки</a></nav></div></aside>
+<div class="content">
+<h2 class="sec-title" id="sec-0"><span class="emoji">🌳</span>Свойства и методы DOM-дерева</h2>
+<p class="table-cap">Всё, что написано ЗАГЛАВНЫМИ буквами, — заранее выбранный элемент</p><div class="table-wrap"><table class="nice"><thead><tr><th>Как вызвать</th><th>Что делает</th></tr></thead><tbody><tr><td><code>document.createElement('TAG')</code></td><td>Создание тега</td></tr><tr><td><code>ELEMENT.className</code></td><td>Добавление класса к элементу</td></tr><tr><td><code>ELEMENT.id</code></td><td>Добавление id к элементу</td></tr><tr><td><code>ELEMENT.setAttribute('NAME', 'VALUE')</code></td><td>Добавление атрибута к элементу</td></tr><tr><td><code>document.createTextNode('TEXT')</code></td><td>Создание текста</td></tr><tr><td><code>ELEMENT.insertBefore(NEW, REFERENCE)</code></td><td>Вставка элемента перед другим</td></tr><tr><td><code>ELEMENT.appendChild(NEW)</code></td><td>Добавление элемента в структуру</td></tr><tr><td><code>ELEMENT.append(NEW)</code></td><td>Добавление элемента в конец (после последнего потомка)</td></tr><tr><td><code>ELEMENT.removeChild(CHILD)</code></td><td>Удаление дочернего элемента</td></tr><tr><td><code>ELEMENT.remove()</code></td><td>Удаление элемента со страницы</td></tr><tr><td><code>ELEMENT.addEventListener('EVENT', FUNCTION)</code></td><td>Добавление «прослушки» события</td></tr></tbody></table></div>
+<h2 class="sec-title" id="sec-1"><span class="emoji">🖱️</span>Задания</h2>
+<div class="note info"><p>В этом уроке пишем целую страницу: HTML, CSS и JavaScript в теге <code>&lt;script&gt;</code> перед <code>&lt;/body&gt;</code>. Результат можно сразу потрогать мышкой.</p></div>
+<article class="task" id="task-1" data-task="l25:1">
+<div class="task-head">
+<span class="task-num">1</span>
+<div class="task-title"><h3>Цвет от положения мыши</h3><div class="badges"><span class="badge lvl-2">средне</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Создай страницу, которая меняет цвет фона в зависимости от положения курсора: по горизонтали меняется красный канал, по вертикали — зелёный.</p>
+<div class="shots single"><img class="zoomable" src="img/l25_q1.gif" alt="Как работает" loading="lazy"></div>
+<div class="web" data-mode="html" data-key="l25:1" data-tests="[{&quot;js&quot;: &quot;fire(\&quot;body\&quot;, \&quot;mousemove\&quot;, { clientX: 20, clientY: 20 }); const a = css(\&quot;body\&quot;, \&quot;background-color\&quot;); fire(\&quot;body\&quot;, \&quot;mousemove\&quot;, { clientX: 900, clientY: 600 }); const b = css(\&quot;body\&quot;, \&quot;background-color\&quot;); return (a !== b) || \&quot;Цвет фона не меняется при движении мыши\&quot;;&quot;, &quot;label&quot;: &quot;Фон меняется при движении мыши&quot;}, {&quot;js&quot;: &quot;return new RegExp(\&quot;addEventListener\\\\(\\\\s*[&#x27;\\\\\\\&quot;]mousemove\&quot;, \&quot;\&quot;).test(code) || \&quot;В коде не нашёл: Используется событие mousemove\&quot;;&quot;, &quot;label&quot;: &quot;Используется событие mousemove&quot;}]"><textarea class="src" data-role="code" hidden>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Цвет от мышки&lt;/title&gt;
+    &lt;style&gt;
+
+        body { height: 100vh; margin: 0; overflow: hidden; display: flex; justify-content: center; align-items: center; }
+        h1 { color: white; font-family: sans-serif; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Поводи мышкой!&lt;/h1&gt;
+    &lt;script&gt;
+        let body = document.querySelector(&#x27;body&#x27;)
+        body.addEventListener(&#x27;mousemove&#x27;, changeColor)
+
+        function changeColor(event) {
+            let w = window.innerWidth
+            let h = window.innerHeight
+            let mouseX = event.clientX / (w / 255)
+            let mouseY = event.clientY / (h / 255)
+            body.style.backgroundColor = &#x27;rgb(&#x27; + mouseX + &#x27;,&#x27; + mouseY + &#x27;, 40)&#x27;
+        }
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre><p><a href="lesson_25_ans_1.html" target="_blank" rel="noopener">Открыть готовую страницу с ответом ↗</a></p></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-2" data-task="l25:2">
+<div class="task-head">
+<span class="task-num">2</span>
+<div class="task-title"><h3>Клик меняет блок</h3><div class="badges"><span class="badge lvl-2">средне</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Сделай страницу из четырёх цветных блоков. При клике блок меняет текст и становится цвета <code>tomato</code>.</p>
+<div class="shots single"><img class="zoomable" src="img/l25_q3.gif" alt="Как работает" loading="lazy"></div>
+<div class="web" data-mode="html" data-key="l25:2" data-tests="[{&quot;js&quot;: &quot;const d = $$(\&quot;div\&quot;)[1]; const t = d.textContent; d.click(); return d.textContent !== t || \&quot;Текст блока не изменился\&quot;;&quot;, &quot;label&quot;: &quot;После клика меняется текст&quot;}, {&quot;js&quot;: &quot;const d = $$(\&quot;div\&quot;)[2]; d.click(); await wait(350); return getComputedStyle(d).backgroundColor === norm(\&quot;background-color\&quot;, \&quot;tomato\&quot;) || \&quot;Цвет блока после клика: \&quot; + getComputedStyle(d).backgroundColor;&quot;, &quot;label&quot;: &quot;После клика блок становится tomato&quot;}, {&quot;js&quot;: &quot;const d = $$(\&quot;div\&quot;)[0]; const t = d.textContent; $$(\&quot;div\&quot;)[3].click(); return d.textContent === t || \&quot;Клик по одному блоку не должен менять другие\&quot;;&quot;, &quot;label&quot;: &quot;Остальные блоки не меняются&quot;}]"><textarea class="src" data-role="code" hidden>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Клики по блокам&lt;/title&gt;
+    &lt;style&gt;
+
+        body { margin: 0; overflow-x: hidden; display: flex; flex-wrap: wrap; }
+        div { width: 50%; height: 50vh; display: flex; justify-content: center; align-items: center;
+              font-size: 2em; color: white; cursor: pointer; transition: all ease .25s; }
+        .box1 { background-color: #28c7fa; }
+        .box2 { background-color: #775ada; }
+        .box3 { background-color: #002651; }
+        .box4 { background-color: #ff304f; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;box1&quot;&gt;Нажми на меня!&lt;/div&gt;
+    &lt;div class=&quot;box2&quot;&gt;Нажми на меня!&lt;/div&gt;
+    &lt;div class=&quot;box3&quot;&gt;Нажми на меня!&lt;/div&gt;
+    &lt;div class=&quot;box4&quot;&gt;Нажми на меня!&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Клики по блокам&lt;/title&gt;
+    &lt;style&gt;
+
+        body { margin: 0; overflow-x: hidden; display: flex; flex-wrap: wrap; }
+        div { width: 50%; height: 50vh; display: flex; justify-content: center; align-items: center;
+              font-size: 2em; color: white; cursor: pointer; transition: all ease .25s; }
+        .box1 { background-color: #28c7fa; }
+        .box2 { background-color: #775ada; }
+        .box3 { background-color: #002651; }
+        .box4 { background-color: #ff304f; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;box1&quot;&gt;Нажми на меня!&lt;/div&gt;
+    &lt;div class=&quot;box2&quot;&gt;Нажми на меня!&lt;/div&gt;
+    &lt;div class=&quot;box3&quot;&gt;Нажми на меня!&lt;/div&gt;
+    &lt;div class=&quot;box4&quot;&gt;Нажми на меня!&lt;/div&gt;
+    &lt;script&gt;
+        let boxes = document.getElementsByTagName(&#x27;div&#x27;)
+
+        function boxClicked(event) {
+            event.target.textContent = &#x27;Больше не нажимай!&#x27;
+            event.target.style.backgroundColor = &#x27;tomato&#x27;
+        }
+
+        for (let i = 0; i &lt; boxes.length; i++) {
+            boxes[i].addEventListener(&#x27;click&#x27;, boxClicked)
+        }
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre><p><a href="lesson_25_ans_3.html" target="_blank" rel="noopener">Открыть готовую страницу с ответом ↗</a></p></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-3" data-task="l25:3">
+<div class="task-head">
+<span class="task-num">3</span>
+<div class="task-title"><h3>HELLO: мышь и клики</h3><div class="badges"><span class="badge lvl-3">сложно</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Сделай слово HELLO из отдельных букв. При движении мыши буквы меняют цвет, а по клику буква подчёркивается красной линией (<code>border-bottom</code>); повторный клик убирает линию.</p>
+<div class="shots single"><img class="zoomable" src="img/l25_q4.gif" alt="Как работает" loading="lazy"></div>
+<div class="web" data-mode="html" data-key="l25:3" data-tests="[{&quot;js&quot;: &quot;return count(\&quot;span\&quot;) &gt;= 5 || \&quot;Нужно хотя бы 5 шт. span\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;span\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;5 букв в span&quot;}, {&quot;js&quot;: &quot;const s = $$(\&quot;span\&quot;)[0]; fire(\&quot;body\&quot;, \&quot;mousemove\&quot;, { clientX: 30, clientY: 30 }); const a = getComputedStyle(s).color; fire(\&quot;body\&quot;, \&quot;mousemove\&quot;, { clientX: 800, clientY: 500 }); return getComputedStyle(s).color !== a || \&quot;Цвет букв не меняется\&quot;;&quot;, &quot;label&quot;: &quot;Буквы меняют цвет при движении мыши&quot;}, {&quot;js&quot;: &quot;const s = $$(\&quot;span\&quot;)[1]; s.click(); return getComputedStyle(s).borderBottomStyle !== \&quot;none\&quot; || \&quot;После клика у буквы нет border-bottom\&quot;;&quot;, &quot;label&quot;: &quot;Клик подчёркивает букву&quot;}, {&quot;js&quot;: &quot;const s = $$(\&quot;span\&quot;)[2]; s.click(); s.click(); return getComputedStyle(s).borderBottomStyle === \&quot;none\&quot; || \&quot;После второго клика линия должна исчезнуть\&quot;;&quot;, &quot;label&quot;: &quot;Повторный клик убирает линию&quot;}]"><textarea class="src" data-role="code" hidden>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;HELLO&lt;/title&gt;
+    &lt;style&gt;
+
+        body { height: 100vh; margin: 0; overflow: hidden; display: flex; justify-content: center; align-items: center; }
+        span { color: black; font-size: 5em; cursor: pointer; transition: border-bottom ease .15s; }
+        span:hover { text-shadow: 1px 1px 0 black, 2px 2px 0 black, 3px 3px 0 black, 4px 4px 0 black; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;
+        &lt;span&gt;H&lt;/span&gt;&lt;span&gt;E&lt;/span&gt;&lt;span&gt;L&lt;/span&gt;&lt;span&gt;L&lt;/span&gt;&lt;span&gt;O&lt;/span&gt;
+    &lt;/h1&gt;
+    &lt;script&gt;
+        let body = document.querySelector(&#x27;body&#x27;)
+        let word = document.querySelectorAll(&#x27;span&#x27;)
+        body.addEventListener(&#x27;mousemove&#x27;, changeColor)
+
+        for (let i = 0; i &lt; word.length; i++) {
+            word[i].addEventListener(&#x27;click&#x27;, changeDirection)
+        }
+
+        function changeColor(event) {
+            let r = event.clientX / (window.innerWidth / 255)
+            let g = event.clientY / (window.innerHeight / 255)
+            let b = 80
+            for (let i = 0; i &lt; word.length; i++) {
+                word[i].style.color = &#x27;rgb(&#x27; + r + &#x27;,&#x27; + g + &#x27;,&#x27; + b + &#x27;)&#x27;
+                r += r * 0.25
+                g += g * 0.25
+                b += b * 0.05
+            }
+        }
+
+        function changeDirection(event) {
+            let element = event.target
+            if (!element.style.borderBottom) {
+                element.style.borderBottom = &#x27;15px solid red&#x27;
+            } else {
+                element.style.borderBottom = &#x27;&#x27;
+            }
+        }
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre><p><a href="lesson_25_ans_4.html" target="_blank" rel="noopener">Открыть готовую страницу с ответом ↗</a></p></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-4" data-task="l25:4">
+<div class="task-head">
+<span class="task-num">4</span>
+<div class="task-title"><h3>Игра «Виселица»</h3><div class="badges"><span class="badge lvl-3">сложно</span><span class="badge local">в VS Code</span></div></div>
+</div>
+<div class="task-body">
+<p>Создай страницу с игрой «Виселица»: слово загадано, игрок вводит буквы, открываются угаданные.</p>
+<div class="shots single"><img class="zoomable" src="img/l25_q2.png" alt="Виселица" loading="lazy"></div>
+<p class="note info">🖥️ Это большое задание — делай его в <b>VS Code</b> на компьютере и открывай страницу в браузере. Не забудь выложить результат на свой сайт на GitHub!</p>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><p><a href="lesson_25_ans_2.html" target="_blank" rel="noopener">Открыть готовую страницу с ответом ↗</a></p></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-5" data-task="l25:5">
+<div class="task-head">
+<span class="task-num">5</span>
+<div class="task-title"><h3>Счётчик кликов</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>При каждом нажатии на кнопку <code>#plus</code> число в <code>#count</code> увеличивается на 1, а кнопка <code>#reset</code> сбрасывает его в 0.</p>
+
+<div class="web" data-mode="js" data-key="l25:5" data-tests="[{&quot;js&quot;: &quot;click(\&quot;#plus\&quot;); click(\&quot;#plus\&quot;); click(\&quot;#plus\&quot;); return text(\&quot;#count\&quot;) === \&quot;3\&quot; || \&quot;После трёх кликов: \&quot; + text(\&quot;#count\&quot;);&quot;, &quot;label&quot;: &quot;Три клика — число 3&quot;}, {&quot;js&quot;: &quot;click(\&quot;#plus\&quot;); click(\&quot;#reset\&quot;); return text(\&quot;#count\&quot;) === \&quot;0\&quot; || \&quot;После сброса: \&quot; + text(\&quot;#count\&quot;);&quot;, &quot;label&quot;: &quot;Сброс возвращает 0&quot;}, {&quot;js&quot;: &quot;click(\&quot;#reset\&quot;); click(\&quot;#plus\&quot;); return text(\&quot;#count\&quot;) === \&quot;1\&quot; || \&quot;После сброса и клика: \&quot; + text(\&quot;#count\&quot;);&quot;, &quot;label&quot;: &quot;После сброса счёт снова идёт с 1&quot;}]"><textarea class="src" data-role="code" hidden>let count = 0
+let countText = document.querySelector(&#x27;#count&#x27;)
+</textarea><textarea class="src" data-role="fixture" hidden>&lt;h1 id=&quot;count&quot;&gt;0&lt;/h1&gt;
+&lt;button id=&quot;plus&quot;&gt;+1&lt;/button&gt;
+&lt;button id=&quot;reset&quot;&gt;Сброс&lt;/button&gt;
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>let count = 0
+let countText = document.querySelector(&#x27;#count&#x27;)
+
+document.querySelector(&#x27;#plus&#x27;).addEventListener(&#x27;click&#x27;, function () {
+    count++
+    countText.textContent = count
+})
+
+document.querySelector(&#x27;#reset&#x27;).addEventListener(&#x27;click&#x27;, function () {
+    count = 0
+    countText.textContent = count
+})
+</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-6" data-task="l25:6">
+<div class="task-head">
+<span class="task-num">6</span>
+<div class="task-title"><h3>Список дел</h3><div class="badges"><span class="badge lvl-2">средне</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Сделай список дел:</p><p><ul><li>по кнопке <code>#add</code> текст из поля <code>#task</code> добавляется в список <code>#list</code> новым <code>&lt;li&gt;</code></li><li>после добавления поле очищается</li><li>пустую задачу добавлять нельзя</li><li>клик по задаче удаляет её (<code>remove()</code>)</li></ul></p>
+
+<div class="web" data-mode="js" data-key="l25:6" data-tests="[{&quot;js&quot;: &quot;$(\&quot;#task\&quot;).value = \&quot;Сделать домашку\&quot;; click(\&quot;#add\&quot;); return (count(\&quot;#list li\&quot;) === 1 &amp;&amp; text(\&quot;#list li\&quot;) === \&quot;Сделать домашку\&quot;) || \&quot;В списке: \&quot; + $$(\&quot;#list li\&quot;).map(e =&gt; e.textContent).join(\&quot;, \&quot;);&quot;, &quot;label&quot;: &quot;Задача добавляется&quot;}, {&quot;js&quot;: &quot;$(\&quot;#task\&quot;).value = \&quot;Погулять\&quot;; click(\&quot;#add\&quot;); return $(\&quot;#task\&quot;).value === \&quot;\&quot; || \&quot;Поле не очистилось\&quot;;&quot;, &quot;label&quot;: &quot;Поле очищается&quot;}, {&quot;js&quot;: &quot;const n = count(\&quot;#list li\&quot;); $(\&quot;#task\&quot;).value = \&quot;\&quot;; click(\&quot;#add\&quot;); return count(\&quot;#list li\&quot;) === n || \&quot;Пустая задача добавилась\&quot;;&quot;, &quot;label&quot;: &quot;Пустая задача не добавляется&quot;}, {&quot;js&quot;: &quot;$(\&quot;#task\&quot;).value = \&quot;Удали меня\&quot;; click(\&quot;#add\&quot;); const n = count(\&quot;#list li\&quot;); $$(\&quot;#list li\&quot;).pop().click(); return count(\&quot;#list li\&quot;) === n - 1 || \&quot;Задача не удалилась по клику\&quot;;&quot;, &quot;label&quot;: &quot;Клик по задаче удаляет её&quot;}]"><textarea class="src" data-role="code" hidden>let input = document.querySelector(&#x27;#task&#x27;)
+let list = document.querySelector(&#x27;#list&#x27;)
+</textarea><textarea class="src" data-role="fixture" hidden>&lt;input id=&quot;task&quot; placeholder=&quot;Что нужно сделать?&quot;&gt;
+&lt;button id=&quot;add&quot;&gt;Добавить&lt;/button&gt;
+&lt;ul id=&quot;list&quot;&gt;&lt;/ul&gt;
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>let input = document.querySelector(&#x27;#task&#x27;)
+let list = document.querySelector(&#x27;#list&#x27;)
+
+document.querySelector(&#x27;#add&#x27;).addEventListener(&#x27;click&#x27;, function () {
+    if (input.value === &#x27;&#x27;) {
+        return
+    }
+    let li = document.createElement(&#x27;li&#x27;)
+    li.textContent = input.value
+    li.addEventListener(&#x27;click&#x27;, function () {
+        li.remove()
+    })
+    list.append(li)
+    input.value = &#x27;&#x27;
+})
+</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-7" data-task="l25:7">
+<div class="task-head">
+<span class="task-num">7</span>
+<div class="task-title"><h3>Тёмная тема</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Кнопка <code>#theme</code> включает и выключает тёмную тему: добавляет или убирает у <code>body</code> класс <code>dark</code> (<code>classList.toggle</code>). Стили для <code>.dark</code> уже есть.</p>
+
+<div class="web" data-mode="js" data-key="l25:7" data-tests="[{&quot;js&quot;: &quot;click(\&quot;#theme\&quot;); return document.body.classList.contains(\&quot;dark\&quot;) || \&quot;У body не появился класс dark\&quot;;&quot;, &quot;label&quot;: &quot;Клик включает тёмную тему&quot;}, {&quot;js&quot;: &quot;click(\&quot;#theme\&quot;); return !document.body.classList.contains(\&quot;dark\&quot;) || \&quot;Второй клик должен убрать класс dark\&quot;;&quot;, &quot;label&quot;: &quot;Второй клик выключает&quot;}]"><textarea class="src" data-role="code" hidden>// Напиши решение здесь
+</textarea><textarea class="src" data-role="fixture" hidden>&lt;style&gt;body { transition: .3s; font-family: sans-serif; } .dark { background-color: #1f1b3d; color: white; }&lt;/style&gt;
+&lt;h1&gt;Привет!&lt;/h1&gt;
+&lt;button id=&quot;theme&quot;&gt;🌙 Сменить тему&lt;/button&gt;
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>let button = document.querySelector(&#x27;#theme&#x27;)
+
+button.addEventListener(&#x27;click&#x27;, function () {
+    document.body.classList.toggle(&#x27;dark&#x27;)
+})
+</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<h2 class="sec-title" id="links"><span class="emoji">🔗</span>Полезные ссылки</h2>
+<h3 class="links-title">Что почитать</h3>
+<div class="links-grid">
+<a class="link-card" href="https://learn.javascript.ru/modifying-document#sozdanie-elementa" target="_blank" rel="noopener"><span class="ico">📚</span><span>Создание элемента<small>learn.javascript.ru</small></span></a>
+<a class="link-card" href="https://learn.javascript.ru/modifying-document#metody-vstavki" target="_blank" rel="noopener"><span class="ico">📚</span><span>Добавление элемента<small>learn.javascript.ru</small></span></a>
+<a class="link-card" href="https://learn.javascript.ru/modifying-document#udalenie-uzlov" target="_blank" rel="noopener"><span class="ico">📚</span><span>Удаление элемента<small>learn.javascript.ru</small></span></a>
+<a class="link-card" href="https://learn.javascript.ru/introduction-browser-events" target="_blank" rel="noopener"><span class="ico">📚</span><span>Браузерные события<small>learn.javascript.ru</small></span></a>
+<a class="link-card" href="https://learn.javascript.ru/mouse-clicks" target="_blank" rel="noopener"><span class="ico">📚</span><span>События мыши<small>learn.javascript.ru</small></span></a>
+<a class="link-card" href="https://learn.javascript.ru/keyboard-events" target="_blank" rel="noopener"><span class="ico">📚</span><span>События клавиатуры<small>learn.javascript.ru</small></span></a>
+<a class="link-card" href="https://developer.mozilla.org/ru/docs/Web/API/EventTarget/addEventListener" target="_blank" rel="noopener"><span class="ico">📚</span><span>Отслеживание событий<small>developer.mozilla.org</small></span></a>
+</div>
+<h3 class="links-title">Предыдущие JS-уроки</h3>
+<div class="links-grid">
+<a class="link-card" href="lesson_17_adv.html"><span class="ico">🌐</span><span>Урок 17<small>raferalston.github.io</small></span></a>
+<a class="link-card" href="lesson_18_adv.html"><span class="ico">🌐</span><span>Урок 18<small>raferalston.github.io</small></span></a>
+<a class="link-card" href="lesson_19_adv.html"><span class="ico">🌐</span><span>Урок 19<small>raferalston.github.io</small></span></a>
+<a class="link-card" href="lesson_20_adv.html"><span class="ico">🌐</span><span>Урок 20<small>raferalston.github.io</small></span></a>
+<a class="link-card" href="lesson_21_adv.html"><span class="ico">🌐</span><span>Урок 21<small>raferalston.github.io</small></span></a>
+<a class="link-card" href="lesson_22_adv.html"><span class="ico">🌐</span><span>Урок 22<small>raferalston.github.io</small></span></a>
+<a class="link-card" href="lesson_23_adv.html"><span class="ico">🌐</span><span>Урок 23<small>raferalston.github.io</small></span></a>
+<a class="link-card" href="lesson_24_adv.html"><span class="ico">🌐</span><span>Урок 24<small>raferalston.github.io</small></span></a>
+</div>
+<nav class="pager" aria-label="Соседние уроки">
+<a class="prev" href="lesson_24_adv.html"><small>← Предыдущий</small>Урок 24. DOM, часть 1</a>
+<a class="next" href="lesson_26_adv.html"><small>Следующий →</small>Урок 26. DOM, часть 3: координаты</a>
+</nav>
+</div>
+</div>
+</main>
+<footer class="site-footer">
+    <div class="wrap">
+        <div>
+            <b>КИДКОД</b> — школа программирования для детей и подростков<br>
+            <span>Вопросы по домашке? Пиши преподавателю:</span>
         </div>
-        <h2 class="important">Предыдущие js уроки</h2>
-        <div class="stuff">
-
-            <a href="lesson_17_adv.html">Урок 17</a>
-            <a href="lesson_18_adv.html">Урок 18</a>
-            <a href="lesson_19_adv.html">Урок 19</a>
-            <a href="lesson_20_adv.html">Урок 20</a>
-            <a href="lesson_21_adv.html">Урок 21</a>
-            <a href="lesson_22_adv.html">Урок 22</a>
-            <a href="lesson_23_adv.html">Урок 23</a>
-            <a href="lesson_24_adv.html">Урок 24</a>
+        <div class="socials">
+            <a href="https://t.me/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#29a9eb" d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24z"/><path fill="#fff" d="M5.4 11.8 16.9 7.4c.5-.2 1 .1.8 1l-2 9.3c-.1.7-.5.8-1.1.5l-3-2.2-1.4 1.4c-.2.2-.3.3-.6.3l.2-3.1 5.6-5c.2-.2 0-.3-.4-.1l-6.9 4.3-3-.9c-.6-.2-.7-.7.2-1z"/></svg> Telegram</a>
+            <a href="https://vk.com/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#0077ff"/><path fill="#fff" d="M12.8 17.3c-5.5 0-8.6-3.8-8.7-10h2.7c.1 4.6 2.1 6.5 3.7 6.9V7.3h2.6v4c1.6-.2 3.2-2 3.8-4h2.5a7.6 7.6 0 0 1-3.4 5 7.8 7.8 0 0 1 4 5h-2.8a4.9 4.9 0 0 0-4.1-3.6v3.6h-.3z"/></svg> ВКонтакте</a>
+            <a href="https://kidkod.ru" target="_blank" rel="noopener">🌐 kidkod.ru</a>
         </div>
     </div>
-    <div class="footer">
-        <h5>Связь с преподавателем:</h5>
-        <div class="links">
-            <a href="https://t.me/kidkodschool" target="_blank">
-                <img src="/img/telegram.png" class="social-icon" alt="телеграм">
-            </a>
-            <a href="https://vk.com/kidkodschool" target="_blank" class="vk-desktop">
-                <img src="/img/vk.png" class="social-icon" alt="вконтакте">
-            </a>
-        </div>
-    </div>
+</footer>
+<script src="assets/course-map.js?v=1"></script>
+<script src="assets/kk.js?v=1"></script>
 </body>
-
 </html>

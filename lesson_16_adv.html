@@ -1,67 +1,293 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="css/style_lesson.css" rel="stylesheet">
-    <title>css grid</title>
-    <style>
-    </style>
+    <title>Урок 16. CSS Grid — домашнее задание · КИДКОД</title>
+    <meta name="description" content="Grid — сетка из строк и колонок. С ней сложные раскладки делаются в пару строк.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%90%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link href="assets/kk.css?v=1" rel="stylesheet">
+    <script>try{var t=localStorage.getItem('kkw:theme');if(t)document.documentElement.setAttribute('data-theme',JSON.parse(t))}catch(e){}</script>
 </head>
-
 <body>
-    <h1 class="title">Создаем сайт с помощью css-grid</h1>
-    <ol>
-        <li>
-            <h2>Создать сайт</h2>    
-            <img src="img/lesson_16.png" alt="grid" width="700">
-        </li>      
-        <li>
-            <h2>
-                <a href="img/mock.xd">Макет сайта для adobe xd(скачать)</a>
-            </h2>
-            <h2>
-                <a href="https://www.figma.com/file/7SfJlaPoNXv55g26YKXzFH/lesson-16-grid?node-id=0%3A1">Макет сайта для figma</a>
-            </h2>
-        </li>  
-        <li>
-            <h2>
-                <a href="https://www.adobe.com/products/xd.html" target="_blank" rel="noopener noreferrer">Ссылка на Adobe XD, удобная программа для макетов</a>
-            </h2>
-            <h2>
-                <a href="https://www.figma.com/" target="_blank" rel="noopener noreferrer">Ссылка на Figma, удобная программа для макетов</a>
-            </h2>
-        </li>
-        <li>
-            <h2>
 
-                <a href="https://cssgridgarden.com/#ru" target="_blank" rel="noopener noreferrer">CSS grid тренажер</a>
-            </h2>
-        </li>
-    </ol>
+<header class="site-header">
+    <div class="wrap">
+        <a class="logo" href="index.html" aria-label="КИДКОД — на главную">
+            <span class="logo-mark">&lt;/&gt;</span>
+            <span>КИДКОД<small>домашние задания · Web</small></span>
+        </a>
+        <nav class="nav" aria-label="Основная навигация">
+            <a href="index.html#basic" class="hide-sm">HTML и CSS</a>
+            <a href="index.html#js" class="hide-sm">JavaScript</a>
+            <a href="index.html#project" class="hide-sm">Проект</a>
+            <button class="icon-btn theme-btn" type="button" aria-label="Сменить тему"><span class="moon">🌙</span><span class="sun">☀️</span></button>
+        </nav>
+    </div>
+</header>
 
-    <div class="additional">
-        <h2 class="important">Что почитать:</h2>
-        <div class="stuff">
-            <a href="https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Grid_Layout" target="_blank" rel="noopener noreferrer">Документация - CSS grid</a>
-            <a href="https://learncssgrid.com/" target="_blank" rel="noopener noreferrer">Все о CSS grid</a>
-            <a href="http://htmlbook.ru/blog/css-grid-i-flexbox-sravnenie-na-praktike#:~:text=Flexbox%20%D0%BE%D1%82%D0%BB%D0%B8%D1%87%D0%BD%D0%BE%20%D0%BF%D0%BE%D0%B4%D1%85%D0%BE%D0%B4%D0%B8%D1%82%20%D0%B4%D0%BB%D1%8F%20%D0%B2%D1%8B%D1%80%D0%B0%D0%B2%D0%BD%D0%B8%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F,%D1%81%D0%BE%20%D1%81%D1%82%D1%80%D0%BE%D0%BA%D0%B0%D0%BC%D0%B8%20%D0%98%D0%9B%D0%98%20%D1%81%20%D0%BA%D0%BE%D0%BB%D0%BE%D0%BD%D0%BA%D0%B0%D0%BC%D0%B8)." target="_blank" rel="noopener noreferrer">Grid или Flexbox?</a>
 
+<main>
+<section class="lesson-hero"><div class="wrap">
+<div class="crumbs"><a href="index.html">Главная</a><span>›</span><a href="index.html#basic">Начинающий web-дизайнер</a><span>›</span><span>Урок 16</span></div>
+<h1>Создаём сайт с помощью CSS Grid</h1>
+<p class="lead">Grid — сетка из строк и колонок. С ней сложные раскладки делаются в пару строк.</p>
+<div class="chips"><span class="chip">📋 Заданий: 4</span><span class="chip">✅ С автопроверкой: 3</span><span class="chip">✨ Новых: 3</span></div>
+</div></section>
+<div class="wrap lesson-layout">
+<aside class="side"><div class="side-card" data-lesson-progress><h4>Прогресс</h4><div class="bar"><i></i></div><span class="cnt">0 из 0</span> выполнено</div><div class="side-card"><h4>Содержание</h4><nav class="toc"><a class="sec" href="#sec-0">Задания</a><a href="#task-1"><span class="n">1</span><span>Сайт на grid по макету</span></a><a href="#task-2"><span class="n">2</span><span>Сетка 3 × 3</span></a><a href="#task-3"><span class="n">3</span><span>Раскладка через grid-template-areas</span></a><a href="#task-4"><span class="n">4</span><span>Большая плитка</span></a><a class="sec" href="#sec-5">Программы для макетов</a><a class="sec" href="#links">Полезные ссылки</a></nav></div></aside>
+<div class="content">
+<h2 class="sec-title" id="sec-0"><span class="emoji">🔲</span>Задания</h2>
+<article class="task" id="task-1" data-task="l16:1">
+<div class="task-head">
+<span class="task-num">1</span>
+<div class="task-title"><h3>Сайт на grid по макету</h3><div class="badges"><span class="badge lvl-3">сложно</span><span class="badge local">в VS Code</span></div></div>
+</div>
+<div class="task-body">
+<p>Сверстай сайт по картинке с помощью CSS Grid. Макет можно открыть в <a href="https://www.figma.com/file/7SfJlaPoNXv55g26YKXzFH/lesson-16-grid?node-id=0%3A1" target="_blank" rel="noopener">Figma</a> или скачать для <a href="img/mock.xd">Adobe XD</a>.</p>
+<div class="shots single"><img class="zoomable" src="img/lesson_16.png" alt="Сайт на grid" loading="lazy"></div>
+<p class="note info">🖥️ Это большое задание — делай его в <b>VS Code</b> на компьютере и открывай страницу в браузере. Не забудь выложить результат на свой сайт на GitHub!</p>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-2" data-task="l16:2">
+<div class="task-head">
+<span class="task-num">2</span>
+<div class="task-title"><h3>Сетка 3 × 3</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Расставь 9 клеток <code>.cell</code> сеткой 3 на 3: у <code>.grid</code> — <code>display: grid</code>, <code>grid-template-columns: repeat(3, 1fr)</code> и промежутки <code>gap: 10px</code>.</p>
+
+<div class="web" data-mode="html" data-key="l16:2" data-tests="[{&quot;js&quot;: &quot;if (!has(\&quot;.grid\&quot;)) return \&quot;Не нашёл элемент .grid\&quot;; return cssIs(\&quot;.grid\&quot;, \&quot;display\&quot;, \&quot;grid\&quot;) || \&quot;Сейчас display = \&quot; + css(\&quot;.grid\&quot;, \&quot;display\&quot;);&quot;, &quot;label&quot;: &quot;.grid { display: grid }&quot;}, {&quot;js&quot;: &quot;if (!has(\&quot;.grid\&quot;)) return \&quot;Не нашёл элемент .grid\&quot;; return cssIs(\&quot;.grid\&quot;, \&quot;row-gap\&quot;, \&quot;10px\&quot;) || \&quot;Сейчас row-gap = \&quot; + css(\&quot;.grid\&quot;, \&quot;row-gap\&quot;);&quot;, &quot;label&quot;: &quot;.grid { gap: 10px }&quot;}, {&quot;js&quot;: &quot;const tops = $$(\&quot;.cell\&quot;).map(e =&gt; Math.round(e.getBoundingClientRect().top)); const rows = {}; tops.forEach(t =&gt; rows[t] = (rows[t] || 0) + 1); const c = Object.values(rows); return (c.length === 3 &amp;&amp; c.every(x =&gt; x === 3)) || \&quot;Сейчас в рядах: \&quot; + c.join(\&quot;, \&quot;);&quot;, &quot;label&quot;: &quot;По три клетки в ряд&quot;}]"><textarea class="src" data-role="code" hidden>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+    &lt;style&gt;
+
+        .cell { background-color: #ffd23f; font-size: 30px; text-align: center; padding: 20px; border-radius: 8px; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;grid&quot;&gt;
+        &lt;div class=&quot;cell&quot;&gt;1&lt;/div&gt;
+        &lt;div class=&quot;cell&quot;&gt;2&lt;/div&gt;
+        &lt;div class=&quot;cell&quot;&gt;3&lt;/div&gt;
+        &lt;div class=&quot;cell&quot;&gt;4&lt;/div&gt;
+        &lt;div class=&quot;cell&quot;&gt;5&lt;/div&gt;
+        &lt;div class=&quot;cell&quot;&gt;6&lt;/div&gt;
+        &lt;div class=&quot;cell&quot;&gt;7&lt;/div&gt;
+        &lt;div class=&quot;cell&quot;&gt;8&lt;/div&gt;
+        &lt;div class=&quot;cell&quot;&gt;9&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+    &lt;style&gt;
+
+        .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+        .cell { background-color: #ffd23f; font-size: 30px; text-align: center; padding: 20px; border-radius: 8px; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;grid&quot;&gt;
+        &lt;div class=&quot;cell&quot;&gt;1&lt;/div&gt;
+        &lt;div class=&quot;cell&quot;&gt;2&lt;/div&gt;
+        &lt;div class=&quot;cell&quot;&gt;3&lt;/div&gt;
+        &lt;div class=&quot;cell&quot;&gt;4&lt;/div&gt;
+        &lt;div class=&quot;cell&quot;&gt;5&lt;/div&gt;
+        &lt;div class=&quot;cell&quot;&gt;6&lt;/div&gt;
+        &lt;div class=&quot;cell&quot;&gt;7&lt;/div&gt;
+        &lt;div class=&quot;cell&quot;&gt;8&lt;/div&gt;
+        &lt;div class=&quot;cell&quot;&gt;9&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-3" data-task="l16:3">
+<div class="task-head">
+<span class="task-num">3</span>
+<div class="task-title"><h3>Раскладка через grid-template-areas</h3><div class="badges"><span class="badge lvl-2">средне</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Разложи страницу по областям: шапка сверху на всю ширину, ниже меню (<code>200px</code>) и контент, внизу подвал на всю ширину. Используй <code>grid-template-areas</code> и <code>grid-area</code>.</p>
+
+<details class="hint"><summary>Подсказка</summary><div class="inner"><pre class="code">.page {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-areas:
+        "header header"
+        "aside  main"
+        "footer footer";
+}
+header { grid-area: header; }</pre></div></details>
+<div class="web" data-mode="html" data-key="l16:3" data-tests="[{&quot;js&quot;: &quot;if (!has(\&quot;.page\&quot;)) return \&quot;Не нашёл элемент .page\&quot;; return cssIs(\&quot;.page\&quot;, \&quot;display\&quot;, \&quot;grid\&quot;) || \&quot;Сейчас display = \&quot; + css(\&quot;.page\&quot;, \&quot;display\&quot;);&quot;, &quot;label&quot;: &quot;.page { display: grid }&quot;}, {&quot;js&quot;: &quot;return new RegExp(\&quot;grid-template-areas\&quot;, \&quot;\&quot;).test(code) || \&quot;В коде не нашёл: Используется grid-template-areas\&quot;;&quot;, &quot;label&quot;: &quot;Используется grid-template-areas&quot;}, {&quot;js&quot;: &quot;return [\&quot;header\&quot;, \&quot;footer\&quot;].every(s =&gt; Math.abs($(s).getBoundingClientRect().width - $(\&quot;.page\&quot;).getBoundingClientRect().width) &lt; 2) || \&quot;header и footer должны занимать всю ширину\&quot;;&quot;, &quot;label&quot;: &quot;Шапка и подвал на всю ширину&quot;}, {&quot;js&quot;: &quot;const a = $(\&quot;aside\&quot;).getBoundingClientRect(), m = $(\&quot;main\&quot;).getBoundingClientRect(); return (Math.abs(a.width - 200) &lt; 2 &amp;&amp; Math.abs(a.top - m.top) &lt; 2 &amp;&amp; m.left &gt;= a.right - 1) || \&quot;aside (200px) должен стоять слева от main\&quot;;&quot;, &quot;label&quot;: &quot;Меню слева шириной 200px, контент справа&quot;}]"><textarea class="src" data-role="code" hidden>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+    &lt;style&gt;
+
+        body { margin: 0; font-family: sans-serif; }
+        .page &gt; * { padding: 20px; color: white; font-size: 20px; }
+        header { background-color: #6d4aff; }
+        aside { background-color: #ff4d8d; }
+        main { background-color: #19b8a6; height: 200px; }
+        footer { background-color: #1f1b3d; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;page&quot;&gt;
+        &lt;header&gt;Шапка&lt;/header&gt;
+        &lt;aside&gt;Меню&lt;/aside&gt;
+        &lt;main&gt;Контент&lt;/main&gt;
+        &lt;footer&gt;Подвал&lt;/footer&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+    &lt;style&gt;
+
+        body { margin: 0; font-family: sans-serif; }
+        .page &gt; * { padding: 20px; color: white; font-size: 20px; }
+        .page {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            grid-template-areas:
+                &quot;header header&quot;
+                &quot;aside main&quot;
+                &quot;footer footer&quot;;
+        }
+        header { background-color: #6d4aff; grid-area: header; }
+        aside { background-color: #ff4d8d; grid-area: aside; }
+        main { background-color: #19b8a6; height: 200px; grid-area: main; }
+        footer { background-color: #1f1b3d; grid-area: footer; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;page&quot;&gt;
+        &lt;header&gt;Шапка&lt;/header&gt;
+        &lt;aside&gt;Меню&lt;/aside&gt;
+        &lt;main&gt;Контент&lt;/main&gt;
+        &lt;footer&gt;Подвал&lt;/footer&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-4" data-task="l16:4">
+<div class="task-head">
+<span class="task-num">4</span>
+<div class="task-title"><h3>Большая плитка</h3><div class="badges"><span class="badge lvl-3">сложно</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>В галерее из 6 плиток первая плитка <code>.big</code> должна занимать <b>две колонки и две строки</b>: <code>grid-column: span 2</code> и <code>grid-row: span 2</code>. У сетки 3 колонки по <code>100px</code> и строки по <code>100px</code>.</p>
+
+<div class="web" data-mode="html" data-key="l16:4" data-tests="[{&quot;js&quot;: &quot;return Math.abs($(\&quot;.big\&quot;).getBoundingClientRect().width - 208) &lt; 2 || \&quot;Ширина .big = \&quot; + $(\&quot;.big\&quot;).getBoundingClientRect().width + \&quot;px, а нужно 2 колонки (208px)\&quot;;&quot;, &quot;label&quot;: &quot;Большая плитка шириной в две колонки&quot;}, {&quot;js&quot;: &quot;return Math.abs($(\&quot;.big\&quot;).getBoundingClientRect().height - 208) &lt; 2 || \&quot;Высота .big = \&quot; + $(\&quot;.big\&quot;).getBoundingClientRect().height + \&quot;px\&quot;;&quot;, &quot;label&quot;: &quot;Большая плитка высотой в две строки&quot;}]"><textarea class="src" data-role="code" hidden>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+    &lt;style&gt;
+
+        .grid { display: grid; grid-template-columns: repeat(3, 100px); grid-auto-rows: 100px; gap: 8px; }
+        .tile { background-color: #19b8a6; border-radius: 8px; }
+        .big { background-color: #ff4d8d; font-size: 60px; color: white; display: flex; justify-content: center; align-items: center; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;grid&quot;&gt;
+        &lt;div class=&quot;tile big&quot;&gt;★&lt;/div&gt;
+        &lt;div class=&quot;tile&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;tile&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;tile&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;tile&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;tile&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+    &lt;style&gt;
+
+        .grid { display: grid; grid-template-columns: repeat(3, 100px); grid-auto-rows: 100px; gap: 8px; }
+        .tile { background-color: #19b8a6; border-radius: 8px; }
+        .big { background-color: #ff4d8d; font-size: 60px; color: white; display: flex; justify-content: center; align-items: center;
+               grid-column: span 2; grid-row: span 2; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;grid&quot;&gt;
+        &lt;div class=&quot;tile big&quot;&gt;★&lt;/div&gt;
+        &lt;div class=&quot;tile&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;tile&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;tile&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;tile&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;tile&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<h2 class="sec-title" id="sec-5"><span class="emoji">🎨</span>Программы для макетов</h2>
+<div class="note info"><p><a href="https://www.figma.com/" target="_blank" rel="noopener">Figma</a> и <a href="https://www.adobe.com/products/xd.html" target="_blank" rel="noopener">Adobe XD</a> — удобные программы для создания макетов. Потренироваться с grid можно в игре <a href="https://cssgridgarden.com/#ru" target="_blank" rel="noopener">CSS Grid Garden</a>.</p></div>
+<h2 class="sec-title" id="links"><span class="emoji">🔗</span>Полезные ссылки</h2>
+<h3 class="links-title">Что почитать</h3>
+<div class="links-grid">
+<a class="link-card" href="https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Grid_Layout" target="_blank" rel="noopener"><span class="ico">📚</span><span>Документация — CSS Grid<small>developer.mozilla.org</small></span></a>
+<a class="link-card" href="https://learncssgrid.com/" target="_blank" rel="noopener"><span class="ico">📚</span><span>Всё о CSS Grid<small>learncssgrid.com</small></span></a>
+<a class="link-card" href="http://htmlbook.ru/blog/css-grid-i-flexbox-sravnenie-na-praktike" target="_blank" rel="noopener"><span class="ico">📚</span><span>Grid или Flexbox?<small>htmlbook.ru</small></span></a>
+</div>
+<h3 class="links-title">Где потренироваться</h3>
+<div class="links-grid">
+<a class="link-card" href="https://cssgridgarden.com/#ru" target="_blank" rel="noopener"><span class="ico">🎮</span><span>CSS Grid Garden — тренажёр<small>cssgridgarden.com</small></span></a>
+</div>
+<nav class="pager" aria-label="Соседние уроки">
+<a class="prev" href="lesson_15_adv.html"><small>← Предыдущий</small>Урок 15. CSS-фреймворки: Bootstrap</a>
+<a class="next" href="lesson_17_adv.html"><small>Следующий →</small>Урок 17. Введение в JavaScript</a>
+</nav>
+</div>
+</div>
+</main>
+<footer class="site-footer">
+    <div class="wrap">
+        <div>
+            <b>КИДКОД</b> — школа программирования для детей и подростков<br>
+            <span>Вопросы по домашке? Пиши преподавателю:</span>
+        </div>
+        <div class="socials">
+            <a href="https://t.me/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#29a9eb" d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24z"/><path fill="#fff" d="M5.4 11.8 16.9 7.4c.5-.2 1 .1.8 1l-2 9.3c-.1.7-.5.8-1.1.5l-3-2.2-1.4 1.4c-.2.2-.3.3-.6.3l.2-3.1 5.6-5c.2-.2 0-.3-.4-.1l-6.9 4.3-3-.9c-.6-.2-.7-.7.2-1z"/></svg> Telegram</a>
+            <a href="https://vk.com/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#0077ff"/><path fill="#fff" d="M12.8 17.3c-5.5 0-8.6-3.8-8.7-10h2.7c.1 4.6 2.1 6.5 3.7 6.9V7.3h2.6v4c1.6-.2 3.2-2 3.8-4h2.5a7.6 7.6 0 0 1-3.4 5 7.8 7.8 0 0 1 4 5h-2.8a4.9 4.9 0 0 0-4.1-3.6v3.6h-.3z"/></svg> ВКонтакте</a>
+            <a href="https://kidkod.ru" target="_blank" rel="noopener">🌐 kidkod.ru</a>
         </div>
     </div>
-    <div class="footer">
-        <h5>Связь с преподавателем:</h5>
-        <div class="links">
-            <a href="https://t.me/kidkodschool" target="_blank">
-                <img src="/img/telegram.png" class="social-icon" alt="телеграм">
-            </a>
-            <a href="https://vk.com/kidkodschool" target="_blank" class="vk-desktop">
-                <img src="/img/vk.png" class="social-icon" alt="вконтакте">
-            </a>
-        </div>
-    </div>
+</footer>
+<script src="assets/course-map.js?v=1"></script>
+<script src="assets/kk.js?v=1"></script>
 </body>
-
 </html>

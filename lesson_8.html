@@ -1,56 +1,142 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="css/style_lesson.css" rel="stylesheet">
-    <title>Дополнительные свойства flex</title>
-    <style>
-
-    </style>
+    <title>Урок 8. Промежуточный проект — домашнее задание · КИДКОД</title>
+    <meta name="description" content="Пора собрать всё, что мы знаем, в один настоящий сайт!">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%90%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link href="assets/kk.css?v=1" rel="stylesheet">
+    <script>try{var t=localStorage.getItem('kkw:theme');if(t)document.documentElement.setAttribute('data-theme',JSON.parse(t))}catch(e){}</script>
 </head>
-
 <body>
-    <!-- <h1 class="title">Тест для 8 урока</h1>
-    <ol>
-        <li>
-            <h2>            
-                <a href="web_tests/lesson_8/index.html" target="_blank" rel="noopener noreferrer">Тест для 8 урока</a>
-            </h2>
-        </li>
-    </ol> -->
-    <h1 class="title">Создаем ваш промежуточный проект используя HTML/CSS</h1>
-    <ol>
-        <li>
-            <img src="img/lesson_8_question.png" alt="Задание" width="1000">
-            <h2><a href="lesson_8_final.html">Ответ</a></h2>
-        </li>
-    </ol>
-    <h1 class="title">Повторяем прошлые уроки</h1>
-    
-    <div class="additional">
-        <div class="stuff">
-            <a href="lesson_1.html">Урок 1</a>
-            <a href="lesson_2.html">Урок 2</a>
-            <a href="lesson_3.html">Урок 3</a>
-            <a href="lesson_4.html">Урок 4</a>
-            <a href="lesson_5.html">Урок 5</a>
-            <a href="lesson_6.html">Урок 6</a>
-        </div>
-    </div>
-    <div class="footer">
-        <h5>Связь с преподавателем:</h5>
-        <div class="links">
-            <a href="https://t.me/kidkodschool" target="_blank">
-                <img src="/img/telegram.png" class="social-icon" alt="телеграм">
-            </a>
-            <a href="https://vk.com/kidkodschool" target="_blank" class="vk-desktop">
-                <img src="/img/vk.png" class="social-icon" alt="вконтакте">
-            </a>
-        </div>
-    </div>
-</body>
 
+<header class="site-header">
+    <div class="wrap">
+        <a class="logo" href="index.html" aria-label="КИДКОД — на главную">
+            <span class="logo-mark">&lt;/&gt;</span>
+            <span>КИДКОД<small>домашние задания · Web</small></span>
+        </a>
+        <nav class="nav" aria-label="Основная навигация">
+            <a href="index.html#basic" class="hide-sm">HTML и CSS</a>
+            <a href="index.html#js" class="hide-sm">JavaScript</a>
+            <a href="index.html#project" class="hide-sm">Проект</a>
+            <button class="icon-btn theme-btn" type="button" aria-label="Сменить тему"><span class="moon">🌙</span><span class="sun">☀️</span></button>
+        </nav>
+    </div>
+</header>
+
+
+<main>
+<section class="lesson-hero"><div class="wrap">
+<div class="crumbs"><a href="index.html">Главная</a><span>›</span><a href="index.html#basic">Начинающий web-дизайнер</a><span>›</span><span>Урок 8</span></div>
+<h1>Промежуточный проект на HTML и CSS</h1>
+<p class="lead">Пора собрать всё, что мы знаем, в один настоящий сайт!</p>
+<div class="chips"><span class="chip">📋 Заданий: 2</span><span class="chip">✅ С автопроверкой: 1</span><span class="chip">✨ Новых: 1</span></div>
+</div></section>
+<div class="wrap lesson-layout">
+<aside class="side"><div class="side-card" data-lesson-progress><h4>Прогресс</h4><div class="bar"><i></i></div><span class="cnt">0 из 0</span> выполнено</div><div class="side-card"><h4>Содержание</h4><nav class="toc"><a class="sec" href="#sec-0">Задания</a><a href="#task-1"><span class="n">1</span><span>Сайт по макету</span></a><a href="#task-2"><span class="n">2</span><span>Лендинг за 30 минут</span></a><a class="sec" href="#sec-3">Повторяем прошлые уроки</a></nav></div></aside>
+<div class="content">
+<h2 class="sec-title" id="sec-0"><span class="emoji">🏆</span>Задания</h2>
+<article class="task" id="task-1" data-task="l8:1">
+<div class="task-head">
+<span class="task-num">1</span>
+<div class="task-title"><h3>Сайт по макету</h3><div class="badges"><span class="badge lvl-3">сложно</span><span class="badge local">в VS Code</span></div></div>
+</div>
+<div class="task-body">
+<p>Сверстай сайт по картинке, используя всё, что изучили: теги, стили, отступы, flexbox и :hover. Сравни свой результат с ответом только после того, как закончишь.</p>
+<div class="shots single"><img class="zoomable" src="img/lesson_8_question.png" alt="Задание" loading="lazy"></div>
+<p class="note info">🖥️ Это большое задание — делай его в <b>VS Code</b> на компьютере и открывай страницу в браузере. Не забудь выложить результат на свой сайт на GitHub!</p>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><p><a href="lesson_8_final.html" target="_blank" rel="noopener">Открыть готовую страницу с ответом ↗</a></p></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-2" data-task="l8:2">
+<div class="task-head">
+<span class="task-num">2</span>
+<div class="task-title"><h3>Лендинг за 30 минут</h3><div class="badges"><span class="badge lvl-3">сложно</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Сделай одностраничный сайт о своём хобби. Обязательно:</p><p><ul><li>шапка <code>&lt;header&gt;</code> с меню <code>&lt;nav&gt;</code> (минимум 3 ссылки)</li><li>заголовок <code>&lt;h1&gt;</code></li><li>минимум два раздела <code>&lt;section&gt;</code></li><li>подвал <code>&lt;footer&gt;</code></li><li>меню — в одну строку с помощью flexbox</li><li>ссылки меню меняются при наведении (<code>:hover</code>)</li></ul></p>
+
+<div class="web" data-mode="html" data-key="l8:2" data-tests="[{&quot;js&quot;: &quot;return count(\&quot;header\&quot;) &gt;= 1 || \&quot;Не нашёл элемент header\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;header\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Есть header&quot;}, {&quot;js&quot;: &quot;return count(\&quot;header nav a, nav a\&quot;) &gt;= 3 || \&quot;Нужно хотя бы 3 шт. header nav a, nav a\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;header nav a, nav a\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;В меню не меньше 3 ссылок&quot;}, {&quot;js&quot;: &quot;return count(\&quot;h1\&quot;) &gt;= 1 || \&quot;Не нашёл элемент h1\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;h1\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Есть h1&quot;}, {&quot;js&quot;: &quot;return count(\&quot;section\&quot;) &gt;= 2 || \&quot;Нужно хотя бы 2 шт. section\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;section\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Не меньше двух section&quot;}, {&quot;js&quot;: &quot;return count(\&quot;footer\&quot;) &gt;= 1 || \&quot;Не нашёл элемент footer\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;footer\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Есть footer&quot;}, {&quot;js&quot;: &quot;if (!has(\&quot;nav\&quot;)) return \&quot;Не нашёл элемент nav\&quot;; return cssIs(\&quot;nav\&quot;, \&quot;display\&quot;, \&quot;flex\&quot;) || \&quot;Сейчас display = \&quot; + css(\&quot;nav\&quot;, \&quot;display\&quot;);&quot;, &quot;label&quot;: &quot;nav { display: flex }&quot;}, {&quot;js&quot;: &quot;return !!rule(/a:hover/) || \&quot;Добавь правило для a:hover\&quot;;&quot;, &quot;label&quot;: &quot;Есть эффект :hover для ссылок&quot;}]"><textarea class="src" data-role="code" hidden>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+    &lt;style&gt;
+
+        body { margin: 0; font-family: sans-serif; }
+        header { background-color: #1f1b3d; padding: 16px; }
+        nav { display: flex; gap: 20px; justify-content: center; }
+        nav a { color: white; text-decoration: none; }
+        nav a:hover { color: #ffd23f; }
+        h1, section { text-align: center; }
+        footer { background-color: #1f1b3d; color: white; text-align: center; padding: 16px; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;nav&gt;
+            &lt;a href=&quot;#about&quot;&gt;Обо мне&lt;/a&gt;
+            &lt;a href=&quot;#hobby&quot;&gt;Хобби&lt;/a&gt;
+            &lt;a href=&quot;#contacts&quot;&gt;Контакты&lt;/a&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+    &lt;h1&gt;Я люблю космос 🚀&lt;/h1&gt;
+    &lt;section id=&quot;about&quot;&gt;
+        &lt;h2&gt;Обо мне&lt;/h2&gt;
+        &lt;p&gt;Мне 12 лет, я учусь делать сайты.&lt;/p&gt;
+    &lt;/section&gt;
+    &lt;section id=&quot;hobby&quot;&gt;
+        &lt;h2&gt;Моё хобби&lt;/h2&gt;
+        &lt;p&gt;Смотрю на звёзды в телескоп.&lt;/p&gt;
+    &lt;/section&gt;
+    &lt;footer id=&quot;contacts&quot;&gt;© 2024 Мой сайт&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<h2 class="sec-title" id="sec-3"><span class="emoji">🔁</span>Повторяем прошлые уроки</h2>
+<div class="note "><p>Пройдись по урокам <a href="lesson_1.html">1</a>, <a href="lesson_2.html">2</a>, <a href="lesson_3.html">3</a>, <a href="lesson_4.html">4</a>, <a href="lesson_5.html">5</a>, <a href="lesson_6.html">6</a> и проверь, все ли задания выполнены.</p></div>
+<nav class="pager" aria-label="Соседние уроки">
+<a class="prev" href="lesson_7.html"><small>← Предыдущий</small>Урок 7. :hover и inline-block</a>
+<a class="next" href="lesson_9_adv.html"><small>Следующий →</small>Урок 9. Вёрстка по макету</a>
+</nav>
+</div>
+</div>
+</main>
+<footer class="site-footer">
+    <div class="wrap">
+        <div>
+            <b>КИДКОД</b> — школа программирования для детей и подростков<br>
+            <span>Вопросы по домашке? Пиши преподавателю:</span>
+        </div>
+        <div class="socials">
+            <a href="https://t.me/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#29a9eb" d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24z"/><path fill="#fff" d="M5.4 11.8 16.9 7.4c.5-.2 1 .1.8 1l-2 9.3c-.1.7-.5.8-1.1.5l-3-2.2-1.4 1.4c-.2.2-.3.3-.6.3l.2-3.1 5.6-5c.2-.2 0-.3-.4-.1l-6.9 4.3-3-.9c-.6-.2-.7-.7.2-1z"/></svg> Telegram</a>
+            <a href="https://vk.com/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#0077ff"/><path fill="#fff" d="M12.8 17.3c-5.5 0-8.6-3.8-8.7-10h2.7c.1 4.6 2.1 6.5 3.7 6.9V7.3h2.6v4c1.6-.2 3.2-2 3.8-4h2.5a7.6 7.6 0 0 1-3.4 5 7.8 7.8 0 0 1 4 5h-2.8a4.9 4.9 0 0 0-4.1-3.6v3.6h-.3z"/></svg> ВКонтакте</a>
+            <a href="https://kidkod.ru" target="_blank" rel="noopener">🌐 kidkod.ru</a>
+        </div>
+    </div>
+</footer>
+<script src="assets/course-map.js?v=1"></script>
+<script src="assets/kk.js?v=1"></script>
+</body>
 </html>

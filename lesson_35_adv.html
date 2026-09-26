@@ -1,90 +1,206 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Создаем сайт - портфолио</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="css/style_lesson.css" rel="stylesheet">
-    <style>
-    table {
-        max-width: 1200px;
-    }
-    caption {
-        background-color: #fff;
-        padding: .5em;
-    }
-
-    </style>
+    <title>Урок 35. Портфолио: адаптивность — домашнее задание · КИДКОД</title>
+    <meta name="description" content="Делаем так, чтобы портфолио отлично смотрелось на планшете и телефоне.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%90%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link href="assets/kk.css?v=1" rel="stylesheet">
+    <script>try{var t=localStorage.getItem('kkw:theme');if(t)document.documentElement.setAttribute('data-theme',JSON.parse(t))}catch(e){}</script>
 </head>
-
 <body>
-    <h1 class="title">Сверстать сайт для разрешений - 1920/768/360 пикселей</h1>
-    <ol>
-        <li>
-            <img src="img/35_tablet.png" alt="adobexd" width="500" height="750">
 
-        </li>
-        <li>
-            <img src="img/35_phone.png" alt="adobexd" width="500" height="750">
-
-        </li>
-    </ol>
+<header class="site-header">
+    <div class="wrap">
+        <a class="logo" href="index.html" aria-label="КИДКОД — на главную">
+            <span class="logo-mark">&lt;/&gt;</span>
+            <span>КИДКОД<small>домашние задания · Web</small></span>
+        </a>
+        <nav class="nav" aria-label="Основная навигация">
+            <a href="index.html#basic" class="hide-sm">HTML и CSS</a>
+            <a href="index.html#js" class="hide-sm">JavaScript</a>
+            <a href="index.html#project" class="hide-sm">Проект</a>
+            <button class="icon-btn theme-btn" type="button" aria-label="Сменить тему"><span class="moon">🌙</span><span class="sun">☀️</span></button>
+        </nav>
     </div>
-
-    <h1 class="title">Ресурсы для создания сайта</h1>
-    <ol>
-        <li>
-            <h2><a href="assets/lesson35_figma_done.fig" download>Макет для figma (скачать)</a></h2>
-        </li>
-        <li>
-            <h2><a href="https://www.figma.com/file/HyCmE9VWYgQZRZO4SWukyP/Untitled?node-id=0%3A1" download>Макет для figma (онлайн)</a></h2>
-        </li>
-        <li>
-            <h2><a href="https://careerfoundry.com/en/blog/ui-design/ui-element-glossary/" target="_blank" rel="noopener noreferrer">32 элемента в современном веб-дизайне</a></h2>
-
-        </li>
-        <li>
-            <h2><a href="https://bennettfeely.com/clippy/" target="_blank" rel="noopener noreferrer">Генератор clip-path</a></h2>
-
-        </li>
-        <li>
-            <h2><a href="https://github.com/wrongakram/sass-mediaqueries/blob/master/src/breakpoints/breakpoints.scss" target="_blank" rel="noopener noreferrer">Адаптивные точки для scss</a></h2>
-
-        </li>
-        <li>
-            <h2><a href="https://sass-guidelin.es/#architecture" target="_blank" rel="noopener noreferrer">Архитектура sass проектов</a></h2>
-
-        </li>
-        <li>
-            <h2><a href="https://github.com/HugoGiraudel/sass-boilerplate/tree/master/stylesheets" target="_blank" rel="noopener noreferrer">Пример организации архитектуры sass</a></h2>
-
-        </li>
-    </ol>
+</header>
 
 
-    <div class="additional">
-        <h2 class="important">Что почитать:</h2>
-        <div class="stuff">
+<main>
+<section class="lesson-hero"><div class="wrap">
+<div class="crumbs"><a href="index.html">Главная</a><span>›</span><a href="index.html#project">Дизайн-проект</a><span>›</span><span>Урок 35</span></div>
+<h1>Создаём сайт-портфолио: 1920 / 768 / 360px</h1>
+<p class="lead">Делаем так, чтобы портфолио отлично смотрелось на планшете и телефоне.</p>
+<div class="chips"><span class="chip">📋 Заданий: 3</span><span class="chip">✅ С автопроверкой: 2</span><span class="chip">✨ Новых: 2</span></div>
+</div></section>
+<div class="wrap lesson-layout">
+<aside class="side"><div class="side-card" data-lesson-progress><h4>Прогресс</h4><div class="bar"><i></i></div><span class="cnt">0 из 0</span> выполнено</div><div class="side-card"><h4>Содержание</h4><nav class="toc"><a class="sec" href="#sec-0">Задания</a><a href="#task-1"><span class="n">1</span><span>Адаптивная версия сайта</span></a><a href="#task-2"><span class="n">2</span><span>Три брейкпоинта</span></a><a href="#task-3"><span class="n">3</span><span>Скошенный фон через clip-path</span></a><a class="sec" href="#links">Полезные ссылки</a></nav></div></aside>
+<div class="content">
+<h2 class="sec-title" id="sec-0"><span class="emoji">📱</span>Задания</h2>
+<article class="task" id="task-1" data-task="l35:1">
+<div class="task-head">
+<span class="task-num">1</span>
+<div class="task-title"><h3>Адаптивная версия сайта</h3><div class="badges"><span class="badge lvl-3">сложно</span><span class="badge local">в VS Code</span></div></div>
+</div>
+<div class="task-body">
+<p>Сверстай сайт для разрешений 1920, 768 и 360 пикселей по макетам. Макет — <a href="assets/lesson35_figma_done.fig" download>скачать для Figma</a> или <a href="https://www.figma.com/file/HyCmE9VWYgQZRZO4SWukyP/Untitled?node-id=0%3A1" target="_blank" rel="noopener">открыть онлайн</a>.</p>
+<div class="shots"><img class="zoomable" src="img/35_tablet.png" alt="Планшет" loading="lazy"><img class="zoomable" src="img/35_phone.png" alt="Телефон" loading="lazy"></div>
+<p class="note info">🖥️ Это большое задание — делай его в <b>VS Code</b> на компьютере и открывай страницу в браузере. Не забудь выложить результат на свой сайт на GitHub!</p>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-2" data-task="l35:2">
+<div class="task-head">
+<span class="task-num">2</span>
+<div class="task-title"><h3>Три брейкпоинта</h3><div class="badges"><span class="badge lvl-2">средне</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Сделай так, чтобы у блока <code>.projects</code> менялось число колонок:</p><p><ul><li>по умолчанию — 3 колонки (<code>grid-template-columns: repeat(3, 1fr)</code>)</li><li><code>@media (max-width: 768px)</code> — 2 колонки</li><li><code>@media (max-width: 360px)</code> — 1 колонка</li></ul></p>
 
-            <a href="https://jazzteam.org/ru/technical-articles/overview-of-approaches-and-css-frameworks-for-adaptive-web-page-layout/" target="_blank" rel="noopener noreferrer">Адаптивная верстка</a>
-            <a href="assets/responsive.pdf" target="_blank" rel="noopener noreferrer">Книга - Отзывчивый веб-дизайн</a>
-            <a href="assets/krug.pdf" target="_blank" rel="noopener noreferrer">Книга - Не заставляйте меня думать</a>
+<div class="web" data-mode="html" data-key="l35:2" data-tests="[{&quot;js&quot;: &quot;return css(\&quot;.projects\&quot;, \&quot;grid-template-columns\&quot;).split(\&quot; \&quot;).length === 3 || \&quot;Сейчас колонки: \&quot; + css(\&quot;.projects\&quot;, \&quot;grid-template-columns\&quot;);&quot;, &quot;label&quot;: &quot;На широком экране 3 колонки&quot;}, {&quot;js&quot;: &quot;const m = media().find(m =&gt; /max-width:\\s*768px/.test(m.conditionText || m.media.mediaText)); return (m &amp;&amp; /repeat\\(2,|1fr 1fr(?! 1fr)/.test(m.cssText)) || \&quot;Добавь @media (max-width: 768px) с двумя колонками\&quot;;&quot;, &quot;label&quot;: &quot;@media (max-width: 768px) — 2 колонки&quot;}, {&quot;js&quot;: &quot;const m = media().find(m =&gt; /max-width:\\s*360px/.test(m.conditionText || m.media.mediaText)); return (m &amp;&amp; /grid-template-columns:\\s*(1fr|repeat\\(1,)/.test(m.cssText)) || \&quot;Добавь @media (max-width: 360px) с одной колонкой\&quot;;&quot;, &quot;label&quot;: &quot;@media (max-width: 360px) — 1 колонка&quot;}, {&quot;js&quot;: &quot;const list = media().map(m =&gt; parseInt((m.conditionText || m.media.mediaText).match(/\\d+/))); return list.indexOf(768) &lt; list.indexOf(360) || \&quot;Сначала @media для 768px, потом для 360px — иначе 360px перезапишется\&quot;;&quot;, &quot;label&quot;: &quot;Медиазапросы идут от большего к меньшему&quot;}]"><textarea class="src" data-role="code" hidden>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+    &lt;style&gt;
+
+        .projects { display: grid; gap: 16px; }
+        .project { background-color: #19b8a6; color: white; padding: 40px; border-radius: 12px; font-family: sans-serif; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;projects&quot;&gt;
+        &lt;div class=&quot;project&quot;&gt;Проект 1&lt;/div&gt;
+        &lt;div class=&quot;project&quot;&gt;Проект 2&lt;/div&gt;
+        &lt;div class=&quot;project&quot;&gt;Проект 3&lt;/div&gt;
+        &lt;div class=&quot;project&quot;&gt;Проект 4&lt;/div&gt;
+        &lt;div class=&quot;project&quot;&gt;Проект 5&lt;/div&gt;
+        &lt;div class=&quot;project&quot;&gt;Проект 6&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+    &lt;style&gt;
+
+        .projects { display: grid; gap: 16px; grid-template-columns: repeat(3, 1fr); }
+        .project { background-color: #19b8a6; color: white; padding: 40px; border-radius: 12px; font-family: sans-serif; }
+        @media (max-width: 768px) {
+            .projects { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 360px) {
+            .projects { grid-template-columns: 1fr; }
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;projects&quot;&gt;
+        &lt;div class=&quot;project&quot;&gt;Проект 1&lt;/div&gt;
+        &lt;div class=&quot;project&quot;&gt;Проект 2&lt;/div&gt;
+        &lt;div class=&quot;project&quot;&gt;Проект 3&lt;/div&gt;
+        &lt;div class=&quot;project&quot;&gt;Проект 4&lt;/div&gt;
+        &lt;div class=&quot;project&quot;&gt;Проект 5&lt;/div&gt;
+        &lt;div class=&quot;project&quot;&gt;Проект 6&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-3" data-task="l35:3">
+<div class="task-head">
+<span class="task-num">3</span>
+<div class="task-title"><h3>Скошенный фон через clip-path</h3><div class="badges"><span class="badge lvl-2">средне</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Сделай у шапки <code>.hero</code> скошенный нижний край с помощью <code>clip-path: polygon(...)</code>. Подобрать форму поможет <a href="https://bennettfeely.com/clippy/" target="_blank" rel="noopener">генератор clip-path</a>.</p>
+
+<div class="web" data-mode="html" data-key="l35:3" data-tests="[{&quot;js&quot;: &quot;return /polygon/.test(css(\&quot;.hero\&quot;, \&quot;clip-path\&quot;)) || \&quot;Добавь .hero clip-path: polygon(...)\&quot;;&quot;, &quot;label&quot;: &quot;У .hero есть clip-path: polygon&quot;}]"><textarea class="src" data-role="code" hidden>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+    &lt;style&gt;
+
+        body { margin: 0; font-family: sans-serif; }
+        .hero { height: 300px; background: linear-gradient(135deg, #6d4aff, #ff4d8d); color: white; display: flex; align-items: center; justify-content: center; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;section class=&quot;hero&quot;&gt;
+        &lt;h1&gt;Привет! Я — веб-дизайнер&lt;/h1&gt;
+    &lt;/section&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+    &lt;style&gt;
+
+        body { margin: 0; font-family: sans-serif; }
+        .hero { height: 300px; background: linear-gradient(135deg, #6d4aff, #ff4d8d); color: white; display: flex; align-items: center; justify-content: center;
+                clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;section class=&quot;hero&quot;&gt;
+        &lt;h1&gt;Привет! Я — веб-дизайнер&lt;/h1&gt;
+    &lt;/section&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<h2 class="sec-title" id="links"><span class="emoji">🔗</span>Полезные ссылки</h2>
+<h3 class="links-title">Ресурсы для создания сайта</h3>
+<div class="links-grid">
+<a class="link-card" href="https://careerfoundry.com/en/blog/ui-design/ui-element-glossary/" target="_blank" rel="noopener"><span class="ico">🎨</span><span>32 элемента современного веб-дизайна<small>careerfoundry.com</small></span></a>
+<a class="link-card" href="https://bennettfeely.com/clippy/" target="_blank" rel="noopener"><span class="ico">🛠️</span><span>Генератор clip-path<small>bennettfeely.com</small></span></a>
+<a class="link-card" href="https://github.com/wrongakram/sass-mediaqueries/blob/master/src/breakpoints/breakpoints.scss" target="_blank" rel="noopener"><span class="ico">🛠️</span><span>Адаптивные точки для SCSS<small>github.com</small></span></a>
+<a class="link-card" href="https://sass-guidelin.es/#architecture" target="_blank" rel="noopener"><span class="ico">📚</span><span>Архитектура Sass-проектов<small>sass-guidelin.es</small></span></a>
+<a class="link-card" href="https://github.com/HugoGiraudel/sass-boilerplate/tree/master/stylesheets" target="_blank" rel="noopener"><span class="ico">📚</span><span>Пример архитектуры Sass<small>github.com</small></span></a>
+</div>
+<h3 class="links-title">Что почитать</h3>
+<div class="links-grid">
+<a class="link-card" href="https://jazzteam.org/ru/technical-articles/overview-of-approaches-and-css-frameworks-for-adaptive-web-page-layout/" target="_blank" rel="noopener"><span class="ico">📚</span><span>Адаптивная вёрстка<small>jazzteam.org</small></span></a>
+<a class="link-card" href="assets/responsive.pdf" target="_blank" rel="noopener"><span class="ico">📚</span><span>Книга «Отзывчивый веб-дизайн»<small>raferalston.github.io</small></span></a>
+<a class="link-card" href="assets/krug.pdf" target="_blank" rel="noopener"><span class="ico">📚</span><span>Книга «Не заставляйте меня думать»<small>raferalston.github.io</small></span></a>
+</div>
+<nav class="pager" aria-label="Соседние уроки">
+<a class="prev" href="lesson_34_adv.html"><small>← Предыдущий</small>Урок 34. Портфолио: BEM и Sass</a>
+<a class="next" href="lesson_36_adv.html"><small>Следующий →</small>Урок 36. Портфолио: публикация</a>
+</nav>
+</div>
+</div>
+</main>
+<footer class="site-footer">
+    <div class="wrap">
+        <div>
+            <b>КИДКОД</b> — школа программирования для детей и подростков<br>
+            <span>Вопросы по домашке? Пиши преподавателю:</span>
+        </div>
+        <div class="socials">
+            <a href="https://t.me/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#29a9eb" d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24z"/><path fill="#fff" d="M5.4 11.8 16.9 7.4c.5-.2 1 .1.8 1l-2 9.3c-.1.7-.5.8-1.1.5l-3-2.2-1.4 1.4c-.2.2-.3.3-.6.3l.2-3.1 5.6-5c.2-.2 0-.3-.4-.1l-6.9 4.3-3-.9c-.6-.2-.7-.7.2-1z"/></svg> Telegram</a>
+            <a href="https://vk.com/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#0077ff"/><path fill="#fff" d="M12.8 17.3c-5.5 0-8.6-3.8-8.7-10h2.7c.1 4.6 2.1 6.5 3.7 6.9V7.3h2.6v4c1.6-.2 3.2-2 3.8-4h2.5a7.6 7.6 0 0 1-3.4 5 7.8 7.8 0 0 1 4 5h-2.8a4.9 4.9 0 0 0-4.1-3.6v3.6h-.3z"/></svg> ВКонтакте</a>
+            <a href="https://kidkod.ru" target="_blank" rel="noopener">🌐 kidkod.ru</a>
         </div>
     </div>
-    <div class="footer">
-        <h5>Связь с преподавателем:</h5>
-        <div class="links">
-            <a href="https://t.me/kidkodschool" target="_blank">
-                <img src="/img/telegram.png" class="social-icon" alt="телеграм">
-            </a>
-            <a href="https://vk.com/kidkodschool" target="_blank" class="vk-desktop">
-                <img src="/img/vk.png" class="social-icon" alt="вконтакте">
-            </a>
-        </div>
-    </div>
+</footer>
+<script src="assets/course-map.js?v=1"></script>
+<script src="assets/kk.js?v=1"></script>
 </body>
-
 </html>

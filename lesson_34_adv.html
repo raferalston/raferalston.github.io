@@ -1,119 +1,146 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Создаем сайт - портфолио</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="css/style_lesson.css" rel="stylesheet">
-    <style>
-    table {
-        max-width: 1200px;
-    }
-    caption {
-        background-color: #fff;
-        padding: .5em;
-    }
-    </style>
+    <title>Урок 34. Портфолио: BEM и Sass — домашнее задание · КИДКОД</title>
+    <meta name="description" content="Верстаем сайт по макету для большого экрана и учимся держать код в порядке: методология BEM и препроцессор Sass.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%90%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link href="assets/kk.css?v=1" rel="stylesheet">
+    <script>try{var t=localStorage.getItem('kkw:theme');if(t)document.documentElement.setAttribute('data-theme',JSON.parse(t))}catch(e){}</script>
 </head>
-
 <body>
-    <h1 class="title">Сверстать сайт для 1920 разрешения</h1>
-    <ol>
-        <li>
-            <h2>
-                Ресурсы для создания сайта
-            </h2>
-            <ol>
-                <li>
-                    <h2><a href="https://ru.bem.info/methodology/quick-start/" target="_blank" rel="noopener noreferrer">BEM - методология</a></h2>
 
-                </li>
-                <li>
-                    <h2><a href="https://sass-scss.ru/guide/" target="_blank" rel="noopener noreferrer">Sass - препроцессор для CSS</a></h2>
+<header class="site-header">
+    <div class="wrap">
+        <a class="logo" href="index.html" aria-label="КИДКОД — на главную">
+            <span class="logo-mark">&lt;/&gt;</span>
+            <span>КИДКОД<small>домашние задания · Web</small></span>
+        </a>
+        <nav class="nav" aria-label="Основная навигация">
+            <a href="index.html#basic" class="hide-sm">HTML и CSS</a>
+            <a href="index.html#js" class="hide-sm">JavaScript</a>
+            <a href="index.html#project" class="hide-sm">Проект</a>
+            <button class="icon-btn theme-btn" type="button" aria-label="Сменить тему"><span class="moon">🌙</span><span class="sun">☀️</span></button>
+        </nav>
+    </div>
+</header>
 
-                </li>
-                <li>
-                    <h2><a href="https://gist.github.com/DavidWells/18e73022e723037a50d6" target="_blank" rel="noopener noreferrer">reset CSS (Обнуление изначальных стилей)</a></h2>
 
-                </li>
-            </ol>
-        </li>
-    </ol>
-    </ol>
+<main>
+<section class="lesson-hero"><div class="wrap">
+<div class="crumbs"><a href="index.html">Главная</a><span>›</span><a href="index.html#project">Дизайн-проект</a><span>›</span><span>Урок 34</span></div>
+<h1>Создаём сайт-портфолио: вёрстка для 1920px</h1>
+<p class="lead">Верстаем сайт по макету для большого экрана и учимся держать код в порядке: методология BEM и препроцессор Sass.</p>
+<div class="chips"><span class="chip">📋 Заданий: 2</span><span class="chip">✅ С автопроверкой: 1</span><span class="chip">✨ Новых: 1</span></div>
+</div></section>
+<div class="wrap lesson-layout">
+<aside class="side"><div class="side-card" data-lesson-progress><h4>Прогресс</h4><div class="bar"><i></i></div><span class="cnt">0 из 0</span> выполнено</div><div class="side-card"><h4>Содержание</h4><nav class="toc"><a class="sec" href="#sec-0">Ресурсы для создания сайта</a><a class="sec" href="#sec-1">Примеры вёрстки по BEM</a><a class="sec" href="#sec-2">Как установить и использовать Sass</a><a class="sec" href="#sec-3">Задания</a><a href="#task-1"><span class="n">1</span><span>Сверстай сайт для 1920px</span></a><a href="#task-2"><span class="n">2</span><span>Карточка по BEM</span></a><a class="sec" href="#links">Полезные ссылки</a></nav></div></aside>
+<div class="content">
+<h2 class="sec-title" id="sec-0"><span class="emoji">📚</span>Ресурсы для создания сайта</h2>
+<div class="note info"><p><a href="https://ru.bem.info/methodology/quick-start/" target="_blank" rel="noopener">BEM — методология</a> · <a href="https://sass-scss.ru/guide/" target="_blank" rel="noopener">Sass — препроцессор для CSS</a> · <a href="https://gist.github.com/DavidWells/18e73022e723037a50d6" target="_blank" rel="noopener">reset CSS (обнуление стилей)</a></p></div>
+<h2 class="sec-title" id="sec-1"><span class="emoji">🧱</span>Примеры вёрстки по BEM</h2>
+<div class="shots single"><img class="zoomable" src="img/bem_1.png" alt="BEM, пример 1" loading="lazy"><img class="zoomable" src="img/bem_2.png" alt="BEM, пример 2" loading="lazy"></div>
+<h2 class="sec-title" id="sec-2"><span class="emoji">💅</span>Как установить и использовать Sass</h2>
+<div class="shots single"><img class="zoomable" src="img/sass.png" alt="Установка Sass" loading="lazy"><img class="zoomable" src="img/sass_1.png" alt="Sass, шаг 1" loading="lazy"><img class="zoomable" src="img/sass_2.png" alt="Sass, шаг 2" loading="lazy"></div>
+<h2 class="sec-title" id="sec-3"><span class="emoji">✍️</span>Задания</h2>
+<article class="task" id="task-1" data-task="l34:1">
+<div class="task-head">
+<span class="task-num">1</span>
+<div class="task-title"><h3>Сверстай сайт для 1920px</h3><div class="badges"><span class="badge lvl-3">сложно</span><span class="badge local">в VS Code</span></div></div>
+</div>
+<div class="task-body">
+<p>Сверстай свой сайт-портфолио по макету для экрана 1920px. Называй классы по BEM, стили пиши на Sass. Как выгрузить картинки из макета — в <a href="lesson_34_tutorial.html" target="_blank">инструкции</a>.</p>
 
-    <h1 class="title">Примеры верстки по BEM</h1>
-    <ol>
-        <li>
-            <img src="img/bem_1.png" alt="adobexd" width="600">
+<p class="note info">🖥️ Это большое задание — делай его в <b>VS Code</b> на компьютере и открывай страницу в браузере. Не забудь выложить результат на свой сайт на GitHub!</p>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-2" data-task="l34:2">
+<div class="task-head">
+<span class="task-num">2</span>
+<div class="task-title"><h3>Карточка по BEM</h3><div class="badges"><span class="badge lvl-2">средне</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Сверстай карточку проекта, называя классы по BEM:</p><p><ul><li>блок — <code>card</code></li><li>элементы — <code>card__image</code>, <code>card__title</code>, <code>card__text</code>, <code>card__button</code></li><li>модификатор — у кнопки <code>card__button--active</code> другой цвет фона</li></ul></p>
 
-        </li>
-        <li>
-            <img src="img/bem_2.png" alt="adobexd" width="600">
+<div class="web" data-mode="html" data-key="l34:2" data-tests="[{&quot;js&quot;: &quot;return count(\&quot;.card\&quot;) &gt;= 1 || \&quot;Не нашёл элемент .card\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;.card\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Есть .card&quot;}, {&quot;js&quot;: &quot;return count(\&quot;.card .card__image\&quot;) &gt;= 1 || \&quot;Не нашёл элемент .card .card__image\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;.card .card__image\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Есть card__image внутри card&quot;}, {&quot;js&quot;: &quot;return count(\&quot;.card .card__title\&quot;) &gt;= 1 || \&quot;Не нашёл элемент .card .card__title\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;.card .card__title\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Есть .card .card__title&quot;}, {&quot;js&quot;: &quot;return count(\&quot;.card .card__text\&quot;) &gt;= 1 || \&quot;Не нашёл элемент .card .card__text\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;.card .card__text\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Есть .card .card__text&quot;}, {&quot;js&quot;: &quot;return count(\&quot;.card .card__button\&quot;) &gt;= 1 || \&quot;Не нашёл элемент .card .card__button\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;.card .card__button\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Есть .card .card__button&quot;}, {&quot;js&quot;: &quot;return count(\&quot;.card__button.card__button--active\&quot;) &gt;= 1 || \&quot;Не нашёл элемент .card__button.card__button--active\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;.card__button.card__button--active\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Есть модификатор card__button--active&quot;}, {&quot;js&quot;: &quot;const btns = $$(\&quot;.card__button\&quot;); const act = $(\&quot;.card__button--active\&quot;); const plain = btns.find(b =&gt; !b.classList.contains(\&quot;card__button--active\&quot;)); if (!plain) return \&quot;Сделай ещё одну кнопку без модификатора, чтобы было видно разницу\&quot;; return getComputedStyle(act).backgroundColor !== getComputedStyle(plain).backgroundColor || \&quot;У card__button--active должен быть другой фон\&quot;;&quot;, &quot;label&quot;: &quot;У модификатора свой фон&quot;}]"><textarea class="src" data-role="code" hidden>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+    &lt;style&gt;
 
-        </li>
-    </ol>
-
-    <h1 class="title">Как установить Sass</h1>
-    <ol>
-        <li>
-            <img src="img/sass.png" alt="adobexd" width="600">
-
-        </li>
-    </ol>
-
-    <h1 class="title">Создание CSS с помощью Sass препроцессора</h1>
-    <ol>
-        <li>
-            <img src="img/sass_1.png" alt="adobexd" width="500">
-
-        </li>
-        <li>
-            <img src="img/sass_2.png" alt="adobexd" width="500">
-
-        </li>
-        <li>
-            <img src="img/sass_2.png" alt="adobexd" width="500">
-
-        </li>
-    </ol>
-
-    <h1 class="title">Инструкция как загружать картинки из программы adobe xd</h1>
-    <ol>
-        <li>
-
-            <h2><a href="lesson_34_tutorial.html" target="_blank" rel="noopener noreferrer">Инструкция</a></h2>
-        </li>
-    </ol>
-
-    <div class="additional">
-        <h2 class="important">Что посмотреть:</h2>
-        <div class="stuff">
-
-            <a href="https://www.youtube.com/watch?v=3AP7opexzSs" target="_blank" rel="noopener noreferrer">Верстка сайта с нуля (BEM и Sass)</a>
+        .card { width: 260px; padding: 16px; border-radius: 16px; background-color: #f6f4ff; font-family: sans-serif; }
+        .card__image { width: 100%; border-radius: 12px; }
+        .card__title { margin: 12px 0 4px; }
+        .card__text { color: #555; }
+        .card__button { border: 0; padding: 10px 16px; border-radius: 8px; background-color: #ddd; }
+        .card__button--active { background-color: #6d4aff; color: white; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;card&quot;&gt;
+        &lt;img class=&quot;card__image&quot; src=&quot;img/lesson_6.jpg&quot; alt=&quot;Проект&quot;&gt;
+        &lt;h3 class=&quot;card__title&quot;&gt;Мой первый сайт&lt;/h3&gt;
+        &lt;p class=&quot;card__text&quot;&gt;Сайт о космосе на HTML и CSS.&lt;/p&gt;
+        &lt;button class=&quot;card__button&quot;&gt;Подробнее&lt;/button&gt;
+        &lt;button class=&quot;card__button card__button--active&quot;&gt;Открыть&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<h2 class="sec-title" id="links"><span class="emoji">🔗</span>Полезные ссылки</h2>
+<h3 class="links-title">Что посмотреть</h3>
+<div class="links-grid">
+<a class="link-card" href="https://www.youtube.com/watch?v=3AP7opexzSs" target="_blank" rel="noopener"><span class="ico">🎬</span><span>Вёрстка сайта с нуля (BEM и Sass)<small>youtube.com</small></span></a>
+</div>
+<h3 class="links-title">Что почитать</h3>
+<div class="links-grid">
+<a class="link-card" href="https://sass-guidelin.es/#architecture" target="_blank" rel="noopener"><span class="ico">📚</span><span>Как создавать структуру в Sass-проектах<small>sass-guidelin.es</small></span></a>
+<a class="link-card" href="https://github.com/HugoGiraudel/sass-boilerplate/tree/master/stylesheets" target="_blank" rel="noopener"><span class="ico">📚</span><span>Готовая файловая структура для проекта<small>github.com</small></span></a>
+<a class="link-card" href="assets/responsive.pdf" target="_blank" rel="noopener"><span class="ico">📚</span><span>Книга «Отзывчивый веб-дизайн»<small>raferalston.github.io</small></span></a>
+<a class="link-card" href="assets/krug.pdf" target="_blank" rel="noopener"><span class="ico">📚</span><span>Книга «Не заставляйте меня думать»<small>raferalston.github.io</small></span></a>
+</div>
+<nav class="pager" aria-label="Соседние уроки">
+<a class="prev" href="lesson_33_adv.html"><small>← Предыдущий</small>Урок 33. Портфолио: макет</a>
+<a class="next" href="lesson_35_adv.html"><small>Следующий →</small>Урок 35. Портфолио: адаптивность</a>
+</nav>
+</div>
+</div>
+</main>
+<footer class="site-footer">
+    <div class="wrap">
+        <div>
+            <b>КИДКОД</b> — школа программирования для детей и подростков<br>
+            <span>Вопросы по домашке? Пиши преподавателю:</span>
         </div>
-        <h2 class="important">Что почитать:</h2>
-        <div class="stuff">
-
-            <a href="https://sass-guidelin.es/#architecture" target="_blank" rel="noopener noreferrer">Как создавать структуру в sass проектах</a>
-            <a href="https://github.com/HugoGiraudel/sass-boilerplate/tree/master/stylesheets" target="_blank" rel="noopener noreferrer">Готовая файловая структура для проекта</a>
-            <a href="assets/responsive.pdf" target="_blank" rel="noopener noreferrer">Книга - Отзывчивый веб-дизайн</a>
-            <a href="assets/krug.pdf" target="_blank" rel="noopener noreferrer">Книга - Не заставляйте меня думать</a>
+        <div class="socials">
+            <a href="https://t.me/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#29a9eb" d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24z"/><path fill="#fff" d="M5.4 11.8 16.9 7.4c.5-.2 1 .1.8 1l-2 9.3c-.1.7-.5.8-1.1.5l-3-2.2-1.4 1.4c-.2.2-.3.3-.6.3l.2-3.1 5.6-5c.2-.2 0-.3-.4-.1l-6.9 4.3-3-.9c-.6-.2-.7-.7.2-1z"/></svg> Telegram</a>
+            <a href="https://vk.com/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#0077ff"/><path fill="#fff" d="M12.8 17.3c-5.5 0-8.6-3.8-8.7-10h2.7c.1 4.6 2.1 6.5 3.7 6.9V7.3h2.6v4c1.6-.2 3.2-2 3.8-4h2.5a7.6 7.6 0 0 1-3.4 5 7.8 7.8 0 0 1 4 5h-2.8a4.9 4.9 0 0 0-4.1-3.6v3.6h-.3z"/></svg> ВКонтакте</a>
+            <a href="https://kidkod.ru" target="_blank" rel="noopener">🌐 kidkod.ru</a>
         </div>
     </div>
-    <div class="footer">
-        <h5>Связь с преподавателем:</h5>
-        <div class="links">
-            <a href="https://t.me/kidkodschool" target="_blank">
-                <img src="/img/telegram.png" class="social-icon" alt="телеграм">
-            </a>
-            <a href="https://vk.com/kidkodschool" target="_blank" class="vk-desktop">
-                <img src="/img/vk.png" class="social-icon" alt="вконтакте">
-            </a>
-        </div>
-    </div>
+</footer>
+<script src="assets/course-map.js?v=1"></script>
+<script src="assets/kk.js?v=1"></script>
 </body>
-
 </html>

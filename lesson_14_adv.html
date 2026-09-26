@@ -1,73 +1,255 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="css/style_lesson.css" rel="stylesheet">
-    <title>Адаптивный дизайн</title>
-    <style>
-        .box1 {
-            width: 500px;
-            height: 300px;
-            background-image: url('img/resp.gif');
-            background-repeat: no-repeat;
-            background-size: contain;
-            margin: 0 .5em;
-        }
-        .box2 {
-            width: 500px;
-            height: 300px;
-            background-image: url('img/resp2.gif');
-            background-repeat: no-repeat;
-            background-size: contain;
-            margin: 0 .5em;
-        }
-    </style>
+    <title>Урок 14. Адаптивный дизайн — домашнее задание · КИДКОД</title>
+    <meta name="description" content="Сайт должен хорошо выглядеть и на большом мониторе, и на телефоне. Для этого есть медиазапросы.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%90%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link href="assets/kk.css?v=1" rel="stylesheet">
+    <script>try{var t=localStorage.getItem('kkw:theme');if(t)document.documentElement.setAttribute('data-theme',JSON.parse(t))}catch(e){}</script>
 </head>
-
 <body>
-    <h1 class="title">Создаем адаптивные элементы с помощью flex</h1>
-    <ol>
-        <li >
-            <h2>
 
-                <a href="https://i.gyazo.com/98231cdb9232f80bf65f38475e9aadee.mp4">Создать сайт #1</a>
-            </h2>
-            <div class="box1">
-            </div>
-        </li>
-        <li >
-            <h2>
+<header class="site-header">
+    <div class="wrap">
+        <a class="logo" href="index.html" aria-label="КИДКОД — на главную">
+            <span class="logo-mark">&lt;/&gt;</span>
+            <span>КИДКОД<small>домашние задания · Web</small></span>
+        </a>
+        <nav class="nav" aria-label="Основная навигация">
+            <a href="index.html#basic" class="hide-sm">HTML и CSS</a>
+            <a href="index.html#js" class="hide-sm">JavaScript</a>
+            <a href="index.html#project" class="hide-sm">Проект</a>
+            <button class="icon-btn theme-btn" type="button" aria-label="Сменить тему"><span class="moon">🌙</span><span class="sun">☀️</span></button>
+        </nav>
+    </div>
+</header>
 
-                <a href="https://i.gyazo.com/afe8e236a26e6e1e0f688812d861651d.mp4">Создать сайт #2</a>
-            </h2>
-            <div class="box2">
-            </div>
-        </li>
 
-    </ol>
-    <div class="additional">
-        <h2 class="important">Что почитать:</h2>
-        <div class="stuff">
+<main>
+<section class="lesson-hero"><div class="wrap">
+<div class="crumbs"><a href="index.html">Главная</a><span>›</span><a href="index.html#basic">Начинающий web-дизайнер</a><span>›</span><span>Урок 14</span></div>
+<h1>Адаптивный дизайн и медиазапросы</h1>
+<p class="lead">Сайт должен хорошо выглядеть и на большом мониторе, и на телефоне. Для этого есть медиазапросы.</p>
+<div class="chips"><span class="chip">📋 Заданий: 5</span><span class="chip">✅ С автопроверкой: 3</span><span class="chip">✨ Новых: 3</span></div>
+</div></section>
+<div class="wrap lesson-layout">
+<aside class="side"><div class="side-card" data-lesson-progress><h4>Прогресс</h4><div class="bar"><i></i></div><span class="cnt">0 из 0</span> выполнено</div><div class="side-card"><h4>Содержание</h4><nav class="toc"><a class="sec" href="#sec-0">Задания</a><a href="#task-1"><span class="n">1</span><span>Адаптивный сайт #1</span></a><a href="#task-2"><span class="n">2</span><span>Адаптивный сайт #2</span></a><a href="#task-3"><span class="n">3</span><span>Карточки: в ряд или столбиком</span></a><a href="#task-4"><span class="n">4</span><span>Картинка не вылезает за экран</span></a><a href="#task-5"><span class="n">5</span><span>Прячем меню на телефоне</span></a><a class="sec" href="#links">Полезные ссылки</a></nav></div></aside>
+<div class="content">
+<h2 class="sec-title" id="sec-0"><span class="emoji">📱</span>Задания</h2>
+<div class="note info"><p>Проверить адаптивность можно в DevTools: <kbd>F12</kbd> → значок телефона (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>M</kbd>). А здесь — нажми <b>⤢</b> над редактором и меняй ширину окна.</p></div>
+<article class="task" id="task-1" data-task="l14:1">
+<div class="task-head">
+<span class="task-num">1</span>
+<div class="task-title"><h3>Адаптивный сайт #1</h3><div class="badges"><span class="badge lvl-2">средне</span><span class="badge local">в VS Code</span></div></div>
+</div>
+<div class="task-body">
+<p>Создай сайт, как на анимации: при уменьшении экрана блоки перестраиваются. <a href="https://i.gyazo.com/98231cdb9232f80bf65f38475e9aadee.mp4" target="_blank" rel="noopener">Смотреть видео</a>.</p>
+<div class="shots single"><img class="zoomable" src="img/resp.gif" alt="Сайт #1" loading="lazy"></div>
+<p class="note info">🖥️ Это большое задание — делай его в <b>VS Code</b> на компьютере и открывай страницу в браузере. Не забудь выложить результат на свой сайт на GitHub!</p>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-2" data-task="l14:2">
+<div class="task-head">
+<span class="task-num">2</span>
+<div class="task-title"><h3>Адаптивный сайт #2</h3><div class="badges"><span class="badge lvl-3">сложно</span><span class="badge local">в VS Code</span></div></div>
+</div>
+<div class="task-body">
+<p>Создай второй сайт, как на анимации. <a href="https://i.gyazo.com/afe8e236a26e6e1e0f688812d861651d.mp4" target="_blank" rel="noopener">Смотреть видео</a>.</p>
+<div class="shots single"><img class="zoomable" src="img/resp2.gif" alt="Сайт #2" loading="lazy"></div>
+<p class="note info">🖥️ Это большое задание — делай его в <b>VS Code</b> на компьютере и открывай страницу в браузере. Не забудь выложить результат на свой сайт на GitHub!</p>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-3" data-task="l14:3">
+<div class="task-head">
+<span class="task-num">3</span>
+<div class="task-title"><h3>Карточки: в ряд или столбиком</h3><div class="badges"><span class="badge lvl-2">средне</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Три карточки стоят в ряд (<code>display: flex</code> у <code>.cards</code>). Добавь медиазапрос: если ширина экрана <b>меньше 600px</b> — <code>@media (max-width: 600px)</code> — карточки должны встать столбиком (<code>flex-direction: column</code>).</p>
 
-            <a href="https://www.w3schools.com/css/css_rwd_mediaqueries.asp" target="_blank">Отзывчивый веб-дизайн</a>
-            <a href="https://developer.mozilla.org/ru/docs/Web/CSS/Media_Queries/Using_media_queries" target="_blank">Медиа запросы</a>
-            <a href="https://www.invisionapp.com/inside-design/examples-responsive-web-design/" target="_blank">Примеры хорошего веб-дизайна</a>
+<div class="web" data-mode="html" data-key="l14:3" data-tests="[{&quot;js&quot;: &quot;if (!has(\&quot;.cards\&quot;)) return \&quot;Не нашёл элемент .cards\&quot;; return cssIs(\&quot;.cards\&quot;, \&quot;display\&quot;, \&quot;flex\&quot;) || \&quot;Сейчас display = \&quot; + css(\&quot;.cards\&quot;, \&quot;display\&quot;);&quot;, &quot;label&quot;: &quot;.cards { display: flex }&quot;}, {&quot;js&quot;: &quot;return media().some(m =&gt; /max-width:\\s*600px/.test(m.conditionText || m.media.mediaText)) || \&quot;Добавь @media (max-width: 600px)\&quot;;&quot;, &quot;label&quot;: &quot;Есть @media (max-width: 600px)&quot;}, {&quot;js&quot;: &quot;const m = media().find(m =&gt; /max-width:\\s*600px/.test(m.conditionText || m.media.mediaText)); return (m &amp;&amp; /flex-direction:\\s*column/.test(m.cssText)) || \&quot;Внутри @media сделай .cards { flex-direction: column }\&quot;;&quot;, &quot;label&quot;: &quot;В медиазапросе карточки встают столбиком&quot;}, {&quot;js&quot;: &quot;const r = $$(\&quot;.card\&quot;).map(e =&gt; e.getBoundingClientRect().top); return r.every(t =&gt; Math.abs(t - r[0]) &lt; 2) || \&quot;На широком экране карточки должны стоять в одну строку\&quot;;&quot;, &quot;label&quot;: &quot;На широком экране карточки в ряд&quot;}]"><textarea class="src" data-role="code" hidden>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+    &lt;style&gt;
+
+        body { margin: 0; font-family: sans-serif; }
+        .card { flex: 1; font-size: 80px; text-align: center; padding: 30px; margin: 10px; background-color: #efeaff; border-radius: 16px; }
+        .cards { display: flex; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;cards&quot;&gt;
+        &lt;div class=&quot;card&quot;&gt;🐶&lt;/div&gt;
+        &lt;div class=&quot;card&quot;&gt;🐱&lt;/div&gt;
+        &lt;div class=&quot;card&quot;&gt;🐰&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+    &lt;style&gt;
+
+        body { margin: 0; font-family: sans-serif; }
+        .card { flex: 1; font-size: 80px; text-align: center; padding: 30px; margin: 10px; background-color: #efeaff; border-radius: 16px; }
+        .cards { display: flex; }
+        @media (max-width: 600px) {
+            .cards { flex-direction: column; }
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;cards&quot;&gt;
+        &lt;div class=&quot;card&quot;&gt;🐶&lt;/div&gt;
+        &lt;div class=&quot;card&quot;&gt;🐱&lt;/div&gt;
+        &lt;div class=&quot;card&quot;&gt;🐰&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-4" data-task="l14:4">
+<div class="task-head">
+<span class="task-num">4</span>
+<div class="task-title"><h3>Картинка не вылезает за экран</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Большая картинка вылезает за край экрана на телефоне. Исправь: у картинки должно быть <code>max-width: 100%</code>, а в <code>&lt;head&gt;</code> добавь тег <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code>.</p>
+
+<div class="web" data-mode="html" data-key="l14:4" data-tests="[{&quot;js&quot;: &quot;return count(\&quot;meta[name=\\\&quot;viewport\\\&quot;]\&quot;) &gt;= 1 || \&quot;Не нашёл элемент meta[name=\\\&quot;viewport\\\&quot;]\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;meta[name=\\\&quot;viewport\\\&quot;]\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Есть meta viewport&quot;}, {&quot;js&quot;: &quot;if (!has(\&quot;img\&quot;)) return \&quot;Не нашёл элемент img\&quot;; return cssIs(\&quot;img\&quot;, \&quot;max-width\&quot;, \&quot;100%\&quot;) || \&quot;Сейчас max-width = \&quot; + css(\&quot;img\&quot;, \&quot;max-width\&quot;);&quot;, &quot;label&quot;: &quot;img { max-width: 100% }&quot;}, {&quot;js&quot;: &quot;return $(\&quot;img\&quot;).getBoundingClientRect().right &lt;= innerWidth || \&quot;Картинка вылезает за край\&quot;;&quot;, &quot;label&quot;: &quot;Картинка не шире страницы&quot;}]"><textarea class="src" data-role="code" hidden>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+    &lt;style&gt;
+        body { font-family: sans-serif; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Моё путешествие&lt;/h1&gt;
+    &lt;img src=&quot;img/night.jpg&quot; alt=&quot;Ночное небо&quot;&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+    &lt;style&gt;
+
+        body { font-family: sans-serif; }
+        img { max-width: 100%; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Моё путешествие&lt;/h1&gt;
+    &lt;img src=&quot;img/night.jpg&quot; alt=&quot;Ночное небо&quot;&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-5" data-task="l14:5">
+<div class="task-head">
+<span class="task-num">5</span>
+<div class="task-title"><h3>Прячем меню на телефоне</h3><div class="badges"><span class="badge lvl-3">сложно</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>На экранах уже <code>768px</code> меню <code>.menu</code> должно прятаться (<code>display: none</code>), а вместо него показываться кнопка-бургер <code>.burger</code> (на широком экране она спрятана).</p>
+
+<div class="web" data-mode="html" data-key="l14:5" data-tests="[{&quot;js&quot;: &quot;return (css(\&quot;.menu\&quot;, \&quot;display\&quot;) !== \&quot;none\&quot; &amp;&amp; css(\&quot;.burger\&quot;, \&quot;display\&quot;) === \&quot;none\&quot;) || \&quot;На широком экране должно быть видно меню, а бургер спрятан\&quot;;&quot;, &quot;label&quot;: &quot;На широком экране меню видно, а бургер спрятан&quot;}, {&quot;js&quot;: &quot;return media().some(m =&gt; /max-width:\\s*768px/.test(m.conditionText || m.media.mediaText)) || \&quot;Добавь @media (max-width: 768px)\&quot;;&quot;, &quot;label&quot;: &quot;Есть @media (max-width: 768px)&quot;}, {&quot;js&quot;: &quot;const m = media().find(m =&gt; /max-width:\\s*768px/.test(m.conditionText || m.media.mediaText)); if (!m) return \&quot;Нет медиазапроса\&quot;; const t = m.cssText; return (/\\.menu[^}]*display:\\s*none/.test(t) &amp;&amp; /\\.burger[^}]*display:\\s*(block|inline-block|flex|inline)/.test(t)) || \&quot;Внутри @media спрячь .menu и покажи .burger\&quot;;&quot;, &quot;label&quot;: &quot;В медиазапросе меню прячется, а бургер появляется&quot;}]"><textarea class="src" data-role="code" hidden>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+    &lt;style&gt;
+
+        header { display: flex; justify-content: space-between; align-items: center; padding: 16px; background-color: #eee; }
+        .burger { display: none; font-size: 24px; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;b&gt;Логотип&lt;/b&gt;
+        &lt;nav class=&quot;menu&quot;&gt;&lt;a href=&quot;#&quot;&gt;Главная&lt;/a&gt; &lt;a href=&quot;#&quot;&gt;О нас&lt;/a&gt; &lt;a href=&quot;#&quot;&gt;Контакты&lt;/a&gt;&lt;/nav&gt;
+        &lt;button class=&quot;burger&quot;&gt;☰&lt;/button&gt;
+    &lt;/header&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+    &lt;style&gt;
+
+        header { display: flex; justify-content: space-between; align-items: center; padding: 16px; background-color: #eee; }
+        .burger { display: none; font-size: 24px; }
+        @media (max-width: 768px) {
+            .menu { display: none; }
+            .burger { display: block; }
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;b&gt;Логотип&lt;/b&gt;
+        &lt;nav class=&quot;menu&quot;&gt;&lt;a href=&quot;#&quot;&gt;Главная&lt;/a&gt; &lt;a href=&quot;#&quot;&gt;О нас&lt;/a&gt; &lt;a href=&quot;#&quot;&gt;Контакты&lt;/a&gt;&lt;/nav&gt;
+        &lt;button class=&quot;burger&quot;&gt;☰&lt;/button&gt;
+    &lt;/header&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<h2 class="sec-title" id="links"><span class="emoji">🔗</span>Полезные ссылки</h2>
+<h3 class="links-title">Что почитать</h3>
+<div class="links-grid">
+<a class="link-card" href="https://www.w3schools.com/css/css_rwd_mediaqueries.asp" target="_blank" rel="noopener"><span class="ico">📚</span><span>Отзывчивый веб-дизайн<small>w3schools.com</small></span></a>
+<a class="link-card" href="https://developer.mozilla.org/ru/docs/Web/CSS/Media_Queries/Using_media_queries" target="_blank" rel="noopener"><span class="ico">📚</span><span>Медиазапросы<small>developer.mozilla.org</small></span></a>
+<a class="link-card" href="https://www.invisionapp.com/inside-design/examples-responsive-web-design/" target="_blank" rel="noopener"><span class="ico">🎨</span><span>Примеры хорошего веб-дизайна<small>invisionapp.com</small></span></a>
+</div>
+<nav class="pager" aria-label="Соседние уроки">
+<a class="prev" href="lesson_13_adv.html"><small>← Предыдущий</small>Урок 13. Параллакс и SVG</a>
+<a class="next" href="lesson_15_adv.html"><small>Следующий →</small>Урок 15. CSS-фреймворки: Bootstrap</a>
+</nav>
+</div>
+</div>
+</main>
+<footer class="site-footer">
+    <div class="wrap">
+        <div>
+            <b>КИДКОД</b> — школа программирования для детей и подростков<br>
+            <span>Вопросы по домашке? Пиши преподавателю:</span>
+        </div>
+        <div class="socials">
+            <a href="https://t.me/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#29a9eb" d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24z"/><path fill="#fff" d="M5.4 11.8 16.9 7.4c.5-.2 1 .1.8 1l-2 9.3c-.1.7-.5.8-1.1.5l-3-2.2-1.4 1.4c-.2.2-.3.3-.6.3l.2-3.1 5.6-5c.2-.2 0-.3-.4-.1l-6.9 4.3-3-.9c-.6-.2-.7-.7.2-1z"/></svg> Telegram</a>
+            <a href="https://vk.com/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#0077ff"/><path fill="#fff" d="M12.8 17.3c-5.5 0-8.6-3.8-8.7-10h2.7c.1 4.6 2.1 6.5 3.7 6.9V7.3h2.6v4c1.6-.2 3.2-2 3.8-4h2.5a7.6 7.6 0 0 1-3.4 5 7.8 7.8 0 0 1 4 5h-2.8a4.9 4.9 0 0 0-4.1-3.6v3.6h-.3z"/></svg> ВКонтакте</a>
+            <a href="https://kidkod.ru" target="_blank" rel="noopener">🌐 kidkod.ru</a>
         </div>
     </div>
-    <div class="footer">
-        <h5>Связь с преподавателем:</h5>
-        <div class="links">
-            <a href="https://t.me/kidkodschool" target="_blank">
-                <img src="/img/telegram.png" class="social-icon" alt="телеграм">
-            </a>
-            <a href="https://vk.com/kidkodschool" target="_blank" class="vk-desktop">
-                <img src="/img/vk.png" class="social-icon" alt="вконтакте">
-            </a>
-        </div>
-    </div>
+</footer>
+<script src="assets/course-map.js?v=1"></script>
+<script src="assets/kk.js?v=1"></script>
 </body>
-
 </html>

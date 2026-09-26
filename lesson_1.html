@@ -1,84 +1,320 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="css/style_lesson.css" rel="stylesheet">
-    <title>Пошаговая инструкция и дополнительные материалы к первому уроку</title>
+    <title>Урок 1. Первая страница: теги — домашнее задание · КИДКОД</title>
+    <meta name="description" content="Устанавливаем редактор кода и создаём первую страницу. Разбираемся, чем блочные теги отличаются от строчных.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%90%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link href="assets/kk.css?v=1" rel="stylesheet">
+    <script>try{var t=localStorage.getItem('kkw:theme');if(t)document.documentElement.setAttribute('data-theme',JSON.parse(t))}catch(e){}</script>
 </head>
-
 <body>
-    <h1 class="title">Пошаговая инструкция - как запустить дома Visual Studio Code</h1>
-    <ol>
-        <li class="Первое число для шифра сейфа - 8">
-            <h2>
-                <a href="https://code.visualstudio.com" target="_blank">Скачать и установить Visual Studio Code</a>
-            </h2>
-        </li>
-        <li>
-            <h2>Установить расширения</h2>
-            <img src="img/img_1.png" width="1000" alt="Инструкция 1">
-        </li>
-        <li>
-            <h2>Создать новую папку для проекта</h2>
-            <img src="img/img_2.png" alt="Инструкция 2">
-        </li>
-        <li>
-            <h2>
-                В папке создать файл index.html
-            </h2>
-            <img src="img/img_3.png" alt="Инструкция 3">
-        </li>
-        <li>
-            <h2 id="Второе число для шифра сейфа - 5">
-                Пишем в документе html и выбираем html:5, жмем Enter
-            </h2>
-            <img src="img/img_4.png" alt="Инструкция 4">
-        </li>
-        <li>
-            <h2>Можно начинать работать!</h2>
-            <img src="img/img_5.png" alt="Инструкция 5">
-        </li>
-    </ol>
 
-    <h1 class="homework">Создайте страницу используя все известные вам блочные и линейные теги</h1>
-    <h2 class="exercise"><a href="lesson_1_example.html">Ссылка на задание</a></h2>
+<header class="site-header">
+    <div class="wrap">
+        <a class="logo" href="index.html" aria-label="КИДКОД — на главную">
+            <span class="logo-mark">&lt;/&gt;</span>
+            <span>КИДКОД<small>домашние задания · Web</small></span>
+        </a>
+        <nav class="nav" aria-label="Основная навигация">
+            <a href="index.html#basic" class="hide-sm">HTML и CSS</a>
+            <a href="index.html#js" class="hide-sm">JavaScript</a>
+            <a href="index.html#project" class="hide-sm">Проект</a>
+            <button class="icon-btn theme-btn" type="button" aria-label="Сменить тему"><span class="moon">🌙</span><span class="sun">☀️</span></button>
+        </nav>
+    </div>
+</header>
 
-    <div class="additional">
-        <h2 class="important">Полезные ссылки:</h2>
-        <div class="stuff">
-            <a href="https://html5book.ru/html-text/" target="_blank">Список текстовых тегов</a>
-            <a href="http://htmlbook.ru/html/type/block/" target="_blank">Блочные элементы</a>
-            <a href="https://htmlweb.ru/html/symbols.php" target="_blank">Специальные символы</a>
-            <a href="https://haveibeenpwned.com/">Проверить почту и пароль на взлом</a>
-            <a href="web_tests/lesson_1/index.html" target="_blank" rel="noopener noreferrer">Тест для 1 урока</a>
+
+<main>
+<section class="lesson-hero"><div class="wrap">
+<div class="crumbs"><a href="index.html">Главная</a><span>›</span><a href="index.html#basic">Начинающий web-дизайнер</a><span>›</span><span>Урок 1</span></div>
+<h1>Первая веб-страница. Блочные и строчные теги</h1>
+<p class="lead">Устанавливаем редактор кода и создаём первую страницу. Разбираемся, чем блочные теги отличаются от строчных.</p>
+<div class="chips"><span class="chip">📋 Заданий: 6</span><span class="chip">✅ С автопроверкой: 6</span><span class="chip">✨ Новых: 5</span></div>
+</div></section>
+<div class="wrap lesson-layout">
+<aside class="side"><div class="side-card" data-lesson-progress><h4>Прогресс</h4><div class="bar"><i></i></div><span class="cnt">0 из 0</span> выполнено</div><div class="side-card"><h4>Содержание</h4><nav class="toc"><a class="sec" href="#sec-0">Как запустить дома Visual Studio Code</a><a class="sec" href="#sec-1">Задания</a><a href="#task-1"><span class="n">1</span><span>Страница из блочных и строчных тегов</span></a><a href="#task-2"><span class="n">2</span><span>Все заголовки</span></a><a href="#task-3"><span class="n">3</span><span>Списки</span></a><a href="#task-4"><span class="n">4</span><span>Стихотворение</span></a><a href="#task-5"><span class="n">5</span><span>Спецсимволы</span></a><a href="#task-6"><span class="n">6</span><span>Формулы и цитаты</span></a><a class="sec" href="#links">Полезные ссылки</a></nav></div></aside>
+<div class="content">
+<h2 class="sec-title" id="sec-0"><span class="emoji">⬇️</span>Как запустить дома Visual Studio Code</h2>
+<ol class="steps"><li class="Первое число для шифра сейфа - 8"><p>Скачай и установи <a href="https://code.visualstudio.com" target="_blank" rel="noopener">Visual Studio Code</a>.</p></li><li><p>Установи расширения.</p><div class="shots single"><img class="zoomable" src="img/img_1.png" alt="Установка расширений" loading="lazy"></div></li><li><p>Создай новую папку для проекта.</p><div class="shots single"><img class="zoomable" src="img/img_2.png" alt="Новая папка" loading="lazy"></div></li><li><p>В папке создай файл <code>index.html</code>.</p><div class="shots single"><img class="zoomable" src="img/img_3.png" alt="Файл index.html" loading="lazy"></div></li><li><p id="Второе число для шифра сейфа - 5">Напиши в документе <code>html</code>, выбери <code>html:5</code> и нажми <kbd>Enter</kbd>.</p><div class="shots single"><img class="zoomable" src="img/img_4.png" alt="Заготовка html:5" loading="lazy"></div></li><li><p>Можно начинать работать!</p><div class="shots single"><img class="zoomable" src="img/img_5.png" alt="Готово" loading="lazy"></div></li></ol>
+<h2 class="sec-title" id="sec-1"><span class="emoji">✍️</span>Задания</h2>
+<div class="note info"><p>Пиши код в редакторе — ниже сразу появится <b>результат</b>. Когда закончишь, нажми <b>«✓ Проверить»</b>. Код сохраняется в браузере сам.</p></div>
+<article class="task" id="task-1" data-task="l1:1">
+<div class="task-head">
+<span class="task-num">1</span>
+<div class="task-title"><h3>Страница из блочных и строчных тегов</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Создай страницу, используя все известные тебе <b>блочные</b> (<code>h1–h6</code>, <code>p</code>, <code>div</code>) и <b>строчные</b> (<code>b</code>, <code>i</code>, <code>em</code>, <code>mark</code>, <code>span</code>) теги.</p><p>Посмотри образец и сделай похожую страницу про себя.</p>
+
+<p><a class="btn btn-ghost btn-sm" href="lesson_1_example.html" target="_blank" rel="noopener">👀 Открыть образец</a></p>
+<div class="web" data-mode="html" data-key="l1:1" data-tests="[{&quot;js&quot;: &quot;return count(\&quot;h1\&quot;) &gt;= 1 || \&quot;Не нашёл элемент h1\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;h1\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Есть h1&quot;}, {&quot;js&quot;: &quot;return count(\&quot;p\&quot;) &gt;= 2 || \&quot;Нужно хотя бы 2 шт. p\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;p\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Есть p (не меньше 2)&quot;}, {&quot;js&quot;: &quot;return count(\&quot;b, strong\&quot;) &gt;= 1 || \&quot;Не нашёл элемент b, strong\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;b, strong\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Есть жирный текст (b или strong)&quot;}, {&quot;js&quot;: &quot;return count(\&quot;i, em\&quot;) &gt;= 1 || \&quot;Не нашёл элемент i, em\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;i, em\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Есть курсив (i или em)&quot;}, {&quot;js&quot;: &quot;return count(\&quot;mark\&quot;) &gt;= 1 || \&quot;Не нашёл элемент mark\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;mark\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Есть выделение mark&quot;}, {&quot;js&quot;: &quot;return count(\&quot;h2, h3, h4, h5, h6\&quot;) &gt;= 1 || \&quot;Не нашёл элемент h2, h3, h4, h5, h6\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;h2, h3, h4, h5, h6\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Есть заголовок поменьше (h2–h6)&quot;}]"><textarea class="src" data-role="code" hidden>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Добро пожаловать на мою &lt;em&gt;страничку&lt;/em&gt;&lt;/h1&gt;
+    &lt;p&gt;Меня зовут &lt;b&gt;Аня&lt;/b&gt;, я учусь &lt;mark&gt;делать сайты&lt;/mark&gt;.&lt;/p&gt;
+    &lt;p&gt;Больше всего мне нравится &lt;i&gt;рисовать&lt;/i&gt; и играть в шахматы.&lt;/p&gt;
+    &lt;h6&gt;Слишком маленький заголовок, чтобы его рассмотреть&lt;/h6&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-2" data-task="l1:2">
+<div class="task-head">
+<span class="task-num">2</span>
+<div class="task-title"><h3>Все заголовки</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Создай шесть заголовков — от <code>&lt;h1&gt;</code> до <code>&lt;h6&gt;</code>. В каждом напиши, какого он уровня. Посмотри, как меняется размер.</p>
+
+<div class="web" data-mode="html" data-key="l1:2" data-tests="[{&quot;js&quot;: &quot;return count(\&quot;h1\&quot;) &gt;= 1 || \&quot;Не нашёл элемент h1\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;h1\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Есть h1&quot;}, {&quot;js&quot;: &quot;return count(\&quot;h2\&quot;) &gt;= 1 || \&quot;Не нашёл элемент h2\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;h2\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Есть h2&quot;}, {&quot;js&quot;: &quot;return count(\&quot;h3\&quot;) &gt;= 1 || \&quot;Не нашёл элемент h3\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;h3\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Есть h3&quot;}, {&quot;js&quot;: &quot;return count(\&quot;h4\&quot;) &gt;= 1 || \&quot;Не нашёл элемент h4\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;h4\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Есть h4&quot;}, {&quot;js&quot;: &quot;return count(\&quot;h5\&quot;) &gt;= 1 || \&quot;Не нашёл элемент h5\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;h5\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Есть h5&quot;}, {&quot;js&quot;: &quot;return count(\&quot;h6\&quot;) &gt;= 1 || \&quot;Не нашёл элемент h6\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;h6\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Есть h6&quot;}]"><textarea class="src" data-role="code" hidden>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Заголовок 1 уровня&lt;/h1&gt;
+    &lt;h2&gt;Заголовок 2 уровня&lt;/h2&gt;
+    &lt;h3&gt;Заголовок 3 уровня&lt;/h3&gt;
+    &lt;h4&gt;Заголовок 4 уровня&lt;/h4&gt;
+    &lt;h5&gt;Заголовок 5 уровня&lt;/h5&gt;
+    &lt;h6&gt;Заголовок 6 уровня&lt;/h6&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-3" data-task="l1:3">
+<div class="task-head">
+<span class="task-num">3</span>
+<div class="task-title"><h3>Списки</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Сделай <b>маркированный</b> список покупок (<code>&lt;ul&gt;</code>, минимум 5 пунктов) и <b>нумерованный</b> список шагов, как приготовить бутерброд (<code>&lt;ol&gt;</code>, минимум 3 пункта).</p>
+
+<div class="web" data-mode="html" data-key="l1:3" data-tests="[{&quot;js&quot;: &quot;return count(\&quot;ul &gt; li\&quot;) &gt;= 5 || \&quot;Нужно хотя бы 5 шт. ul &gt; li\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;ul &gt; li\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;В ul не меньше 5 пунктов&quot;}, {&quot;js&quot;: &quot;return count(\&quot;ol &gt; li\&quot;) &gt;= 3 || \&quot;Нужно хотя бы 3 шт. ol &gt; li\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;ol &gt; li\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;В ol не меньше 3 пунктов&quot;}]"><textarea class="src" data-role="code" hidden>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h2&gt;Список покупок&lt;/h2&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Хлеб&lt;/li&gt;
+        &lt;li&gt;Сыр&lt;/li&gt;
+        &lt;li&gt;Помидоры&lt;/li&gt;
+        &lt;li&gt;Молоко&lt;/li&gt;
+        &lt;li&gt;Яблоки&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;h2&gt;Как сделать бутерброд&lt;/h2&gt;
+    &lt;ol&gt;
+        &lt;li&gt;Отрезать кусок хлеба&lt;/li&gt;
+        &lt;li&gt;Положить сыр&lt;/li&gt;
+        &lt;li&gt;Добавить помидор&lt;/li&gt;
+    &lt;/ol&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-4" data-task="l1:4">
+<div class="task-head">
+<span class="task-num">4</span>
+<div class="task-title"><h3>Стихотворение</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Запиши любое четверостишие. Каждая строчка — с новой строки: используй <code>&lt;br&gt;</code> (минимум 3 штуки). Между названием и стихом поставь горизонтальную линию <code>&lt;hr&gt;</code>.</p>
+
+<div class="web" data-mode="html" data-key="l1:4" data-tests="[{&quot;js&quot;: &quot;return count(\&quot;br\&quot;) &gt;= 3 || \&quot;Нужно хотя бы 3 шт. br\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;br\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Есть переносы строк br (не меньше 3)&quot;}, {&quot;js&quot;: &quot;return count(\&quot;hr\&quot;) &gt;= 1 || \&quot;Не нашёл элемент hr\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;hr\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Есть линия hr&quot;}, {&quot;js&quot;: &quot;return count(\&quot;p\&quot;) &gt;= 1 || \&quot;Не нашёл элемент p\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;p\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Есть p&quot;}]"><textarea class="src" data-role="code" hidden>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h2&gt;Зимнее утро&lt;/h2&gt;
+    &lt;hr&gt;
+    &lt;p&gt;
+        Мороз и солнце; день чудесный!&lt;br&gt;
+        Ещё ты дремлешь, друг прелестный —&lt;br&gt;
+        Пора, красавица, проснись:&lt;br&gt;
+        Открой сомкнуты негой взоры...
+    &lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-5" data-task="l1:5">
+<div class="task-head">
+<span class="task-num">5</span>
+<div class="task-title"><h3>Спецсимволы</h3><div class="badges"><span class="badge lvl-2">средне</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Некоторые символы нельзя просто так написать в HTML. Выведи на странице:</p><p><ul><li>знак копирайта: <b>© КИДКОД</b> (<code>&amp;copy;</code>)</li><li>текст <b>&lt;h1&gt;</b> — именно как текст, а не как тег (<code>&amp;lt;</code> и <code>&amp;gt;</code>)</li><li>сердечко <b>♥</b> (<code>&amp;hearts;</code>)</li></ul></p>
+
+<details class="hint"><summary>Подсказка</summary><div class="inner"><p>Полный список спецсимволов — в полезных ссылках внизу страницы.</p></div></details>
+<div class="web" data-mode="html" data-key="l1:5" data-tests="[{&quot;js&quot;: &quot;return document.body.textContent.includes(\&quot;©\&quot;) || \&quot;Не нашёл символ ©\&quot;;&quot;, &quot;label&quot;: &quot;На странице есть ©&quot;}, {&quot;js&quot;: &quot;return document.body.textContent.includes(\&quot;&lt;h1&gt;\&quot;) || \&quot;Не вижу текст &lt;h1&gt; на странице\&quot;;&quot;, &quot;label&quot;: &quot;Тег &lt;h1&gt; виден как текст&quot;}, {&quot;js&quot;: &quot;return document.body.textContent.includes(\&quot;♥\&quot;) || \&quot;Не нашёл ♥\&quot;;&quot;, &quot;label&quot;: &quot;Есть сердечко ♥&quot;}]"><textarea class="src" data-role="code" hidden>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p&gt;&amp;copy; КИДКОД&lt;/p&gt;
+    &lt;p&gt;Самый главный заголовок делается тегом &amp;lt;h1&amp;gt;&lt;/p&gt;
+    &lt;p&gt;Я &amp;hearts; HTML&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-6" data-task="l1:6">
+<div class="task-head">
+<span class="task-num">6</span>
+<div class="task-title"><h3>Формулы и цитаты</h3><div class="badges"><span class="badge lvl-2">средне</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Напиши формулу воды <b>H<sub>2</sub>O</b> и площадь квадрата <b>a<sup>2</sup></b> с помощью тегов <code>&lt;sub&gt;</code> и <code>&lt;sup&gt;</code>. Добавь цитату в теге <code>&lt;blockquote&gt;</code>.</p>
+
+<div class="web" data-mode="html" data-key="l1:6" data-tests="[{&quot;js&quot;: &quot;return count(\&quot;sub\&quot;) &gt;= 1 || \&quot;Не нашёл элемент sub\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;sub\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Есть sub&quot;}, {&quot;js&quot;: &quot;return count(\&quot;sup\&quot;) &gt;= 1 || \&quot;Не нашёл элемент sup\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;sup\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Есть sup&quot;}, {&quot;js&quot;: &quot;return count(\&quot;blockquote\&quot;) &gt;= 1 || \&quot;Не нашёл элемент blockquote\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;blockquote\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Есть blockquote&quot;}]"><textarea class="src" data-role="code" hidden>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p&gt;Формула воды: H&lt;sub&gt;2&lt;/sub&gt;O&lt;/p&gt;
+    &lt;p&gt;Площадь квадрата: S = a&lt;sup&gt;2&lt;/sup&gt;&lt;/p&gt;
+    &lt;blockquote&gt;Лучший способ предсказать будущее — создать его.&lt;/blockquote&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<h2 class="sec-title" id="links"><span class="emoji">🔗</span>Полезные ссылки</h2>
+<h3 class="links-title">Полезные ссылки</h3>
+<div class="links-grid">
+<a class="link-card" href="https://html5book.ru/html-text/" target="_blank" rel="noopener"><span class="ico">📘</span><span>Список текстовых тегов<small>html5book.ru</small></span></a>
+<a class="link-card" href="http://htmlbook.ru/html/type/block/" target="_blank" rel="noopener"><span class="ico">📘</span><span>Блочные элементы<small>htmlbook.ru</small></span></a>
+<a class="link-card" href="https://htmlweb.ru/html/symbols.php" target="_blank" rel="noopener"><span class="ico">📘</span><span>Специальные символы<small>htmlweb.ru</small></span></a>
+<a class="link-card" href="https://haveibeenpwned.com/" target="_blank" rel="noopener"><span class="ico">🛠️</span><span>Проверить почту и пароль на взлом<small>haveibeenpwned.com</small></span></a>
+<a class="link-card" href="web_tests/lesson_1/index.html" target="_blank" rel="noopener"><span class="ico">📝</span><span>Тест для 1 урока<small>raferalston.github.io</small></span></a>
+</div>
+<h3 class="links-title">Что почитать</h3>
+<div class="links-grid">
+<a class="link-card" href="https://html5book.ru/osnovy-html/" target="_blank" rel="noopener"><span class="ico">📚</span><span>Основы HTML<small>html5book.ru</small></span></a>
+</div>
+<h3 class="links-title">Где потренироваться</h3>
+<div class="links-grid">
+<a class="link-card" href="https://www.w3schools.com/html/exercise.asp?x=xrcise_headings1" target="_blank" rel="noopener"><span class="ico">🏋️</span><span>Тег заголовка (heading)<small>w3schools.com</small></span></a>
+<a class="link-card" href="https://www.w3schools.com/html/exercise.asp?x=xrcise_paragraphs1" target="_blank" rel="noopener"><span class="ico">🏋️</span><span>Тег параграфа (paragraph)<small>w3schools.com</small></span></a>
+</div>
+<nav class="pager" aria-label="Соседние уроки">
+<a class="next" href="lesson_2.html"><small>Следующий →</small>Урок 2. Браузер, ссылки, таблицы, формы</a>
+</nav>
+</div>
+</div>
+</main>
+<footer class="site-footer">
+    <div class="wrap">
+        <div>
+            <b>КИДКОД</b> — школа программирования для детей и подростков<br>
+            <span>Вопросы по домашке? Пиши преподавателю:</span>
         </div>
-        <h2 class="important">Что почитать:</h2>
-        <div class="stuff">
-            <a href="https://html5book.ru/osnovy-html/" target="_blank">Основы HTML</a>
-        </div>
-        <h2 class="important">Где потренироваться:</h2>
-        <h2 class="task">Тег заголовка (heading)</h2>
-        <div class="stuff">
-            <a href="https://www.w3schools.com/html/exercise.asp?x=xrcise_headings1">Задание</a>
-        </div>
-        <h2 class="task">Тег параграфа (paragraph)</h2>
-        <div class="stuff">
-            <a href="https://www.w3schools.com/html/exercise.asp?x=xrcise_paragraphs1">Задание</a>
+        <div class="socials">
+            <a href="https://t.me/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#29a9eb" d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24z"/><path fill="#fff" d="M5.4 11.8 16.9 7.4c.5-.2 1 .1.8 1l-2 9.3c-.1.7-.5.8-1.1.5l-3-2.2-1.4 1.4c-.2.2-.3.3-.6.3l.2-3.1 5.6-5c.2-.2 0-.3-.4-.1l-6.9 4.3-3-.9c-.6-.2-.7-.7.2-1z"/></svg> Telegram</a>
+            <a href="https://vk.com/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#0077ff"/><path fill="#fff" d="M12.8 17.3c-5.5 0-8.6-3.8-8.7-10h2.7c.1 4.6 2.1 6.5 3.7 6.9V7.3h2.6v4c1.6-.2 3.2-2 3.8-4h2.5a7.6 7.6 0 0 1-3.4 5 7.8 7.8 0 0 1 4 5h-2.8a4.9 4.9 0 0 0-4.1-3.6v3.6h-.3z"/></svg> ВКонтакте</a>
+            <a href="https://kidkod.ru" target="_blank" rel="noopener">🌐 kidkod.ru</a>
         </div>
     </div>
-    <div class="footer">
-        <h5>Связь с преподавателем:</h5>
-        <div class="links">
-            <a href="https://t.me/kidkodschool" target="_blank">
-                <img src="/img/telegram.png" class="social-icon" alt="телеграм">
-            </a>
-            <a href="https://vk.com/kidkodschool" target="_blank" class="vk-desktop">
-                <img src="/img/vk.png" class="social-icon" alt="вконтакте">
-            </a>
-        </div>
-    </div>
+</footer>
+<script src="assets/course-map.js?v=1"></script>
+<script src="assets/kk.js?v=1"></script>
 </body>
 </html>

@@ -1,143 +1,254 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>OOP - объектно-ориентированное программирование</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="css/style_lesson.css" rel="stylesheet">
-    <style>
-    table {
-        max-width: 1200px;
-    }
-    caption {
-        background-color: #fff;
-        padding: .5em;
-    }
-    </style>
+    <title>Урок 28. ООП: объекты и классы — домашнее задание · КИДКОД</title>
+    <meta name="description" content="Учимся описывать «чертежи» объектов: героев, машин, врагов — и создавать по ним сколько угодно экземпляров.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%90%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link href="assets/kk.css?v=1" rel="stylesheet">
+    <script>try{var t=localStorage.getItem('kkw:theme');if(t)document.documentElement.setAttribute('data-theme',JSON.parse(t))}catch(e){}</script>
 </head>
-
 <body>
-    <h1 class="title">OOP - объектно-ориентированное программирование</h1>
-    <ol>
-        <li>
-            <h2>Javascript методы и функции используемые в заданиях</h2>
-            <table class="table table-sm table-bordered table-dark table-hover">
-                <caption class="text-danger">Все написанное капсом (заглавными буквами), является заранее выбранным объектом</caption>
-                <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Как вызвать</th>
-                        <th scope="col">Что делает</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>setTimeout(function, time, arguments)</td>
-                        <td>Позволяет вызвать функцию один раз через определенный интервал времени</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>setInterval(function, time, arguments)</td>
-                        <td>Позволяет вызвать функцию много раз, повторяя вызов через определенный интервал времени</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>clearTimeout(NAME)</td>
-                        <td>Удаляет однократный интервал вызова функции</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">4</th>
-                        <td>clearInterval(NAME)</td>
-                        <td>Удаляет многократный интервал вызова функции</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">5</th>
-                        <td>Math.random() * n</td>
-                        <td>Позволяет получить случайное число от 0 до n (не включительно)</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">6</th>
-                        <td>ELEMENT.append(OTHER)</td>
-                        <td>Добавление элемента (OTHER) в DOM-дерево</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">7</th>
-                        <td>ELEMENT.remove()</td>
-                        <td>Удаление элемента (ELEMENT) из DOM-дерева</td>
-                    </tr>
-                </tbody>
-            </table>
-        </li>
-        <li>
-            <h2>Создайте <a style="font-size: 1em" href="https://www.w3schools.com/bootstrap4/bootstrap_modal.asp">модальное окно</a></h2>
-            <h2>
-                <img src="img/l28_q3.gif" alt="" width="500">
-            </h2>
-            <h2>
 
-                <a href="lesson_28_ans_1.html" target="_blank" rel="noopener noreferrer">Попробовать</a>
-            </h2>
-        </li>
-        <li>
-            <h2>Создайте игру "Гонка" - Простой вариант</h2>
-            <h2>
-                <img src="img/l28_q1.gif" alt="" width="500">
-            </h2>
-            <h2>
+<header class="site-header">
+    <div class="wrap">
+        <a class="logo" href="index.html" aria-label="КИДКОД — на главную">
+            <span class="logo-mark">&lt;/&gt;</span>
+            <span>КИДКОД<small>домашние задания · Web</small></span>
+        </a>
+        <nav class="nav" aria-label="Основная навигация">
+            <a href="index.html#basic" class="hide-sm">HTML и CSS</a>
+            <a href="index.html#js" class="hide-sm">JavaScript</a>
+            <a href="index.html#project" class="hide-sm">Проект</a>
+            <button class="icon-btn theme-btn" type="button" aria-label="Сменить тему"><span class="moon">🌙</span><span class="sun">☀️</span></button>
+        </nav>
+    </div>
+</header>
 
-                <a href="race_homework_easy.html" target="_blank" rel="noopener noreferrer">Попробовать</a>
-            </h2>
-        </li>
-        <li>
-            <h2>Создайте игру "Гонка" - Сложный вариант</h2>
-            <h2>
-                <img src="img/l28_q2.gif" alt="" width="500">
-            </h2>
-            <h2>
 
-                <a href="race_homework_hard.html" target="_blank" rel="noopener noreferrer">Попробовать</a>
-            </h2>
-        </li>
-    </ol>  
+<main>
+<section class="lesson-hero"><div class="wrap">
+<div class="crumbs"><a href="index.html">Главная</a><span>›</span><a href="index.html#js">Продвинутый web-дизайнер</a><span>›</span><span>Урок 28</span></div>
+<h1>ООП — объектно-ориентированное программирование</h1>
+<p class="lead">Учимся описывать «чертежи» объектов: героев, машин, врагов — и создавать по ним сколько угодно экземпляров.</p>
+<div class="chips"><span class="chip">📋 Заданий: 5</span><span class="chip">✅ С автопроверкой: 3</span><span class="chip">✨ Новых: 2</span></div>
+</div></section>
+<div class="wrap lesson-layout">
+<aside class="side"><div class="side-card" data-lesson-progress><h4>Прогресс</h4><div class="bar"><i></i></div><span class="cnt">0 из 0</span> выполнено</div><div class="side-card"><h4>Содержание</h4><nav class="toc"><a class="sec" href="#sec-0">Методы и функции для заданий</a><a class="sec" href="#sec-1">Задания</a><a href="#task-1"><span class="n">1</span><span>Модальное окно</span></a><a href="#task-2"><span class="n">2</span><span>Гонка — простой вариант</span></a><a href="#task-3"><span class="n">3</span><span>Гонка — сложный вариант</span></a><a href="#task-4"><span class="n">4</span><span>Конструктор героя</span></a><a href="#task-5"><span class="n">5</span><span>Класс Car</span></a><a class="sec" href="#links">Полезные ссылки</a></nav></div></aside>
+<div class="content">
+<h2 class="sec-title" id="sec-0"><span class="emoji">🧰</span>Методы и функции для заданий</h2>
+<p class="table-cap">Всё, что написано ЗАГЛАВНЫМИ буквами, — заранее выбранный элемент</p><div class="table-wrap"><table class="nice"><thead><tr><th>Как вызвать</th><th>Что делает</th></tr></thead><tbody><tr><td><code>setTimeout(function, time, arguments)</code></td><td>Вызвать функцию один раз через заданное время (в миллисекундах)</td></tr><tr><td><code>setInterval(function, time, arguments)</code></td><td>Вызывать функцию снова и снова через заданный интервал</td></tr><tr><td><code>clearTimeout(NAME)</code></td><td>Отменить однократный вызов</td></tr><tr><td><code>clearInterval(NAME)</code></td><td>Остановить повторяющийся вызов</td></tr><tr><td><code>Math.random() * n</code></td><td>Случайное число от 0 до n (не включительно)</td></tr><tr><td><code>ELEMENT.append(OTHER)</code></td><td>Добавление элемента OTHER в DOM-дерево</td></tr><tr><td><code>ELEMENT.remove()</code></td><td>Удаление элемента из DOM-дерева</td></tr></tbody></table></div>
+<h2 class="sec-title" id="sec-1"><span class="emoji">🏎️</span>Задания</h2>
+<article class="task" id="task-1" data-task="l28:1">
+<div class="task-head">
+<span class="task-num">1</span>
+<div class="task-title"><h3>Модальное окно</h3><div class="badges"><span class="badge lvl-2">средне</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Создай <a href="https://www.w3schools.com/bootstrap4/bootstrap_modal.asp" target="_blank" rel="noopener">модальное окно</a>: кнопка <code>#close</code> убирает окно <code>#modal</code> со страницы, а кнопка <code>#open</code> возвращает его.</p>
+<div class="shots single"><img class="zoomable" src="img/l28_q3.gif" alt="Модальное окно" loading="lazy"></div>
+<div class="web" data-mode="html" data-key="l28:1" data-tests="[{&quot;js&quot;: &quot;return count(\&quot;#modal\&quot;) &gt;= 1 || \&quot;Не нашёл элемент #modal\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;#modal\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Есть #modal&quot;}, {&quot;js&quot;: &quot;click(\&quot;#close\&quot;); return !has(\&quot;#modal\&quot;) || \&quot;Окно не исчезло\&quot;;&quot;, &quot;label&quot;: &quot;Кнопка закрытия убирает окно&quot;}, {&quot;js&quot;: &quot;if (has(\&quot;#modal\&quot;)) click(\&quot;#close\&quot;); click(\&quot;#open\&quot;); return has(\&quot;#modal\&quot;) || \&quot;Окно не вернулось\&quot;;&quot;, &quot;label&quot;: &quot;Кнопка открытия возвращает окно&quot;}]"><textarea class="src" data-role="code" hidden>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Модальное окно&lt;/title&gt;
+    &lt;style&gt;
 
-    <div class="additional">
-        <h2 class="important">Что почитать:</h2>
-        <div class="stuff">
+        body { margin: 0; height: 100vh; background-color: #482ff7; color: white; display: flex; flex-direction: column;
+               justify-content: center; align-items: center; text-align: center; font-family: sans-serif; }
+        #modal { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: rgba(131, 24, 131, 0.83);
+                 display: flex; justify-content: center; align-items: center; }
+        button { border: 0; color: white; font-size: 2em; font-weight: bold; padding: 1em 1.75em; border-radius: 10px; cursor: pointer; }
+        #close { background-color: #fc5185; }
+        #open { background-color: #22eaaa; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit.&lt;/h1&gt;
+    &lt;button id=&quot;open&quot;&gt;ОТКРЫТЬ ОКНО&lt;/button&gt;
+    &lt;div id=&quot;modal&quot;&gt;
+        &lt;button id=&quot;close&quot;&gt;ЗАКРЫТЬ ОКНО&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;script&gt;
+        let body = document.querySelector(&#x27;body&#x27;)
+        let modal = document.querySelector(&#x27;#modal&#x27;)
 
-            <a href="https://learn.javascript.ru/constructor-new" target="_blank" rel="noopener noreferrer">Конструктор в javascript (на Русском)</a>
-            <a href="https://www.w3schools.com/js/js_object_constructors.asp" target="_blank" rel="noopener noreferrer">Конструктор в javascript (на Английском)</a>
+        document.querySelector(&#x27;#close&#x27;).addEventListener(&#x27;click&#x27;, function () {
+            modal.remove()
+        })
+        document.querySelector(&#x27;#open&#x27;).addEventListener(&#x27;click&#x27;, function () {
+            body.append(modal)
+        })
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre><p><a href="lesson_28_ans_1.html" target="_blank" rel="noopener">Открыть готовую страницу с ответом ↗</a></p></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-2" data-task="l28:2">
+<div class="task-head">
+<span class="task-num">2</span>
+<div class="task-title"><h3>Гонка — простой вариант</h3><div class="badges"><span class="badge lvl-3">сложно</span><span class="badge local">в VS Code</span></div></div>
+</div>
+<div class="task-body">
+<p>Создай игру «Гонка», как на анимации. Каждая машина — объект, созданный конструктором.</p>
+<div class="shots single"><img class="zoomable" src="img/l28_q1.gif" alt="Гонка" loading="lazy"></div>
+<p class="note info">🖥️ Это большое задание — делай его в <b>VS Code</b> на компьютере и открывай страницу в браузере. Не забудь выложить результат на свой сайт на GitHub!</p>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><p><a href="race_homework_easy.html" target="_blank" rel="noopener">Открыть готовую страницу с ответом ↗</a></p></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-3" data-task="l28:3">
+<div class="task-head">
+<span class="task-num">3</span>
+<div class="task-title"><h3>Гонка — сложный вариант</h3><div class="badges"><span class="badge lvl-3">сложно</span><span class="badge local">в VS Code</span></div></div>
+</div>
+<div class="task-body">
+<p>Усложни «Гонку»: добавь препятствия и счёт.</p>
+<div class="shots single"><img class="zoomable" src="img/l28_q2.gif" alt="Гонка hard" loading="lazy"></div>
+<p class="note info">🖥️ Это большое задание — делай его в <b>VS Code</b> на компьютере и открывай страницу в браузере. Не забудь выложить результат на свой сайт на GitHub!</p>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><p><a href="race_homework_hard.html" target="_blank" rel="noopener">Открыть готовую страницу с ответом ↗</a></p></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-4" data-task="l28:4">
+<div class="task-head">
+<span class="task-num">4</span>
+<div class="task-title"><h3>Конструктор героя</h3><div class="badges"><span class="badge lvl-2">средне</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Напиши функцию-конструктор <code>Hero(name, hp)</code> (или класс <code>class Hero</code>). У героя есть свойства <code>name</code> и <code>hp</code> и метод <code>attack(target)</code>, который отнимает у цели 10 здоровья.</p>
+
+<div class="web" data-mode="js" data-key="l28:4" data-tests="[{&quot;call&quot;: &quot;new Hero(&#x27;Артур&#x27;, 100).name&quot;, &quot;want&quot;: &quot;&#x27;Артур&#x27;&quot;}, {&quot;call&quot;: &quot;new Hero(&#x27;Артур&#x27;, 100).hp&quot;, &quot;want&quot;: &quot;100&quot;}, {&quot;js&quot;: &quot;const a = new Hero(\&quot;A\&quot;, 100), b = new Hero(\&quot;B\&quot;, 50); a.attack(b); a.attack(b); return (b.hp === 30 &amp;&amp; a.hp === 100) || \&quot;После двух атак у цели \&quot; + b.hp + \&quot; hp, у атакующего \&quot; + a.hp;&quot;, &quot;label&quot;: &quot;attack отнимает 10 здоровья&quot;}]"><textarea class="src" data-role="code" hidden>function Hero(name, hp) {
+    
+}
+
+let arthur = new Hero(&#x27;Артур&#x27;, 100)
+let goblin = new Hero(&#x27;Гоблин&#x27;, 30)
+arthur.attack(goblin)
+console.log(goblin.hp)
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>function Hero(name, hp) {
+    this.name = name
+    this.hp = hp
+    this.attack = function (target) {
+        target.hp -= 10
+    }
+}
+
+let arthur = new Hero(&#x27;Артур&#x27;, 100)
+let goblin = new Hero(&#x27;Гоблин&#x27;, 30)
+arthur.attack(goblin)
+console.log(goblin.hp)
+</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-5" data-task="l28:5">
+<div class="task-head">
+<span class="task-num">5</span>
+<div class="task-title"><h3>Класс Car</h3><div class="badges"><span class="badge lvl-3">сложно</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Напиши класс <code>Car</code>:</p><p><ul><li>в <code>constructor(brand)</code> сохраняются марка <code>brand</code> и скорость <code>speed = 0</code></li><li>метод <code>accelerate()</code> увеличивает скорость на 10</li><li>метод <code>brake()</code> уменьшает скорость на 10, но не ниже 0</li><li>метод <code>info()</code> возвращает строку <b>Лада: 20 км/ч</b></li></ul></p>
+
+<div class="web" data-mode="js" data-key="l28:5" data-tests="[{&quot;call&quot;: &quot;new Car(&#x27;Лада&#x27;).speed&quot;, &quot;want&quot;: &quot;0&quot;}, {&quot;call&quot;: &quot;(() =&gt; { const c = new Car(&#x27;Лада&#x27;); c.accelerate(); c.accelerate(); return c.info() })()&quot;, &quot;want&quot;: &quot;&#x27;Лада: 20 км/ч&#x27;&quot;}, {&quot;call&quot;: &quot;(() =&gt; { const c = new Car(&#x27;BMW&#x27;); c.accelerate(); c.brake(); c.brake(); return c.speed })()&quot;, &quot;want&quot;: &quot;0&quot;, &quot;label&quot;: &quot;Скорость не бывает меньше 0&quot;}, {&quot;js&quot;: &quot;return new RegExp(\&quot;class\\\\s+Car\&quot;, \&quot;\&quot;).test(code) || \&quot;В коде не нашёл: Используется class\&quot;;&quot;, &quot;label&quot;: &quot;Используется class&quot;}]"><textarea class="src" data-role="code" hidden>class Car {
+    constructor(brand) {
+        
+    }
+}
+
+let car = new Car(&#x27;Лада&#x27;)
+car.accelerate()
+car.accelerate()
+console.log(car.info())
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>class Car {
+    constructor(brand) {
+        this.brand = brand
+        this.speed = 0
+    }
+
+    accelerate() {
+        this.speed += 10
+    }
+
+    brake() {
+        this.speed = Math.max(0, this.speed - 10)
+    }
+
+    info() {
+        return this.brand + &#x27;: &#x27; + this.speed + &#x27; км/ч&#x27;
+    }
+}
+
+let car = new Car(&#x27;Лада&#x27;)
+car.accelerate()
+car.accelerate()
+console.log(car.info())
+</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<h2 class="sec-title" id="links"><span class="emoji">🔗</span>Полезные ссылки</h2>
+<h3 class="links-title">Что почитать</h3>
+<div class="links-grid">
+<a class="link-card" href="https://learn.javascript.ru/constructor-new" target="_blank" rel="noopener"><span class="ico">📚</span><span>Конструктор в JavaScript (на русском)<small>learn.javascript.ru</small></span></a>
+<a class="link-card" href="https://www.w3schools.com/js/js_object_constructors.asp" target="_blank" rel="noopener"><span class="ico">📚</span><span>Конструктор в JavaScript (на английском)<small>w3schools.com</small></span></a>
+<a class="link-card" href="https://learn.javascript.ru/class" target="_blank" rel="noopener"><span class="ico">📚</span><span>Классы<small>learn.javascript.ru</small></span></a>
+</div>
+<h3 class="links-title">Предыдущие JS-уроки</h3>
+<div class="links-grid">
+<a class="link-card" href="lesson_17_adv.html"><span class="ico">🌐</span><span>Урок 17<small>raferalston.github.io</small></span></a>
+<a class="link-card" href="lesson_18_adv.html"><span class="ico">🌐</span><span>Урок 18<small>raferalston.github.io</small></span></a>
+<a class="link-card" href="lesson_19_adv.html"><span class="ico">🌐</span><span>Урок 19<small>raferalston.github.io</small></span></a>
+<a class="link-card" href="lesson_20_adv.html"><span class="ico">🌐</span><span>Урок 20<small>raferalston.github.io</small></span></a>
+<a class="link-card" href="lesson_21_adv.html"><span class="ico">🌐</span><span>Урок 21<small>raferalston.github.io</small></span></a>
+<a class="link-card" href="lesson_22_adv.html"><span class="ico">🌐</span><span>Урок 22<small>raferalston.github.io</small></span></a>
+<a class="link-card" href="lesson_23_adv.html"><span class="ico">🌐</span><span>Урок 23<small>raferalston.github.io</small></span></a>
+<a class="link-card" href="lesson_24_adv.html"><span class="ico">🌐</span><span>Урок 24<small>raferalston.github.io</small></span></a>
+<a class="link-card" href="lesson_25_adv.html"><span class="ico">🌐</span><span>Урок 25<small>raferalston.github.io</small></span></a>
+<a class="link-card" href="lesson_26_adv.html"><span class="ico">🌐</span><span>Урок 26<small>raferalston.github.io</small></span></a>
+<a class="link-card" href="lesson_27_adv.html"><span class="ico">🌐</span><span>Урок 27<small>raferalston.github.io</small></span></a>
+</div>
+<nav class="pager" aria-label="Соседние уроки">
+<a class="prev" href="lesson_27_adv.html"><small>← Предыдущий</small>Урок 27. Интерактивные программы</a>
+<a class="next" href="lesson_29_adv.html"><small>Следующий →</small>Урок 29. Canvas: рисуем кодом</a>
+</nav>
+</div>
+</div>
+</main>
+<footer class="site-footer">
+    <div class="wrap">
+        <div>
+            <b>КИДКОД</b> — школа программирования для детей и подростков<br>
+            <span>Вопросы по домашке? Пиши преподавателю:</span>
         </div>
-        <h2 class="important">Предыдущие js уроки</h2>
-        <div class="stuff">
-
-            <a href="lesson_17_adv.html">Урок 17</a>
-            <a href="lesson_18_adv.html">Урок 18</a>
-            <a href="lesson_19_adv.html">Урок 19</a>
-            <a href="lesson_20_adv.html">Урок 20</a>
-            <a href="lesson_21_adv.html">Урок 21</a>
-            <a href="lesson_22_adv.html">Урок 22</a>
-            <a href="lesson_23_adv.html">Урок 23</a>
-            <a href="lesson_24_adv.html">Урок 24</a>
-            <a href="lesson_25_adv.html">Урок 25</a>
-            <a href="lesson_26_adv.html">Урок 26</a>
-            <a href="lesson_27_adv.html">Урок 27</a>
+        <div class="socials">
+            <a href="https://t.me/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#29a9eb" d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24z"/><path fill="#fff" d="M5.4 11.8 16.9 7.4c.5-.2 1 .1.8 1l-2 9.3c-.1.7-.5.8-1.1.5l-3-2.2-1.4 1.4c-.2.2-.3.3-.6.3l.2-3.1 5.6-5c.2-.2 0-.3-.4-.1l-6.9 4.3-3-.9c-.6-.2-.7-.7.2-1z"/></svg> Telegram</a>
+            <a href="https://vk.com/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#0077ff"/><path fill="#fff" d="M12.8 17.3c-5.5 0-8.6-3.8-8.7-10h2.7c.1 4.6 2.1 6.5 3.7 6.9V7.3h2.6v4c1.6-.2 3.2-2 3.8-4h2.5a7.6 7.6 0 0 1-3.4 5 7.8 7.8 0 0 1 4 5h-2.8a4.9 4.9 0 0 0-4.1-3.6v3.6h-.3z"/></svg> ВКонтакте</a>
+            <a href="https://kidkod.ru" target="_blank" rel="noopener">🌐 kidkod.ru</a>
         </div>
     </div>
-    <div class="footer">
-        <h5>Связь с преподавателем:</h5>
-        <div class="links">
-            <a href="https://t.me/kidkodschool" target="_blank">
-                <img src="/img/telegram.png" class="social-icon" alt="телеграм">
-            </a>
-            <a href="https://vk.com/kidkodschool" target="_blank" class="vk-desktop">
-                <img src="/img/vk.png" class="social-icon" alt="вконтакте">
-            </a>
-        </div>
-    </div>
+</footer>
+<script src="assets/course-map.js?v=1"></script>
+<script src="assets/kk.js?v=1"></script>
 </body>
-
 </html>

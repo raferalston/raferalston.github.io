@@ -1,128 +1,235 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="css/style_lesson.css" rel="stylesheet">
-    <title>Сравнения, ветвления и типы данных ч.2</title>
-    <style>
-    </style>
+    <title>Урок 21. Условия и сравнения — домашнее задание · КИДКОД</title>
+    <meta name="description" content="Программа начинает «думать»: в зависимости от ответа пользователя делает разные вещи.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%90%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link href="assets/kk.css?v=1" rel="stylesheet">
+    <script>try{var t=localStorage.getItem('kkw:theme');if(t)document.documentElement.setAttribute('data-theme',JSON.parse(t))}catch(e){}</script>
 </head>
-
 <body>
-    <h1 class="title">Сравнения, ветвления и типы данных ч.2</h1>
-    <ol>
-        <li>
-            <h2>Во всех нижеперечисленных заданиях будет использоваться функция alert() для вывода результата</h2>
-            <ol>
-                <li>
 
-                    <h2>
-                        <a href="https://developer.mozilla.org/ru/docs/Web/API/Window/alert" target="_blank" rel="noopener noreferrer">О функции alert()</a>
-                    </h2>
-                </li>
-                <li>
-
-                    <h2>А также встроенная функция превращения строки в число</h2>
-                    <h2>
-        
-                        <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/parseInt" target="_blank" rel="noopener noreferrer">parseInt</a>
-                    </h2>
-                </li>
-                <li>
-                    <h2>
-        
-                        <a href="https://learn.javascript.ru/type-conversions#chislennoe-preobrazovanie" target="_blank" rel="noopener noreferrer">Преобразование строки в число</a>
-                    </h2>
-
-                </li>
-            </ol>
-        </li>
-        <li>
-            <h2>Создайте программу, которая в зависимости от ввода пользователя
-                выдает сумму двух чисел если их сумма больше 1000, иначе результатом будет их произведение.
-            </h2>
-            <img src="img/l21_q1.png" alt="вопрос 2" style="display: block; padding: .15em 0;">
-            <img src="img/l21_q1_2.png" alt="вопрос 2" style="display: block; padding: .15em 0;">
-            <img src="img/l21_q1_3.png" alt="вопрос 2" style="display: block; padding: .15em 0;">
-            <h2>
-                <a href="lesson_21_ans_1.html" target="_blank" rel="noopener noreferrer">Ответ</a>
-            </h2>
-        </li>
-        <li>
-            <h2>Создайте программу, которая в зависимости от ввода пользователя
-                проверяет имя для персонажа и выдает разный результат
-            </h2>
-            <img src="img/l21_q2.png" alt="вопрос 2" style="display: block; padding: .15em 0;">
-            <img src="img/l21_q2_2.png" alt="вопрос 2" style="display: block; padding: .15em 0;">
-            <h2>от 1 до 3 символов
-            </h2>
-            <img src="img/l21_q2_5.png" alt="вопрос 2" style="display: block; padding: .15em 0;">
-            <h2>от 4 до 6 символов
-            </h2>
-            <img src="img/l21_q2_3.png" alt="вопрос 2" style="display: block; padding: .15em 0;">
-            <h2>Если ничего не ввели
-            </h2>
-            <img src="img/l21_q2_4.png" alt="вопрос 2" style="display: block; padding: .15em 0;">
-            <h2>
-                <a href="lesson_21_ans_2.html" target="_blank" rel="noopener noreferrer">Ответ</a>
-            </h2>
-        </li>
-        <li>
-            <h2>Создайте программу, которая задает загадку и в зависимости от ответа пользователя
-                выдает разный результат
-            </h2>
-            <img src="img/l21_q3_1.png" alt="1">
-            <img src="img/l21_q3_2.png" alt="2">
-            <h2>
-                <a href="lesson_21_ans_3.html" target="_blank" rel="noopener noreferrer">Ответ</a>
-            </h2>
-        </li>
-    </ol>
-
-    <div class="additional">
-        <h2 class="important">Полезные ссылки:</h2>
-        <div class="stuff">
-            <a href="web_tests/lesson_21/21.html" target="_blank" rel="noopener noreferrer">Тест для 21 урока</a>
-        </div>
-        <h2 class="important">Что почитать:</h2>
-        <div class="stuff">
-
-            <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/null" target="_blank" rel="noopener noreferrer">Тип данных - null</a>
-            <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/undefined" target="_blank" rel="noopener noreferrer">Тип данных - undefined</a>
-            <a href="https://javascript.ru/basic/types#boolean" target="_blank" rel="noopener noreferrer">Тип данных - boolean</a>
-            <a href="https://learn.javascript.ru/ifelse" target="_blank" rel="noopener noreferrer">Ветвления в javascript</a>
-        </div>
-        <h2 class="important">Где потренироваться:</h2>
-        <h2 class="task">Сравнения</h2>
-        <div class="stuff">
-
-            <a href="https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_comparisons1">Упражнение#1</a>
-            <a href="https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_comparisons2">Упражнение#2</a>
-            <a href="https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_comparisons3">Упражнение#3</a>
-            <a href="https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_comparisons4">Упражнение#4</a>
-        </div>
-        <h2 class="task">Ветвление</h2>
-        <div class="stuff">
-
-            <a href="https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_conditions1">Упражнение #1</a>
-            <a href="https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_conditions2">Упражнение #2</a>
-        </div>
-
+<header class="site-header">
+    <div class="wrap">
+        <a class="logo" href="index.html" aria-label="КИДКОД — на главную">
+            <span class="logo-mark">&lt;/&gt;</span>
+            <span>КИДКОД<small>домашние задания · Web</small></span>
+        </a>
+        <nav class="nav" aria-label="Основная навигация">
+            <a href="index.html#basic" class="hide-sm">HTML и CSS</a>
+            <a href="index.html#js" class="hide-sm">JavaScript</a>
+            <a href="index.html#project" class="hide-sm">Проект</a>
+            <button class="icon-btn theme-btn" type="button" aria-label="Сменить тему"><span class="moon">🌙</span><span class="sun">☀️</span></button>
+        </nav>
     </div>
-    <div class="footer">
-        <h5>Связь с преподавателем:</h5>
-        <div class="links">
-            <a href="https://t.me/kidkodschool" target="_blank">
-                <img src="/img/telegram.png" class="social-icon" alt="телеграм">
-            </a>
-            <a href="https://vk.com/kidkodschool" target="_blank" class="vk-desktop">
-                <img src="/img/vk.png" class="social-icon" alt="вконтакте">
-            </a>
+</header>
+
+
+<main>
+<section class="lesson-hero"><div class="wrap">
+<div class="crumbs"><a href="index.html">Главная</a><span>›</span><a href="index.html#js">Продвинутый web-дизайнер</a><span>›</span><span>Урок 21</span></div>
+<h1>Сравнения, ветвления и типы данных ч. 2</h1>
+<p class="lead">Программа начинает «думать»: в зависимости от ответа пользователя делает разные вещи.</p>
+<div class="chips"><span class="chip">📋 Заданий: 6</span><span class="chip">✅ С автопроверкой: 6</span><span class="chip">✨ Новых: 3</span></div>
+</div></section>
+<div class="wrap lesson-layout">
+<aside class="side"><div class="side-card" data-lesson-progress><h4>Прогресс</h4><div class="bar"><i></i></div><span class="cnt">0 из 0</span> выполнено</div><div class="side-card"><h4>Содержание</h4><nav class="toc"><a class="sec" href="#sec-0">Задания</a><a href="#task-1"><span class="n">1</span><span>Сумма или произведение</span></a><a href="#task-2"><span class="n">2</span><span>Проверка имени персонажа</span></a><a href="#task-3"><span class="n">3</span><span>Загадка</span></a><a href="#task-4"><span class="n">4</span><span>Чётное или нечётное</span></a><a href="#task-5"><span class="n">5</span><span>Оценка за тест</span></a><a href="#task-6"><span class="n">6</span><span>Високосный год</span></a><a class="sec" href="#links">Полезные ссылки</a></nav></div></aside>
+<div class="content">
+<h2 class="sec-title" id="sec-0"><span class="emoji">🔀</span>Задания</h2>
+<div class="note info"><p>Во всех заданиях результат выводим через <a href="https://developer.mozilla.org/ru/docs/Web/API/Window/alert" target="_blank" rel="noopener">alert()</a>. <code>prompt()</code> всегда возвращает <b>строку</b> — чтобы получить число, используй <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/parseInt" target="_blank" rel="noopener">parseInt()</a> или <a href="https://learn.javascript.ru/type-conversions#chislennoe-preobrazovanie" target="_blank" rel="noopener">Number()</a>.</p></div>
+<article class="task" id="task-1" data-task="l21:1">
+<div class="task-head">
+<span class="task-num">1</span>
+<div class="task-title"><h3>Сумма или произведение</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Программа спрашивает у пользователя два числа. Если их сумма <b>больше 1000</b> — выводит <b>Сумма этих чисел: …</b>, иначе — <b>Произведение этих чисел: …</b></p>
+<div class="shots"><img class="zoomable" src="img/l21_q1.png" alt="Ввод" loading="lazy"><img class="zoomable" src="img/l21_q1_2.png" alt="Ввод" loading="lazy"><img class="zoomable" src="img/l21_q1_3.png" alt="Результат" loading="lazy"></div>
+<div class="web" data-mode="js" data-key="l21:1" data-tests="[{&quot;inputs&quot;: [&quot;600&quot;, &quot;500&quot;], &quot;expect&quot;: [&quot;Сумма этих чисел: 1100&quot;], &quot;reject&quot;: [&quot;Произведение&quot;]}, {&quot;inputs&quot;: [&quot;10&quot;, &quot;20&quot;], &quot;expect&quot;: [&quot;Произведение этих чисел: 200&quot;], &quot;reject&quot;: [&quot;Сумма&quot;]}, {&quot;inputs&quot;: [&quot;1000&quot;, &quot;0&quot;], &quot;expect&quot;: [&quot;Произведение этих чисел: 0&quot;], &quot;reject&quot;: [&quot;Сумма&quot;]}]"><textarea class="src" data-role="code" hidden>// Напиши решение здесь
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>let firstNumber = Number(prompt(&#x27;Введите первое число: &#x27;));
+let secondNumber = Number(prompt(&#x27;Введите второе число: &#x27;));
+let result = firstNumber + secondNumber
+
+if (result &gt; 1000) {
+    alert(&#x27;Сумма этих чисел: &#x27; + result)
+} else {
+    result = firstNumber * secondNumber
+    alert(&#x27;Произведение этих чисел: &#x27; + result)
+}
+</pre><img class="zoomable" src="img/l21_a1.png" alt="Решение задания" loading="lazy"></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-2" data-task="l21:2">
+<div class="task-head">
+<span class="task-num">2</span>
+<div class="task-title"><h3>Проверка имени персонажа</h3><div class="badges"><span class="badge lvl-2">средне</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Программа спрашивает имя персонажа и отвечает по-разному:</p><p><ul><li>ничего не ввели — <b>Вы не ввели имя!</b></li><li>от 1 до 3 символов — <b>…слишком короткое…</b></li><li>от 4 до 6 символов — <b>&lt;имя&gt; это имя идеально вам подходит!</b></li><li>больше 6 символов — <b>…слишком длинное…</b></li></ul></p>
+<div class="shots"><img class="zoomable" src="img/l21_q2.png" alt="Ввод" loading="lazy"><img class="zoomable" src="img/l21_q2_2.png" alt="Результат" loading="lazy"><img class="zoomable" src="img/l21_q2_5.png" alt="от 1 до 3 символов" loading="lazy"><img class="zoomable" src="img/l21_q2_3.png" alt="от 4 до 6 символов" loading="lazy"><img class="zoomable" src="img/l21_q2_4.png" alt="если ничего не ввели" loading="lazy"></div>
+<div class="web" data-mode="js" data-key="l21:2" data-tests="[{&quot;inputs&quot;: [&quot;&quot;], &quot;expect&quot;: [&quot;Вы не ввели имя!&quot;]}, {&quot;inputs&quot;: [&quot;Ян&quot;], &quot;expect&quot;: [&quot;слишком короткое&quot;]}, {&quot;inputs&quot;: [&quot;Оля&quot;], &quot;expect&quot;: [&quot;слишком короткое&quot;]}, {&quot;inputs&quot;: [&quot;Анна&quot;], &quot;expect&quot;: [&quot;Анна это имя идеально вам подходит!&quot;]}, {&quot;inputs&quot;: [&quot;Максим&quot;], &quot;expect&quot;: [&quot;идеально&quot;]}, {&quot;inputs&quot;: [&quot;Константин&quot;], &quot;expect&quot;: [&quot;слишком длинное&quot;]}]"><textarea class="src" data-role="code" hidden>// Напиши решение здесь
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>let name = prompt(&#x27;Введите имя персонажа и мы проверим, подходит ли оно вам: &#x27;)
+
+if (name.length === 0) {
+    alert(&#x27;Вы не ввели имя!&#x27;)
+} else if (name.length &lt;= 3) {
+    alert(&#x27;Оно слишком короткое, попробуйте ввести больше чем &#x27; + name.length + &#x27; символа&#x27;)
+} else if (name.length &lt;= 6) {
+    alert(name + &#x27; это имя идеально вам подходит!&#x27;)
+} else {
+    alert(&#x27;Оно слишком длинное, попробуйте ввести меньше чем &#x27; + name.length + &#x27; символов&#x27;)
+}
+</pre><img class="zoomable" src="img/l21_a2.png" alt="Решение задания" loading="lazy"></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-3" data-task="l21:3">
+<div class="task-head">
+<span class="task-num">3</span>
+<div class="task-title"><h3>Загадка</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Программа задаёт загадку и отвечает <b>Правильный ответ!</b> или <b>Ответ неверный, правильный ответ: фонтан</b>. Ответ «Фонтан» с большой буквы тоже должен засчитываться.</p>
+<div class="shots"><img class="zoomable" src="img/l21_q3_1.png" alt="Загадка" loading="lazy"><img class="zoomable" src="img/l21_q3_2.png" alt="Результат" loading="lazy"></div>
+<details class="hint"><summary>Подсказка</summary><div class="inner"><p>Приведи ответ к маленьким буквам: <code>answer.toLowerCase()</code></p></div></details>
+<div class="web" data-mode="js" data-key="l21:3" data-tests="[{&quot;inputs&quot;: [&quot;фонтан&quot;], &quot;expect&quot;: [&quot;Правильный ответ!&quot;], &quot;reject&quot;: [&quot;неверный&quot;]}, {&quot;inputs&quot;: [&quot;Фонтан&quot;], &quot;expect&quot;: [&quot;Правильный ответ!&quot;], &quot;reject&quot;: [&quot;неверный&quot;]}, {&quot;inputs&quot;: [&quot;дождь&quot;], &quot;expect&quot;: [&quot;Ответ неверный, правильный ответ: фонтан&quot;]}]"><textarea class="src" data-role="code" hidden>// Напиши решение здесь
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>let question = [&#x27;Странный дождь порой идёт: сотней струй он кверху бьёт.&#x27;, &#x27;фонтан&#x27;]
+
+let answer = prompt(&#x27;Отгадайте загадку: &#x27; + question[0] + &#x27; Ваш ответ: &#x27;)
+
+if (answer.toLowerCase() === question[1]) {
+    alert(&#x27;Правильный ответ!&#x27;)
+} else {
+    alert(&#x27;Ответ неверный, правильный ответ: &#x27; + question[1])
+}
+</pre><img class="zoomable" src="img/l21_a3.png" alt="Решение задания" loading="lazy"></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-4" data-task="l21:4">
+<div class="task-head">
+<span class="task-num">4</span>
+<div class="task-title"><h3>Чётное или нечётное</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Спроси у пользователя число и выведи <b>Число чётное</b> или <b>Число нечётное</b>.</p>
+
+<details class="hint"><summary>Подсказка</summary><div class="inner"><p>Остаток от деления на 2: <code>number % 2 === 0</code> — значит, чётное.</p></div></details>
+<div class="web" data-mode="js" data-key="l21:4" data-tests="[{&quot;inputs&quot;: [&quot;4&quot;], &quot;expect&quot;: [&quot;Число чётное&quot;], &quot;reject&quot;: [&quot;нечётное&quot;]}, {&quot;inputs&quot;: [&quot;7&quot;], &quot;expect&quot;: [&quot;Число нечётное&quot;]}, {&quot;inputs&quot;: [&quot;0&quot;], &quot;expect&quot;: [&quot;Число чётное&quot;], &quot;reject&quot;: [&quot;нечётное&quot;]}]"><textarea class="src" data-role="code" hidden>// Напиши решение здесь
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>let number = Number(prompt(&#x27;Введите число: &#x27;))
+
+if (number % 2 === 0) {
+    alert(&#x27;Число чётное&#x27;)
+} else {
+    alert(&#x27;Число нечётное&#x27;)
+}
+</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-5" data-task="l21:5">
+<div class="task-head">
+<span class="task-num">5</span>
+<div class="task-title"><h3>Оценка за тест</h3><div class="badges"><span class="badge lvl-2">средне</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Спроси, сколько баллов из 100 набрал ученик, и выведи оценку:</p><p><ul><li>90 и больше — <b>Оценка: 5</b></li><li>70–89 — <b>Оценка: 4</b></li><li>50–69 — <b>Оценка: 3</b></li><li>меньше 50 — <b>Оценка: 2</b></li></ul></p>
+
+<div class="web" data-mode="js" data-key="l21:5" data-tests="[{&quot;inputs&quot;: [&quot;95&quot;], &quot;expect&quot;: [&quot;Оценка: 5&quot;]}, {&quot;inputs&quot;: [&quot;90&quot;], &quot;expect&quot;: [&quot;Оценка: 5&quot;]}, {&quot;inputs&quot;: [&quot;75&quot;], &quot;expect&quot;: [&quot;Оценка: 4&quot;]}, {&quot;inputs&quot;: [&quot;55&quot;], &quot;expect&quot;: [&quot;Оценка: 3&quot;]}, {&quot;inputs&quot;: [&quot;50&quot;], &quot;expect&quot;: [&quot;Оценка: 3&quot;]}, {&quot;inputs&quot;: [&quot;10&quot;], &quot;expect&quot;: [&quot;Оценка: 2&quot;]}]"><textarea class="src" data-role="code" hidden>// Напиши решение здесь
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>let score = Number(prompt(&#x27;Сколько баллов ты набрал? &#x27;))
+
+if (score &gt;= 90) {
+    alert(&#x27;Оценка: 5&#x27;)
+} else if (score &gt;= 70) {
+    alert(&#x27;Оценка: 4&#x27;)
+} else if (score &gt;= 50) {
+    alert(&#x27;Оценка: 3&#x27;)
+} else {
+    alert(&#x27;Оценка: 2&#x27;)
+}
+</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-6" data-task="l21:6">
+<div class="task-head">
+<span class="task-num">6</span>
+<div class="task-title"><h3>Високосный год</h3><div class="badges"><span class="badge lvl-3">сложно</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Год високосный, если он делится на 4, но не делится на 100, <b>или</b> если делится на 400. Спроси год и выведи <b>Год високосный</b> или <b>Год не високосный</b>.</p>
+
+<details class="hint"><summary>Подсказка</summary><div class="inner"><p>Логические операторы: <code>&amp;&amp;</code> — «и», <code>||</code> — «или».</p></div></details>
+<div class="web" data-mode="js" data-key="l21:6" data-tests="[{&quot;inputs&quot;: [&quot;2024&quot;], &quot;expect&quot;: [&quot;Год високосный&quot;], &quot;reject&quot;: [&quot;не високосный&quot;]}, {&quot;inputs&quot;: [&quot;2023&quot;], &quot;expect&quot;: [&quot;Год не високосный&quot;]}, {&quot;inputs&quot;: [&quot;1900&quot;], &quot;expect&quot;: [&quot;Год не високосный&quot;]}, {&quot;inputs&quot;: [&quot;2000&quot;], &quot;expect&quot;: [&quot;Год високосный&quot;], &quot;reject&quot;: [&quot;не високосный&quot;]}]"><textarea class="src" data-role="code" hidden>// Напиши решение здесь
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>let year = Number(prompt(&#x27;Введите год: &#x27;))
+
+if ((year % 4 === 0 &amp;&amp; year % 100 !== 0) || year % 400 === 0) {
+    alert(&#x27;Год високосный&#x27;)
+} else {
+    alert(&#x27;Год не високосный&#x27;)
+}
+</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<h2 class="sec-title" id="links"><span class="emoji">🔗</span>Полезные ссылки</h2>
+<h3 class="links-title">Полезные ссылки</h3>
+<div class="links-grid">
+<a class="link-card" href="web_tests/lesson_21/21.html" target="_blank" rel="noopener"><span class="ico">📝</span><span>Тест для 21 урока<small>raferalston.github.io</small></span></a>
+</div>
+<h3 class="links-title">Что почитать</h3>
+<div class="links-grid">
+<a class="link-card" href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/null" target="_blank" rel="noopener"><span class="ico">📚</span><span>Тип данных — null<small>developer.mozilla.org</small></span></a>
+<a class="link-card" href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/undefined" target="_blank" rel="noopener"><span class="ico">📚</span><span>Тип данных — undefined<small>developer.mozilla.org</small></span></a>
+<a class="link-card" href="https://javascript.ru/basic/types#boolean" target="_blank" rel="noopener"><span class="ico">📚</span><span>Тип данных — boolean<small>javascript.ru</small></span></a>
+<a class="link-card" href="https://learn.javascript.ru/ifelse" target="_blank" rel="noopener"><span class="ico">📚</span><span>Ветвления в JavaScript<small>learn.javascript.ru</small></span></a>
+</div>
+<h3 class="links-title">Сравнения</h3>
+<div class="links-grid">
+<a class="link-card" href="https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_comparisons1" target="_blank" rel="noopener"><span class="ico">🏋️</span><span>Упражнение #1<small>w3schools.com</small></span></a>
+<a class="link-card" href="https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_comparisons2" target="_blank" rel="noopener"><span class="ico">🏋️</span><span>Упражнение #2<small>w3schools.com</small></span></a>
+<a class="link-card" href="https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_comparisons3" target="_blank" rel="noopener"><span class="ico">🏋️</span><span>Упражнение #3<small>w3schools.com</small></span></a>
+<a class="link-card" href="https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_comparisons4" target="_blank" rel="noopener"><span class="ico">🏋️</span><span>Упражнение #4<small>w3schools.com</small></span></a>
+</div>
+<h3 class="links-title">Ветвление</h3>
+<div class="links-grid">
+<a class="link-card" href="https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_conditions1" target="_blank" rel="noopener"><span class="ico">🏋️</span><span>Упражнение #1<small>w3schools.com</small></span></a>
+<a class="link-card" href="https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_conditions2" target="_blank" rel="noopener"><span class="ico">🏋️</span><span>Упражнение #2<small>w3schools.com</small></span></a>
+</div>
+<nav class="pager" aria-label="Соседние уроки">
+<a class="prev" href="lesson_20_adv.html"><small>← Предыдущий</small>Урок 20. Объекты</a>
+<a class="next" href="lesson_22_adv.html"><small>Следующий →</small>Урок 22. Циклы</a>
+</nav>
+</div>
+</div>
+</main>
+<footer class="site-footer">
+    <div class="wrap">
+        <div>
+            <b>КИДКОД</b> — школа программирования для детей и подростков<br>
+            <span>Вопросы по домашке? Пиши преподавателю:</span>
+        </div>
+        <div class="socials">
+            <a href="https://t.me/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#29a9eb" d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24z"/><path fill="#fff" d="M5.4 11.8 16.9 7.4c.5-.2 1 .1.8 1l-2 9.3c-.1.7-.5.8-1.1.5l-3-2.2-1.4 1.4c-.2.2-.3.3-.6.3l.2-3.1 5.6-5c.2-.2 0-.3-.4-.1l-6.9 4.3-3-.9c-.6-.2-.7-.7.2-1z"/></svg> Telegram</a>
+            <a href="https://vk.com/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#0077ff"/><path fill="#fff" d="M12.8 17.3c-5.5 0-8.6-3.8-8.7-10h2.7c.1 4.6 2.1 6.5 3.7 6.9V7.3h2.6v4c1.6-.2 3.2-2 3.8-4h2.5a7.6 7.6 0 0 1-3.4 5 7.8 7.8 0 0 1 4 5h-2.8a4.9 4.9 0 0 0-4.1-3.6v3.6h-.3z"/></svg> ВКонтакте</a>
+            <a href="https://kidkod.ru" target="_blank" rel="noopener">🌐 kidkod.ru</a>
         </div>
     </div>
+</footer>
+<script src="assets/course-map.js?v=1"></script>
+<script src="assets/kk.js?v=1"></script>
 </body>
-
 </html>

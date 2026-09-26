@@ -1,113 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Создаем сайт - портфолио</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="css/style_lesson.css" rel="stylesheet">
-    <style>
-    table {
-        max-width: 1200px;
-    }
-    caption {
-        background-color: #fff;
-        padding: .5em;
-    }
-    </style>
+    <title>Урок 33. Портфолио: макет — домашнее задание · КИДКОД</title>
+    <meta name="description" content="Начинаем свой главный проект — сайт-портфолио. Сначала собираем материалы и рисуем макет.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%90%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link href="assets/kk.css?v=1" rel="stylesheet">
+    <script>try{var t=localStorage.getItem('kkw:theme');if(t)document.documentElement.setAttribute('data-theme',JSON.parse(t))}catch(e){}</script>
 </head>
-
 <body>
-    <h1 class="title">Ресурсы для поиска материалов для сайта</h1>
-    <ol>
-        <li>
-            <h2><a href="https://www.freepik.com/" target="_blank" rel="noopener noreferrer">Freepik - картинки</a></h2>
 
-        </li>
-        <li>
-            <h2><a href="https://www.pinterest.ru/" target="_blank" rel="noopener noreferrer">Pinterest - картинки</a></h2>
+<header class="site-header">
+    <div class="wrap">
+        <a class="logo" href="index.html" aria-label="КИДКОД — на главную">
+            <span class="logo-mark">&lt;/&gt;</span>
+            <span>КИДКОД<small>домашние задания · Web</small></span>
+        </a>
+        <nav class="nav" aria-label="Основная навигация">
+            <a href="index.html#basic" class="hide-sm">HTML и CSS</a>
+            <a href="index.html#js" class="hide-sm">JavaScript</a>
+            <a href="index.html#project" class="hide-sm">Проект</a>
+            <button class="icon-btn theme-btn" type="button" aria-label="Сменить тему"><span class="moon">🌙</span><span class="sun">☀️</span></button>
+        </nav>
+    </div>
+</header>
 
-        </li>
-        <li>
-            <h2><a href="https://material.io/design" target="_blank" rel="noopener noreferrer">Google Material - иконки</a></h2>
 
-        </li>
-        <li>
-            <h2><a href="https://icons8.com/" target="_blank" rel="noopener noreferrer">Icons8 - иконки</a></h2>
+<main>
+<section class="lesson-hero"><div class="wrap">
+<div class="crumbs"><a href="index.html">Главная</a><span>›</span><a href="index.html#project">Дизайн-проект</a><span>›</span><span>Урок 33</span></div>
+<h1>Создаём сайт-портфолио: макет</h1>
+<p class="lead">Начинаем свой главный проект — сайт-портфолио. Сначала собираем материалы и рисуем макет.</p>
+<div class="chips"><span class="chip">📋 Заданий: 2</span></div>
+</div></section>
+<div class="wrap lesson-layout">
+<aside class="side"><div class="side-card" data-lesson-progress><h4>Прогресс</h4><div class="bar"><i></i></div><span class="cnt">0 из 0</span> выполнено</div><div class="side-card"><h4>Содержание</h4><nav class="toc"><a class="sec" href="#sec-0">Где искать материалы для сайта</a><a class="sec" href="#sec-1">Задания</a><a href="#task-1"><span class="n">1</span><span>Макет для трёх экранов</span></a><a href="#task-2"><span class="n">2</span><span>Изучи готовый макет</span></a><a class="sec" href="#links">Полезные ссылки</a></nav></div></aside>
+<div class="content">
+<h2 class="sec-title" id="sec-0"><span class="emoji">🔎</span>Где искать материалы для сайта</h2>
+<div class="table-wrap"><table class="nice"><thead><tr><th>Ресурс</th><th>Что там есть</th></tr></thead><tbody><tr><td><a href="https://www.freepik.com/" target="_blank" rel="noopener">Freepik</a></td><td>Картинки</td></tr><tr><td><a href="https://www.pinterest.ru/" target="_blank" rel="noopener">Pinterest</a></td><td>Картинки и идеи</td></tr><tr><td><a href="https://material.io/design" target="_blank" rel="noopener">Google Material</a></td><td>Иконки</td></tr><tr><td><a href="https://icons8.com/" target="_blank" rel="noopener">Icons8</a></td><td>Иконки</td></tr><tr><td><a href="https://fonts.google.com/" target="_blank" rel="noopener">Google Fonts</a></td><td>Шрифты</td></tr><tr><td><a href="https://fontflipper.com/upload" target="_blank" rel="noopener">Fontflipper</a></td><td>Подбор шрифтов</td></tr><tr><td><a href="https://fontjoy.com/" target="_blank" rel="noopener">Fontjoy</a></td><td>Сочетания шрифтов</td></tr><tr><td><a href="https://patternpad.com/" target="_blank" rel="noopener">Patternpad</a></td><td>Паттерны для фона</td></tr><tr><td><a href="https://freellustrations.com/" target="_blank" rel="noopener">Freellustrations</a></td><td>Бесплатные иллюстрации</td></tr></tbody></table></div>
+<h2 class="sec-title" id="sec-1"><span class="emoji">🖼️</span>Задания</h2>
+<article class="task" id="task-1" data-task="l33:1">
+<div class="task-head">
+<span class="task-num">1</span>
+<div class="task-title"><h3>Макет для трёх экранов</h3><div class="badges"><span class="badge lvl-3">сложно</span><span class="badge local">в VS Code</span></div></div>
+</div>
+<div class="task-body">
+<p>В <a href="https://www.figma.com/" target="_blank" rel="noopener">Figma</a> нарисуй макет своего сайта-портфолио для трёх размеров экрана: <b>≥ 1200px</b> (компьютер), <b>768px</b> (планшет) и <b>&lt; 576px</b> (телефон).</p><p><a href="assets/adobexd_design.rar" target="_blank" rel="noopener">Материалы для макета</a> — обязательно скачай!</p>
+<div class="shots single"><img class="zoomable" src="img/adapt.png" alt="Разрешения" loading="lazy"></div>
+<p class="note info">🖥️ Это большое задание — делай его в <b>VS Code</b> на компьютере и открывай страницу в браузере. Не забудь выложить результат на свой сайт на GitHub!</p>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-2" data-task="l33:2">
+<div class="task-head">
+<span class="task-num">2</span>
+<div class="task-title"><h3>Изучи готовый макет</h3><div class="badges"><span class="badge lvl-1">легко</span></div></div>
+</div>
+<div class="task-body">
+<p>Открой <a href="https://www.figma.com/file/Jp9SBTYQRIuPLRfPCIni0X/lesson-33?node-id=0%3A1" target="_blank" rel="noopener">готовый макет для больших экранов</a> (или <a href="assets/lesson33_figma.fig" download>скачай его</a>) и посмотри, как устроены отступы, сетка и шрифты.</p>
 
-        </li>
-        <li>
-            <h2><a href="https://fonts.google.com/" target="_blank" rel="noopener noreferrer">Google fonts - шрифты #1</a></h2>
-
-        </li>
-        <li>
-            <h2><a href="https://fontflipper.com/upload" target="_blank" rel="noopener noreferrer">fontflipper - шрифты #2</a></h2>
-
-        </li>
-        <li>
-            <h2><a href="https://fontjoy.com/" target="_blank" rel="noopener noreferrer">fontjoy - шрифты #3</a></h2>
-
-        </li>
-        <li>
-            <h2>
-                <a href="https://patternpad.com/" target="_blank" rel="noopener noreferrer">Набор "паттернов" (задники)</a>
-            </h2>
-        </li>
-        <li>
-            <h2><a href="https://freellustrations.com/" target="_blank">Набор бесплатных иллюстраций</a></h2>
-        </li>
-    </ol>
-    </ol>
-    <h1 class="title">Создание макета</h1>
-    <ol>
-        <li>
-            <h2>
-                <a href="https://www.figma.com/">figma.com - дизайн макетов</a>
-            </h2>
-        </li>
-    </ol>
-    <h1 class="title">Создать готовый макет для >=1200px / 768px / <576px разрешений</h1>
-    <ol>
-        <li>
-            <img src="img/adapt.png" alt="Разрешения">
-        </li>
-        <li>
-            <h2>
-            <a href="assets/adobexd_design.rar" target="_blank" rel="noopener noreferrer">Материалы для создания макета (обязательно скачать)</a>
-            </h2>
-        </li>
-        <li>
-            <h2>
-            <a href="https://www.figma.com/file/Jp9SBTYQRIuPLRfPCIni0X/lesson-33?node-id=0%3A1" target="_blank" rel="noopener noreferrer">Ссылка на готовый макет для больших экранов</a>
-            </h2>
-        </li>
-        <li>
-            <h2>
-            <a href="assets/lesson33_figma.fig" download>Ссылка на готовый макет для больших экранов (скачать)</a>
-            </h2>
-        </li>
-    </ol>
-    <div class="additional">
-        <h2 class="important">Что почитать:</h2>
-        <div class="stuff">
-            <a href="assets/responsive.pdf" target="_blank" rel="noopener noreferrer">Книга - Отзывчивый веб-дизайн</a>
-            <a href="assets/krug.pdf" target="_blank" rel="noopener noreferrer">Книга - Не заставляйте меня думать</a>
-
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<h2 class="sec-title" id="links"><span class="emoji">🔗</span>Полезные ссылки</h2>
+<h3 class="links-title">Что почитать</h3>
+<div class="links-grid">
+<a class="link-card" href="assets/responsive.pdf" target="_blank" rel="noopener"><span class="ico">📚</span><span>Книга «Отзывчивый веб-дизайн»<small>raferalston.github.io</small></span></a>
+<a class="link-card" href="assets/krug.pdf" target="_blank" rel="noopener"><span class="ico">📚</span><span>Книга «Не заставляйте меня думать»<small>raferalston.github.io</small></span></a>
+</div>
+<nav class="pager" aria-label="Соседние уроки">
+<a class="prev" href="lesson_32_adv.html"><small>← Предыдущий</small>Урок 32. Библиотеки и Figma</a>
+<a class="next" href="lesson_34_adv.html"><small>Следующий →</small>Урок 34. Портфолио: BEM и Sass</a>
+</nav>
+</div>
+</div>
+</main>
+<footer class="site-footer">
+    <div class="wrap">
+        <div>
+            <b>КИДКОД</b> — школа программирования для детей и подростков<br>
+            <span>Вопросы по домашке? Пиши преподавателю:</span>
+        </div>
+        <div class="socials">
+            <a href="https://t.me/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#29a9eb" d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24z"/><path fill="#fff" d="M5.4 11.8 16.9 7.4c.5-.2 1 .1.8 1l-2 9.3c-.1.7-.5.8-1.1.5l-3-2.2-1.4 1.4c-.2.2-.3.3-.6.3l.2-3.1 5.6-5c.2-.2 0-.3-.4-.1l-6.9 4.3-3-.9c-.6-.2-.7-.7.2-1z"/></svg> Telegram</a>
+            <a href="https://vk.com/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#0077ff"/><path fill="#fff" d="M12.8 17.3c-5.5 0-8.6-3.8-8.7-10h2.7c.1 4.6 2.1 6.5 3.7 6.9V7.3h2.6v4c1.6-.2 3.2-2 3.8-4h2.5a7.6 7.6 0 0 1-3.4 5 7.8 7.8 0 0 1 4 5h-2.8a4.9 4.9 0 0 0-4.1-3.6v3.6h-.3z"/></svg> ВКонтакте</a>
+            <a href="https://kidkod.ru" target="_blank" rel="noopener">🌐 kidkod.ru</a>
         </div>
     </div>
-    <div class="footer">
-        <h5>Связь с преподавателем:</h5>
-        <div class="links">
-            <a href="https://t.me/kidkodschool" target="_blank">
-                <img src="/img/telegram.png" class="social-icon" alt="телеграм">
-            </a>
-            <a href="https://vk.com/kidkodschool" target="_blank" class="vk-desktop">
-                <img src="/img/vk.png" class="social-icon" alt="вконтакте">
-            </a>
-        </div>
-    </div>
+</footer>
+<script src="assets/course-map.js?v=1"></script>
+<script src="assets/kk.js?v=1"></script>
 </body>
-
 </html>

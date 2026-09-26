@@ -1,130 +1,473 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Flexbox</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="css/style_lesson.css" rel="stylesheet">
-    <style>
-    table {
-        max-width: 600px;
-    }
-    </style>
+    <title>Урок 6. Flexbox — домашнее задание · КИДКОД</title>
+    <meta name="description" content="Flexbox — самый удобный способ расставить блоки в ряд, в столбик или ровно по центру.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%90%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link href="assets/kk.css?v=1" rel="stylesheet">
+    <script>try{var t=localStorage.getItem('kkw:theme');if(t)document.documentElement.setAttribute('data-theme',JSON.parse(t))}catch(e){}</script>
 </head>
-
 <body>
-    <h1 class="title">Flexbox</h1>
-    <ol>
-        <li>
-            <h2><a href="flex_example.html" style="margin-bottom: 10px">Домашнее задание #1</a></h2>
-            <h4 style="margin-bottom: 10px">Используемые css свойства:</h4>
-            <table class="ml-0 mr-3 table table-sm table-bordered table-dark table-hover">
-                <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Свойство</th>
-                        <th scope="col">Значение</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>display</td>
-                        <td>flex</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>flex-direction</td>
-                        <td>column</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>flex-basis</td>
-                        <td>20%</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">4</th>
-                        <td>text-align</td>
-                        <td>center</td>
-                    </tr>
-                </tbody>
-            </table>
-        </li>
-        <li>
-            <div>
-                <h2><a href="homework_2.html">Ссылка на домашнее задание #2</a></h2>
-                <h4 style="margin-bottom: 10px">Используемые css свойства:</h4>
-                <table class="ml-0 mr-3 table table-sm table-bordered table-dark table-hover">
-                    <thead>
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Свойство</th>
-                            <th scope="col">Значение</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>cursor</td>
-                            <td>pointer</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>border-bottom-...-radius</td>
-                            <td>5px</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>flex-wrap</td>
-                            <td>wrap</td>
-                        </tr>                        
-                    </tbody>
-                </table>
-            </div>
-        </li>
-        <li>
-            <h2>Полезные сокращения для Visual Studio Code</h2>
-            <div>
-                <img src="img/vsc_short_1.png" alt="1" width="400">
-            </div>
-            <div>
-                <img src="img/vsc_short_2.png" alt="2" width="400">
-            </div>
-            <div>
-                <img src="img/vsc_short_3.png" alt="4" width="400">
-            </div>
-        </li>
-    </ol>    
-    <div class="additional">
-        <h2 class="important">Полезные ссылки:</h2>
-        <div class="stuff">
-            <a href="https://www.w3schools.com/css/css3_flexbox.asp" target="_blank" rel="noopener noreferrer">Все о flex</a>
-            <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">flexbox - руководство (на английском)</a>
-            <a href="https://tuhub.ru/posts/flexbox-complete-guide" target="_blank">flexbox - руководство (на русском)</a>
-            <a href="https://www.w3schools.com/csSref/playit.asp?filename=playcss_align-content&preval=center">Выравнивание предметов в flex-контейнере</a>
-            <a href="https://www.w3schools.com/cssref/pr_text_text-align.asp">Выравнивание текста</a>    
-            <a href="https://flexboxfroggy.com/#ru">flexbox тренажер</a>
+
+<header class="site-header">
+    <div class="wrap">
+        <a class="logo" href="index.html" aria-label="КИДКОД — на главную">
+            <span class="logo-mark">&lt;/&gt;</span>
+            <span>КИДКОД<small>домашние задания · Web</small></span>
+        </a>
+        <nav class="nav" aria-label="Основная навигация">
+            <a href="index.html#basic" class="hide-sm">HTML и CSS</a>
+            <a href="index.html#js" class="hide-sm">JavaScript</a>
+            <a href="index.html#project" class="hide-sm">Проект</a>
+            <button class="icon-btn theme-btn" type="button" aria-label="Сменить тему"><span class="moon">🌙</span><span class="sun">☀️</span></button>
+        </nav>
+    </div>
+</header>
+
+
+<main>
+<section class="lesson-hero"><div class="wrap">
+<div class="crumbs"><a href="index.html">Главная</a><span>›</span><a href="index.html#basic">Начинающий web-дизайнер</a><span>›</span><span>Урок 6</span></div>
+<h1>Flexbox: раскладываем блоки</h1>
+<p class="lead">Flexbox — самый удобный способ расставить блоки в ряд, в столбик или ровно по центру.</p>
+<div class="chips"><span class="chip">📋 Заданий: 5</span><span class="chip">✅ С автопроверкой: 5</span><span class="chip">✨ Новых: 3</span></div>
+</div></section>
+<div class="wrap lesson-layout">
+<aside class="side"><div class="side-card" data-lesson-progress><h4>Прогресс</h4><div class="bar"><i></i></div><span class="cnt">0 из 0</span> выполнено</div><div class="side-card"><h4>Содержание</h4><nav class="toc"><a class="sec" href="#sec-0">Задания</a><a href="#task-1"><span class="n">1</span><span>Страница-раскладка</span></a><a href="#task-2"><span class="n">2</span><span>Карточки товаров</span></a><a href="#task-3"><span class="n">3</span><span>Ровно по центру</span></a><a href="#task-4"><span class="n">4</span><span>Меню в одну строку</span></a><a href="#task-5"><span class="n">5</span><span>Галерея в три колонки</span></a><a class="sec" href="#sec-6">Полезные сокращения для VS Code</a><a class="sec" href="#links">Полезные ссылки</a></nav></div></aside>
+<div class="content">
+<h2 class="sec-title" id="sec-0"><span class="emoji">📦</span>Задания</h2>
+<div class="note info"><p><b>Шпаргалка:</b> <code>display: flex</code> включают у <b>родителя</b>. <code>justify-content</code> — выравнивание вдоль главной оси, <code>align-items</code> — поперёк, <code>flex-direction: column</code> — столбиком, <code>flex-wrap: wrap</code> — перенос на новую строку.</p></div>
+<article class="task" id="task-1" data-task="l6:1">
+<div class="task-head">
+<span class="task-num">1</span>
+<div class="task-title"><h3>Страница-раскладка</h3><div class="badges"><span class="badge lvl-2">средне</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Сделай такую же раскладку, как на образце. Используемые свойства:</p><div class="table-wrap"><table class="nice"><thead><tr><th>Свойство</th><th>Значение</th></tr></thead><tbody><tr><td>display</td><td>flex</td></tr><tr><td>flex-direction</td><td>column</td></tr><tr><td>flex-basis</td><td>20%</td></tr><tr><td>text-align</td><td>center</td></tr></tbody></table></div>
+
+<p><a class="btn btn-ghost btn-sm" href="flex_example.html" target="_blank" rel="noopener">👀 Открыть образец</a></p>
+<div class="web" data-mode="html" data-key="l6:1" data-tests="[{&quot;js&quot;: &quot;if (!has(\&quot;body\&quot;)) return \&quot;Не нашёл элемент body\&quot;; return cssIs(\&quot;body\&quot;, \&quot;display\&quot;, \&quot;flex\&quot;) || \&quot;Сейчас display = \&quot; + css(\&quot;body\&quot;, \&quot;display\&quot;);&quot;, &quot;label&quot;: &quot;body { display: flex }&quot;}, {&quot;js&quot;: &quot;return $$(\&quot;body *\&quot;).some(e =&gt; getComputedStyle(e).flexDirection === \&quot;column\&quot; &amp;&amp; getComputedStyle(e).display === \&quot;flex\&quot;) || \&quot;Не нашёл flex-контейнер со столбиком\&quot;;&quot;, &quot;label&quot;: &quot;Есть блок с flex-direction: column&quot;}, {&quot;js&quot;: &quot;return /flex-basis\\s*:\\s*20%/.test(code) || \&quot;Не нашёл flex-basis: 20%\&quot;;&quot;, &quot;label&quot;: &quot;Есть блок с flex-basis: 20%&quot;}, {&quot;js&quot;: &quot;const m = $(\&quot;body &gt; *\&quot;); return (m &amp;&amp; m.getBoundingClientRect().left &lt; 5 &amp;&amp; m.getBoundingClientRect().width &lt; innerWidth / 2) || \&quot;Первый блок должен стоять слева\&quot;;&quot;, &quot;label&quot;: &quot;Меню занимает левую часть экрана&quot;}]"><textarea class="src" data-role="code" hidden>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;
+    &lt;title&gt;display&lt;/title&gt;
+    &lt;style&gt;
+        h1 {
+            text-align: center;
+            color: white;
+        }
+
+        p {
+            font-size: 1.75em;
+            text-align: center;
+            color: white;
+            padding: 1em;
+        }
+        
+        body {
+            display: flex;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container-1 {
+            flex-basis: 20%;
+            background-color: darkcyan;
+        }
+
+        .container-2 {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .inside-container-1 {
+            flex-basis: 20%;
+            background-color: darkred;
+        }
+
+        .inside-container-2 {
+            width: 100%;
+            height: 100%;
+            display: flex;
+        }
+
+        .container-col-1 {
+            background-color: darkblue;
+        }
+
+        .container-col-2 {
+            background-color: darkgreen;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div class=&quot;container-1&quot;&gt;
+        &lt;h1&gt;Меню&lt;/h1&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;container-2&quot;&gt;
+        &lt;div class=&quot;inside-container-1&quot;&gt;
+            &lt;h1&gt;Заголовок&lt;/h1&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;inside-container-2&quot;&gt;
+            &lt;div class=&quot;container-col-1&quot;&gt;
+                &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quaerat ad cum voluptas fugiat,
+                    repellendus doloribus
+                    ipsam modi eos unde praesentium accusamus beatae! Nobis tempore quidem magni ut accusamus
+                    molestiae.&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;container-col-2&quot;&gt;
+                &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quaerat ad cum voluptas fugiat,
+                    repellendus doloribus
+                    ipsam modi eos unde praesentium accusamus beatae! Nobis tempore quidem magni ut accusamus
+                    molestiae.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-2" data-task="l6:2">
+<div class="task-head">
+<span class="task-num">2</span>
+<div class="task-title"><h3>Карточки товаров</h3><div class="badges"><span class="badge lvl-2">средне</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Сделай три карточки, как на образце. Используемые свойства:</p><div class="table-wrap"><table class="nice"><thead><tr><th>Свойство</th><th>Значение</th></tr></thead><tbody><tr><td>cursor</td><td>pointer</td></tr><tr><td>border-bottom-…-radius</td><td>5px</td></tr><tr><td>flex-wrap</td><td>wrap</td></tr></tbody></table></div>
+
+<p><a class="btn btn-ghost btn-sm" href="homework_2.html" target="_blank" rel="noopener">👀 Открыть образец</a></p>
+<details class="hint"><summary>Подсказка</summary><div class="inner"><p>Картинку можно взять с сайта: <code>&lt;img src="img/lesson_6.jpg"&gt;</code>.</p></div></details>
+<div class="web" data-mode="html" data-key="l6:2" data-tests="[{&quot;js&quot;: &quot;return count(\&quot;.container\&quot;) &gt;= 3 || \&quot;Нужно хотя бы 3 шт. .container\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;.container\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Три карточки .container&quot;}, {&quot;js&quot;: &quot;if (!has(\&quot;body\&quot;)) return \&quot;Не нашёл элемент body\&quot;; return cssIs(\&quot;body\&quot;, \&quot;display\&quot;, \&quot;flex\&quot;) || \&quot;Сейчас display = \&quot; + css(\&quot;body\&quot;, \&quot;display\&quot;);&quot;, &quot;label&quot;: &quot;body { display: flex }&quot;}, {&quot;js&quot;: &quot;if (!has(\&quot;body\&quot;)) return \&quot;Не нашёл элемент body\&quot;; return cssIs(\&quot;body\&quot;, \&quot;flex-wrap\&quot;, \&quot;wrap\&quot;) || \&quot;Сейчас flex-wrap = \&quot; + css(\&quot;body\&quot;, \&quot;flex-wrap\&quot;);&quot;, &quot;label&quot;: &quot;body { flex-wrap: wrap }&quot;}, {&quot;js&quot;: &quot;if (!has(\&quot;button\&quot;)) return \&quot;Не нашёл элемент button\&quot;; return cssIs(\&quot;button\&quot;, \&quot;cursor\&quot;, \&quot;pointer\&quot;) || \&quot;Сейчас cursor = \&quot; + css(\&quot;button\&quot;, \&quot;cursor\&quot;);&quot;, &quot;label&quot;: &quot;button { cursor: pointer }&quot;}, {&quot;js&quot;: &quot;return parseFloat(css(\&quot;button\&quot;, \&quot;border-bottom-left-radius\&quot;)) &gt; 0 || \&quot;Скругли нижние углы кнопки\&quot;;&quot;, &quot;label&quot;: &quot;У кнопки скруглены нижние углы&quot;}, {&quot;js&quot;: &quot;return count(\&quot;.container img\&quot;) &gt;= 3 || \&quot;Нужно хотя бы 3 шт. .container img\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;.container img\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;В карточках есть картинки&quot;}]"><textarea class="src" data-role="code" hidden>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;
+    &lt;title&gt;Домашнее задание 2&lt;/title&gt;
+    &lt;style&gt;
+    body {
+        height: 100vh;
+        margin: 0;
+        background-color: #303a52;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        background-color: #fc85ae;
+        height: 300px;
+        width: 200px;
+        border-radius: 5px;
+    }
+    .top-img {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    img {
+        width: 100%;   
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+    .text {
+        justify-self: center;
+        text-align: center;
+        padding: .25em;
+    }
+    button {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        color: #fff;
+        background-color: #574b90;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        cursor: pointer;
+    }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;div class=&quot;top-img&quot;&gt;
+            &lt;img src=&quot;img/lesson_6.jpg&quot; alt=&quot;&quot;&gt;
+        &lt;/div&gt;
+        &lt;p class=&quot;text&quot;&gt;
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit adipisci quo odio sunt eius veritatis at quisquam ad
+            dolor.
+        &lt;/p&gt;
+        &lt;button&gt;Learn more&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;div class=&quot;top-img&quot;&gt;
+            &lt;img src=&quot;img/lesson_6.jpg&quot; alt=&quot;&quot;&gt;
+        &lt;/div&gt;
+        &lt;p class=&quot;text&quot;&gt;
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit adipisci quo odio sunt eius veritatis at
+            quisquam ad
+            dolor.
+        &lt;/p&gt;
+        &lt;button&gt;Learn more&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;div class=&quot;top-img&quot;&gt;
+            &lt;img src=&quot;img/lesson_6.jpg&quot; alt=&quot;&quot;&gt;
+        &lt;/div&gt;
+        &lt;p class=&quot;text&quot;&gt;
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit adipisci quo odio sunt eius veritatis at
+            quisquam ad
+            dolor.
+        &lt;/p&gt;
+        &lt;button&gt;Learn more&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-3" data-task="l6:3">
+<div class="task-head">
+<span class="task-num">3</span>
+<div class="task-title"><h3>Ровно по центру</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Поставь блок <code>.box</code> <b>ровно в центр</b> экрана с помощью flexbox. У <code>body</code> уже есть высота во весь экран — осталось включить flex и выровнять.</p>
+
+<div class="web" data-mode="html" data-key="l6:3" data-tests="[{&quot;js&quot;: &quot;if (!has(\&quot;body\&quot;)) return \&quot;Не нашёл элемент body\&quot;; return cssIs(\&quot;body\&quot;, \&quot;display\&quot;, \&quot;flex\&quot;) || \&quot;Сейчас display = \&quot; + css(\&quot;body\&quot;, \&quot;display\&quot;);&quot;, &quot;label&quot;: &quot;body { display: flex }&quot;}, {&quot;js&quot;: &quot;const r = $(\&quot;.box\&quot;).getBoundingClientRect(); const dx = Math.abs(r.left + r.width / 2 - innerWidth / 2), dy = Math.abs(r.top + r.height / 2 - innerHeight / 2); return (dx &lt; 3 &amp;&amp; dy &lt; 3) || \&quot;Блок сдвинут от центра на \&quot; + Math.round(dx) + \&quot;px по горизонтали и \&quot; + Math.round(dy) + \&quot;px по вертикали\&quot;;&quot;, &quot;label&quot;: &quot;Блок по центру экрана&quot;}]"><textarea class="src" data-role="code" hidden>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+    &lt;style&gt;
+
+        body { margin: 0; height: 100vh; background-color: #efeaff; }
+        .box { width: 200px; padding: 30px; background-color: #6d4aff; color: white; text-align: center; border-radius: 16px; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;box&quot;&gt;Я в центре!&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+    &lt;style&gt;
+
+        body { margin: 0; height: 100vh; background-color: #efeaff; display: flex; justify-content: center; align-items: center; }
+        .box { width: 200px; padding: 30px; background-color: #6d4aff; color: white; text-align: center; border-radius: 16px; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;box&quot;&gt;Я в центре!&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-4" data-task="l6:4">
+<div class="task-head">
+<span class="task-num">4</span>
+<div class="task-title"><h3>Меню в одну строку</h3><div class="badges"><span class="badge lvl-2">средне</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Сделай меню: логотип слева, ссылки справа. Для <code>nav</code> используй <code>display: flex</code> и <code>justify-content: space-between</code>, а для списка ссылок <code>.links</code> — тоже flex с промежутком <code>gap: 20px</code>.</p>
+
+<div class="web" data-mode="html" data-key="l6:4" data-tests="[{&quot;js&quot;: &quot;if (!has(\&quot;nav\&quot;)) return \&quot;Не нашёл элемент nav\&quot;; return cssIs(\&quot;nav\&quot;, \&quot;display\&quot;, \&quot;flex\&quot;) || \&quot;Сейчас display = \&quot; + css(\&quot;nav\&quot;, \&quot;display\&quot;);&quot;, &quot;label&quot;: &quot;nav { display: flex }&quot;}, {&quot;js&quot;: &quot;if (!has(\&quot;nav\&quot;)) return \&quot;Не нашёл элемент nav\&quot;; return cssIs(\&quot;nav\&quot;, \&quot;justify-content\&quot;, \&quot;space-between\&quot;) || \&quot;Сейчас justify-content = \&quot; + css(\&quot;nav\&quot;, \&quot;justify-content\&quot;);&quot;, &quot;label&quot;: &quot;nav { justify-content: space-between }&quot;}, {&quot;js&quot;: &quot;if (!has(\&quot;.links\&quot;)) return \&quot;Не нашёл элемент .links\&quot;; return cssIs(\&quot;.links\&quot;, \&quot;display\&quot;, \&quot;flex\&quot;) || \&quot;Сейчас display = \&quot; + css(\&quot;.links\&quot;, \&quot;display\&quot;);&quot;, &quot;label&quot;: &quot;.links { display: flex }&quot;}, {&quot;js&quot;: &quot;if (!has(\&quot;.links\&quot;)) return \&quot;Не нашёл элемент .links\&quot;; return cssIs(\&quot;.links\&quot;, \&quot;column-gap\&quot;, \&quot;20px\&quot;) || \&quot;Сейчас column-gap = \&quot; + css(\&quot;.links\&quot;, \&quot;column-gap\&quot;);&quot;, &quot;label&quot;: &quot;.links { gap: 20px }&quot;}, {&quot;js&quot;: &quot;const a = $(\&quot;.logo\&quot;).getBoundingClientRect(), b = $(\&quot;.links\&quot;).getBoundingClientRect(); return (Math.abs(a.top - b.top) &lt; 20 &amp;&amp; b.left &gt; a.right) || \&quot;Логотип и ссылки должны быть в одной строке\&quot;;&quot;, &quot;label&quot;: &quot;Логотип и ссылки в одной строке&quot;}]"><textarea class="src" data-role="code" hidden>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+    &lt;style&gt;
+
+        body { margin: 0; font-family: sans-serif; }
+        nav { background-color: #1f1b3d; padding: 16px 24px; }
+        .logo { color: #ffd23f; font-weight: bold; font-size: 22px; }
+        .links a { color: white; text-decoration: none; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;nav&gt;
+        &lt;div class=&quot;logo&quot;&gt;🚀 Космо&lt;/div&gt;
+        &lt;div class=&quot;links&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;Главная&lt;/a&gt;
+            &lt;a href=&quot;#&quot;&gt;Игры&lt;/a&gt;
+            &lt;a href=&quot;#&quot;&gt;Контакты&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/nav&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+    &lt;style&gt;
+
+        body { margin: 0; font-family: sans-serif; }
+        nav { background-color: #1f1b3d; padding: 16px 24px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { color: #ffd23f; font-weight: bold; font-size: 22px; }
+        .links { display: flex; gap: 20px; }
+        .links a { color: white; text-decoration: none; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;nav&gt;
+        &lt;div class=&quot;logo&quot;&gt;🚀 Космо&lt;/div&gt;
+        &lt;div class=&quot;links&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;Главная&lt;/a&gt;
+            &lt;a href=&quot;#&quot;&gt;Игры&lt;/a&gt;
+            &lt;a href=&quot;#&quot;&gt;Контакты&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/nav&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-5" data-task="l6:5">
+<div class="task-head">
+<span class="task-num">5</span>
+<div class="task-title"><h3>Галерея в три колонки</h3><div class="badges"><span class="badge lvl-2">средне</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Шесть блоков <code>.item</code> должны стоять <b>по три в ряд</b>. Контейнеру <code>.gallery</code> — <code>display: flex</code> и <code>flex-wrap: wrap</code>, а каждому <code>.item</code> — ширину <code>33.33%</code>.</p>
+
+<div class="web" data-mode="html" data-key="l6:5" data-tests="[{&quot;js&quot;: &quot;if (!has(\&quot;.gallery\&quot;)) return \&quot;Не нашёл элемент .gallery\&quot;; return cssIs(\&quot;.gallery\&quot;, \&quot;display\&quot;, \&quot;flex\&quot;) || \&quot;Сейчас display = \&quot; + css(\&quot;.gallery\&quot;, \&quot;display\&quot;);&quot;, &quot;label&quot;: &quot;.gallery { display: flex }&quot;}, {&quot;js&quot;: &quot;if (!has(\&quot;.gallery\&quot;)) return \&quot;Не нашёл элемент .gallery\&quot;; return cssIs(\&quot;.gallery\&quot;, \&quot;flex-wrap\&quot;, \&quot;wrap\&quot;) || \&quot;Сейчас flex-wrap = \&quot; + css(\&quot;.gallery\&quot;, \&quot;flex-wrap\&quot;);&quot;, &quot;label&quot;: &quot;.gallery { flex-wrap: wrap }&quot;}, {&quot;js&quot;: &quot;const tops = $$(\&quot;.item\&quot;).map(e =&gt; Math.round(e.getBoundingClientRect().top)); const rows = {}; tops.forEach(t =&gt; rows[t] = (rows[t] || 0) + 1); const counts = Object.values(rows); return (counts.length === 2 &amp;&amp; counts.every(c =&gt; c === 3)) || \&quot;Сейчас в рядах: \&quot; + counts.join(\&quot;, \&quot;);&quot;, &quot;label&quot;: &quot;По три блока в ряд&quot;}]"><textarea class="src" data-role="code" hidden>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+    &lt;style&gt;
+
+        body { margin: 0; }
+        .item { box-sizing: border-box; font-size: 60px; text-align: center; padding: 20px; border: 2px solid white; background-color: #ffe6f0; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;gallery&quot;&gt;
+        &lt;div class=&quot;item&quot;&gt;🍎&lt;/div&gt;
+        &lt;div class=&quot;item&quot;&gt;🍌&lt;/div&gt;
+        &lt;div class=&quot;item&quot;&gt;🍇&lt;/div&gt;
+        &lt;div class=&quot;item&quot;&gt;🍉&lt;/div&gt;
+        &lt;div class=&quot;item&quot;&gt;🍓&lt;/div&gt;
+        &lt;div class=&quot;item&quot;&gt;🥝&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+    &lt;style&gt;
+
+        body { margin: 0; }
+        .gallery { display: flex; flex-wrap: wrap; }
+        .item { box-sizing: border-box; width: 33.33%; font-size: 60px; text-align: center; padding: 20px; border: 2px solid white; background-color: #ffe6f0; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;gallery&quot;&gt;
+        &lt;div class=&quot;item&quot;&gt;🍎&lt;/div&gt;
+        &lt;div class=&quot;item&quot;&gt;🍌&lt;/div&gt;
+        &lt;div class=&quot;item&quot;&gt;🍇&lt;/div&gt;
+        &lt;div class=&quot;item&quot;&gt;🍉&lt;/div&gt;
+        &lt;div class=&quot;item&quot;&gt;🍓&lt;/div&gt;
+        &lt;div class=&quot;item&quot;&gt;🥝&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<h2 class="sec-title" id="sec-6"><span class="emoji">⌨️</span>Полезные сокращения для VS Code</h2>
+<div class="shots single"><img class="zoomable" src="img/vsc_short_1.png" alt="Сокращения 1" loading="lazy"><img class="zoomable" src="img/vsc_short_2.png" alt="Сокращения 2" loading="lazy"><img class="zoomable" src="img/vsc_short_3.png" alt="Сокращения 3" loading="lazy"></div>
+<h2 class="sec-title" id="links"><span class="emoji">🔗</span>Полезные ссылки</h2>
+<h3 class="links-title">Полезные ссылки</h3>
+<div class="links-grid">
+<a class="link-card" href="https://www.w3schools.com/css/css3_flexbox.asp" target="_blank" rel="noopener"><span class="ico">📘</span><span>Всё о flex<small>w3schools.com</small></span></a>
+<a class="link-card" href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank" rel="noopener"><span class="ico">📘</span><span>Flexbox — руководство (на английском)<small>css-tricks.com</small></span></a>
+<a class="link-card" href="https://tuhub.ru/posts/flexbox-complete-guide" target="_blank" rel="noopener"><span class="ico">📘</span><span>Flexbox — руководство (на русском)<small>tuhub.ru</small></span></a>
+<a class="link-card" href="https://www.w3schools.com/csSref/playit.asp?filename=playcss_align-content&amp;preval=center" target="_blank" rel="noopener"><span class="ico">📘</span><span>Выравнивание в flex-контейнере<small>w3schools.com</small></span></a>
+<a class="link-card" href="https://www.w3schools.com/cssref/pr_text_text-align.asp" target="_blank" rel="noopener"><span class="ico">📘</span><span>Выравнивание текста<small>w3schools.com</small></span></a>
+<a class="link-card" href="https://flexboxfroggy.com/#ru" target="_blank" rel="noopener"><span class="ico">🎮</span><span>Flexbox Froggy — тренажёр<small>flexboxfroggy.com</small></span></a>
+</div>
+<h3 class="links-title">Что почитать</h3>
+<div class="links-grid">
+<a class="link-card" href="https://www.w3schools.com/cssref/pr_class_display.asp" target="_blank" rel="noopener"><span class="ico">📚</span><span>Отображение элемента (display)<small>w3schools.com</small></span></a>
+</div>
+<nav class="pager" aria-label="Соседние уроки">
+<a class="prev" href="lesson_5.html"><small>← Предыдущий</small>Урок 5. Сайт в интернете и position</a>
+<a class="next" href="lesson_7.html"><small>Следующий →</small>Урок 7. :hover и inline-block</a>
+</nav>
+</div>
+</div>
+</main>
+<footer class="site-footer">
+    <div class="wrap">
+        <div>
+            <b>КИДКОД</b> — школа программирования для детей и подростков<br>
+            <span>Вопросы по домашке? Пиши преподавателю:</span>
         </div>
-        <h2 class="important">Что почитать:</h2>
-        <div class="stuff">
-            <a href="https://www.w3schools.com/cssref/pr_class_display.asp" target="_blank">Отображение элемента (display)</a>
+        <div class="socials">
+            <a href="https://t.me/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#29a9eb" d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24z"/><path fill="#fff" d="M5.4 11.8 16.9 7.4c.5-.2 1 .1.8 1l-2 9.3c-.1.7-.5.8-1.1.5l-3-2.2-1.4 1.4c-.2.2-.3.3-.6.3l.2-3.1 5.6-5c.2-.2 0-.3-.4-.1l-6.9 4.3-3-.9c-.6-.2-.7-.7.2-1z"/></svg> Telegram</a>
+            <a href="https://vk.com/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#0077ff"/><path fill="#fff" d="M12.8 17.3c-5.5 0-8.6-3.8-8.7-10h2.7c.1 4.6 2.1 6.5 3.7 6.9V7.3h2.6v4c1.6-.2 3.2-2 3.8-4h2.5a7.6 7.6 0 0 1-3.4 5 7.8 7.8 0 0 1 4 5h-2.8a4.9 4.9 0 0 0-4.1-3.6v3.6h-.3z"/></svg> ВКонтакте</a>
+            <a href="https://kidkod.ru" target="_blank" rel="noopener">🌐 kidkod.ru</a>
         </div>
     </div>
-    <div class="footer">
-        <h5>Связь с преподавателем:</h5>
-        <div class="links">
-            <a href="https://t.me/kidkodschool" target="_blank">
-                <img src="/img/telegram.png" class="social-icon" alt="телеграм">
-            </a>
-            <a href="https://vk.com/kidkodschool" target="_blank" class="vk-desktop">
-                <img src="/img/vk.png" class="social-icon" alt="вконтакте">
-            </a>
-        </div>
-    </div>
+</footer>
+<script src="assets/course-map.js?v=1"></script>
+<script src="assets/kk.js?v=1"></script>
 </body>
-
 </html>
-
-
