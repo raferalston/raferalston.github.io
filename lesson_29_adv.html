@@ -1,200 +1,257 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Canvas</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="css/style_lesson.css" rel="stylesheet">
-    <style>
-    table {
-        max-width: 1200px;
-    }
-    caption {
-        background-color: #fff;
-        padding: .5em;
-    }
-    </style>
+    <title>Урок 29. Canvas: рисуем кодом — домашнее задание · КИДКОД</title>
+    <meta name="description" content="Canvas — холст, на котором JavaScript рисует фигуры, линии и текст. На нём делают игры и графики.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%90%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link href="assets/kk.css?v=1" rel="stylesheet">
+    <script>try{var t=localStorage.getItem('kkw:theme');if(t)document.documentElement.setAttribute('data-theme',JSON.parse(t))}catch(e){}</script>
 </head>
-
 <body>
-    <h1 class="title">Canvas</h1>
-    <ol>
-        <li>
-            <h2>Javascript методы и функции используемые в заданиях</h2>
-            <table class=" table table-sm table-bordered table-dark table-hover">
-                <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Как вызвать</th>
-                        <th scope="col">Что делает</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>ctx = canvas.getContext("2d")</td>
-                        <td>Метод предназначенный для визуализации рисования на холсте</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>ctx.fillRect(x, y, w, h)</td>
-                        <td>Создание сплошного прямоугольника</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>ctx.fillStyle = 'color'</td>
-                        <td>Выбор цвета для заполнения фигур</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">4</th>
-                        <td>ctx.strokeRect(x, y, w, h)</td>
-                        <td>Создание полого прямоугольника</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">5</th>
-                        <td>ctx.strokeStyle = 'color'</td>
-                        <td>Выбор цвета для границы у фигур</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">6</th>
-                        <td>ctx.clearRect(x, y, w, h)</td>
-                        <td>Удаление прямоугольной формы из холста</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">7</th>
-                        <td>ctx.font = '30px Arial'</td>
-                        <td>Выбор шрифта</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">8</th>
-                        <td>ctx.fillText('Text', x, y)</td>
-                        <td>Создание сплошного текста на холсте</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">9</th>
-                        <td>ctx.strokeText('Text', x, y)</td>
-                        <td>Создание полого текста на холсте</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">10</th>
-                        <td>ctx.beginPath()</td>
-                        <td>Начать рисовать пользовательскую фигуру</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">11</th>
-                        <td>ctx.moveTo(x, y)</td>
-                        <td>Передвинуть точку для начала рисования (не рисуя)</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">12</th>
-                        <td>ctx.lineTo(x, y)</td>
-                        <td>Передвинуть точку для рисования (рисуя)</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">13</th>
-                        <td>ctx.stroke()</td>
-                        <td>Заливаем путь цветом</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">14</th>
-                        <td>ctx.fill()</td>
-                        <td>Заливаем пользовательскую фигуру цветом</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">15</th>
-                        <td>ctx.closePath()</td>
-                        <td>Автоматически завершаем пользовательскую фигуру</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">16</th>
-                        <td>ctx.arc(x, y, radius, startAngle, endAngle)</td>
-                        <td>Создание формы дуга (круг можно создать следующим образом: <b>ctx.arc(100, 100, 40, 0, Math.PI * 2)</b></td>
-                    </tr>
-                </tbody>
-            </table>
-        </li>
-        <li>
-            <h2>С помощью canvas и циклов расчертите холст на горизонтальные и вертикальные линии</h2>
-            <h2>
-                <img src="img/l29_q1.png" alt="" width="400">
-            </h2>
-            <h2>
 
-                <a href="lesson_29_ans_1.html" target="_blank" rel="noopener noreferrer">Ответ</a>
-            </h2>
-        </li>
-        <li>
-            <h2>С помощью canvas и циклов создайте "шахматную" доску</h2>
-            <h2>
-                <img src="img/l29_q2.png" alt="" width="400">
-            </h2>
-            <h2>
+<header class="site-header">
+    <div class="wrap">
+        <a class="logo" href="index.html" aria-label="КИДКОД — на главную">
+            <span class="logo-mark">&lt;/&gt;</span>
+            <span>КИДКОД<small>домашние задания · Web</small></span>
+        </a>
+        <nav class="nav" aria-label="Основная навигация">
+            <a href="index.html#basic" class="hide-sm">HTML и CSS</a>
+            <a href="index.html#js" class="hide-sm">JavaScript</a>
+            <a href="index.html#project" class="hide-sm">Проект</a>
+            <button class="icon-btn theme-btn" type="button" aria-label="Сменить тему"><span class="moon">🌙</span><span class="sun">☀️</span></button>
+        </nav>
+    </div>
+</header>
 
-                <a href="lesson_29_ans_2.html" target="_blank" rel="noopener noreferrer">Ответ</a>
-            </h2>
-        </li>
-        <li>
-            <h2>Создайте "мир" с физической моделью столкновений</h2>
-            <h2>
-                <img src="img/l29_q3.gif" alt="" width="400">
-            </h2>
-            <h2>
 
-                <a href="lesson_29_ans_3.html" target="_blank" rel="noopener noreferrer">Попробовать</a>
-            </h2>
-        </li>
-        <li>
-            <h2>Создайте аналог paint</h2>
-            <h2>
-                <img src="img/l29_q4.gif" alt="" width="400">
-            </h2>
-            <h2>
+<main>
+<section class="lesson-hero"><div class="wrap">
+<div class="crumbs"><a href="index.html">Главная</a><span>›</span><a href="index.html#js">Продвинутый web-дизайнер</a><span>›</span><span>Урок 29</span></div>
+<h1>Canvas</h1>
+<p class="lead">Canvas — холст, на котором JavaScript рисует фигуры, линии и текст. На нём делают игры и графики.</p>
+<div class="chips"><span class="chip">📋 Заданий: 6</span><span class="chip">✅ С автопроверкой: 4</span><span class="chip">✨ Новых: 2</span></div>
+</div></section>
+<div class="wrap lesson-layout">
+<aside class="side"><div class="side-card" data-lesson-progress><h4>Прогресс</h4><div class="bar"><i></i></div><span class="cnt">0 из 0</span> выполнено</div><div class="side-card"><h4>Содержание</h4><nav class="toc"><a class="sec" href="#sec-0">Методы canvas</a><a class="sec" href="#sec-1">Задания</a><a href="#task-1"><span class="n">1</span><span>Сетка на холсте</span></a><a href="#task-2"><span class="n">2</span><span>Шахматная доска</span></a><a href="#task-3"><span class="n">3</span><span>Мир с физикой столкновений</span></a><a href="#task-4"><span class="n">4</span><span>Свой Paint</span></a><a href="#task-5"><span class="n">5</span><span>Смайлик на canvas</span></a><a href="#task-6"><span class="n">6</span><span>Домик</span></a><a class="sec" href="#links">Полезные ссылки</a></nav></div></aside>
+<div class="content">
+<h2 class="sec-title" id="sec-0"><span class="emoji">🖌️</span>Методы canvas</h2>
+<div class="table-wrap"><table class="nice"><thead><tr><th>Как вызвать</th><th>Что делает</th></tr></thead><tbody><tr><td><code>ctx = canvas.getContext('2d')</code></td><td>Получить «кисть» для рисования на холсте</td></tr><tr><td><code>ctx.fillRect(x, y, w, h)</code></td><td>Закрашенный прямоугольник</td></tr><tr><td><code>ctx.fillStyle = 'color'</code></td><td>Цвет заливки фигур</td></tr><tr><td><code>ctx.strokeRect(x, y, w, h)</code></td><td>Прямоугольник-контур</td></tr><tr><td><code>ctx.strokeStyle = 'color'</code></td><td>Цвет контура</td></tr><tr><td><code>ctx.clearRect(x, y, w, h)</code></td><td>Стереть прямоугольную область</td></tr><tr><td><code>ctx.font = '30px Arial'</code></td><td>Выбор шрифта</td></tr><tr><td><code>ctx.fillText('Text', x, y)</code></td><td>Закрашенный текст</td></tr><tr><td><code>ctx.strokeText('Text', x, y)</code></td><td>Текст-контур</td></tr><tr><td><code>ctx.beginPath()</code></td><td>Начать рисовать свою фигуру</td></tr><tr><td><code>ctx.moveTo(x, y)</code></td><td>Переместить кисть (не рисуя)</td></tr><tr><td><code>ctx.lineTo(x, y)</code></td><td>Провести линию до точки</td></tr><tr><td><code>ctx.stroke()</code></td><td>Обвести путь</td></tr><tr><td><code>ctx.fill()</code></td><td>Залить фигуру цветом</td></tr><tr><td><code>ctx.closePath()</code></td><td>Замкнуть фигуру</td></tr><tr><td><code>ctx.arc(x, y, radius, startAngle, endAngle)</code></td><td>Дуга. Круг: <code>ctx.arc(100, 100, 40, 0, Math.PI * 2)</code></td></tr></tbody></table></div>
+<h2 class="sec-title" id="sec-1"><span class="emoji">🎨</span>Задания</h2>
+<article class="task" id="task-1" data-task="l29:1">
+<div class="task-head">
+<span class="task-num">1</span>
+<div class="task-title"><h3>Сетка на холсте</h3><div class="badges"><span class="badge lvl-2">средне</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>С помощью canvas и циклов расчерти холст 400 × 400 на вертикальные и горизонтальные линии через каждые 40px и подпиши номера клеток.</p>
+<div class="shots single"><img class="zoomable" src="img/l29_q1.png" alt="Сетка" loading="lazy"></div>
+<div class="web" data-mode="js" data-key="l29:1" data-tests="[{&quot;js&quot;: &quot;return [40, 200, 360].every(x =&gt; pixel(\&quot;#canvas\&quot;, x, 30)[3] &gt; 0) || \&quot;Не вижу вертикальных линий на x = 40, 200, 360\&quot;;&quot;, &quot;label&quot;: &quot;Есть вертикальные линии&quot;}, {&quot;js&quot;: &quot;return [80, 240, 320].every(y =&gt; pixel(\&quot;#canvas\&quot;, 30, y)[3] &gt; 0) || \&quot;Не вижу горизонтальных линий на y = 80, 240, 320\&quot;;&quot;, &quot;label&quot;: &quot;Есть горизонтальные линии&quot;}, {&quot;js&quot;: &quot;return [[30, 30], [250, 250], [110, 350]].every(([x, y]) =&gt; pixel(\&quot;#canvas\&quot;, x, y)[3] === 0) || \&quot;Клетки должны быть пустыми внутри\&quot;;&quot;, &quot;label&quot;: &quot;Внутри клеток пусто&quot;}, {&quot;js&quot;: &quot;return new RegExp(\&quot;for\\\\s*\\\\(\&quot;, \&quot;\&quot;).test(code) || \&quot;В коде не нашёл: Линии рисуются в цикле\&quot;;&quot;, &quot;label&quot;: &quot;Линии рисуются в цикле&quot;}]"><textarea class="src" data-role="code" hidden>let canvas = document.querySelector(&#x27;#canvas&#x27;)
+let ctx = canvas.getContext(&#x27;2d&#x27;)
+</textarea><textarea class="src" data-role="fixture" hidden>&lt;canvas id=&quot;canvas&quot; width=&quot;400&quot; height=&quot;400&quot;&gt;&lt;/canvas&gt;
+&lt;style&gt;body { background-color: #252423; } canvas { background-color: #fdfff5; border-radius: 5px; }&lt;/style&gt;
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>let canvas = document.querySelector(&#x27;#canvas&#x27;)
+let ctx = canvas.getContext(&#x27;2d&#x27;)
 
-                <a href="lesson_29_ans_4.html" target="_blank" rel="noopener noreferrer">Попробовать</a>
-            </h2>
-        </li>
-    </ol>  
+let step = 40
 
-    <div class="additional">
-        <h2 class="important">Что почитать:</h2>
-        <div class="stuff">
+for (let i = 1; i &lt; 10; i++) {
+    ctx.beginPath()
+    ctx.moveTo(step * i, 0)
+    ctx.lineTo(step * i, 400)
+    ctx.stroke()
 
-            <a href="https://developer.mozilla.org/ru/docs/Web/API/Canvas_API/Tutorial" target="_blank" rel="noopener noreferrer">Руководство по canvas</a>
-            <a href="https://www.w3schools.com/html/html5_canvas.asp" target="_blank" rel="noopener noreferrer">Практика canvas #1</a>
-            <a href="https://www.w3schools.com/graphics/canvas_drawing.asp" target="_blank" rel="noopener noreferrer">Практика canvas #2</a>
-            <a href="https://developer.mozilla.org/en-US/docs/Games/Techniques/2D_collision_detection" target="_blank" rel="noopener noreferrer">Физическая модель столкновений в javascript</a>
+    ctx.beginPath()
+    ctx.moveTo(0, step * i)
+    ctx.lineTo(400, step * i)
+    ctx.stroke()
+}
+
+for (let i = 0; i &lt; 10; i++) {
+    ctx.fillText(i, step * i + 4, 12)
+}
+</pre><p><a href="lesson_29_ans_1.html" target="_blank" rel="noopener">Открыть готовую страницу с ответом ↗</a></p></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-2" data-task="l29:2">
+<div class="task-head">
+<span class="task-num">2</span>
+<div class="task-title"><h3>Шахматная доска</h3><div class="badges"><span class="badge lvl-2">средне</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>С помощью canvas и <b>двух вложенных циклов</b> нарисуй шахматную доску 8 × 8 из клеток по 50px. Левая верхняя клетка — светлая (<code>white</code>), соседняя — тёмная (<code>#333</code>).</p>
+<div class="shots single"><img class="zoomable" src="img/l29_q2.png" alt="Шахматная доска" loading="lazy"></div>
+<details class="hint"><summary>Подсказка</summary><div class="inner"><p>Клетка тёмная, если <code>(i + j) % 2 === 1</code>.</p></div></details>
+<div class="web" data-mode="js" data-key="l29:2" data-tests="[{&quot;js&quot;: &quot;const dark = (x, y) =&gt; pixel(\&quot;#canvas\&quot;, x, y)[0] &lt; 128 &amp;&amp; pixel(\&quot;#canvas\&quot;, x, y)[3] &gt; 0; const cells = [[0,0],[1,0],[0,1],[1,1],[7,7],[6,7],[3,4]]; for (const [i, j] of cells) { const want = (i + j) % 2 === 1; if (dark(i * 50 + 25, j * 50 + 25) !== want) return \&quot;Клетка (\&quot; + i + \&quot;, \&quot; + j + \&quot;) должна быть \&quot; + (want ? \&quot;тёмной\&quot; : \&quot;светлой\&quot;); } return true;&quot;, &quot;label&quot;: &quot;Клетки чередуются&quot;}, {&quot;js&quot;: &quot;return new RegExp(\&quot;for[\\\\s\\\\S]*for\&quot;, \&quot;\&quot;).test(code) || \&quot;В коде не нашёл: Используются вложенные циклы\&quot;;&quot;, &quot;label&quot;: &quot;Используются вложенные циклы&quot;}]"><textarea class="src" data-role="code" hidden>let canvas = document.querySelector(&#x27;#canvas&#x27;)
+let ctx = canvas.getContext(&#x27;2d&#x27;)
+</textarea><textarea class="src" data-role="fixture" hidden>&lt;canvas id=&quot;canvas&quot; width=&quot;400&quot; height=&quot;400&quot;&gt;&lt;/canvas&gt;
+&lt;style&gt;body { background-color: #252423; } canvas { background-color: #fdfff5; border-radius: 5px; }&lt;/style&gt;
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>let canvas = document.querySelector(&#x27;#canvas&#x27;)
+let ctx = canvas.getContext(&#x27;2d&#x27;)
+
+for (let i = 0; i &lt; 8; i++) {
+    for (let j = 0; j &lt; 8; j++) {
+        if ((i + j) % 2 === 1) {
+            ctx.fillStyle = &#x27;#333&#x27;
+        } else {
+            ctx.fillStyle = &#x27;white&#x27;
+        }
+        ctx.fillRect(i * 50, j * 50, 50, 50)
+    }
+}
+</pre><p><a href="lesson_29_ans_2.html" target="_blank" rel="noopener">Открыть готовую страницу с ответом ↗</a></p></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-3" data-task="l29:3">
+<div class="task-head">
+<span class="task-num">3</span>
+<div class="task-title"><h3>Мир с физикой столкновений</h3><div class="badges"><span class="badge lvl-3">сложно</span><span class="badge local">в VS Code</span></div></div>
+</div>
+<div class="task-body">
+<p>Создай «мир», в котором шарики летают и отскакивают от стен и друг от друга.</p>
+<div class="shots single"><img class="zoomable" src="img/l29_q3.gif" alt="Физика" loading="lazy"></div>
+<p class="note info">🖥️ Это большое задание — делай его в <b>VS Code</b> на компьютере и открывай страницу в браузере. Не забудь выложить результат на свой сайт на GitHub!</p>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><p><a href="lesson_29_ans_3.html" target="_blank" rel="noopener">Открыть готовую страницу с ответом ↗</a></p></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-4" data-task="l29:4">
+<div class="task-head">
+<span class="task-num">4</span>
+<div class="task-title"><h3>Свой Paint</h3><div class="badges"><span class="badge lvl-3">сложно</span><span class="badge local">в VS Code</span></div></div>
+</div>
+<div class="task-body">
+<p>Создай аналог программы Paint: рисование мышкой, выбор цвета и толщины кисти.</p>
+<div class="shots single"><img class="zoomable" src="img/l29_q4.gif" alt="Paint" loading="lazy"></div>
+<p class="note info">🖥️ Это большое задание — делай его в <b>VS Code</b> на компьютере и открывай страницу в браузере. Не забудь выложить результат на свой сайт на GitHub!</p>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><p><a href="lesson_29_ans_4.html" target="_blank" rel="noopener">Открыть готовую страницу с ответом ↗</a></p></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-5" data-task="l29:5">
+<div class="task-head">
+<span class="task-num">5</span>
+<div class="task-title"><h3>Смайлик на canvas</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Нарисуй смайлик на холсте 400 × 400:</p><p><ul><li>лицо — жёлтый (<code>gold</code>) круг с центром (200, 200) и радиусом 150</li><li>глаза — чёрные круги радиусом 20 в точках (140, 160) и (260, 160)</li><li>улыбка — дуга: <code>ctx.arc(200, 220, 80, 0, Math.PI)</code></li></ul></p>
+
+<div class="web" data-mode="js" data-key="l29:5" data-tests="[{&quot;js&quot;: &quot;const p = pixel(\&quot;#canvas\&quot;, 200, 80); return (p[0] &gt; 200 &amp;&amp; p[1] &gt; 150 &amp;&amp; p[2] &lt; 100) || \&quot;В точке (200, 80) должен быть жёлтый цвет\&quot;;&quot;, &quot;label&quot;: &quot;Жёлтое лицо&quot;}, {&quot;js&quot;: &quot;return [[140, 160], [260, 160]].every(([x, y]) =&gt; { const p = pixel(\&quot;#canvas\&quot;, x, y); return p[0] &lt; 60 &amp;&amp; p[3] &gt; 200; }) || \&quot;В точках (140, 160) и (260, 160) должны быть чёрные глаза\&quot;;&quot;, &quot;label&quot;: &quot;Чёрные глаза&quot;}, {&quot;js&quot;: &quot;const p = pixel(\&quot;#canvas\&quot;, 200, 300); return (p[0] &lt; 150 || p[2] &gt; 100) || \&quot;Не вижу улыбку в точке (200, 300)\&quot;;&quot;, &quot;label&quot;: &quot;Есть улыбка&quot;}, {&quot;js&quot;: &quot;return new RegExp(\&quot;\\\\.arc\\\\(\&quot;, \&quot;\&quot;).test(code) || \&quot;В коде не нашёл: Используется arc\&quot;;&quot;, &quot;label&quot;: &quot;Используется arc&quot;}]"><textarea class="src" data-role="code" hidden>let canvas = document.querySelector(&#x27;#canvas&#x27;)
+let ctx = canvas.getContext(&#x27;2d&#x27;)
+</textarea><textarea class="src" data-role="fixture" hidden>&lt;canvas id=&quot;canvas&quot; width=&quot;400&quot; height=&quot;400&quot;&gt;&lt;/canvas&gt;
+&lt;style&gt;body { background-color: #252423; } canvas { background-color: #fdfff5; border-radius: 5px; }&lt;/style&gt;
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>let canvas = document.querySelector(&#x27;#canvas&#x27;)
+let ctx = canvas.getContext(&#x27;2d&#x27;)
+
+ctx.fillStyle = &#x27;gold&#x27;
+ctx.beginPath()
+ctx.arc(200, 200, 150, 0, Math.PI * 2)
+ctx.fill()
+
+ctx.fillStyle = &#x27;black&#x27;
+ctx.beginPath()
+ctx.arc(140, 160, 20, 0, Math.PI * 2)
+ctx.fill()
+ctx.beginPath()
+ctx.arc(260, 160, 20, 0, Math.PI * 2)
+ctx.fill()
+
+ctx.lineWidth = 8
+ctx.beginPath()
+ctx.arc(200, 220, 80, 0, Math.PI)
+ctx.stroke()
+</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-6" data-task="l29:6">
+<div class="task-head">
+<span class="task-num">6</span>
+<div class="task-title"><h3>Домик</h3><div class="badges"><span class="badge lvl-2">средне</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Нарисуй домик:</p><p><ul><li>стены — коричневый (<code>saddlebrown</code>) прямоугольник: x = 100, y = 200, ширина 200, высота 150</li><li>крыша — красный (<code>red</code>) треугольник с вершинами (100, 200), (200, 100), (300, 200) — используй <code>beginPath</code>, <code>moveTo</code>, <code>lineTo</code>, <code>fill</code></li><li>окно — голубой (<code>skyblue</code>) квадрат 50 × 50 в точке (175, 240)</li></ul></p>
+
+<div class="web" data-mode="js" data-key="l29:6" data-tests="[{&quot;js&quot;: &quot;const p = pixel(\&quot;#canvas\&quot;, 120, 330); return (p[0] &gt; 100 &amp;&amp; p[1] &lt; 100 &amp;&amp; p[2] &lt; 60) || \&quot;В точке (120, 330) должна быть коричневая стена\&quot;;&quot;, &quot;label&quot;: &quot;Коричневые стены&quot;}, {&quot;js&quot;: &quot;const p = pixel(\&quot;#canvas\&quot;, 200, 170); return (p[0] &gt; 200 &amp;&amp; p[1] &lt; 60 &amp;&amp; p[2] &lt; 60) || \&quot;В точке (200, 170) должна быть красная крыша\&quot;;&quot;, &quot;label&quot;: &quot;Красная крыша&quot;}, {&quot;js&quot;: &quot;return pixel(\&quot;#canvas\&quot;, 120, 120)[3] === 0 || \&quot;В точке (120, 120) должно быть пусто — крыша треугольная\&quot;;&quot;, &quot;label&quot;: &quot;Над крышей пусто&quot;}, {&quot;js&quot;: &quot;const p = pixel(\&quot;#canvas\&quot;, 200, 265); return (p[2] &gt; 200 &amp;&amp; p[1] &gt; 150) || \&quot;В точке (200, 265) должно быть голубое окно\&quot;;&quot;, &quot;label&quot;: &quot;Голубое окно&quot;}]"><textarea class="src" data-role="code" hidden>let canvas = document.querySelector(&#x27;#canvas&#x27;)
+let ctx = canvas.getContext(&#x27;2d&#x27;)
+</textarea><textarea class="src" data-role="fixture" hidden>&lt;canvas id=&quot;canvas&quot; width=&quot;400&quot; height=&quot;400&quot;&gt;&lt;/canvas&gt;
+&lt;style&gt;body { background-color: #252423; } canvas { background-color: #fdfff5; border-radius: 5px; }&lt;/style&gt;
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>let canvas = document.querySelector(&#x27;#canvas&#x27;)
+let ctx = canvas.getContext(&#x27;2d&#x27;)
+
+ctx.fillStyle = &#x27;saddlebrown&#x27;
+ctx.fillRect(100, 200, 200, 150)
+
+ctx.fillStyle = &#x27;red&#x27;
+ctx.beginPath()
+ctx.moveTo(100, 200)
+ctx.lineTo(200, 100)
+ctx.lineTo(300, 200)
+ctx.closePath()
+ctx.fill()
+
+ctx.fillStyle = &#x27;skyblue&#x27;
+ctx.fillRect(175, 240, 50, 50)
+</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<h2 class="sec-title" id="links"><span class="emoji">🔗</span>Полезные ссылки</h2>
+<h3 class="links-title">Что почитать</h3>
+<div class="links-grid">
+<a class="link-card" href="https://developer.mozilla.org/ru/docs/Web/API/Canvas_API/Tutorial" target="_blank" rel="noopener"><span class="ico">📚</span><span>Руководство по canvas<small>developer.mozilla.org</small></span></a>
+<a class="link-card" href="https://www.w3schools.com/html/html5_canvas.asp" target="_blank" rel="noopener"><span class="ico">🏋️</span><span>Практика canvas #1<small>w3schools.com</small></span></a>
+<a class="link-card" href="https://www.w3schools.com/graphics/canvas_drawing.asp" target="_blank" rel="noopener"><span class="ico">🏋️</span><span>Практика canvas #2<small>w3schools.com</small></span></a>
+<a class="link-card" href="https://developer.mozilla.org/en-US/docs/Games/Techniques/2D_collision_detection" target="_blank" rel="noopener"><span class="ico">📚</span><span>Физическая модель столкновений<small>developer.mozilla.org</small></span></a>
+</div>
+<h3 class="links-title">Предыдущие JS-уроки</h3>
+<div class="links-grid">
+<a class="link-card" href="lesson_17_adv.html"><span class="ico">🌐</span><span>Урок 17<small>raferalston.github.io</small></span></a>
+<a class="link-card" href="lesson_18_adv.html"><span class="ico">🌐</span><span>Урок 18<small>raferalston.github.io</small></span></a>
+<a class="link-card" href="lesson_19_adv.html"><span class="ico">🌐</span><span>Урок 19<small>raferalston.github.io</small></span></a>
+<a class="link-card" href="lesson_20_adv.html"><span class="ico">🌐</span><span>Урок 20<small>raferalston.github.io</small></span></a>
+<a class="link-card" href="lesson_21_adv.html"><span class="ico">🌐</span><span>Урок 21<small>raferalston.github.io</small></span></a>
+<a class="link-card" href="lesson_22_adv.html"><span class="ico">🌐</span><span>Урок 22<small>raferalston.github.io</small></span></a>
+<a class="link-card" href="lesson_23_adv.html"><span class="ico">🌐</span><span>Урок 23<small>raferalston.github.io</small></span></a>
+<a class="link-card" href="lesson_24_adv.html"><span class="ico">🌐</span><span>Урок 24<small>raferalston.github.io</small></span></a>
+<a class="link-card" href="lesson_25_adv.html"><span class="ico">🌐</span><span>Урок 25<small>raferalston.github.io</small></span></a>
+<a class="link-card" href="lesson_26_adv.html"><span class="ico">🌐</span><span>Урок 26<small>raferalston.github.io</small></span></a>
+<a class="link-card" href="lesson_27_adv.html"><span class="ico">🌐</span><span>Урок 27<small>raferalston.github.io</small></span></a>
+<a class="link-card" href="lesson_28_adv.html"><span class="ico">🌐</span><span>Урок 28<small>raferalston.github.io</small></span></a>
+</div>
+<nav class="pager" aria-label="Соседние уроки">
+<a class="prev" href="lesson_28_adv.html"><small>← Предыдущий</small>Урок 28. ООП: объекты и классы</a>
+<a class="next" href="lesson_30_31_adv.html"><small>Следующий →</small>Урок 30–31. Создаём игру</a>
+</nav>
+</div>
+</div>
+</main>
+<footer class="site-footer">
+    <div class="wrap">
+        <div>
+            <b>КИДКОД</b> — школа программирования для детей и подростков<br>
+            <span>Вопросы по домашке? Пиши преподавателю:</span>
         </div>
-        <h2 class="important">Предыдущие js уроки</h2>
-        <div class="stuff">
-
-            <a href="lesson_17_adv.html">Урок 17</a>
-            <a href="lesson_18_adv.html">Урок 18</a>
-            <a href="lesson_19_adv.html">Урок 19</a>
-            <a href="lesson_20_adv.html">Урок 20</a>
-            <a href="lesson_21_adv.html">Урок 21</a>
-            <a href="lesson_22_adv.html">Урок 22</a>
-            <a href="lesson_23_adv.html">Урок 23</a>
-            <a href="lesson_24_adv.html">Урок 24</a>
-            <a href="lesson_25_adv.html">Урок 25</a>
-            <a href="lesson_26_adv.html">Урок 26</a>
-            <a href="lesson_27_adv.html">Урок 27</a>
-            <a href="lesson_28_adv.html">Урок 28</a>
+        <div class="socials">
+            <a href="https://t.me/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#29a9eb" d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24z"/><path fill="#fff" d="M5.4 11.8 16.9 7.4c.5-.2 1 .1.8 1l-2 9.3c-.1.7-.5.8-1.1.5l-3-2.2-1.4 1.4c-.2.2-.3.3-.6.3l.2-3.1 5.6-5c.2-.2 0-.3-.4-.1l-6.9 4.3-3-.9c-.6-.2-.7-.7.2-1z"/></svg> Telegram</a>
+            <a href="https://vk.com/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#0077ff"/><path fill="#fff" d="M12.8 17.3c-5.5 0-8.6-3.8-8.7-10h2.7c.1 4.6 2.1 6.5 3.7 6.9V7.3h2.6v4c1.6-.2 3.2-2 3.8-4h2.5a7.6 7.6 0 0 1-3.4 5 7.8 7.8 0 0 1 4 5h-2.8a4.9 4.9 0 0 0-4.1-3.6v3.6h-.3z"/></svg> ВКонтакте</a>
+            <a href="https://kidkod.ru" target="_blank" rel="noopener">🌐 kidkod.ru</a>
         </div>
     </div>
-    <div class="footer">
-        <h5>Связь с преподавателем:</h5>
-        <div class="links">
-            <a href="https://t.me/kidkodschool" target="_blank">
-                <img src="/img/telegram.png" class="social-icon" alt="телеграм">
-            </a>
-            <a href="https://vk.com/kidkodschool" target="_blank" class="vk-desktop">
-                <img src="/img/vk.png" class="social-icon" alt="вконтакте">
-            </a>
-        </div>
-    </div>
+</footer>
+<script src="assets/course-map.js?v=1"></script>
+<script src="assets/kk.js?v=1"></script>
 </body>
-
 </html>

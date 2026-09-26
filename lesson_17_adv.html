@@ -1,82 +1,167 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="css/style_lesson.css" rel="stylesheet">
-    <title>Введение в javascript</title>
-    <style>
-    </style>
+    <title>Урок 17. Введение в JavaScript — домашнее задание · КИДКОД</title>
+    <meta name="description" content="JavaScript оживляет страницы: реагирует на клики, меняет текст и цвета, считает и даже делает игры.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%90%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link href="assets/kk.css?v=1" rel="stylesheet">
+    <script>try{var t=localStorage.getItem('kkw:theme');if(t)document.documentElement.setAttribute('data-theme',JSON.parse(t))}catch(e){}</script>
 </head>
-
 <body>
-    <h1 class="title">Знакомство с javascript</h1>
-    <ol>
-        <li>
-            <h2>
 
-                <a href="https://developer.mozilla.org/ru/docs/Learn/JavaScript/%D0%9F%D0%B5%D1%80%D0%B2%D1%8B%D0%B5_%D1%88%D0%B0%D0%B3%D0%B8">Первые шаги в javascript</a></li> 
-            </h2>
-        <li>
-            <h2>
+<header class="site-header">
+    <div class="wrap">
+        <a class="logo" href="index.html" aria-label="КИДКОД — на главную">
+            <span class="logo-mark">&lt;/&gt;</span>
+            <span>КИДКОД<small>домашние задания · Web</small></span>
+        </a>
+        <nav class="nav" aria-label="Основная навигация">
+            <a href="index.html#basic" class="hide-sm">HTML и CSS</a>
+            <a href="index.html#js" class="hide-sm">JavaScript</a>
+            <a href="index.html#project" class="hide-sm">Проект</a>
+            <button class="icon-btn theme-btn" type="button" aria-label="Сменить тему"><span class="moon">🌙</span><span class="sun">☀️</span></button>
+        </nav>
+    </div>
+</header>
 
-                <a href="https://www.creativebloq.com/web-design/examples-of-javascript-1233964" target="_blank" rel="noopener noreferrer">Примеры применения javascript</a>
-            </h2>
-        </li>   
-        <li>
-            <h2>Создать сайт</h2>
-            <img src="img/17.png" alt="knight game" style="display: block; max-width: 1000px;">
-        </li>
-        <li>
-            <h2>
 
-                <a href="img/17.xd">Макет для сайта (скачать)</a>
-            </h2>
-        </li>
-        <li>
-            <h2>Добавить анимацию</h2>
-            <img src="img/knights/17.gif" alt="knight gif" style="display: block; max-width: 1000px;">
-        </li>
-        <li>
-            <h2>Подсказка</h2>
-            <h2>
-                <a href="lesson_17_homework.html">Сначала попробуйте сделать сами!</a>
-            </h2>
-        </li>
-        <li>
-            <h2>Ссылки на картинки рыцарей</h2>
-            <h2>
-                <a href="img/knights/kn_1.png">Левый рыцарь</a>
-            </h2>
-            <h2>
-                <a href="img/knights/kn_2.png">Правый рыцарь</a>
-            </h2>
-        </li>
-    </ol>
-    <div class="additional">
-        <h2 class="important">Полезные ссылки:</h2>
-        <div class="stuff">
-            <a href="web_tests/lesson_17/index.html" target="_blank" rel="noopener noreferrer">Тест для 17 урока</a>
+<main>
+<section class="lesson-hero"><div class="wrap">
+<div class="crumbs"><a href="index.html">Главная</a><span>›</span><a href="index.html#js">Продвинутый web-дизайнер</a><span>›</span><span>Урок 17</span></div>
+<h1>Знакомство с JavaScript</h1>
+<p class="lead">JavaScript оживляет страницы: реагирует на клики, меняет текст и цвета, считает и даже делает игры.</p>
+<div class="chips"><span class="chip">📋 Заданий: 5</span><span class="chip">✅ С автопроверкой: 4</span><span class="chip">✨ Новых: 4</span></div>
+</div></section>
+<div class="wrap lesson-layout">
+<aside class="side"><div class="side-card" data-lesson-progress><h4>Прогресс</h4><div class="bar"><i></i></div><span class="cnt">0 из 0</span> выполнено</div><div class="side-card"><h4>Содержание</h4><nav class="toc"><a class="sec" href="#sec-0">Задания</a><a href="#task-1"><span class="n">1</span><span>Первая программа</span></a><a href="#task-2"><span class="n">2</span><span>Окно с сообщением</span></a><a href="#task-3"><span class="n">3</span><span>Меняем текст на странице</span></a><a href="#task-4"><span class="n">4</span><span>Кнопка-приветствие</span></a><a href="#task-5"><span class="n">5</span><span>Сайт с рыцарями</span></a><a class="sec" href="#links">Полезные ссылки</a></nav></div></aside>
+<div class="content">
+<h2 class="sec-title" id="sec-0"><span class="emoji">⚡</span>Задания</h2>
+<div class="note info"><p>Здесь пишем <b>только JavaScript</b>. <code>console.log()</code> и <code>alert()</code> выводят результат в консоль под редактором, а <code>prompt()</code> откроет окошко для ввода. При проверке ответы на <code>prompt()</code> подставляются сами.</p></div>
+<article class="task" id="task-1" data-task="l17:1">
+<div class="task-head">
+<span class="task-num">1</span>
+<div class="task-title"><h3>Первая программа</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Выведи в консоль фразу <b>Привет, мир!</b> с помощью <code>console.log()</code>.</p>
+
+<div class="web" data-mode="js" data-key="l17:1" data-tests="[{&quot;inputs&quot;: [], &quot;expect&quot;: [&quot;Привет, мир!&quot;]}]"><textarea class="src" data-role="code" hidden>// Напиши свою первую программу
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>console.log(&#x27;Привет, мир!&#x27;)
+</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-2" data-task="l17:2">
+<div class="task-head">
+<span class="task-num">2</span>
+<div class="task-title"><h3>Окно с сообщением</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Покажи окно <code>alert()</code> с текстом <b>Добро пожаловать!</b>, а потом выведи в консоль, сколько будет <code>2 + 2</code> (пусть посчитает JavaScript).</p>
+
+<div class="web" data-mode="js" data-key="l17:2" data-tests="[{&quot;inputs&quot;: [], &quot;expect&quot;: [&quot;Добро пожаловать!&quot;, &quot;4&quot;]}, {&quot;js&quot;: &quot;return new RegExp(\&quot;2\\\\s*\\\\+\\\\s*2\&quot;, \&quot;\&quot;).test(code) || \&quot;В коде не нашёл: JavaScript сам считает 2 + 2\&quot;;&quot;, &quot;label&quot;: &quot;JavaScript сам считает 2 + 2&quot;}]"><textarea class="src" data-role="code" hidden>// Напиши решение здесь
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>alert(&#x27;Добро пожаловать!&#x27;)
+console.log(2 + 2)
+</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-3" data-task="l17:3">
+<div class="task-head">
+<span class="task-num">3</span>
+<div class="task-title"><h3>Меняем текст на странице</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>На странице есть заголовок <code>&lt;h1 id="title"&gt;</code>. С помощью JavaScript поменяй его текст на <b>Привет, JavaScript!</b> и сделай его красным.</p>
+
+<details class="hint"><summary>Подсказка</summary><div class="inner"><p>Текст меняется через <code>title.textContent = ...</code>, а цвет — через <code>title.style.color = ...</code></p></div></details>
+<div class="web" data-mode="js" data-key="l17:3" data-tests="[{&quot;js&quot;: &quot;return text(\&quot;#title\&quot;) === \&quot;Привет, JavaScript!\&quot; || \&quot;Сейчас в заголовке: \&quot; + text(\&quot;#title\&quot;);&quot;, &quot;label&quot;: &quot;Текст заголовка изменён&quot;}, {&quot;js&quot;: &quot;if (!has(\&quot;#title\&quot;)) return \&quot;Не нашёл элемент #title\&quot;; return cssIs(\&quot;#title\&quot;, \&quot;color\&quot;, \&quot;red\&quot;) || \&quot;Сейчас color = \&quot; + css(\&quot;#title\&quot;, \&quot;color\&quot;);&quot;, &quot;label&quot;: &quot;Заголовок красный&quot;}]"><textarea class="src" data-role="code" hidden>let title = document.querySelector(&#x27;#title&#x27;)
+// Поменяй текст и цвет
+</textarea><textarea class="src" data-role="fixture" hidden>&lt;h1 id=&quot;title&quot;&gt;Скучный заголовок&lt;/h1&gt;
+&lt;p&gt;Этот текст не трогаем.&lt;/p&gt;
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>let title = document.querySelector(&#x27;#title&#x27;)
+title.textContent = &#x27;Привет, JavaScript!&#x27;
+title.style.color = &#x27;red&#x27;
+</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-4" data-task="l17:4">
+<div class="task-head">
+<span class="task-num">4</span>
+<div class="task-title"><h3>Кнопка-приветствие</h3><div class="badges"><span class="badge lvl-2">средне</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Когда пользователь нажимает на кнопку <code>#hello</code>, должно появляться окно с текстом <b>Привет!</b></p>
+
+<details class="hint"><summary>Подсказка</summary><div class="inner"><p>Используй <code>button.addEventListener('click', function () { ... })</code></p></div></details>
+<div class="web" data-mode="js" data-key="l17:4" data-tests="[{&quot;js&quot;: &quot;return !out().includes(\&quot;Привет!\&quot;) || \&quot;alert должен появляться только после нажатия\&quot;;&quot;, &quot;label&quot;: &quot;До нажатия ничего не выводится&quot;}, {&quot;js&quot;: &quot;click(\&quot;#hello\&quot;); await wait(50); return out().includes(\&quot;Привет!\&quot;) || \&quot;После нажатия нет сообщения «Привет!»\&quot;;&quot;, &quot;label&quot;: &quot;После нажатия появляется «Привет!»&quot;}]"><textarea class="src" data-role="code" hidden>let button = document.querySelector(&#x27;#hello&#x27;)
+</textarea><textarea class="src" data-role="fixture" hidden>&lt;button id=&quot;hello&quot;&gt;Нажми меня&lt;/button&gt;
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>let button = document.querySelector(&#x27;#hello&#x27;)
+
+button.addEventListener(&#x27;click&#x27;, function () {
+    alert(&#x27;Привет!&#x27;)
+})
+</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-5" data-task="l17:5">
+<div class="task-head">
+<span class="task-num">5</span>
+<div class="task-title"><h3>Сайт с рыцарями</h3><div class="badges"><span class="badge lvl-3">сложно</span><span class="badge local">в VS Code</span></div></div>
+</div>
+<div class="task-body">
+<p>Создай сайт по картинке, а потом добавь анимацию появления рыцарей. Картинки: <a href="img/knights/kn_1.png" target="_blank">левый рыцарь</a>, <a href="img/knights/kn_2.png" target="_blank">правый рыцарь</a>. Макет можно <a href="img/17.xd">скачать для Adobe XD</a>.</p>
+<div class="shots"><img class="zoomable" src="img/17.png" alt="Сайт с рыцарями" loading="lazy"><img class="zoomable" src="img/knights/17.gif" alt="Анимация рыцарей" loading="lazy"></div>
+<p class="note info">🖥️ Это большое задание — делай его в <b>VS Code</b> на компьютере и открывай страницу в браузере. Не забудь выложить результат на свой сайт на GitHub!</p>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><p><a href="lesson_17_homework.html" target="_blank" rel="noopener">Открыть готовую страницу с ответом ↗</a></p></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<h2 class="sec-title" id="links"><span class="emoji">🔗</span>Полезные ссылки</h2>
+<h3 class="links-title">Полезные ссылки</h3>
+<div class="links-grid">
+<a class="link-card" href="https://developer.mozilla.org/ru/docs/Learn/JavaScript/%D0%9F%D0%B5%D1%80%D0%B2%D1%8B%D0%B5_%D1%88%D0%B0%D0%B3%D0%B8" target="_blank" rel="noopener"><span class="ico">📘</span><span>Первые шаги в JavaScript<small>developer.mozilla.org</small></span></a>
+<a class="link-card" href="https://www.creativebloq.com/web-design/examples-of-javascript-1233964" target="_blank" rel="noopener"><span class="ico">📘</span><span>Примеры применения JavaScript<small>creativebloq.com</small></span></a>
+<a class="link-card" href="web_tests/lesson_17/index.html" target="_blank" rel="noopener"><span class="ico">📝</span><span>Тест для 17 урока<small>raferalston.github.io</small></span></a>
+</div>
+<h3 class="links-title">Что почитать</h3>
+<div class="links-grid">
+<a class="link-card" href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/JavaScript_basics" target="_blank" rel="noopener"><span class="ico">📚</span><span>Основы JavaScript<small>developer.mozilla.org</small></span></a>
+<a class="link-card" href="https://learn.javascript.ru/dom-nodes" target="_blank" rel="noopener"><span class="ico">📚</span><span>DOM-дерево<small>learn.javascript.ru</small></span></a>
+</div>
+<nav class="pager" aria-label="Соседние уроки">
+<a class="prev" href="lesson_16_adv.html"><small>← Предыдущий</small>Урок 16. CSS Grid</a>
+<a class="next" href="lesson_18_adv.html"><small>Следующий →</small>Урок 18. Типы данных: числа и строки</a>
+</nav>
+</div>
+</div>
+</main>
+<footer class="site-footer">
+    <div class="wrap">
+        <div>
+            <b>КИДКОД</b> — школа программирования для детей и подростков<br>
+            <span>Вопросы по домашке? Пиши преподавателю:</span>
         </div>
-        <h2 class="important">Что почитать:</h2>
-        <div class="stuff">
-            <a href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/JavaScript_basics" target="_blank" rel="noopener noreferrer">Основы javascript</a>
-            <a href="https://learn.javascript.ru/dom-nodes" target="_blank" rel="noopener noreferrer">DOM дерево</a>
+        <div class="socials">
+            <a href="https://t.me/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#29a9eb" d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24z"/><path fill="#fff" d="M5.4 11.8 16.9 7.4c.5-.2 1 .1.8 1l-2 9.3c-.1.7-.5.8-1.1.5l-3-2.2-1.4 1.4c-.2.2-.3.3-.6.3l.2-3.1 5.6-5c.2-.2 0-.3-.4-.1l-6.9 4.3-3-.9c-.6-.2-.7-.7.2-1z"/></svg> Telegram</a>
+            <a href="https://vk.com/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#0077ff"/><path fill="#fff" d="M12.8 17.3c-5.5 0-8.6-3.8-8.7-10h2.7c.1 4.6 2.1 6.5 3.7 6.9V7.3h2.6v4c1.6-.2 3.2-2 3.8-4h2.5a7.6 7.6 0 0 1-3.4 5 7.8 7.8 0 0 1 4 5h-2.8a4.9 4.9 0 0 0-4.1-3.6v3.6h-.3z"/></svg> ВКонтакте</a>
+            <a href="https://kidkod.ru" target="_blank" rel="noopener">🌐 kidkod.ru</a>
         </div>
     </div>
-    <div class="footer">
-        <h5>Связь с преподавателем:</h5>
-        <div class="links">
-            <a href="https://t.me/kidkodschool" target="_blank">
-                <img src="/img/telegram.png" class="social-icon" alt="телеграм">
-            </a>
-            <a href="https://vk.com/kidkodschool" target="_blank" class="vk-desktop">
-                <img src="/img/vk.png" class="social-icon" alt="вконтакте">
-            </a>
-        </div>
-    </div>
+</footer>
+<script src="assets/course-map.js?v=1"></script>
+<script src="assets/kk.js?v=1"></script>
 </body>
-
 </html>

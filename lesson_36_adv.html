@@ -1,195 +1,152 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Создаем сайт - портфолио</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="css/style_lesson.css" rel="stylesheet">
-    <style>
-    table {
-        /* max-width: 1200px; */
-    }
-    caption {
-        background-color: #fff;
-        padding: .5em;
-    }
-
-    </style>
+    <title>Урок 36. Портфолио: публикация — домашнее задание · КИДКОД</title>
+    <meta name="description" content="Финишная прямая: проверяем сайт по чек-листу, ускоряем его и выкладываем в интернет.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%90%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link href="assets/kk.css?v=1" rel="stylesheet">
+    <script>try{var t=localStorage.getItem('kkw:theme');if(t)document.documentElement.setAttribute('data-theme',JSON.parse(t))}catch(e){}</script>
 </head>
-
 <body>
-    <h1 class="title">Чек-лист перед загрузкой в интернет (без хостинга)</h1>
-    <table class="m-0 table table-sm table-bordered table-dark table-hover">
-        <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Проверка</th>
-                <th scope="col">Описание</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Микро-ошибки</td>
-                <td>
-                    <a href="https://chrome.google.com/webstore/detail/html-validator/mpbelhhnfhfjnaehkcnnaknldmnocglk" target="_blank" rel="noopener noreferrer">HTML-валидатор</a>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Изображения</td>
-                <td>
-                    Смотрим, все ли изображения корректно загружаются
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>Ссылки</td>
-                <td>
-                    Проверяем работоспособность ссылок
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>Обратная связь</td>
-                <td>
-                    Обязательная секция для любого сайта
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">4</th>
-                <td>Мобильные устройства</td>
-                <td>
-                    Проверяем корректное отображение сайта на всех устройствах
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">5</th>
-                <td>Chrome - Lighthouse</td>
-                <td>
-                    Используем lighthouse для мобильных и стационарных устройств
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">6</th>
-                <td>Кросс-браузерный тест</td>
-                <td>
-                    Проверяем работоспособность сайта на всех современных браузерах -
-                    <a href="https://www.w3counter.com/globalstats.php" target="_blank" rel="noopener noreferrer">список браузеров</a>
-                </td>
-            </tr>
-        </tbody>
-    </table>    
-    <h1 class="title">Чек-лист перед загрузкой в интернет (с хостингом)</h1>
-    <table class="m-0 table table-sm table-bordered table-dark table-hover">
-        <caption class="text-danger">Обращайтесь в службу поддержки хостинга для более подробного руководства</caption>
-        <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Проверка</th>
-                <th scope="col">Описание</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Коректность URL</td>
-                <td>
-                    Проверяем перенаправления на нужные нам страницы
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>robots.txt</td>
-                <td>
-                    <a href="https://support.google.com/webmasters/answer/6062608?hl=ru" target="_blank" rel="noopener noreferrer">Что такое robots.txt</a>
-                </td>
-            </tr>
-        </tbody>
-    </table>    
-    <h1 class="title">Полезные плагины для VS Code</h1>
-    <ol>
-        <li>
-            <h2>
-                css/js minifier</h2>
 
-                <img src="img/l36_1.png" alt="minifier" width="400">
-        </li>
-        <li>
-
-            <h2>
-                Sass compiler
-            </h2>
-            <img src="img/l36_2.png" alt="compiler" width="400">
-
-        </li>
-        <li>
-            <h2>
-                Live server
-            </h2>
-            <img src="img/l36_3.png" alt="server" width="400">
-
-        </li>
-    </ol>
-
-    <h1 class="title">Ресурсы для создания сайта</h1>
-    <ol>
-        <li>
-            <h2><a href="https://compressjpeg.com" target="_blank" rel="noopener noreferrer">Сжимаем jpeg</a></h2>
-
-        </li>
-        <li>
-            <h2><a href="https://compresspng.com/" target="_blank" rel="noopener noreferrer">Сжимаем png</a></h2>
-
-        </li>
-        <li>
-            <h2><a href="https://squoosh.app/editor" target="_blank" rel="noopener noreferrer">Сжимаем изображения</a></h2>
-
-        </li>
-        <li>
-            <h2><a href="https://resizeimage.net/" target="_blank" rel="noopener noreferrer">Изменяем размер (соотношение сторон) для изображений</a></h2>
-
-        </li>
-        <li>
-            <h2><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images" target="_blank" rel="noopener noreferrer">Используем картинки правильно (тег picture)</a></h2>
-
-        </li>
-        <li>
-            <h2><a href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/Publishing_your_website" target="_blank" rel="noopener noreferrer">Руководство - Публикация веб-страницы в сети</a></h2>
-
-        </li>
-        <li>
-            <h2><a href="https://sprinthost.ru/s33951" target="_blank" rel="noopener noreferrer">Хостинг используемый нами</a></h2>
-
-        </li>
-    </ol>
+<header class="site-header">
+    <div class="wrap">
+        <a class="logo" href="index.html" aria-label="КИДКОД — на главную">
+            <span class="logo-mark">&lt;/&gt;</span>
+            <span>КИДКОД<small>домашние задания · Web</small></span>
+        </a>
+        <nav class="nav" aria-label="Основная навигация">
+            <a href="index.html#basic" class="hide-sm">HTML и CSS</a>
+            <a href="index.html#js" class="hide-sm">JavaScript</a>
+            <a href="index.html#project" class="hide-sm">Проект</a>
+            <button class="icon-btn theme-btn" type="button" aria-label="Сменить тему"><span class="moon">🌙</span><span class="sun">☀️</span></button>
+        </nav>
+    </div>
+</header>
 
 
-    <div class="additional">
-        <h2 class="important">Что почитать:</h2>
-        <div class="stuff">
+<main>
+<section class="lesson-hero"><div class="wrap">
+<div class="crumbs"><a href="index.html">Главная</a><span>›</span><a href="index.html#project">Дизайн-проект</a><span>›</span><span>Урок 36</span></div>
+<h1>Создаём сайт-портфолио: проверка и публикация</h1>
+<p class="lead">Финишная прямая: проверяем сайт по чек-листу, ускоряем его и выкладываем в интернет.</p>
+<div class="chips"><span class="chip">📋 Заданий: 3</span><span class="chip">✅ С автопроверкой: 1</span><span class="chip">✨ Новых: 1</span></div>
+</div></section>
+<div class="wrap lesson-layout">
+<aside class="side"><div class="side-card" data-lesson-progress><h4>Прогресс</h4><div class="bar"><i></i></div><span class="cnt">0 из 0</span> выполнено</div><div class="side-card"><h4>Содержание</h4><nav class="toc"><a class="sec" href="#sec-0">Чек-лист перед публикацией (без хостинга)</a><a class="sec" href="#sec-1">Чек-лист перед публикацией (с хостингом)</a><a class="sec" href="#sec-2">Полезные плагины для VS Code</a><a class="sec" href="#sec-3">Задания</a><a href="#task-1"><span class="n">1</span><span>Проверь сайт по чек-листу</span></a><a href="#task-2"><span class="n">2</span><span>Опубликуй портфолио</span></a><a href="#task-3"><span class="n">3</span><span>Картинка для любого экрана</span></a><a class="sec" href="#links">Полезные ссылки</a></nav></div></aside>
+<div class="content">
+<h2 class="sec-title" id="sec-0"><span class="emoji">✅</span>Чек-лист перед публикацией (без хостинга)</h2>
+<div class="table-wrap"><table class="nice"><thead><tr><th>Проверка</th><th>Описание</th></tr></thead><tbody><tr><td>Микро-ошибки</td><td><a href="https://chrome.google.com/webstore/detail/html-validator/mpbelhhnfhfjnaehkcnnaknldmnocglk" target="_blank" rel="noopener">HTML-валидатор</a></td></tr><tr><td>Изображения</td><td>Все ли изображения корректно загружаются</td></tr><tr><td>Ссылки</td><td>Работают ли все ссылки</td></tr><tr><td>Обратная связь</td><td>Обязательная секция для любого сайта</td></tr><tr><td>Мобильные устройства</td><td>Сайт правильно выглядит на всех устройствах</td></tr><tr><td>Chrome — Lighthouse</td><td>Проверка Lighthouse для мобильных и компьютеров</td></tr><tr><td>Кросс-браузерный тест</td><td>Сайт работает во всех современных браузерах — <a href="https://www.w3counter.com/globalstats.php" target="_blank" rel="noopener">список браузеров</a></td></tr></tbody></table></div>
+<h2 class="sec-title" id="sec-1"><span class="emoji">🌍</span>Чек-лист перед публикацией (с хостингом)</h2>
+<p class="table-cap">За подробным руководством обращайся в службу поддержки хостинга</p><div class="table-wrap"><table class="nice"><thead><tr><th>Проверка</th><th>Описание</th></tr></thead><tbody><tr><td>Корректность URL</td><td>Перенаправления ведут на нужные страницы</td></tr><tr><td>robots.txt</td><td><a href="https://support.google.com/webmasters/answer/6062608?hl=ru" target="_blank" rel="noopener">Что такое robots.txt</a></td></tr></tbody></table></div>
+<h2 class="sec-title" id="sec-2"><span class="emoji">🧩</span>Полезные плагины для VS Code</h2>
+<ol class="steps"><li><p>CSS/JS minifier — сжимает код</p><div class="shots single"><img class="zoomable" src="img/l36_1.png" alt="Minifier" loading="lazy"></div></li><li><p>Sass compiler — превращает Sass в CSS</p><div class="shots single"><img class="zoomable" src="img/l36_2.png" alt="Sass compiler" loading="lazy"></div></li><li><p>Live Server — обновляет страницу при сохранении</p><div class="shots single"><img class="zoomable" src="img/l36_3.png" alt="Live Server" loading="lazy"></div></li></ol>
+<h2 class="sec-title" id="sec-3"><span class="emoji">🚀</span>Задания</h2>
+<article class="task" id="task-1" data-task="l36:1">
+<div class="task-head">
+<span class="task-num">1</span>
+<div class="task-title"><h3>Проверь сайт по чек-листу</h3><div class="badges"><span class="badge lvl-2">средне</span><span class="badge local">в VS Code</span></div></div>
+</div>
+<div class="task-body">
+<p>Пройди по чек-листу выше. Открой свой сайт в Chrome, нажми <kbd>F12</kbd> → вкладка <b>Lighthouse</b> → <b>Analyze page load</b>. Исправь всё, что подсветится красным, и добейся хотя бы 90 баллов.</p>
 
-            <a href="assets/responsive.pdf" target="_blank" rel="noopener noreferrer">Книга - Отзывчивый веб-дизайн (Ознакомительная версия)</a>
-            <a href="https://www.ozon.ru/context/detail/id/8747299/" target="_blank" rel="noopener noreferrer">Книга - Отзывчивый веб-дизайн (Купить)</a>
-            <a href="assets/krug.pdf" target="_blank" rel="noopener noreferrer">Книга - Не заставляйте меня думать (Ознакомительная версия)</a>
-            <a href="https://www.litres.ru/stiv-krug/ne-zastavlyayte-menya-dumat-veb-uzabiliti-i-zdravyy-smysl-24147734/" target="_blank" rel="noopener noreferrer">Книга - Не заставляйте меня думать (Купить)</a>
-            <a href="https://guide.so-edinenie.org/rules" target="_blank" rel="noopener noreferrer">Правила для контента</a>
+<p class="note info">🖥️ Это большое задание — делай его в <b>VS Code</b> на компьютере и открывай страницу в браузере. Не забудь выложить результат на свой сайт на GitHub!</p>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-2" data-task="l36:2">
+<div class="task-head">
+<span class="task-num">2</span>
+<div class="task-title"><h3>Опубликуй портфолио</h3><div class="badges"><span class="badge lvl-3">сложно</span><span class="badge local">в VS Code</span></div></div>
+</div>
+<div class="task-body">
+<p>Сожми картинки (<a href="https://squoosh.app/editor" target="_blank" rel="noopener">squoosh.app</a>, <a href="https://compressjpeg.com" target="_blank" rel="noopener">compressjpeg</a>, <a href="https://compresspng.com/" target="_blank" rel="noopener">compresspng</a>) и выложи сайт на GitHub Pages или <a href="https://sprinthost.ru/s33951" target="_blank" rel="noopener">хостинг</a>. Пришли ссылку преподавателю!</p>
+
+<p class="note info">🖥️ Это большое задание — делай его в <b>VS Code</b> на компьютере и открывай страницу в браузере. Не забудь выложить результат на свой сайт на GitHub!</p>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-3" data-task="l36:3">
+<div class="task-head">
+<span class="task-num">3</span>
+<div class="task-title"><h3>Картинка для любого экрана</h3><div class="badges"><span class="badge lvl-2">средне</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>С помощью тега <code>&lt;picture&gt;</code> покажи на узких экранах (до 600px) картинку <code>img/35_phone.png</code>, а на остальных — <code>img/35_tablet.png</code>. У <code>&lt;img&gt;</code> обязательно заполни <code>alt</code>. <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images" target="_blank" rel="noopener">Как это работает</a>.</p>
+
+<div class="web" data-mode="html" data-key="l36:3" data-tests="[{&quot;js&quot;: &quot;return count(\&quot;picture\&quot;) &gt;= 1 || \&quot;Не нашёл элемент picture\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;picture\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Есть picture&quot;}, {&quot;js&quot;: &quot;return count(\&quot;picture source[media][srcset]\&quot;) &gt;= 1 || \&quot;Не нашёл элемент picture source[media][srcset]\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;picture source[media][srcset]\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Есть source с media и srcset&quot;}, {&quot;js&quot;: &quot;const s = $(\&quot;picture source\&quot;); return (/max-width:\\s*600px/.test(s.media) &amp;&amp; /35_phone/.test(s.srcset)) || \&quot;source должен показывать 35_phone.png при (max-width: 600px)\&quot;;&quot;, &quot;label&quot;: &quot;source для узких экранов&quot;}, {&quot;js&quot;: &quot;return count(\&quot;picture img[src*=\\\&quot;35_tablet\\\&quot;]\&quot;) &gt;= 1 || \&quot;Не нашёл элемент picture img[src*=\\\&quot;35_tablet\\\&quot;]\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;picture img[src*=\\\&quot;35_tablet\\\&quot;]\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;img по умолчанию — 35_tablet.png&quot;}, {&quot;js&quot;: &quot;return !!$(\&quot;picture img\&quot;).alt.trim() || \&quot;Заполни alt\&quot;;&quot;, &quot;label&quot;: &quot;У картинки есть alt&quot;}]"><textarea class="src" data-role="code" hidden>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;picture&gt;
+        &lt;source media=&quot;(max-width: 600px)&quot; srcset=&quot;img/35_phone.png&quot;&gt;
+        &lt;img src=&quot;img/35_tablet.png&quot; alt=&quot;Макет моего сайта&quot; width=&quot;300&quot;&gt;
+    &lt;/picture&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<h2 class="sec-title" id="links"><span class="emoji">🔗</span>Полезные ссылки</h2>
+<h3 class="links-title">Ресурсы для создания сайта</h3>
+<div class="links-grid">
+<a class="link-card" href="https://compressjpeg.com" target="_blank" rel="noopener"><span class="ico">🛠️</span><span>Сжимаем JPEG<small>compressjpeg.com</small></span></a>
+<a class="link-card" href="https://compresspng.com/" target="_blank" rel="noopener"><span class="ico">🛠️</span><span>Сжимаем PNG<small>compresspng.com</small></span></a>
+<a class="link-card" href="https://squoosh.app/editor" target="_blank" rel="noopener"><span class="ico">🛠️</span><span>Сжимаем изображения<small>squoosh.app</small></span></a>
+<a class="link-card" href="https://resizeimage.net/" target="_blank" rel="noopener"><span class="ico">🛠️</span><span>Изменяем размер изображений<small>resizeimage.net</small></span></a>
+<a class="link-card" href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images" target="_blank" rel="noopener"><span class="ico">📚</span><span>Используем картинки правильно (picture)<small>developer.mozilla.org</small></span></a>
+<a class="link-card" href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/Publishing_your_website" target="_blank" rel="noopener"><span class="ico">📚</span><span>Руководство: публикация веб-страницы<small>developer.mozilla.org</small></span></a>
+<a class="link-card" href="https://sprinthost.ru/s33951" target="_blank" rel="noopener"><span class="ico">🛠️</span><span>Хостинг, который используем мы<small>sprinthost.ru</small></span></a>
+</div>
+<h3 class="links-title">Что почитать</h3>
+<div class="links-grid">
+<a class="link-card" href="assets/responsive.pdf" target="_blank" rel="noopener"><span class="ico">📚</span><span>Книга «Отзывчивый веб-дизайн» (ознакомительная версия)<small>raferalston.github.io</small></span></a>
+<a class="link-card" href="https://www.ozon.ru/context/detail/id/8747299/" target="_blank" rel="noopener"><span class="ico">📚</span><span>Книга «Отзывчивый веб-дизайн» (купить)<small>ozon.ru</small></span></a>
+<a class="link-card" href="assets/krug.pdf" target="_blank" rel="noopener"><span class="ico">📚</span><span>Книга «Не заставляйте меня думать» (ознакомительная версия)<small>raferalston.github.io</small></span></a>
+<a class="link-card" href="https://www.litres.ru/stiv-krug/ne-zastavlyayte-menya-dumat-veb-uzabiliti-i-zdravyy-smysl-24147734/" target="_blank" rel="noopener"><span class="ico">📚</span><span>Книга «Не заставляйте меня думать» (купить)<small>litres.ru</small></span></a>
+<a class="link-card" href="https://guide.so-edinenie.org/rules" target="_blank" rel="noopener"><span class="ico">📚</span><span>Правила для контента<small>guide.so-edinenie.org</small></span></a>
+</div>
+<nav class="pager" aria-label="Соседние уроки">
+<a class="prev" href="lesson_35_adv.html"><small>← Предыдущий</small>Урок 35. Портфолио: адаптивность</a>
+</nav>
+</div>
+</div>
+</main>
+<footer class="site-footer">
+    <div class="wrap">
+        <div>
+            <b>КИДКОД</b> — школа программирования для детей и подростков<br>
+            <span>Вопросы по домашке? Пиши преподавателю:</span>
+        </div>
+        <div class="socials">
+            <a href="https://t.me/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#29a9eb" d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24z"/><path fill="#fff" d="M5.4 11.8 16.9 7.4c.5-.2 1 .1.8 1l-2 9.3c-.1.7-.5.8-1.1.5l-3-2.2-1.4 1.4c-.2.2-.3.3-.6.3l.2-3.1 5.6-5c.2-.2 0-.3-.4-.1l-6.9 4.3-3-.9c-.6-.2-.7-.7.2-1z"/></svg> Telegram</a>
+            <a href="https://vk.com/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#0077ff"/><path fill="#fff" d="M12.8 17.3c-5.5 0-8.6-3.8-8.7-10h2.7c.1 4.6 2.1 6.5 3.7 6.9V7.3h2.6v4c1.6-.2 3.2-2 3.8-4h2.5a7.6 7.6 0 0 1-3.4 5 7.8 7.8 0 0 1 4 5h-2.8a4.9 4.9 0 0 0-4.1-3.6v3.6h-.3z"/></svg> ВКонтакте</a>
+            <a href="https://kidkod.ru" target="_blank" rel="noopener">🌐 kidkod.ru</a>
         </div>
     </div>
-    <div class="footer">
-        <h5>Связь с преподавателем:</h5>
-        <div class="links">
-            <a href="https://t.me/kidkodschool" target="_blank">
-                <img src="/img/telegram.png" class="social-icon" alt="телеграм">
-            </a>
-            <a href="https://vk.com/kidkodschool" target="_blank" class="vk-desktop">
-                <img src="/img/vk.png" class="social-icon" alt="вконтакте">
-            </a>
-        </div>
-    </div>
+</footer>
+<script src="assets/course-map.js?v=1"></script>
+<script src="assets/kk.js?v=1"></script>
 </body>
-
 </html>

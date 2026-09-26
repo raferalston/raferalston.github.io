@@ -1,90 +1,281 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="css/style_lesson.css" rel="stylesheet">
-    <title>Функции</title>
-    <style>
-    </style>
+    <title>Урок 23. Функции — домашнее задание · КИДКОД</title>
+    <meta name="description" content="Функция — это «рецепт», который можно вызывать много раз. Учимся писать свои функции и возвращать из них результат.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%90%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link href="assets/kk.css?v=1" rel="stylesheet">
+    <script>try{var t=localStorage.getItem('kkw:theme');if(t)document.documentElement.setAttribute('data-theme',JSON.parse(t))}catch(e){}</script>
 </head>
-
 <body>
-    <h1 class="title">Создать программы, которые используют функции!</h1>
-    <ol>
-        <li>
-            <h2>Создайте программу, которая предлагает купить слона
-            </h2>
-            <img src="img/l23_a1.gif" alt="вопрос 1"  width="450">
-            <h2>
-                <a href="lesson_23_ans_1.html" target="_blank" rel="noopener noreferrer">Попробовать</a>
-            </h2>
-        </li>
-        <li>
-            <h2>Создайте программу, которая возводит в квадратную степень число
-            </h2>
-            <img src="img/l23_q1.png" alt="вопрос 2"  width="450">
-            <img src="img/l23_q1_2.png" alt="вопрос 2_2"  width="450">
-            <h2>
-                <a href="lesson_23_ans_2.html" target="_blank" rel="noopener noreferrer">Ответ</a>
-            </h2>
-        </li>
-        <li>
-            <h2>Создайте программу, которая отображает зеркально введенный текст
-            </h2>
-            <img src="img/l23_q2.png" alt="вопрос 3"  width="450">
-            <img src="img/l23_q2_2.png" alt="вопрос 3_2"  width="450">
-            <h2>
-                <a href="lesson_23_ans_3.html" target="_blank" rel="noopener noreferrer">Ответ</a>
-            </h2>
-        </li>
-        <li>
-            <h2>Создайте программу, которая в зависимости от введеных чисел выводит такое же количество иконок
-            </h2>
-            <img src="img/l23_q3.png" alt="вопрос 3" width="450">
-            <img src="img/l23_q3_2.png" alt="вопрос 3_2" width="450">
-            <img src="img/l23_q3_3.png" alt="вопрос 3_2" width="450">
-            <h2>
-                <a href="lesson_23_ans_4.html" target="_blank" rel="noopener noreferrer">Ответ</a>
-            </h2>
-        </li>
-    </ol>
 
-    <div class="additional">
-        <h2 class="important">Полезные ссылки:</h2>
-        <div class="stuff">
-            <a href="web_tests/lesson_23/23.html" target="_blank" rel="noopener noreferrer">Тест для 23 урока</a>
+<header class="site-header">
+    <div class="wrap">
+        <a class="logo" href="index.html" aria-label="КИДКОД — на главную">
+            <span class="logo-mark">&lt;/&gt;</span>
+            <span>КИДКОД<small>домашние задания · Web</small></span>
+        </a>
+        <nav class="nav" aria-label="Основная навигация">
+            <a href="index.html#basic" class="hide-sm">HTML и CSS</a>
+            <a href="index.html#js" class="hide-sm">JavaScript</a>
+            <a href="index.html#project" class="hide-sm">Проект</a>
+            <button class="icon-btn theme-btn" type="button" aria-label="Сменить тему"><span class="moon">🌙</span><span class="sun">☀️</span></button>
+        </nav>
+    </div>
+</header>
+
+
+<main>
+<section class="lesson-hero"><div class="wrap">
+<div class="crumbs"><a href="index.html">Главная</a><span>›</span><a href="index.html#js">Продвинутый web-дизайнер</a><span>›</span><span>Урок 23</span></div>
+<h1>Функции</h1>
+<p class="lead">Функция — это «рецепт», который можно вызывать много раз. Учимся писать свои функции и возвращать из них результат.</p>
+<div class="chips"><span class="chip">📋 Заданий: 7</span><span class="chip">✅ С автопроверкой: 7</span><span class="chip">✨ Новых: 3</span></div>
+</div></section>
+<div class="wrap lesson-layout">
+<aside class="side"><div class="side-card" data-lesson-progress><h4>Прогресс</h4><div class="bar"><i></i></div><span class="cnt">0 из 0</span> выполнено</div><div class="side-card"><h4>Содержание</h4><nav class="toc"><a class="sec" href="#sec-0">Задания</a><a href="#task-1"><span class="n">1</span><span>Купи слона</span></a><a href="#task-2"><span class="n">2</span><span>Квадрат числа</span></a><a href="#task-3"><span class="n">3</span><span>Зеркальный текст</span></a><a href="#task-4"><span class="n">4</span><span>Вечеринка с пиццей</span></a><a href="#task-5"><span class="n">5</span><span>Самое большое из трёх</span></a><a href="#task-6"><span class="n">6</span><span>Стрелочная функция</span></a><a href="#task-7"><span class="n">7</span><span>Приветствие по умолчанию</span></a><a class="sec" href="#links">Полезные ссылки</a></nav></div></aside>
+<div class="content">
+<h2 class="sec-title" id="sec-0"><span class="emoji">🧩</span>Задания</h2>
+<article class="task" id="task-1" data-task="l23:1">
+<div class="task-head">
+<span class="task-num">1</span>
+<div class="task-title"><h3>Купи слона</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Программа предлагает купить слона 🐘. Что бы ни ответил пользователь, она отвечает: <b>Все говорят &lt;ответ&gt; а ты купи 🐘</b>. Остановиться можно, только нажав «Отмена» (тогда <code>prompt</code> вернёт <code>null</code>). Проверку ответа вынеси в функцию <code>buyElephant</code>.</p>
+<div class="shots single"><img class="zoomable" src="img/l23_a1.gif" alt="Как работает" loading="lazy"></div>
+<div class="web" data-mode="demo-js"><textarea class="src" data-role="code" hidden>function buyElephant(answer) {
+    if (answer === null) {
+        return false
+    }
+    return true
+}
+
+let userInput = prompt(&#x27;Купи 🐘&#x27;);
+let answer = buyElephant(userInput);
+
+while (answer) {
+    userInput = prompt(&#x27;Все говорят &#x27; + userInput + &#x27; а ты купи 🐘&#x27;);
+    answer = buyElephant(userInput);
+}
+</textarea></div>
+<div class="web" data-mode="js" data-key="l23:1" data-tests="[{&quot;inputs&quot;: [&quot;нет&quot;, null], &quot;expect&quot;: [&quot;Купи 🐘&quot;, &quot;Все говорят нет а ты купи 🐘&quot;]}, {&quot;inputs&quot;: [&quot;не хочу&quot;, &quot;отстань&quot;, null], &quot;expect&quot;: [&quot;Все говорят не хочу а ты купи 🐘&quot;, &quot;Все говорят отстань а ты купи 🐘&quot;]}, {&quot;js&quot;: &quot;return new RegExp(\&quot;function\\\\s+buyElephant|buyElephant\\\\s*=\&quot;, \&quot;\&quot;).test(code) || \&quot;В коде не нашёл: Есть функция buyElephant\&quot;;&quot;, &quot;label&quot;: &quot;Есть функция buyElephant&quot;}]"><textarea class="src" data-role="code" hidden>// Напиши решение здесь
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>function buyElephant(answer) {
+    if (answer === null) {
+        return false
+    }
+    return true
+}
+
+let userInput = prompt(&#x27;Купи 🐘&#x27;);
+let answer = buyElephant(userInput);
+
+while (answer) {
+    userInput = prompt(&#x27;Все говорят &#x27; + userInput + &#x27; а ты купи 🐘&#x27;);
+    answer = buyElephant(userInput);
+}
+</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-2" data-task="l23:2">
+<div class="task-head">
+<span class="task-num">2</span>
+<div class="task-title"><h3>Квадрат числа</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Напиши функцию <code>pow(x)</code>, которая <b>возвращает</b> квадрат числа. Спроси число у пользователя и выведи <b>Ответ: …</b></p>
+<div class="shots"><img class="zoomable" src="img/l23_q1.png" alt="Ввод" loading="lazy"><img class="zoomable" src="img/l23_q1_2.png" alt="Результат" loading="lazy"></div>
+<div class="web" data-mode="js" data-key="l23:2" data-tests="[{&quot;call&quot;: &quot;pow(5)&quot;, &quot;want&quot;: &quot;25&quot;}, {&quot;call&quot;: &quot;pow(-3)&quot;, &quot;want&quot;: &quot;9&quot;}, {&quot;inputs&quot;: [&quot;4&quot;], &quot;expect&quot;: [&quot;Ответ: 16&quot;]}]"><textarea class="src" data-role="code" hidden>// Напиши решение здесь
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>function pow(x) {
+    return x * x
+}
+
+let userInput = Number(prompt(&#x27;Введите число и я возведу его в квадрат: &#x27;))
+alert(&#x27;Ответ: &#x27; + pow(userInput))
+</pre><img class="zoomable" src="img/l23_a2.png" alt="Решение задания" loading="lazy"></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-3" data-task="l23:3">
+<div class="task-head">
+<span class="task-num">3</span>
+<div class="task-title"><h3>Зеркальный текст</h3><div class="badges"><span class="badge lvl-2">средне</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Напиши функцию <code>reverseString(string)</code>, которая возвращает строку задом наперёд (с помощью цикла). Спроси текст у пользователя и выведи <b>Результат: …</b></p>
+<div class="shots"><img class="zoomable" src="img/l23_q2.png" alt="Ввод" loading="lazy"><img class="zoomable" src="img/l23_q2_2.png" alt="Результат" loading="lazy"></div>
+<div class="web" data-mode="js" data-key="l23:3" data-tests="[{&quot;call&quot;: &quot;reverseString(&#x27;abc&#x27;)&quot;, &quot;want&quot;: &quot;&#x27;cba&#x27;&quot;}, {&quot;call&quot;: &quot;reverseString(&#x27;&#x27;)&quot;, &quot;want&quot;: &quot;&#x27;&#x27;&quot;}, {&quot;inputs&quot;: [&quot;Привет&quot;], &quot;expect&quot;: [&quot;Результат: тевирП&quot;]}]"><textarea class="src" data-role="code" hidden>// Напиши решение здесь
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>let reverseString = function (string) {
+    let tmp = &#x27;&#x27;
+    for (let i = string.length; i &gt; 0; i--) {
+        tmp += string[i - 1]
+    }
+    return tmp
+}
+
+let userInput = prompt(&#x27;Введите текст и я переверну его: &#x27;)
+
+alert(&#x27;Результат: &#x27; + reverseString(userInput))
+</pre><img class="zoomable" src="img/l23_a3.png" alt="Решение задания" loading="lazy"></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-4" data-task="l23:4">
+<div class="task-head">
+<span class="task-num">4</span>
+<div class="task-title"><h3>Вечеринка с пиццей</h3><div class="badges"><span class="badge lvl-2">средне</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Напиши функцию <code>pizzaCount(pizza, people)</code>, которая возвращает массив из двух строк: смайлики 😛 по числу гостей и 🍕 по числу пицц. Спроси, сколько будет людей и пицц, и выведи <b>Будет людей - 😛😛😛 и пицц - 🍕🍕</b>.</p>
+<div class="shots"><img class="zoomable" src="img/l23_q3.png" alt="Ввод" loading="lazy"><img class="zoomable" src="img/l23_q3_2.png" alt="Ввод" loading="lazy"><img class="zoomable" src="img/l23_q3_3.png" alt="Результат" loading="lazy"></div>
+<div class="web" data-mode="js" data-key="l23:4" data-tests="[{&quot;call&quot;: &quot;pizzaCount(2, 3)&quot;, &quot;want&quot;: &quot;[&#x27;😛😛😛&#x27;, &#x27;🍕🍕&#x27;]&quot;}, {&quot;inputs&quot;: [&quot;3&quot;, &quot;2&quot;], &quot;expect&quot;: [&quot;Будет людей - 😛😛😛 и пицц - 🍕🍕&quot;]}]"><textarea class="src" data-role="code" hidden>// Напиши решение здесь
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>let pizzaCount = function (pizza, people) {
+    let party = &#x27;&#x27;
+    let food = &#x27;&#x27;
+    for (let i = 0; i &lt; people; i++) {
+        party += &#x27;😛&#x27;
+    }
+    for (let i = 0; i &lt; pizza; i++) {
+        food += &#x27;🍕&#x27;
+    }
+    return [party, food]
+}
+
+let peopleInput = Number(prompt(&#x27;Сколько будет человек: &#x27;))
+let pizzaInput = Number(prompt(&#x27;Сколько будет пицц: &#x27;))
+
+let people = pizzaCount(pizzaInput, peopleInput)[0]
+let food = pizzaCount(pizzaInput, peopleInput)[1]
+
+alert(&#x27;Будет людей - &#x27;+ people + &#x27; и пицц - &#x27; + food)
+</pre><img class="zoomable" src="img/l23_a4.png" alt="Решение задания" loading="lazy"></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-5" data-task="l23:5">
+<div class="task-head">
+<span class="task-num">5</span>
+<div class="task-title"><h3>Самое большое из трёх</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Напиши функцию <code>maxOfThree(a, b, c)</code>, которая возвращает самое большое из трёх чисел. Используй <code>if</code>, а не <code>Math.max</code>.</p>
+
+<div class="web" data-mode="js" data-key="l23:5" data-tests="[{&quot;call&quot;: &quot;maxOfThree(1, 5, 3)&quot;, &quot;want&quot;: &quot;5&quot;}, {&quot;call&quot;: &quot;maxOfThree(9, 2, 3)&quot;, &quot;want&quot;: &quot;9&quot;}, {&quot;call&quot;: &quot;maxOfThree(1, 2, 8)&quot;, &quot;want&quot;: &quot;8&quot;}, {&quot;call&quot;: &quot;maxOfThree(-1, -5, -3)&quot;, &quot;want&quot;: &quot;-1&quot;}, {&quot;call&quot;: &quot;maxOfThree(7, 7, 2)&quot;, &quot;want&quot;: &quot;7&quot;}, {&quot;js&quot;: &quot;return !/Math\\.max/.test(code) || \&quot;Реши без Math.max\&quot;;&quot;, &quot;label&quot;: &quot;Без Math.max&quot;}]"><textarea class="src" data-role="code" hidden>function maxOfThree(a, b, c) {
+    // твой код
+}
+
+console.log(maxOfThree(1, 5, 3))
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>function maxOfThree(a, b, c) {
+    let max = a
+    if (b &gt; max) {
+        max = b
+    }
+    if (c &gt; max) {
+        max = c
+    }
+    return max
+}
+
+console.log(maxOfThree(1, 5, 3))
+</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-6" data-task="l23:6">
+<div class="task-head">
+<span class="task-num">6</span>
+<div class="task-title"><h3>Стрелочная функция</h3><div class="badges"><span class="badge lvl-2">средне</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Запиши функцию <code>isEven</code> в виде <b>стрелочной</b> функции: <code>const isEven = (n) =&gt; ...</code>. Она возвращает <code>true</code>, если число чётное, и <code>false</code>, если нет.</p>
+
+<div class="web" data-mode="js" data-key="l23:6" data-tests="[{&quot;call&quot;: &quot;isEven(4)&quot;, &quot;want&quot;: &quot;true&quot;}, {&quot;call&quot;: &quot;isEven(7)&quot;, &quot;want&quot;: &quot;false&quot;}, {&quot;call&quot;: &quot;isEven(0)&quot;, &quot;want&quot;: &quot;true&quot;}, {&quot;js&quot;: &quot;return new RegExp(\&quot;=&gt;\&quot;, \&quot;\&quot;).test(code) || \&quot;В коде не нашёл: Функция стрелочная (=&gt;)\&quot;;&quot;, &quot;label&quot;: &quot;Функция стрелочная (=&gt;)&quot;}]"><textarea class="src" data-role="code" hidden>const isEven = 
+
+console.log(isEven(4))
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>const isEven = (n) =&gt; n % 2 === 0
+
+console.log(isEven(4))
+</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-7" data-task="l23:7">
+<div class="task-head">
+<span class="task-num">7</span>
+<div class="task-title"><h3>Приветствие по умолчанию</h3><div class="badges"><span class="badge lvl-2">средне</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Напиши функцию <code>greet(name)</code>, которая возвращает строку <b>Привет, Аня!</b>. Если имя не передали, функция должна вернуть <b>Привет, друг!</b> — используй значение параметра по умолчанию: <code>function greet(name = 'друг')</code>.</p>
+
+<div class="web" data-mode="js" data-key="l23:7" data-tests="[{&quot;call&quot;: &quot;greet(&#x27;Аня&#x27;)&quot;, &quot;want&quot;: &quot;&#x27;Привет, Аня!&#x27;&quot;}, {&quot;call&quot;: &quot;greet()&quot;, &quot;want&quot;: &quot;&#x27;Привет, друг!&#x27;&quot;}, {&quot;call&quot;: &quot;greet(&#x27;Гвидо&#x27;)&quot;, &quot;want&quot;: &quot;&#x27;Привет, Гвидо!&#x27;&quot;}]"><textarea class="src" data-role="code" hidden>function greet(name) {
+    
+}
+
+console.log(greet(&#x27;Аня&#x27;))
+console.log(greet())
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>function greet(name = &#x27;друг&#x27;) {
+    return &#x27;Привет, &#x27; + name + &#x27;!&#x27;
+}
+
+console.log(greet(&#x27;Аня&#x27;))
+console.log(greet())
+</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<h2 class="sec-title" id="links"><span class="emoji">🔗</span>Полезные ссылки</h2>
+<h3 class="links-title">Полезные ссылки</h3>
+<div class="links-grid">
+<a class="link-card" href="web_tests/lesson_23/23.html" target="_blank" rel="noopener"><span class="ico">📝</span><span>Тест для 23 урока<small>raferalston.github.io</small></span></a>
+</div>
+<h3 class="links-title">Что почитать</h3>
+<div class="links-grid">
+<a class="link-card" href="https://learn.javascript.ru/function-basics" target="_blank" rel="noopener"><span class="ico">📚</span><span>Всё о функциях<small>learn.javascript.ru</small></span></a>
+<a class="link-card" href="https://developer.mozilla.org/ru/docs/%D0%A1%D0%BB%D0%BE%D0%B2%D0%B0%D1%80%D1%8C/Call_stack" target="_blank" rel="noopener"><span class="ico">📚</span><span>Стек вызовов<small>developer.mozilla.org</small></span></a>
+<a class="link-card" href="http://pythontutor.com/javascript.html#mode=edit" target="_blank" rel="noopener"><span class="ico">🛠️</span><span>Визуализатор кода для JavaScript<small>pythontutor.com</small></span></a>
+</div>
+<h3 class="links-title">Функции</h3>
+<div class="links-grid">
+<a class="link-card" href="https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_functions1" target="_blank" rel="noopener"><span class="ico">🏋️</span><span>Упражнение #1<small>w3schools.com</small></span></a>
+<a class="link-card" href="https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_functions2" target="_blank" rel="noopener"><span class="ico">🏋️</span><span>Упражнение #2<small>w3schools.com</small></span></a>
+<a class="link-card" href="https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_functions3" target="_blank" rel="noopener"><span class="ico">🏋️</span><span>Упражнение #3<small>w3schools.com</small></span></a>
+<a class="link-card" href="https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_functions4" target="_blank" rel="noopener"><span class="ico">🏋️</span><span>Упражнение #4<small>w3schools.com</small></span></a>
+</div>
+<nav class="pager" aria-label="Соседние уроки">
+<a class="prev" href="lesson_22_adv.html"><small>← Предыдущий</small>Урок 22. Циклы</a>
+<a class="next" href="lesson_24_adv.html"><small>Следующий →</small>Урок 24. DOM, часть 1</a>
+</nav>
+</div>
+</div>
+</main>
+<footer class="site-footer">
+    <div class="wrap">
+        <div>
+            <b>КИДКОД</b> — школа программирования для детей и подростков<br>
+            <span>Вопросы по домашке? Пиши преподавателю:</span>
         </div>
-        <h2 class="important">Что почитать:</h2>
-        <div class="stuff">
-
-            <a href="https://learn.javascript.ru/function-basics" target="_blank" rel="noopener noreferrer">Все о функциях</a>
-            <a href="https://developer.mozilla.org/ru/docs/%D0%A1%D0%BB%D0%BE%D0%B2%D0%B0%D1%80%D1%8C/Call_stack" target="_blank" rel="noopener noreferrer">Стек вызовов</a>
-            <a href="http://pythontutor.com/javascript.html#mode=edit" target="_blank" rel="noopener noreferrer">Визуализатор кода для javascript</a>
-        </div>
-        <h2 class="important">Где потренироваться:</h2>
-        <h2 class="task">Функции</h2>
-        <div class="stuff">
-
-            <a href="https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_functions1">Упражнение #1</a>
-            <a href="https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_functions2">Упражнение #2</a>
-            <a href="https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_functions3">Упражнение #3</a>
-            <a href="https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_functions4">Упражнение #4</a>
+        <div class="socials">
+            <a href="https://t.me/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#29a9eb" d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24z"/><path fill="#fff" d="M5.4 11.8 16.9 7.4c.5-.2 1 .1.8 1l-2 9.3c-.1.7-.5.8-1.1.5l-3-2.2-1.4 1.4c-.2.2-.3.3-.6.3l.2-3.1 5.6-5c.2-.2 0-.3-.4-.1l-6.9 4.3-3-.9c-.6-.2-.7-.7.2-1z"/></svg> Telegram</a>
+            <a href="https://vk.com/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#0077ff"/><path fill="#fff" d="M12.8 17.3c-5.5 0-8.6-3.8-8.7-10h2.7c.1 4.6 2.1 6.5 3.7 6.9V7.3h2.6v4c1.6-.2 3.2-2 3.8-4h2.5a7.6 7.6 0 0 1-3.4 5 7.8 7.8 0 0 1 4 5h-2.8a4.9 4.9 0 0 0-4.1-3.6v3.6h-.3z"/></svg> ВКонтакте</a>
+            <a href="https://kidkod.ru" target="_blank" rel="noopener">🌐 kidkod.ru</a>
         </div>
     </div>
-    <div class="footer">
-        <h5>Связь с преподавателем:</h5>
-        <div class="links">
-            <a href="https://t.me/kidkodschool" target="_blank">
-                <img src="/img/telegram.png" class="social-icon" alt="телеграм">
-            </a>
-            <a href="https://vk.com/kidkodschool" target="_blank" class="vk-desktop">
-                <img src="/img/vk.png" class="social-icon" alt="вконтакте">
-            </a>
-        </div>
-    </div>
+</footer>
+<script src="assets/course-map.js?v=1"></script>
+<script src="assets/kk.js?v=1"></script>
 </body>
-
 </html>

@@ -1,69 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="css/style_lesson.css" rel="stylesheet">
-    <title>css фреймворки</title>
-    <style>
-    </style>
+    <title>Урок 15. CSS-фреймворки: Bootstrap — домашнее задание · КИДКОД</title>
+    <meta name="description" content="Фреймворк — это набор готовых стилей. Подключаешь одну строчку — и получаешь красивые кнопки, сетку и формы.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%90%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link href="assets/kk.css?v=1" rel="stylesheet">
+    <script>try{var t=localStorage.getItem('kkw:theme');if(t)document.documentElement.setAttribute('data-theme',JSON.parse(t))}catch(e){}</script>
 </head>
-
 <body>
-    <h1 class="title">Bootstrap (css фреймворк)</h1>
 
-    <ol>
-        <li>
-            <h2>
+<header class="site-header">
+    <div class="wrap">
+        <a class="logo" href="index.html" aria-label="КИДКОД — на главную">
+            <span class="logo-mark">&lt;/&gt;</span>
+            <span>КИДКОД<small>домашние задания · Web</small></span>
+        </a>
+        <nav class="nav" aria-label="Основная навигация">
+            <a href="index.html#basic" class="hide-sm">HTML и CSS</a>
+            <a href="index.html#js" class="hide-sm">JavaScript</a>
+            <a href="index.html#project" class="hide-sm">Проект</a>
+            <button class="icon-btn theme-btn" type="button" aria-label="Сменить тему"><span class="moon">🌙</span><span class="sun">☀️</span></button>
+        </nav>
+    </div>
+</header>
 
-                <a href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer">Ссылка на фреймворк - Bootstrap</a></li>        
-            </h2>
-        <li>
-            <h2>
-                <a href="https://www.bootstrapcdn.com/bootswatch/" target="_blank" style="display: inline-block;">Цветовые решения для Bootstrap</a>
-            </h2>
-            <img src="img/bootswatch.png" alt="ссылка на css стиль" width="600">
-        </li>
-        <li>
-            <h2>
 
-                <a href="https://startbootstrap.com/themes/" target="_blank">Готовые макеты для bootstrap</a>
-            </h2>
-        </li>
-        <li>
-            <h2>
+<main>
+<section class="lesson-hero"><div class="wrap">
+<div class="crumbs"><a href="index.html">Главная</a><span>›</span><a href="index.html#basic">Начинающий web-дизайнер</a><span>›</span><span>Урок 15</span></div>
+<h1>CSS-фреймворки: Bootstrap</h1>
+<p class="lead">Фреймворк — это набор готовых стилей. Подключаешь одну строчку — и получаешь красивые кнопки, сетку и формы.</p>
+<div class="chips"><span class="chip">📋 Заданий: 2</span><span class="chip">✅ С автопроверкой: 1</span><span class="chip">✨ Новых: 1</span></div>
+</div></section>
+<div class="wrap lesson-layout">
+<aside class="side"><div class="side-card" data-lesson-progress><h4>Прогресс</h4><div class="bar"><i></i></div><span class="cnt">0 из 0</span> выполнено</div><div class="side-card"><h4>Содержание</h4><nav class="toc"><a class="sec" href="#sec-0">Задания</a><a href="#task-1"><span class="n">1</span><span>Познакомься с Bootstrap</span></a><a href="#task-2"><span class="n">2</span><span>Страница на Bootstrap</span></a><a class="sec" href="#links">Полезные ссылки</a></nav></div></aside>
+<div class="content">
+<h2 class="sec-title" id="sec-0"><span class="emoji">🧱</span>Задания</h2>
+<article class="task" id="task-1" data-task="l15:1">
+<div class="task-head">
+<span class="task-num">1</span>
+<div class="task-title"><h3>Познакомься с Bootstrap</h3><div class="badges"><span class="badge lvl-1">легко</span></div></div>
+</div>
+<div class="task-body">
+<p>Открой сайт <a href="https://getbootstrap.com/" target="_blank" rel="noopener">getbootstrap.com</a>, найди раздел <b>Components</b> и посмотри, какие готовые элементы там есть.</p><p>Потом загляни в <a href="https://startbootstrap.com/themes/" target="_blank" rel="noopener">готовые макеты для Bootstrap</a> и <a href="https://www.bootstrapcdn.com/bootswatch/" target="_blank" rel="noopener">цветовые темы Bootswatch</a>: чтобы сменить тему, достаточно поменять ссылку на CSS-файл.</p>
+<div class="shots single"><img class="zoomable" src="img/bootswatch.png" alt="Ссылка на CSS-стиль" loading="lazy"></div>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-2" data-task="l15:2">
+<div class="task-head">
+<span class="task-num">2</span>
+<div class="task-title"><h3>Страница на Bootstrap</h3><div class="badges"><span class="badge lvl-2">средне</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Подключи Bootstrap и собери страницу из готовых классов:</p><p><ul><li>в <code>&lt;head&gt;</code> — <code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"&gt;</code></li><li>всё содержимое — внутри <code>&lt;div class="container"&gt;</code></li><li>кнопка с классами <code>btn btn-primary</code></li><li>ряд <code>row</code> с тремя колонками <code>col</code></li><li>цветная плашка <code>alert alert-success</code></li></ul></p>
 
-                <a href="https://proglib.io/p/css-frameworks" target="_blank">CSS фреймворки</a>
-            </h2>
-        </li>
-        <li>
-            <h2>
-
-                <a href="https://merehead.com/ru/blog/css-frameworks-2019/" target="_blank">Подробнее о фреймворках</a>
-            </h2>
-        </li>
-    </ol>
-
-    <div class="additional">
-        <h2 class="important">Что почитать:</h2>
-        <div class="stuff">
-
-            <a href="https://webkyrs.info/page/chto-takoe-css-freimvorki-i-zachem-oni-nuzhny" target="_blank">Зачем нужны фреймворки</a>
+<div class="web" data-mode="html" data-key="l15:2" data-tests="[{&quot;js&quot;: &quot;return count(\&quot;link[href*=\\\&quot;bootstrap\\\&quot;]\&quot;) &gt;= 1 || \&quot;Не нашёл элемент link[href*=\\\&quot;bootstrap\\\&quot;]\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;link[href*=\\\&quot;bootstrap\\\&quot;]\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Bootstrap подключён&quot;}, {&quot;js&quot;: &quot;return count(\&quot;.container\&quot;) &gt;= 1 || \&quot;Не нашёл элемент .container\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;.container\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Есть .container&quot;}, {&quot;js&quot;: &quot;return count(\&quot;.btn.btn-primary\&quot;) &gt;= 1 || \&quot;Не нашёл элемент .btn.btn-primary\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;.btn.btn-primary\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Кнопка btn btn-primary&quot;}, {&quot;js&quot;: &quot;return count(\&quot;.row &gt; .col\&quot;) &gt;= 3 || \&quot;Нужно хотя бы 3 шт. .row &gt; .col\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;.row &gt; .col\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;В ряду три колонки&quot;}, {&quot;js&quot;: &quot;return count(\&quot;.alert.alert-success\&quot;) &gt;= 1 || \&quot;Не нашёл элемент .alert.alert-success\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;.alert.alert-success\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Плашка alert alert-success&quot;}]"><textarea class="src" data-role="code" hidden>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;h1&gt;Мой первый сайт на Bootstrap&lt;/h1&gt;
+        &lt;div class=&quot;alert alert-success&quot;&gt;Ура, Bootstrap подключён!&lt;/div&gt;
+        &lt;div class=&quot;row&quot;&gt;
+            &lt;div class=&quot;col&quot;&gt;Колонка 1&lt;/div&gt;
+            &lt;div class=&quot;col&quot;&gt;Колонка 2&lt;/div&gt;
+            &lt;div class=&quot;col&quot;&gt;Колонка 3&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;button class=&quot;btn btn-primary&quot;&gt;Нажми меня&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<h2 class="sec-title" id="links"><span class="emoji">🔗</span>Полезные ссылки</h2>
+<h3 class="links-title">Полезные ссылки</h3>
+<div class="links-grid">
+<a class="link-card" href="https://getbootstrap.com/" target="_blank" rel="noopener"><span class="ico">🛠️</span><span>Bootstrap<small>getbootstrap.com</small></span></a>
+<a class="link-card" href="https://www.bootstrapcdn.com/bootswatch/" target="_blank" rel="noopener"><span class="ico">🎨</span><span>Цветовые решения для Bootstrap<small>bootstrapcdn.com</small></span></a>
+<a class="link-card" href="https://startbootstrap.com/themes/" target="_blank" rel="noopener"><span class="ico">🎨</span><span>Готовые макеты для Bootstrap<small>startbootstrap.com</small></span></a>
+<a class="link-card" href="https://proglib.io/p/css-frameworks" target="_blank" rel="noopener"><span class="ico">📘</span><span>CSS-фреймворки<small>proglib.io</small></span></a>
+<a class="link-card" href="https://merehead.com/ru/blog/css-frameworks-2019/" target="_blank" rel="noopener"><span class="ico">📘</span><span>Подробнее о фреймворках<small>merehead.com</small></span></a>
+</div>
+<h3 class="links-title">Что почитать</h3>
+<div class="links-grid">
+<a class="link-card" href="https://webkyrs.info/page/chto-takoe-css-freimvorki-i-zachem-oni-nuzhny" target="_blank" rel="noopener"><span class="ico">📚</span><span>Зачем нужны фреймворки<small>webkyrs.info</small></span></a>
+</div>
+<nav class="pager" aria-label="Соседние уроки">
+<a class="prev" href="lesson_14_adv.html"><small>← Предыдущий</small>Урок 14. Адаптивный дизайн</a>
+<a class="next" href="lesson_16_adv.html"><small>Следующий →</small>Урок 16. CSS Grid</a>
+</nav>
+</div>
+</div>
+</main>
+<footer class="site-footer">
+    <div class="wrap">
+        <div>
+            <b>КИДКОД</b> — школа программирования для детей и подростков<br>
+            <span>Вопросы по домашке? Пиши преподавателю:</span>
+        </div>
+        <div class="socials">
+            <a href="https://t.me/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#29a9eb" d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24z"/><path fill="#fff" d="M5.4 11.8 16.9 7.4c.5-.2 1 .1.8 1l-2 9.3c-.1.7-.5.8-1.1.5l-3-2.2-1.4 1.4c-.2.2-.3.3-.6.3l.2-3.1 5.6-5c.2-.2 0-.3-.4-.1l-6.9 4.3-3-.9c-.6-.2-.7-.7.2-1z"/></svg> Telegram</a>
+            <a href="https://vk.com/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#0077ff"/><path fill="#fff" d="M12.8 17.3c-5.5 0-8.6-3.8-8.7-10h2.7c.1 4.6 2.1 6.5 3.7 6.9V7.3h2.6v4c1.6-.2 3.2-2 3.8-4h2.5a7.6 7.6 0 0 1-3.4 5 7.8 7.8 0 0 1 4 5h-2.8a4.9 4.9 0 0 0-4.1-3.6v3.6h-.3z"/></svg> ВКонтакте</a>
+            <a href="https://kidkod.ru" target="_blank" rel="noopener">🌐 kidkod.ru</a>
         </div>
     </div>
-    <div class="footer">
-        <h5>Связь с преподавателем:</h5>
-        <div class="links">
-            <a href="https://t.me/kidkodschool" target="_blank">
-                <img src="/img/telegram.png" class="social-icon" alt="телеграм">
-            </a>
-            <a href="https://vk.com/kidkodschool" target="_blank" class="vk-desktop">
-                <img src="/img/vk.png" class="social-icon" alt="вконтакте">
-            </a>
-        </div>
-    </div>
+</footer>
+<script src="assets/course-map.js?v=1"></script>
+<script src="assets/kk.js?v=1"></script>
 </body>
-
 </html>

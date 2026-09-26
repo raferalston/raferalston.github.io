@@ -1,81 +1,352 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="css/style_lesson.css" rel="stylesheet">
-    <title>Основы CSS #1</title>
+    <title>Урок 3. Основы CSS — домашнее задание · КИДКОД</title>
+    <meta name="description" content="Учимся украшать страницу: меняем цвета и шрифты, добавляем отступы и рамки.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%90%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link href="assets/kk.css?v=1" rel="stylesheet">
+    <script>try{var t=localStorage.getItem('kkw:theme');if(t)document.documentElement.setAttribute('data-theme',JSON.parse(t))}catch(e){}</script>
 </head>
-
 <body>
-    <h1 class="title">Создать страницу и применить все известные вам стили</h1>
-    <ol>
-        <li>
-            <h2>HTML структура и контент</h2>
-            <img src="img/css_1.png" alt="Пробуем стили" width="600">
-        </li>
-        <li>
-            <h2>Задание, нарисовать макет вашего сайта</h2>
-            <img src="img/wireframe.png" alt="Мега макет" width="200">
-        </li>
-    </ol>
-    <div class="additional">
-        <h2 class="important">Полезные ссылки:</h2>
-        <div class="stuff">
-            <a href="https://www.w3schools.com/cssref/pr_font_font-size.asp" target="_blank">Значения для размера шрифта</a>
-            <a href="https://developer.mozilla.org/ru/docs/Learn/CSS/Styling_text/Fundamentals" target="_blank" rel="noopener noreferrer">Текстовые свойства</a>
-            <a href="https://www.w3schools.com/cssref/css_colors.asp" target="_blank">Список цветов</a>
-            <a href="https://www.w3schools.com/Css/css_colors.asp" target="_blank">css - color</a>
-            <a href="https://www.w3schools.com/css/css_margin.asp" target="_blank">Внешний отступ</a>
-            <a href="https://www.w3schools.com/css/css_padding.asp" target="_blank">Внутренний отступ</a>
-            <a href="https://www.w3schools.com/css/css_border.asp" target="_blank" rel="noopener noreferrer">Свойства границы</a>
-            <a href="https://nikomedvedev.ru/other/vscodeshortcuts/hotkeys.html" target="_blank">Горячие клавиши для Visual Studio Code</a>
-            <a href="web_tests/lesson_3/index.html" target="_blank" rel="noopener noreferrer">Тест для 3 урока</a>
 
+<header class="site-header">
+    <div class="wrap">
+        <a class="logo" href="index.html" aria-label="КИДКОД — на главную">
+            <span class="logo-mark">&lt;/&gt;</span>
+            <span>КИДКОД<small>домашние задания · Web</small></span>
+        </a>
+        <nav class="nav" aria-label="Основная навигация">
+            <a href="index.html#basic" class="hide-sm">HTML и CSS</a>
+            <a href="index.html#js" class="hide-sm">JavaScript</a>
+            <a href="index.html#project" class="hide-sm">Проект</a>
+            <button class="icon-btn theme-btn" type="button" aria-label="Сменить тему"><span class="moon">🌙</span><span class="sun">☀️</span></button>
+        </nav>
+    </div>
+</header>
+
+
+<main>
+<section class="lesson-hero"><div class="wrap">
+<div class="crumbs"><a href="index.html">Главная</a><span>›</span><a href="index.html#basic">Начинающий web-дизайнер</a><span>›</span><span>Урок 3</span></div>
+<h1>Основы CSS: цвета, шрифты, отступы и рамки</h1>
+<p class="lead">Учимся украшать страницу: меняем цвета и шрифты, добавляем отступы и рамки.</p>
+<div class="chips"><span class="chip">📋 Заданий: 6</span><span class="chip">✅ С автопроверкой: 5</span><span class="chip">✨ Новых: 4</span></div>
+</div></section>
+<div class="wrap lesson-layout">
+<aside class="side"><div class="side-card" data-lesson-progress><h4>Прогресс</h4><div class="bar"><i></i></div><span class="cnt">0 из 0</span> выполнено</div><div class="side-card"><h4>Содержание</h4><nav class="toc"><a class="sec" href="#sec-0">Задания</a><a href="#task-1"><span class="n">1</span><span>Страница со всеми известными стилями</span></a><a href="#task-2"><span class="n">2</span><span>Нарисуй макет своего сайта</span></a><a href="#task-3"><span class="n">3</span><span>Цветные заголовки</span></a><a href="#task-4"><span class="n">4</span><span>Карточка</span></a><a href="#task-5"><span class="n">5</span><span>Оформление текста</span></a><a href="#task-6"><span class="n">6</span><span>Три способа записать цвет</span></a><a class="sec" href="#links">Полезные ссылки</a></nav></div></aside>
+<div class="content">
+<h2 class="sec-title" id="sec-0"><span class="emoji">🎨</span>Задания</h2>
+<div class="note info"><p><b>Шпаргалка:</b> стили пишутся в теге <code>&lt;style&gt;</code> внутри <code>&lt;head&gt;</code>: <code>селектор { свойство: значение; }</code>. <code>margin</code> — внешний отступ, <code>padding</code> — внутренний, <code>border</code> — рамка.</p></div>
+<article class="task" id="task-1" data-task="l3:1">
+<div class="task-head">
+<span class="task-num">1</span>
+<div class="task-title"><h3>Страница со всеми известными стилями</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Создай страницу и примени к ней все известные тебе стили: цвет текста и фона, размер шрифта, отступы и рамки. Пример — на картинке.</p>
+<div class="shots single"><img class="zoomable" src="img/css_1.png" alt="Пробуем стили" loading="lazy"></div>
+<div class="web" data-mode="html" data-key="l3:1" data-tests="[{&quot;js&quot;: &quot;return count(\&quot;style\&quot;) &gt;= 1 || \&quot;Не нашёл элемент style\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;style\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Есть тег style&quot;}, {&quot;js&quot;: &quot;if (!has(\&quot;h1\&quot;)) return \&quot;Нет заголовка h1\&quot;; return css(\&quot;h1\&quot;, \&quot;color\&quot;) !== \&quot;rgb(0, 0, 0)\&quot; || \&quot;Поменяй цвет h1\&quot;;&quot;, &quot;label&quot;: &quot;У заголовка свой цвет&quot;}, {&quot;js&quot;: &quot;return $$(\&quot;body, body *\&quot;).some(e =&gt; getComputedStyle(e).backgroundColor !== \&quot;rgba(0, 0, 0, 0)\&quot;) || \&quot;Задай кому-нибудь background-color\&quot;;&quot;, &quot;label&quot;: &quot;У какого-то элемента есть фон&quot;}, {&quot;js&quot;: &quot;return $$(\&quot;body *\&quot;).some(e =&gt; getComputedStyle(e).borderTopStyle !== \&quot;none\&quot;) || \&quot;Добавь кому-нибудь border\&quot;;&quot;, &quot;label&quot;: &quot;У какого-то элемента есть рамка&quot;}, {&quot;js&quot;: &quot;return $$(\&quot;body *\&quot;).some(e =&gt; parseFloat(getComputedStyle(e).paddingTop) &gt; 0) || \&quot;Добавь кому-нибудь padding\&quot;;&quot;, &quot;label&quot;: &quot;У какого-то элемента есть padding&quot;}]"><textarea class="src" data-role="code" hidden>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+    &lt;style&gt;
+
+        body { background-color: #fff8e7; font-family: Arial, sans-serif; }
+        h1 { color: tomato; font-size: 48px; }
+        .card {
+            background-color: lightblue;
+            padding: 20px;
+            margin: 30px;
+            border: 3px dashed navy;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Мой первый стиль&lt;/h1&gt;
+    &lt;p class=&quot;card&quot;&gt;Этот абзац в рамке и с отступами.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-2" data-task="l3:2">
+<div class="task-head">
+<span class="task-num">2</span>
+<div class="task-title"><h3>Нарисуй макет своего сайта</h3><div class="badges"><span class="badge lvl-1">легко</span></div></div>
+</div>
+<div class="task-body">
+<p>Возьми лист бумаги и нарисуй, как будет выглядеть твой будущий сайт: где шапка, меню, картинки, текст. Такой рисунок называется <b>макет</b> (wireframe).</p>
+<div class="shots single"><img class="zoomable" src="img/wireframe.png" alt="Пример макета" loading="lazy"></div>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-3" data-task="l3:3">
+<div class="task-head">
+<span class="task-num">3</span>
+<div class="task-title"><h3>Цветные заголовки</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Сделай заголовок <code>h1</code> <b>красным</b> (<code>red</code>), заголовок <code>h2</code> — цвета <code>#1e90ff</code>, а у абзацев <code>p</code> поставь размер шрифта <code>20px</code>.</p>
+
+<div class="web" data-mode="html" data-key="l3:3" data-tests="[{&quot;js&quot;: &quot;if (!has(\&quot;h1\&quot;)) return \&quot;Не нашёл элемент h1\&quot;; return cssIs(\&quot;h1\&quot;, \&quot;color\&quot;, \&quot;red\&quot;) || \&quot;Сейчас color = \&quot; + css(\&quot;h1\&quot;, \&quot;color\&quot;);&quot;, &quot;label&quot;: &quot;h1 { color: red }&quot;}, {&quot;js&quot;: &quot;if (!has(\&quot;h2\&quot;)) return \&quot;Не нашёл элемент h2\&quot;; return cssIs(\&quot;h2\&quot;, \&quot;color\&quot;, \&quot;#1e90ff\&quot;) || \&quot;Сейчас color = \&quot; + css(\&quot;h2\&quot;, \&quot;color\&quot;);&quot;, &quot;label&quot;: &quot;h2 { color: #1e90ff }&quot;}, {&quot;js&quot;: &quot;if (!has(\&quot;p\&quot;)) return \&quot;Не нашёл элемент p\&quot;; return cssIs(\&quot;p\&quot;, \&quot;font-size\&quot;, \&quot;20px\&quot;) || \&quot;Сейчас font-size = \&quot; + css(\&quot;p\&quot;, \&quot;font-size\&quot;);&quot;, &quot;label&quot;: &quot;p { font-size: 20px }&quot;}]"><textarea class="src" data-role="code" hidden>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+    &lt;style&gt;
+        /* Пиши стили здесь */
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Главный заголовок&lt;/h1&gt;
+    &lt;h2&gt;Подзаголовок&lt;/h2&gt;
+    &lt;p&gt;Обычный текст абзаца.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+    &lt;style&gt;
+
+        h1 { color: red; }
+        h2 { color: #1e90ff; }
+        p { font-size: 20px; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Главный заголовок&lt;/h1&gt;
+    &lt;h2&gt;Подзаголовок&lt;/h2&gt;
+    &lt;p&gt;Обычный текст абзаца.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-4" data-task="l3:4">
+<div class="task-head">
+<span class="task-num">4</span>
+<div class="task-title"><h3>Карточка</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Оформи блок <code>.card</code>: внутренний отступ <code>20px</code>, внешний <code>30px</code>, рамка <code>3px solid</code> любого цвета, скругление углов <code>10px</code> и светлый фон <code>lightyellow</code>.</p>
+
+<div class="web" data-mode="html" data-key="l3:4" data-tests="[{&quot;js&quot;: &quot;if (!has(\&quot;.card\&quot;)) return \&quot;Не нашёл элемент .card\&quot;; return cssIs(\&quot;.card\&quot;, \&quot;padding-top\&quot;, \&quot;20px\&quot;) || \&quot;Сейчас padding-top = \&quot; + css(\&quot;.card\&quot;, \&quot;padding-top\&quot;);&quot;, &quot;label&quot;: &quot;.card { padding: 20px }&quot;}, {&quot;js&quot;: &quot;if (!has(\&quot;.card\&quot;)) return \&quot;Не нашёл элемент .card\&quot;; return cssIs(\&quot;.card\&quot;, \&quot;margin-top\&quot;, \&quot;30px\&quot;) || \&quot;Сейчас margin-top = \&quot; + css(\&quot;.card\&quot;, \&quot;margin-top\&quot;);&quot;, &quot;label&quot;: &quot;.card { margin: 30px }&quot;}, {&quot;js&quot;: &quot;if (!has(\&quot;.card\&quot;)) return \&quot;Не нашёл элемент .card\&quot;; return cssIs(\&quot;.card\&quot;, \&quot;border-top-width\&quot;, \&quot;3px\&quot;) || \&quot;Сейчас border-top-width = \&quot; + css(\&quot;.card\&quot;, \&quot;border-top-width\&quot;);&quot;, &quot;label&quot;: &quot;Рамка толщиной 3px&quot;}, {&quot;js&quot;: &quot;if (!has(\&quot;.card\&quot;)) return \&quot;Не нашёл элемент .card\&quot;; return cssIs(\&quot;.card\&quot;, \&quot;border-top-style\&quot;, \&quot;solid\&quot;) || \&quot;Сейчас border-top-style = \&quot; + css(\&quot;.card\&quot;, \&quot;border-top-style\&quot;);&quot;, &quot;label&quot;: &quot;Рамка сплошная (solid)&quot;}, {&quot;js&quot;: &quot;if (!has(\&quot;.card\&quot;)) return \&quot;Не нашёл элемент .card\&quot;; return cssIs(\&quot;.card\&quot;, \&quot;border-top-left-radius\&quot;, \&quot;10px\&quot;) || \&quot;Сейчас border-top-left-radius = \&quot; + css(\&quot;.card\&quot;, \&quot;border-top-left-radius\&quot;);&quot;, &quot;label&quot;: &quot;Скругление 10px&quot;}, {&quot;js&quot;: &quot;if (!has(\&quot;.card\&quot;)) return \&quot;Не нашёл элемент .card\&quot;; return cssIs(\&quot;.card\&quot;, \&quot;background-color\&quot;, \&quot;lightyellow\&quot;) || \&quot;Сейчас background-color = \&quot; + css(\&quot;.card\&quot;, \&quot;background-color\&quot;);&quot;, &quot;label&quot;: &quot;.card { background-color: lightyellow }&quot;}]"><textarea class="src" data-role="code" hidden>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+    &lt;style&gt;
+        .card {
+            
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;card&quot;&gt;
+        &lt;h2&gt;Кот Барсик&lt;/h2&gt;
+        &lt;p&gt;Любит спать и есть.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+    &lt;style&gt;
+
+        .card {
+            padding: 20px;
+            margin: 30px;
+            border: 3px solid orange;
+            border-radius: 10px;
+            background-color: lightyellow;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;card&quot;&gt;
+        &lt;h2&gt;Кот Барсик&lt;/h2&gt;
+        &lt;p&gt;Любит спать и есть.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-5" data-task="l3:5">
+<div class="task-head">
+<span class="task-num">5</span>
+<div class="task-title"><h3>Оформление текста</h3><div class="badges"><span class="badge lvl-2">средне</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Настрой текст:</p><p><ul><li><code>h1</code> — все буквы заглавные (<code>text-transform: uppercase</code>)</li><li>абзац <code>p</code> — по центру (<code>text-align: center</code>)</li><li>ссылка <code>a</code> — без подчёркивания (<code>text-decoration: none</code>)</li><li>текст <code>.note</code> — жирный (<code>font-weight: bold</code>) и курсивный (<code>font-style: italic</code>)</li></ul></p>
+
+<div class="web" data-mode="html" data-key="l3:5" data-tests="[{&quot;js&quot;: &quot;if (!has(\&quot;h1\&quot;)) return \&quot;Не нашёл элемент h1\&quot;; return cssIs(\&quot;h1\&quot;, \&quot;text-transform\&quot;, \&quot;uppercase\&quot;) || \&quot;Сейчас text-transform = \&quot; + css(\&quot;h1\&quot;, \&quot;text-transform\&quot;);&quot;, &quot;label&quot;: &quot;h1 { text-transform: uppercase }&quot;}, {&quot;js&quot;: &quot;if (!has(\&quot;p\&quot;)) return \&quot;Не нашёл элемент p\&quot;; return cssIs(\&quot;p\&quot;, \&quot;text-align\&quot;, \&quot;center\&quot;) || \&quot;Сейчас text-align = \&quot; + css(\&quot;p\&quot;, \&quot;text-align\&quot;);&quot;, &quot;label&quot;: &quot;p { text-align: center }&quot;}, {&quot;js&quot;: &quot;if (!has(\&quot;a\&quot;)) return \&quot;Не нашёл элемент a\&quot;; return cssIs(\&quot;a\&quot;, \&quot;text-decoration-line\&quot;, \&quot;none\&quot;) || \&quot;Сейчас text-decoration-line = \&quot; + css(\&quot;a\&quot;, \&quot;text-decoration-line\&quot;);&quot;, &quot;label&quot;: &quot;a { text-decoration: none }&quot;}, {&quot;js&quot;: &quot;if (!has(\&quot;.note\&quot;)) return \&quot;Не нашёл элемент .note\&quot;; return cssIs(\&quot;.note\&quot;, \&quot;font-weight\&quot;, \&quot;bold\&quot;) || \&quot;Сейчас font-weight = \&quot; + css(\&quot;.note\&quot;, \&quot;font-weight\&quot;);&quot;, &quot;label&quot;: &quot;.note { font-weight: bold }&quot;}, {&quot;js&quot;: &quot;if (!has(\&quot;.note\&quot;)) return \&quot;Не нашёл элемент .note\&quot;; return cssIs(\&quot;.note\&quot;, \&quot;font-style\&quot;, \&quot;italic\&quot;) || \&quot;Сейчас font-style = \&quot; + css(\&quot;.note\&quot;, \&quot;font-style\&quot;);&quot;, &quot;label&quot;: &quot;.note { font-style: italic }&quot;}]"><textarea class="src" data-role="code" hidden>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+    &lt;style&gt;
+        /* Пиши стили здесь */
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Новости школы&lt;/h1&gt;
+    &lt;p&gt;Сегодня мы научились делать сайты!&lt;/p&gt;
+    &lt;a href=&quot;#&quot;&gt;Читать дальше&lt;/a&gt;
+    &lt;p class=&quot;note&quot;&gt;Домашку сдать до пятницы.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+    &lt;style&gt;
+
+        h1 { text-transform: uppercase; }
+        p { text-align: center; }
+        a { text-decoration: none; }
+        .note { font-weight: bold; font-style: italic; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Новости школы&lt;/h1&gt;
+    &lt;p&gt;Сегодня мы научились делать сайты!&lt;/p&gt;
+    &lt;a href=&quot;#&quot;&gt;Читать дальше&lt;/a&gt;
+    &lt;p class=&quot;note&quot;&gt;Домашку сдать до пятницы.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-6" data-task="l3:6">
+<div class="task-head">
+<span class="task-num">6</span>
+<div class="task-title"><h3>Три способа записать цвет</h3><div class="badges"><span class="badge lvl-2">средне</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Покрась три абзаца разными способами записи цвета: <code>.name</code> — словом <code>tomato</code>, <code>.hex</code> — кодом <code>#2ecc71</code>, <code>.rgb</code> — функцией <code>rgb(52, 152, 219)</code>.</p>
+
+<div class="web" data-mode="html" data-key="l3:6" data-tests="[{&quot;js&quot;: &quot;if (!has(\&quot;.name\&quot;)) return \&quot;Не нашёл элемент .name\&quot;; return cssIs(\&quot;.name\&quot;, \&quot;color\&quot;, \&quot;tomato\&quot;) || \&quot;Сейчас color = \&quot; + css(\&quot;.name\&quot;, \&quot;color\&quot;);&quot;, &quot;label&quot;: &quot;.name { color: tomato }&quot;}, {&quot;js&quot;: &quot;if (!has(\&quot;.hex\&quot;)) return \&quot;Не нашёл элемент .hex\&quot;; return cssIs(\&quot;.hex\&quot;, \&quot;color\&quot;, \&quot;#2ecc71\&quot;) || \&quot;Сейчас color = \&quot; + css(\&quot;.hex\&quot;, \&quot;color\&quot;);&quot;, &quot;label&quot;: &quot;.hex { color: #2ecc71 }&quot;}, {&quot;js&quot;: &quot;if (!has(\&quot;.rgb\&quot;)) return \&quot;Не нашёл элемент .rgb\&quot;; return cssIs(\&quot;.rgb\&quot;, \&quot;color\&quot;, \&quot;rgb(52, 152, 219)\&quot;) || \&quot;Сейчас color = \&quot; + css(\&quot;.rgb\&quot;, \&quot;color\&quot;);&quot;, &quot;label&quot;: &quot;.rgb { color: rgb(52, 152, 219) }&quot;}, {&quot;js&quot;: &quot;return new RegExp(\&quot;#2ecc71\&quot;, \&quot;i\&quot;).test(code) || \&quot;В коде не нашёл: Используется HEX-код\&quot;;&quot;, &quot;label&quot;: &quot;Используется HEX-код&quot;}, {&quot;js&quot;: &quot;return new RegExp(\&quot;rgb\\\\(\&quot;, \&quot;\&quot;).test(code) || \&quot;В коде не нашёл: Используется rgb()\&quot;;&quot;, &quot;label&quot;: &quot;Используется rgb()&quot;}]"><textarea class="src" data-role="code" hidden>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+    &lt;style&gt;
+        /* Пиши стили здесь */
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p class=&quot;name&quot;&gt;Цвет словом&lt;/p&gt;
+    &lt;p class=&quot;hex&quot;&gt;Цвет HEX-кодом&lt;/p&gt;
+    &lt;p class=&quot;rgb&quot;&gt;Цвет в RGB&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+    &lt;style&gt;
+
+        .name { color: tomato; }
+        .hex { color: #2ecc71; }
+        .rgb { color: rgb(52, 152, 219); }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p class=&quot;name&quot;&gt;Цвет словом&lt;/p&gt;
+    &lt;p class=&quot;hex&quot;&gt;Цвет HEX-кодом&lt;/p&gt;
+    &lt;p class=&quot;rgb&quot;&gt;Цвет в RGB&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<h2 class="sec-title" id="links"><span class="emoji">🔗</span>Полезные ссылки</h2>
+<h3 class="links-title">Полезные ссылки</h3>
+<div class="links-grid">
+<a class="link-card" href="https://www.w3schools.com/cssref/pr_font_font-size.asp" target="_blank" rel="noopener"><span class="ico">📘</span><span>Значения для размера шрифта<small>w3schools.com</small></span></a>
+<a class="link-card" href="https://developer.mozilla.org/ru/docs/Learn/CSS/Styling_text/Fundamentals" target="_blank" rel="noopener"><span class="ico">📘</span><span>Текстовые свойства<small>developer.mozilla.org</small></span></a>
+<a class="link-card" href="https://www.w3schools.com/cssref/css_colors.asp" target="_blank" rel="noopener"><span class="ico">📘</span><span>Список цветов<small>w3schools.com</small></span></a>
+<a class="link-card" href="https://www.w3schools.com/Css/css_colors.asp" target="_blank" rel="noopener"><span class="ico">📘</span><span>CSS — color<small>w3schools.com</small></span></a>
+<a class="link-card" href="https://www.w3schools.com/css/css_margin.asp" target="_blank" rel="noopener"><span class="ico">📘</span><span>Внешний отступ (margin)<small>w3schools.com</small></span></a>
+<a class="link-card" href="https://www.w3schools.com/css/css_padding.asp" target="_blank" rel="noopener"><span class="ico">📘</span><span>Внутренний отступ (padding)<small>w3schools.com</small></span></a>
+<a class="link-card" href="https://www.w3schools.com/css/css_border.asp" target="_blank" rel="noopener"><span class="ico">📘</span><span>Свойства границы (border)<small>w3schools.com</small></span></a>
+<a class="link-card" href="https://nikomedvedev.ru/other/vscodeshortcuts/hotkeys.html" target="_blank" rel="noopener"><span class="ico">🛠️</span><span>Горячие клавиши VS Code<small>nikomedvedev.ru</small></span></a>
+<a class="link-card" href="web_tests/lesson_3/index.html" target="_blank" rel="noopener"><span class="ico">📝</span><span>Тест для 3 урока<small>raferalston.github.io</small></span></a>
+</div>
+<h3 class="links-title">Что почитать</h3>
+<div class="links-grid">
+<a class="link-card" href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like" target="_blank" rel="noopener"><span class="ico">📚</span><span>Каким должен быть ваш веб-сайт<small>developer.mozilla.org</small></span></a>
+</div>
+<h3 class="links-title">Где потренироваться</h3>
+<div class="links-grid">
+<a class="link-card" href="https://www.w3schools.com/html/exercise.asp?x=xrcise_css1" target="_blank" rel="noopener"><span class="ico">🏋️</span><span>CSS<small>w3schools.com</small></span></a>
+<a class="link-card" href="https://www.w3schools.com/css/exercise.asp?filename=exercise_margin1" target="_blank" rel="noopener"><span class="ico">🏋️</span><span>Margin #1<small>w3schools.com</small></span></a>
+<a class="link-card" href="https://www.w3schools.com/css/exercise.asp?filename=exercise_margin2" target="_blank" rel="noopener"><span class="ico">🏋️</span><span>Margin #2<small>w3schools.com</small></span></a>
+<a class="link-card" href="https://www.w3schools.com/css/exercise.asp?filename=exercise_margin3" target="_blank" rel="noopener"><span class="ico">🏋️</span><span>Margin #3<small>w3schools.com</small></span></a>
+<a class="link-card" href="https://www.w3schools.com/css/exercise.asp?filename=exercise_margin4" target="_blank" rel="noopener"><span class="ico">🏋️</span><span>Margin #4<small>w3schools.com</small></span></a>
+<a class="link-card" href="https://www.w3schools.com/css/exercise.asp?filename=exercise_padding1" target="_blank" rel="noopener"><span class="ico">🏋️</span><span>Padding #1<small>w3schools.com</small></span></a>
+<a class="link-card" href="https://www.w3schools.com/css/exercise.asp?filename=exercise_padding2" target="_blank" rel="noopener"><span class="ico">🏋️</span><span>Padding #2<small>w3schools.com</small></span></a>
+<a class="link-card" href="https://www.w3schools.com/css/exercise.asp?filename=exercise_padding3" target="_blank" rel="noopener"><span class="ico">🏋️</span><span>Padding #3<small>w3schools.com</small></span></a>
+<a class="link-card" href="https://www.w3schools.com/css/exercise.asp?filename=exercise_border1" target="_blank" rel="noopener"><span class="ico">🏋️</span><span>Border #1<small>w3schools.com</small></span></a>
+<a class="link-card" href="https://www.w3schools.com/css/exercise.asp?filename=exercise_border2" target="_blank" rel="noopener"><span class="ico">🏋️</span><span>Border #2<small>w3schools.com</small></span></a>
+<a class="link-card" href="https://www.w3schools.com/css/exercise.asp?filename=exercise_border3" target="_blank" rel="noopener"><span class="ico">🏋️</span><span>Border #3<small>w3schools.com</small></span></a>
+<a class="link-card" href="https://www.w3schools.com/css/exercise.asp?filename=exercise_border4" target="_blank" rel="noopener"><span class="ico">🏋️</span><span>Border #4<small>w3schools.com</small></span></a>
+</div>
+<nav class="pager" aria-label="Соседние уроки">
+<a class="prev" href="lesson_2.html"><small>← Предыдущий</small>Урок 2. Браузер, ссылки, таблицы, формы</a>
+<a class="next" href="lesson_4.html"><small>Следующий →</small>Урок 4. Структура сайта и селекторы</a>
+</nav>
+</div>
+</div>
+</main>
+<footer class="site-footer">
+    <div class="wrap">
+        <div>
+            <b>КИДКОД</b> — школа программирования для детей и подростков<br>
+            <span>Вопросы по домашке? Пиши преподавателю:</span>
         </div>
-        <h2 class="important">Что почитать:</h2>
-        <div class="stuff">
-            <a href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like">Каким должен быть ваш веб-сайт</a>
-        </div>
-        <h2 class="important">Где потренироваться:</h2>
-        <h2 class="task">CSS</h2>
-        <div class="stuff">
-            <a href="https://www.w3schools.com/html/exercise.asp?x=xrcise_css1">Задание</a>
-        </div>
-        <h2 class="task">Margin (Внешний отступ)</h2>
-        <div class="stuff">
-            <a href="https://www.w3schools.com/css/exercise.asp?filename=exercise_margin1">Задание #1</a>
-            <a href="https://www.w3schools.com/css/exercise.asp?filename=exercise_margin2">Задание #2</a>
-            <a href="https://www.w3schools.com/css/exercise.asp?filename=exercise_margin3">Задание #3</a>
-            <a href="https://www.w3schools.com/css/exercise.asp?filename=exercise_margin4">Задание #4</a>
-        </div>
-        <h2 class="task">Padding (Внутренний отступ)</h2>
-        <div class="stuff">
-            <a href="https://www.w3schools.com/css/exercise.asp?filename=exercise_padding1">Задание #1</a>
-            <a href="https://www.w3schools.com/css/exercise.asp?filename=exercise_padding2">Задание #2</a>
-            <a href="https://www.w3schools.com/css/exercise.asp?filename=exercise_padding3">Задание #3</a>
-        </div>
-        <h2 class="task">Border (Граница)</h2>
-        <div class="stuff">
-            <a href="https://www.w3schools.com/css/exercise.asp?filename=exercise_border1">Задание #1</a>
-            <a href="https://www.w3schools.com/css/exercise.asp?filename=exercise_border2">Задание #2</a>
-            <a href="https://www.w3schools.com/css/exercise.asp?filename=exercise_border3">Задание #3</a>
-            <a href="https://www.w3schools.com/css/exercise.asp?filename=exercise_border4">Задание #4</a>
+        <div class="socials">
+            <a href="https://t.me/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#29a9eb" d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24z"/><path fill="#fff" d="M5.4 11.8 16.9 7.4c.5-.2 1 .1.8 1l-2 9.3c-.1.7-.5.8-1.1.5l-3-2.2-1.4 1.4c-.2.2-.3.3-.6.3l.2-3.1 5.6-5c.2-.2 0-.3-.4-.1l-6.9 4.3-3-.9c-.6-.2-.7-.7.2-1z"/></svg> Telegram</a>
+            <a href="https://vk.com/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#0077ff"/><path fill="#fff" d="M12.8 17.3c-5.5 0-8.6-3.8-8.7-10h2.7c.1 4.6 2.1 6.5 3.7 6.9V7.3h2.6v4c1.6-.2 3.2-2 3.8-4h2.5a7.6 7.6 0 0 1-3.4 5 7.8 7.8 0 0 1 4 5h-2.8a4.9 4.9 0 0 0-4.1-3.6v3.6h-.3z"/></svg> ВКонтакте</a>
+            <a href="https://kidkod.ru" target="_blank" rel="noopener">🌐 kidkod.ru</a>
         </div>
     </div>
-    <div class="footer">
-        <h5>Связь с преподавателем:</h5>
-        <div class="links">
-            <a href="https://t.me/kidkodschool" target="_blank">
-                <img src="/img/telegram.png" class="social-icon" alt="телеграм">
-            </a>
-            <a href="https://vk.com/kidkodschool" target="_blank" class="vk-desktop">
-                <img src="/img/vk.png" class="social-icon" alt="вконтакте">
-            </a>
-        </div>
-    </div>
+</footer>
+<script src="assets/course-map.js?v=1"></script>
+<script src="assets/kk.js?v=1"></script>
 </body>
-
 </html>

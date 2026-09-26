@@ -1,72 +1,272 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="css/style_lesson.css" rel="stylesheet">
-    <title>Как работать с браузером и дополнительные материалы</title>
+    <title>Урок 2. Браузер, ссылки, таблицы, формы — домашнее задание · КИДКОД</title>
+    <meta name="description" content="Открываем «капот» браузера — консоль разработчика, узнаём, как страница попадает к нам из интернета, и учимся делать ссылки, таблицы и формы.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%90%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link href="assets/kk.css?v=1" rel="stylesheet">
+    <script>try{var t=localStorage.getItem('kkw:theme');if(t)document.documentElement.setAttribute('data-theme',JSON.parse(t))}catch(e){}</script>
 </head>
-
 <body>
-    <h1 class="title">Пошаговая инструкция - как работать с браузером Chrome</h1>
-    <ol>
-        <li>
-            <h2>Открываем браузер и нажимаем F12 или ctrl+shift+i на клавиатуре</h2>
-            <img src="img/browser_1.png" alt="Консоль в браузере" width="800">
-        </li>
-    </ol>
 
-    <ol>
-        <li>
-            <h2>Простая схема работы веба</h2>
-            <img src="img/web.png" alt="схема работы веба" width="800">
-        </li>
-    </ol>
+<header class="site-header">
+    <div class="wrap">
+        <a class="logo" href="index.html" aria-label="КИДКОД — на главную">
+            <span class="logo-mark">&lt;/&gt;</span>
+            <span>КИДКОД<small>домашние задания · Web</small></span>
+        </a>
+        <nav class="nav" aria-label="Основная навигация">
+            <a href="index.html#basic" class="hide-sm">HTML и CSS</a>
+            <a href="index.html#js" class="hide-sm">JavaScript</a>
+            <a href="index.html#project" class="hide-sm">Проект</a>
+            <button class="icon-btn theme-btn" type="button" aria-label="Сменить тему"><span class="moon">🌙</span><span class="sun">☀️</span></button>
+        </nav>
+    </div>
+</header>
 
-    <h1 class="homework">Создайте точно такую же страницу и разгадайте шифр</h1>
-    <h2 class="exercise"><a href="lesson_2_test.html">Ссылка на задание</a></h2>
 
-    <div class="additional">
-        <h2 class="important">Полезные ссылки:</h2>
-        <div class="stuff">
-            <a href="http://htmlbook.ru/html/form" target="_blank">Форма и ее атрибуты</a>
-            <a href="http://htmlbook.ru/samhtml5/formy" target="_blank">Элементы формы</a>
-            <a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D0%BA%D0%BE%D0%B4%D0%BE%D0%B2_%D1%81%D0%BE%D1%81%D1%82%D0%BE%D1%8F%D0%BD%D0%B8%D1%8F_HTTP" target="_blank">Список кодов ответов на веб запросы</a>
-            <a href="web_tests/lesson_2/index.html" target="_blank" rel="noopener noreferrer">Тест для 2 урока</a>
+<main>
+<section class="lesson-hero"><div class="wrap">
+<div class="crumbs"><a href="index.html">Главная</a><span>›</span><a href="index.html#basic">Начинающий web-дизайнер</a><span>›</span><span>Урок 2</span></div>
+<h1>Как работает веб. Ссылки, таблицы и формы</h1>
+<p class="lead">Открываем «капот» браузера — консоль разработчика, узнаём, как страница попадает к нам из интернета, и учимся делать ссылки, таблицы и формы.</p>
+<div class="chips"><span class="chip">📋 Заданий: 5</span><span class="chip">✅ С автопроверкой: 4</span><span class="chip">✨ Новых: 4</span></div>
+</div></section>
+<div class="wrap lesson-layout">
+<aside class="side"><div class="side-card" data-lesson-progress><h4>Прогресс</h4><div class="bar"><i></i></div><span class="cnt">0 из 0</span> выполнено</div><div class="side-card"><h4>Содержание</h4><nav class="toc"><a class="sec" href="#sec-0">Как работать с браузером Chrome</a><a class="sec" href="#sec-1">Задания</a><a href="#task-1"><span class="n">1</span><span>Создай такую же страницу и разгадай шифр</span></a><a href="#task-2"><span class="n">2</span><span>Расписание уроков</span></a><a href="#task-3"><span class="n">3</span><span>Все виды ссылок</span></a><a href="#task-4"><span class="n">4</span><span>Форма регистрации</span></a><a href="#task-5"><span class="n">5</span><span>Найди код ответа сервера</span></a><a class="sec" href="#links">Полезные ссылки</a></nav></div></aside>
+<div class="content">
+<h2 class="sec-title" id="sec-0"><span class="emoji">🔍</span>Как работать с браузером Chrome</h2>
+<ol class="steps"><li><p>Открой браузер и нажми <kbd>F12</kbd> или <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd>.</p><div class="shots single"><img class="zoomable" src="img/browser_1.png" alt="Консоль в браузере" loading="lazy"></div></li><li><p>Простая схема работы веба: браузер отправляет запрос, сервер присылает ответ.</p><div class="shots single"><img class="zoomable" src="img/web.png" alt="Схема работы веба" loading="lazy"></div></li></ol>
+<h2 class="sec-title" id="sec-1"><span class="emoji">✍️</span>Задания</h2>
+<article class="task" id="task-1" data-task="l2:1">
+<div class="task-head">
+<span class="task-num">1</span>
+<div class="task-title"><h3>Создай такую же страницу и разгадай шифр</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Открой образец, разгадай зашифрованное слово и сделай <b>точно такую же</b> страницу: заголовок, выделенный текст, форму с полем и кнопкой, подсказку.</p><p>Нажми <kbd>F12</kbd> на странице-образце — там можно найти кое-что интересное!</p>
 
+<p><a class="btn btn-ghost btn-sm" href="lesson_2_test.html" target="_blank" rel="noopener">👀 Открыть загадку</a></p>
+<div class="web" data-mode="html" data-key="l2:1" data-tests="[{&quot;js&quot;: &quot;return count(\&quot;h1\&quot;) &gt;= 1 || \&quot;Не нашёл элемент h1\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;h1\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Есть h1&quot;}, {&quot;js&quot;: &quot;return count(\&quot;mark\&quot;) &gt;= 1 || \&quot;Не нашёл элемент mark\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;mark\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Есть mark&quot;}, {&quot;js&quot;: &quot;return count(\&quot;form\&quot;) &gt;= 1 || \&quot;Не нашёл элемент form\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;form\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Есть form&quot;}, {&quot;js&quot;: &quot;return count(\&quot;form input[type=\\\&quot;text\\\&quot;]\&quot;) &gt;= 1 || \&quot;Не нашёл элемент form input[type=\\\&quot;text\\\&quot;]\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;form input[type=\\\&quot;text\\\&quot;]\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;В форме есть текстовое поле&quot;}, {&quot;js&quot;: &quot;return count(\&quot;input[type=\\\&quot;submit\\\&quot;], button\&quot;) &gt;= 1 || \&quot;Не нашёл элемент input[type=\\\&quot;submit\\\&quot;], button\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;input[type=\\\&quot;submit\\\&quot;], button\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Есть кнопка отправки&quot;}, {&quot;js&quot;: &quot;return count(\&quot;strong\&quot;) &gt;= 1 || \&quot;Не нашёл элемент strong\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;strong\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Есть strong&quot;}, {&quot;js&quot;: &quot;return count(\&quot;small\&quot;) &gt;= 1 || \&quot;Не нашёл элемент small\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;small\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Есть small&quot;}, {&quot;js&quot;: &quot;return count(\&quot;i\&quot;) &gt;= 1 || \&quot;Не нашёл элемент i\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;i\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Есть i&quot;}]"><textarea class="src" data-role="code" hidden>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Загадка&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Загадка!&lt;/h1&gt;
+    &lt;mark&gt;Я зашифровал слово, попробуй его расшифровать! А также попробуй создать точно такую же страничку =)&lt;/mark&gt;
+    &lt;div&gt;
+        &lt;h2&gt;жявягйябдйя&lt;/h2&gt;
+        &lt;form action=&quot;&quot; id=&quot;quizForm&quot;&gt;
+            &lt;input type=&quot;text&quot;&gt;
+            &lt;input type=&quot;submit&quot; value=&quot;Ответ&quot; id=&quot;secret&quot;&gt;
+        &lt;/form&gt;
+        &lt;p id=&quot;answer&quot;&gt;&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;strong&gt;Подсказка: &lt;/strong&gt;
+        &lt;small&gt;Шифр был придуман древнеримским &lt;i&gt;Диктатором!&lt;/i&gt;&lt;/small&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-2" data-task="l2:2">
+<div class="task-head">
+<span class="task-num">2</span>
+<div class="task-title"><h3>Расписание уроков</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Сделай таблицу с расписанием на 3 дня: первая строка — заголовки (<code>&lt;th&gt;</code>), дальше минимум 3 строки с уроками. У таблицы должна быть рамка: атрибут <code>border="1"</code>.</p>
+
+<div class="web" data-mode="html" data-key="l2:2" data-tests="[{&quot;js&quot;: &quot;return count(\&quot;table\&quot;) &gt;= 1 || \&quot;Не нашёл элемент table\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;table\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Есть table&quot;}, {&quot;js&quot;: &quot;return count(\&quot;th\&quot;) &gt;= 3 || \&quot;Нужно хотя бы 3 шт. th\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;th\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Не меньше 3 ячеек-заголовков th&quot;}, {&quot;js&quot;: &quot;return count(\&quot;tr\&quot;) &gt;= 4 || \&quot;Нужно хотя бы 4 шт. tr\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;tr\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Не меньше 4 строк tr&quot;}, {&quot;js&quot;: &quot;return has(\&quot;table[border]\&quot;) || css(\&quot;td\&quot;, \&quot;border-top-style\&quot;) !== \&quot;none\&quot; || \&quot;Добавь border=\\\&quot;1\\\&quot;\&quot;;&quot;, &quot;label&quot;: &quot;Есть рамка&quot;}]"><textarea class="src" data-role="code" hidden>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;table border=&quot;1&quot;&gt;
+        &lt;tr&gt;&lt;th&gt;Понедельник&lt;/th&gt;&lt;th&gt;Вторник&lt;/th&gt;&lt;th&gt;Среда&lt;/th&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;Математика&lt;/td&gt;&lt;td&gt;Русский&lt;/td&gt;&lt;td&gt;Информатика&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;Физкультура&lt;/td&gt;&lt;td&gt;Литература&lt;/td&gt;&lt;td&gt;Английский&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;Рисование&lt;/td&gt;&lt;td&gt;Музыка&lt;/td&gt;&lt;td&gt;Технология&lt;/td&gt;&lt;/tr&gt;
+    &lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-3" data-task="l2:3">
+<div class="task-head">
+<span class="task-num">3</span>
+<div class="task-title"><h3>Все виды ссылок</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Сделай три ссылки:</p><p><ul><li>на любой сайт, которая открывается <b>в новой вкладке</b> (<code>target="_blank"</code>)</li><li>на электронную почту (<code>href="mailto:..."</code>)</li><li>ссылку-<b>картинку</b>: внутри <code>&lt;a&gt;</code> — тег <code>&lt;img&gt;</code> (можно взять картинку <code>img/telegram.png</code>)</li></ul></p>
+
+<div class="web" data-mode="html" data-key="l2:3" data-tests="[{&quot;js&quot;: &quot;return count(\&quot;a[href^=\\\&quot;http\\\&quot;][target=\\\&quot;_blank\\\&quot;]\&quot;) &gt;= 1 || \&quot;Не нашёл элемент a[href^=\\\&quot;http\\\&quot;][target=\\\&quot;_blank\\\&quot;]\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;a[href^=\\\&quot;http\\\&quot;][target=\\\&quot;_blank\\\&quot;]\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Ссылка на сайт в новой вкладке&quot;}, {&quot;js&quot;: &quot;return count(\&quot;a[href^=\\\&quot;mailto:\\\&quot;]\&quot;) &gt;= 1 || \&quot;Не нашёл элемент a[href^=\\\&quot;mailto:\\\&quot;]\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;a[href^=\\\&quot;mailto:\\\&quot;]\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Ссылка на почту&quot;}, {&quot;js&quot;: &quot;return count(\&quot;a img\&quot;) &gt;= 1 || \&quot;Не нашёл элемент a img\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;a img\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Картинка внутри ссылки&quot;}]"><textarea class="src" data-role="code" hidden>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p&gt;&lt;a href=&quot;https://developer.mozilla.org/ru/&quot; target=&quot;_blank&quot;&gt;Учебник MDN&lt;/a&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;mailto:hello@kidkod.ru&quot;&gt;Написать письмо&lt;/a&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;https://t.me/kidkodschool&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;img/telegram.png&quot; alt=&quot;Телеграм&quot; width=&quot;48&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-4" data-task="l2:4">
+<div class="task-head">
+<span class="task-num">4</span>
+<div class="task-title"><h3>Форма регистрации</h3><div class="badges"><span class="badge lvl-2">средне</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Сделай форму регистрации в игре. В ней должны быть:</p><p><ul><li>поле для имени и поле для почты (<code>type="email"</code>)</li><li>поле для пароля (<code>type="password"</code>)</li><li>выпадающий список <code>&lt;select&gt;</code> с выбором класса героя (минимум 3 варианта)</li><li>галочка <code>type="checkbox"</code> «Согласен с правилами»</li><li>кнопка «Зарегистрироваться»</li><li>подписи <code>&lt;label&gt;</code> к полям</li></ul></p>
+
+<div class="web" data-mode="html" data-key="l2:4" data-tests="[{&quot;js&quot;: &quot;return count(\&quot;form\&quot;) &gt;= 1 || \&quot;Не нашёл элемент form\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;form\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Есть form&quot;}, {&quot;js&quot;: &quot;return count(\&quot;input[type=\\\&quot;email\\\&quot;]\&quot;) &gt;= 1 || \&quot;Не нашёл элемент input[type=\\\&quot;email\\\&quot;]\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;input[type=\\\&quot;email\\\&quot;]\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Есть input[type=\&quot;email\&quot;]&quot;}, {&quot;js&quot;: &quot;return count(\&quot;input[type=\\\&quot;password\\\&quot;]\&quot;) &gt;= 1 || \&quot;Не нашёл элемент input[type=\\\&quot;password\\\&quot;]\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;input[type=\\\&quot;password\\\&quot;]\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Есть input[type=\&quot;password\&quot;]&quot;}, {&quot;js&quot;: &quot;return count(\&quot;select option\&quot;) &gt;= 3 || \&quot;Нужно хотя бы 3 шт. select option\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;select option\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;В select не меньше 3 вариантов&quot;}, {&quot;js&quot;: &quot;return count(\&quot;input[type=\\\&quot;checkbox\\\&quot;]\&quot;) &gt;= 1 || \&quot;Не нашёл элемент input[type=\\\&quot;checkbox\\\&quot;]\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;input[type=\\\&quot;checkbox\\\&quot;]\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Есть input[type=\&quot;checkbox\&quot;]&quot;}, {&quot;js&quot;: &quot;return count(\&quot;button, input[type=\\\&quot;submit\\\&quot;]\&quot;) &gt;= 1 || \&quot;Не нашёл элемент button, input[type=\\\&quot;submit\\\&quot;]\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;button, input[type=\\\&quot;submit\\\&quot;]\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Есть кнопка&quot;}, {&quot;js&quot;: &quot;return count(\&quot;label\&quot;) &gt;= 2 || \&quot;Нужно хотя бы 2 шт. label\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;label\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Есть подписи label&quot;}]"><textarea class="src" data-role="code" hidden>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Регистрация героя&lt;/h1&gt;
+    &lt;form&gt;
+        &lt;label for=&quot;name&quot;&gt;Имя:&lt;/label&gt;
+        &lt;input type=&quot;text&quot; id=&quot;name&quot;&gt;&lt;br&gt;
+        &lt;label for=&quot;email&quot;&gt;Почта:&lt;/label&gt;
+        &lt;input type=&quot;email&quot; id=&quot;email&quot;&gt;&lt;br&gt;
+        &lt;label for=&quot;pass&quot;&gt;Пароль:&lt;/label&gt;
+        &lt;input type=&quot;password&quot; id=&quot;pass&quot;&gt;&lt;br&gt;
+        &lt;label for=&quot;hero&quot;&gt;Класс героя:&lt;/label&gt;
+        &lt;select id=&quot;hero&quot;&gt;
+            &lt;option&gt;Воин&lt;/option&gt;
+            &lt;option&gt;Маг&lt;/option&gt;
+            &lt;option&gt;Лучник&lt;/option&gt;
+        &lt;/select&gt;&lt;br&gt;
+        &lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt; Согласен с правилами&lt;/label&gt;&lt;br&gt;
+        &lt;button type=&quot;submit&quot;&gt;Зарегистрироваться&lt;/button&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-5" data-task="l2:5">
+<div class="task-head">
+<span class="task-num">5</span>
+<div class="task-title"><h3>Найди код ответа сервера</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge new">новое</span></div></div>
+</div>
+<div class="task-body">
+<p>Открой консоль разработчика (<kbd>F12</kbd>) → вкладка <b>Network</b> (Сеть) и обнови эту страницу. Какой <b>код ответа</b> пришёл для файла <code>lesson_2.html</code>?</p><p>Теперь открой несуществующую страницу, например <code>raferalston.github.io/nothing.html</code>. Какой код теперь? Найди оба кода в списке кодов ответов (ссылка внизу).</p>
+
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>Для существующей страницы — 200 OK (всё хорошо).
+Для несуществующей — 404 Not Found (страница не найдена).
+</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<h2 class="sec-title" id="links"><span class="emoji">🔗</span>Полезные ссылки</h2>
+<h3 class="links-title">Полезные ссылки</h3>
+<div class="links-grid">
+<a class="link-card" href="http://htmlbook.ru/html/form" target="_blank" rel="noopener"><span class="ico">📘</span><span>Форма и её атрибуты<small>htmlbook.ru</small></span></a>
+<a class="link-card" href="http://htmlbook.ru/samhtml5/formy" target="_blank" rel="noopener"><span class="ico">📘</span><span>Элементы формы<small>htmlbook.ru</small></span></a>
+<a class="link-card" href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D0%BA%D0%BE%D0%B4%D0%BE%D0%B2_%D1%81%D0%BE%D1%81%D1%82%D0%BE%D1%8F%D0%BD%D0%B8%D1%8F_HTTP" target="_blank" rel="noopener"><span class="ico">📘</span><span>Список кодов ответов HTTP<small>ru.wikipedia.org</small></span></a>
+<a class="link-card" href="web_tests/lesson_2/index.html" target="_blank" rel="noopener"><span class="ico">📝</span><span>Тест для 2 урока<small>raferalston.github.io</small></span></a>
+</div>
+<h3 class="links-title">Что почитать</h3>
+<div class="links-grid">
+<a class="link-card" href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/How_the_Web_works" target="_blank" rel="noopener"><span class="ico">📚</span><span>Как работают веб-запросы<small>developer.mozilla.org</small></span></a>
+<a class="link-card" href="https://www.w3schools.com/tags/" target="_blank" rel="noopener"><span class="ico">📚</span><span>Список тегов<small>w3schools.com</small></span></a>
+</div>
+<h3 class="links-title">Где потренироваться</h3>
+<div class="links-grid">
+<a class="link-card" href="https://www.w3schools.com/html/exercise.asp?x=xrcise_tables1" target="_blank" rel="noopener"><span class="ico">🏋️</span><span>Тег таблицы (table)<small>w3schools.com</small></span></a>
+<a class="link-card" href="https://www.w3schools.com/html/exercise.asp?x=xrcise_links1" target="_blank" rel="noopener"><span class="ico">🏋️</span><span>Ссылки (a)<small>w3schools.com</small></span></a>
+<a class="link-card" href="https://www.w3schools.com/html/exercise.asp?x=xrcise_forms1" target="_blank" rel="noopener"><span class="ico">🏋️</span><span>Тег формы (form)<small>w3schools.com</small></span></a>
+</div>
+<nav class="pager" aria-label="Соседние уроки">
+<a class="prev" href="lesson_1.html"><small>← Предыдущий</small>Урок 1. Первая страница: теги</a>
+<a class="next" href="lesson_3.html"><small>Следующий →</small>Урок 3. Основы CSS</a>
+</nav>
+</div>
+</div>
+</main>
+<footer class="site-footer">
+    <div class="wrap">
+        <div>
+            <b>КИДКОД</b> — школа программирования для детей и подростков<br>
+            <span>Вопросы по домашке? Пиши преподавателю:</span>
         </div>
-        <h2 class="important">Что почитать:</h2>
-        <div class="stuff">
-            <a href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/How_the_Web_works" target="_blank">Как работают веб запросы</a>
-            <a href="https://www.w3schools.com/tags/" target="_blank">Список тегов</a>
-        </div>
-        <h2 class="important">Где потренироваться:</h2>
-        <h2 class="task">Тег таблицы (table)</h2>
-        <div class="stuff">
-            <a href="https://www.w3schools.com/html/exercise.asp?x=xrcise_tables1">Задание</a>
-        </div>
-        <h2 class="task">Ссылки (a)</h2>
-        <div class="stuff">
-            <a href="https://www.w3schools.com/html/exercise.asp?x=xrcise_links1">Задание</a>
-        </div>
-        <h2 class="task">Тег формы (form)</h2>
-        <div class="stuff">
-            <a href="https://www.w3schools.com/html/exercise.asp?x=xrcise_forms1">Задание</a>
+        <div class="socials">
+            <a href="https://t.me/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#29a9eb" d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24z"/><path fill="#fff" d="M5.4 11.8 16.9 7.4c.5-.2 1 .1.8 1l-2 9.3c-.1.7-.5.8-1.1.5l-3-2.2-1.4 1.4c-.2.2-.3.3-.6.3l.2-3.1 5.6-5c.2-.2 0-.3-.4-.1l-6.9 4.3-3-.9c-.6-.2-.7-.7.2-1z"/></svg> Telegram</a>
+            <a href="https://vk.com/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#0077ff"/><path fill="#fff" d="M12.8 17.3c-5.5 0-8.6-3.8-8.7-10h2.7c.1 4.6 2.1 6.5 3.7 6.9V7.3h2.6v4c1.6-.2 3.2-2 3.8-4h2.5a7.6 7.6 0 0 1-3.4 5 7.8 7.8 0 0 1 4 5h-2.8a4.9 4.9 0 0 0-4.1-3.6v3.6h-.3z"/></svg> ВКонтакте</a>
+            <a href="https://kidkod.ru" target="_blank" rel="noopener">🌐 kidkod.ru</a>
         </div>
     </div>
-    <div class="footer">
-        <h5>Связь с преподавателем:</h5>
-        <div class="links">
-            <a href="https://t.me/kidkodschool" target="_blank">
-                <img src="/img/telegram.png" class="social-icon" alt="телеграм">
-            </a>
-            <a href="https://vk.com/kidkodschool" target="_blank" class="vk-desktop">
-                <img src="/img/vk.png" class="social-icon" alt="вконтакте">
-            </a>
-        </div>
-    </div>
+</footer>
+<script src="assets/course-map.js?v=1"></script>
+<script src="assets/kk.js?v=1"></script>
 </body>
-
 </html>

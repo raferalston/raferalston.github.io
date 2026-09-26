@@ -1,143 +1,309 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="css/style_lesson.css" rel="stylesheet">
-    <title>Основы CSS #2</title>
-    <style>
-    .code-third-number {
-        width: 6px;
-    }
-    .code-four-number {
-        color: rgba(255, 255, 255, 0);
-    }
-    </style>
+    <title>Урок 4. Структура сайта и селекторы — домашнее задание · КИДКОД</title>
+    <meta name="description" content="Строим каркас сайта по рисунку, знакомимся с селекторами class и id и регистрируемся на GitHub.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%90%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link href="assets/kk.css?v=1" rel="stylesheet">
+    <script>try{var t=localStorage.getItem('kkw:theme');if(t)document.documentElement.setAttribute('data-theme',JSON.parse(t))}catch(e){}</script>
+    <style>.code-third-number { width: 6px; display: inline-block; } .code-four-number { color: rgba(255, 255, 255, 0); }</style>
 </head>
-
 <body>
-    <span class="code-third-number check-css-of-this-element"></span>
-    <h1 class="title">Создаем структуру вашему сайту</h1>
-    <ol>
-        <li>
-            <h2>Задание, создать html структуру вашему сайту, используя рисунок</h2>
-            <ol>
-                <li>
-                    <h2>Рисунок</h2>
-                    <img src="img/wireframe.png" width="200" alt="Макет">
-                </li>
-                <li>
-                    <h2>Структура и контент</h2>
-                    <img src="img/html_struct_code.png" width="800" alt="Код">
-                </li>
-                <li>
-                    <h2>Результат</h2>
-                    <img src="img/html_sctruct_view.png" alt="Вид">
-                </li>
-            </ol>
-        </li>
-        <li>
-            <h2>Задание, cоздать внутреннюю ссылку в документе</h2>
-            <img src="img/inner_anchor.png" alt="Вид">
-        </li>
-    </ol>
-    <h1 class="title">Как зарегистрировать аккаунт на github</h1>
-    <ol>
-        <li>
-            <h2>
-                <a href="https://github.com/">Ссылка на сайт - github.com</a>
-            </h2>
-        </li>
-        <li>
-            <h2>Вводим свои данные и нажимаем Sign up for github</h2>
-            <img src="img/git_1.png" width="600" alt="Вид">
-        </li>
-        <li>
-            <h2>Проверяем почту и нажимаем continue</h2>
-            <img src="img/git_2.png" width="600" alt="Вид">
-        </li>
-        <li>
-            <h2>Вводим пароль и нажимаем continue</h2>
-            <img src="img/git_3.png" width="600" alt="Вид">
-        </li>
-        <li>
-            <h2>Вводим никнейм и нажимаем continue</h2>
-            <img src="img/git_4.png" width="600" alt="Вид">
-        </li>
-        <li>
-            <h2>Пишем no и нажимаем continue</h2>
-            <img src="img/git_5.png" width="600" alt="Вид">
-        </li>
-        <li>
-            <h2>Нажимаем на Start puzzle и проходим головоломку</h2>
-            <img src="img/git_6.png" width="600" alt="Вид">
-        </li>
-        <li>
-            <h2>После успешного прохождения нажимаем на Create account</h2>
-            <img src="img/git_7.png" width="600" alt="Вид">
-        </li>
-        <li>
-            <h2>Далее вводим полученный на почту код</h2>
-            <img src="img/git_8.png" width="600" alt="Вид">
-        </li>
-        <li>
-            <h2>Отмечаем пункты как указано на картинке</h2>
-            <img src="img/git_9.png" width="600" alt="Вид">
-        </li>
-        <li>
-            <h2>В следующем меню жмем Continue</h2>
-            <img src="img/git_10.png" width="600" alt="Вид">
-        </li>
-        <li>
-            <h2>Выбираем Continue for free</h2>
-            <img src="img/git_11.png" width="600" alt="Вид">
-        </li>
-    </ol>
-    <div class="additional">
-        <div class="code-four-number">3</div>
-        <h2 class="important">Полезные ссылки:</h2>
-        <div class="stuff">
-            <a href="https://flukeout.github.io/" target="_blank" rel="noopener noreferrer">Игра для изучения селекторов</a>
-            <a href="https://html5book.ru/edinicy-izmereniya-vh-vw-vmin-vmax/" target="_blank">Единицы измерения vh, vw, vmin, vmax</a>
-            <a href="https://developer.mozilla.org/ru/docs/Web/CSS/CSS_%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B" target="_blank">Селекторы</a>
-            <a href="https://nikomedvedev.ru/other/vscodeshortcuts/hotkeys.html" target="_blank">Горячие клавиши для Visual Studio Code</a>
-            <a href="web_tests/lesson_4/index.html" target="_blank" rel="noopener noreferrer">Тест для 4 урока</a>
-        </div>
-        <h2 class="important">Где потренироваться:</h2>
-        <h2 class="task">Селекторы - class</h2>
-        <div class="stuff">
-            <a href="https://www.w3schools.com/html/exercise.asp?x=xrcise_classes1">Задание</a>
-        </div>
-        <h2 class="task">Селекторы - id</h2>
-        <div class="stuff">
-            <a href="https://www.w3schools.com/html/exercise.asp?x=xrcise_id1">Задание</a>
-        </div>
-        <h2 class="task">Ширина/Высоты (width/height)</h2>
-        <div class="stuff">
-            <a href="https://www.w3schools.com/css/exercise.asp?filename=exercise_dimension1">Задание #1</a>
-            <a href="https://www.w3schools.com/css/exercise.asp?filename=exercise_dimension2">Задание #2</a>
-        </div>
-        <h2 class="task">Блоковая модель</h2>
-        <div class="stuff">
-            <a href="https://www.w3schools.com/css/exercise.asp?filename=exercise_boxmodel1">Задание #1</a>
-            <a href="https://www.w3schools.com/css/exercise.asp?filename=exercise_boxmodel2">Задание #2</a>
-            <a href="https://www.w3schools.com/css/exercise.asp?filename=exercise_boxmodel3">Задание #3</a>
-            <a href="https://www.w3schools.com/css/exercise.asp?filename=exercise_boxmodel4">Задание #4</a>
-        </div>
-    </div>
-    <div class="footer">
-        <h5>Связь с преподавателем:</h5>
-        <div class="links">
-            <a href="https://t.me/kidkodschool" target="_blank">
-                <img src="/img/telegram.png" class="social-icon" alt="телеграм">
-            </a>
-            <a href="https://vk.com/kidkodschool" target="_blank" class="vk-desktop">
-                <img src="/img/vk.png" class="social-icon" alt="вконтакте">
-            </a>
-        </div>
-    </div>
-</body>
 
+<header class="site-header">
+    <div class="wrap">
+        <a class="logo" href="index.html" aria-label="КИДКОД — на главную">
+            <span class="logo-mark">&lt;/&gt;</span>
+            <span>КИДКОД<small>домашние задания · Web</small></span>
+        </a>
+        <nav class="nav" aria-label="Основная навигация">
+            <a href="index.html#basic" class="hide-sm">HTML и CSS</a>
+            <a href="index.html#js" class="hide-sm">JavaScript</a>
+            <a href="index.html#project" class="hide-sm">Проект</a>
+            <button class="icon-btn theme-btn" type="button" aria-label="Сменить тему"><span class="moon">🌙</span><span class="sun">☀️</span></button>
+        </nav>
+    </div>
+</header>
+
+<span class="code-third-number check-css-of-this-element"></span>
+<main>
+<section class="lesson-hero"><div class="wrap">
+<div class="crumbs"><a href="index.html">Главная</a><span>›</span><a href="index.html#basic">Начинающий web-дизайнер</a><span>›</span><span>Урок 4</span></div>
+<h1>Структура сайта. Селекторы class и id</h1>
+<p class="lead">Строим каркас сайта по рисунку, знакомимся с селекторами <code>class</code> и <code>id</code> и регистрируемся на GitHub.</p>
+<div class="chips"><span class="chip">📋 Заданий: 4</span><span class="chip">✅ С автопроверкой: 4</span><span class="chip">✨ Новых: 2</span></div>
+</div></section>
+<div class="wrap lesson-layout">
+<aside class="side"><div class="side-card" data-lesson-progress><h4>Прогресс</h4><div class="bar"><i></i></div><span class="cnt">0 из 0</span> выполнено</div><div class="side-card"><h4>Содержание</h4><nav class="toc"><a class="sec" href="#sec-0">Задания</a><a href="#task-1"><span class="n">1</span><span>HTML-структура по рисунку</span></a><a href="#task-2"><span class="n">2</span><span>Внутренняя ссылка</span></a><a href="#task-3"><span class="n">3</span><span>Селекторы class и id</span></a><a href="#task-4"><span class="n">4</span><span>Экран целиком: vh и vw</span></a><a class="sec" href="#sec-5">Как зарегистрировать аккаунт на GitHub</a><a class="sec" href="#links">Полезные ссылки</a></nav></div></aside>
+<div class="content">
+<h2 class="sec-title" id="sec-0"><span class="emoji">🏗️</span>Задания</h2>
+<article class="task" id="task-1" data-task="l4:1">
+<div class="task-head">
+<span class="task-num">1</span>
+<div class="task-title"><h3>HTML-структура по рисунку</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Создай HTML-структуру своего сайта по рисунку-макету: заголовок, блоки с картинками (<code>class="picture-1"</code>, <code>class="picture-2"</code>), блок с текстами (<code>class="text-1"</code>, <code>class="text-2"</code>) и кнопку.</p>
+<div class="shots"><img class="zoomable" src="img/wireframe.png" alt="Макет" loading="lazy"><img class="zoomable" src="img/html_struct_code.png" alt="Структура и контент" loading="lazy"><img class="zoomable" src="img/html_sctruct_view.png" alt="Результат" loading="lazy"></div>
+<div class="web" data-mode="html" data-key="l4:1" data-tests="[{&quot;js&quot;: &quot;return count(\&quot;h1\&quot;) &gt;= 1 || \&quot;Не нашёл элемент h1\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;h1\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Есть h1&quot;}, {&quot;js&quot;: &quot;return count(\&quot;.picture-1 img\&quot;) &gt;= 1 || \&quot;Не нашёл элемент .picture-1 img\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;.picture-1 img\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Картинка в .picture-1&quot;}, {&quot;js&quot;: &quot;return count(\&quot;.picture-2 img\&quot;) &gt;= 1 || \&quot;Не нашёл элемент .picture-2 img\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;.picture-2 img\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Картинка в .picture-2&quot;}, {&quot;js&quot;: &quot;return count(\&quot;.text-1\&quot;) &gt;= 1 || \&quot;Не нашёл элемент .text-1\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;.text-1\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Есть .text-1&quot;}, {&quot;js&quot;: &quot;return count(\&quot;.text-2\&quot;) &gt;= 1 || \&quot;Не нашёл элемент .text-2\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;.text-2\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Есть .text-2&quot;}, {&quot;js&quot;: &quot;return count(\&quot;button\&quot;) &gt;= 1 || \&quot;Не нашёл элемент button\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;button\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Есть button&quot;}]"><textarea class="src" data-role="code" hidden>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Структура html&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Название&lt;/h1&gt;
+    &lt;div&gt;
+        &lt;div class=&quot;picture-1&quot;&gt;
+            &lt;img src=&quot;img/lesson_6.jpg&quot; alt=&quot;Тут будет первая картинка&quot; width=&quot;200&quot;&gt;
+            &lt;span&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit.&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;picture-2&quot;&gt;
+        &lt;img src=&quot;img/lesson_6.jpg&quot; alt=&quot;Тут будет вторая картинка&quot; width=&quot;200&quot;&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;span class=&quot;text-1&quot;&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit.&lt;/span&gt;
+        &lt;span class=&quot;text-2&quot;&gt;Deserunt modi tempore eligendi minus recusandae.&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;button&gt;Кнопка&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-2" data-task="l4:2">
+<div class="task-head">
+<span class="task-num">2</span>
+<div class="task-title"><h3>Внутренняя ссылка</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Внутренняя ссылка ведёт не на другую страницу, а к месту на этой же странице: <code>href="#id-блока"</code>. Замени <code>_______</code> так, чтобы ссылка «ВНИЗ» вела ко второму блоку, а «НАВЕРХ» — к первому. Покрути результат и понажимай ссылки!</p>
+<div class="shots single"><img class="zoomable" src="img/inner_anchor.png" alt="Вид" loading="lazy"></div>
+<div class="web" data-mode="html" data-key="l4:2" data-tests="[{&quot;js&quot;: &quot;return count(\&quot;a[href=\\\&quot;#second-section\\\&quot;]\&quot;) &gt;= 1 || \&quot;Не нашёл элемент a[href=\\\&quot;#second-section\\\&quot;]\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;a[href=\\\&quot;#second-section\\\&quot;]\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Ссылка ВНИЗ ведёт к #second-section&quot;}, {&quot;js&quot;: &quot;return count(\&quot;a[href=\\\&quot;#first-section\\\&quot;]\&quot;) &gt;= 1 || \&quot;Не нашёл элемент a[href=\\\&quot;#first-section\\\&quot;]\&quot; + \&quot; (сейчас: \&quot; + count(\&quot;a[href=\\\&quot;#first-section\\\&quot;]\&quot;) + \&quot;)\&quot;;&quot;, &quot;label&quot;: &quot;Ссылка НАВЕРХ ведёт к #first-section&quot;}]"><textarea class="src" data-role="code" hidden>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;title&gt;Ссылка внутри документа&lt;/title&gt;
+    &lt;style&gt;
+        #first-section {
+            height: 100vh;
+            background-color: crimson;
+        }
+        #second-section {
+            height: 100vh;
+            background-color: #06ee72;
+        }
+        a {
+            font-size: 4em;
+            color: white;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;first-section&quot;&gt;
+        &lt;a href=&quot;_______&quot;&gt;ВНИЗ&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;second-section&quot;&gt;
+        &lt;a href=&quot;_______&quot;&gt;НАВЕРХ&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;title&gt;Ссылка внутри документа&lt;/title&gt;
+    &lt;style&gt;
+        #first-section {
+            height: 100vh;
+            background-color: crimson;
+        }
+        #second-section {
+            height: 100vh;
+            background-color: #06ee72;
+        }
+        a {
+            font-size: 4em;
+            color: white;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;first-section&quot;&gt;
+        &lt;a href=&quot;#second-section&quot;&gt;ВНИЗ&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;second-section&quot;&gt;
+        &lt;a href=&quot;#first-section&quot;&gt;НАВЕРХ&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-3" data-task="l4:3">
+<div class="task-head">
+<span class="task-num">3</span>
+<div class="task-title"><h3>Селекторы class и id</h3><div class="badges"><span class="badge lvl-1">легко</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Напиши стили, не меняя HTML:</p><p><ul><li>элемент с <code>id="main-title"</code> — фиолетовый (<code>purple</code>)</li><li>все элементы с классом <code>.important</code> — жирные и с жёлтым фоном (<code>yellow</code>)</li><li>элементы с классом <code>.hidden</code> — спрятать (<code>display: none</code>)</li></ul></p>
+
+<details class="hint"><summary>Подсказка</summary><div class="inner"><p>Селектор класса начинается с точки: <code>.important</code>, селектор id — с решётки: <code>#main-title</code>.</p></div></details>
+<div class="web" data-mode="html" data-key="l4:3" data-tests="[{&quot;js&quot;: &quot;if (!has(\&quot;#main-title\&quot;)) return \&quot;Не нашёл элемент #main-title\&quot;; return cssIs(\&quot;#main-title\&quot;, \&quot;color\&quot;, \&quot;purple\&quot;) || \&quot;Сейчас color = \&quot; + css(\&quot;#main-title\&quot;, \&quot;color\&quot;);&quot;, &quot;label&quot;: &quot;#main-title { color: purple }&quot;}, {&quot;js&quot;: &quot;if (!has(\&quot;.important\&quot;)) return \&quot;Не нашёл элемент .important\&quot;; return cssIs(\&quot;.important\&quot;, \&quot;font-weight\&quot;, \&quot;bold\&quot;) || \&quot;Сейчас font-weight = \&quot; + css(\&quot;.important\&quot;, \&quot;font-weight\&quot;);&quot;, &quot;label&quot;: &quot;.important { font-weight: bold }&quot;}, {&quot;js&quot;: &quot;if (!has(\&quot;.important\&quot;)) return \&quot;Не нашёл элемент .important\&quot;; return cssIs(\&quot;.important\&quot;, \&quot;background-color\&quot;, \&quot;yellow\&quot;) || \&quot;Сейчас background-color = \&quot; + css(\&quot;.important\&quot;, \&quot;background-color\&quot;);&quot;, &quot;label&quot;: &quot;.important { background-color: yellow }&quot;}, {&quot;js&quot;: &quot;if (!has(\&quot;.hidden\&quot;)) return \&quot;Не нашёл элемент .hidden\&quot;; return cssIs(\&quot;.hidden\&quot;, \&quot;display\&quot;, \&quot;none\&quot;) || \&quot;Сейчас display = \&quot; + css(\&quot;.hidden\&quot;, \&quot;display\&quot;);&quot;, &quot;label&quot;: &quot;.hidden { display: none }&quot;}]"><textarea class="src" data-role="code" hidden>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+    &lt;style&gt;
+        /* Пиши стили здесь */
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1 id=&quot;main-title&quot;&gt;Правила класса&lt;/h1&gt;
+    &lt;p&gt;Приходить вовремя.&lt;/p&gt;
+    &lt;p class=&quot;important&quot;&gt;Не шуметь на уроке!&lt;/p&gt;
+    &lt;p&gt;Делать домашку.&lt;/p&gt;
+    &lt;p class=&quot;important&quot;&gt;Сохранять код!&lt;/p&gt;
+    &lt;p class=&quot;hidden&quot;&gt;Этот текст должен исчезнуть&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+    &lt;style&gt;
+
+        #main-title { color: purple; }
+        .important { font-weight: bold; background-color: yellow; }
+        .hidden { display: none; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1 id=&quot;main-title&quot;&gt;Правила класса&lt;/h1&gt;
+    &lt;p&gt;Приходить вовремя.&lt;/p&gt;
+    &lt;p class=&quot;important&quot;&gt;Не шуметь на уроке!&lt;/p&gt;
+    &lt;p&gt;Делать домашку.&lt;/p&gt;
+    &lt;p class=&quot;important&quot;&gt;Сохранять код!&lt;/p&gt;
+    &lt;p class=&quot;hidden&quot;&gt;Этот текст должен исчезнуть&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-4" data-task="l4:4">
+<div class="task-head">
+<span class="task-num">4</span>
+<div class="task-title"><h3>Экран целиком: vh и vw</h3><div class="badges"><span class="badge lvl-2">средне</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Сделай блок <code>.hero</code> высотой ровно в <b>весь экран</b> (<code>100vh</code>), а блок <code>.half</code> — шириной в <b>половину</b> экрана (<code>50vw</code>). Не забудь убрать отступы у <code>body</code>: <code>margin: 0</code>.</p>
+
+<div class="web" data-mode="html" data-key="l4:4" data-tests="[{&quot;js&quot;: &quot;if (!has(\&quot;.hero\&quot;)) return \&quot;Нет .hero\&quot;; return Math.abs($(\&quot;.hero\&quot;).getBoundingClientRect().height - innerHeight) &lt; 2 || \&quot;Высота .hero = \&quot; + css(\&quot;.hero\&quot;, \&quot;height\&quot;) + \&quot;, а экран — \&quot; + innerHeight + \&quot;px\&quot;;&quot;, &quot;label&quot;: &quot;.hero высотой во весь экран&quot;}, {&quot;js&quot;: &quot;if (!has(\&quot;.half\&quot;)) return \&quot;Нет .half\&quot;; return Math.abs($(\&quot;.half\&quot;).getBoundingClientRect().width - innerWidth / 2) &lt; 2 || \&quot;Ширина .half = \&quot; + css(\&quot;.half\&quot;, \&quot;width\&quot;);&quot;, &quot;label&quot;: &quot;.half шириной в половину экрана&quot;}, {&quot;js&quot;: &quot;if (!has(\&quot;body\&quot;)) return \&quot;Не нашёл элемент body\&quot;; return cssIs(\&quot;body\&quot;, \&quot;margin-top\&quot;, \&quot;0px\&quot;) || \&quot;Сейчас margin-top = \&quot; + css(\&quot;body\&quot;, \&quot;margin-top\&quot;);&quot;, &quot;label&quot;: &quot;У body нет отступов&quot;}]"><textarea class="src" data-role="code" hidden>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+    &lt;style&gt;
+
+        .hero { background-color: #6d4aff; color: white; }
+        .half { background-color: #ff9f1c; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;hero&quot;&gt;Весь экран&lt;/div&gt;
+    &lt;div class=&quot;half&quot;&gt;Половина ширины&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+    &lt;style&gt;
+
+        body { margin: 0; }
+        .hero { background-color: #6d4aff; color: white; height: 100vh; }
+        .half { background-color: #ff9f1c; width: 50vw; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;hero&quot;&gt;Весь экран&lt;/div&gt;
+    &lt;div class=&quot;half&quot;&gt;Половина ширины&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<h2 class="sec-title" id="sec-5"><span class="emoji">🐙</span>Как зарегистрировать аккаунт на GitHub</h2>
+<ol class="steps"><li><p>Открой сайт <a href="https://github.com/" target="_blank" rel="noopener">github.com</a>.</p></li><li><p>Введи свои данные и нажми <b>Sign up for GitHub</b>.</p><div class="shots single"><img class="zoomable" src="img/git_1.png" alt="Иллюстрация к заданию" loading="lazy"></div></li><li><p>Проверь почту и нажми <b>Continue</b>.</p><div class="shots single"><img class="zoomable" src="img/git_2.png" alt="Иллюстрация к заданию" loading="lazy"></div></li><li><p>Введи пароль и нажми <b>Continue</b>.</p><div class="shots single"><img class="zoomable" src="img/git_3.png" alt="Иллюстрация к заданию" loading="lazy"></div></li><li><p>Введи никнейм и нажми <b>Continue</b>.</p><div class="shots single"><img class="zoomable" src="img/git_4.png" alt="Иллюстрация к заданию" loading="lazy"></div></li><li><p>Напиши <b>n</b> и нажми <b>Continue</b>.</p><div class="shots single"><img class="zoomable" src="img/git_5.png" alt="Иллюстрация к заданию" loading="lazy"></div></li><li><p>Нажми <b>Start puzzle</b> и пройди головоломку.</p><div class="shots single"><img class="zoomable" src="img/git_6.png" alt="Иллюстрация к заданию" loading="lazy"></div></li><li><p>После успешного прохождения нажми <b>Create account</b>.</p><div class="shots single"><img class="zoomable" src="img/git_7.png" alt="Иллюстрация к заданию" loading="lazy"></div></li><li><p>Введи код, который пришёл на почту.</p><div class="shots single"><img class="zoomable" src="img/git_8.png" alt="Иллюстрация к заданию" loading="lazy"></div></li><li><p>Отметь пункты, как на картинке.</p><div class="shots single"><img class="zoomable" src="img/git_9.png" alt="Иллюстрация к заданию" loading="lazy"></div></li><li><p>В следующем меню нажми <b>Continue</b>.</p><div class="shots single"><img class="zoomable" src="img/git_10.png" alt="Иллюстрация к заданию" loading="lazy"></div></li><li><p>Выбери <b>Continue for free</b>.</p><div class="shots single"><img class="zoomable" src="img/git_11.png" alt="Иллюстрация к заданию" loading="lazy"></div></li></ol>
+<div class="code-four-number">3</div>
+<h2 class="sec-title" id="links"><span class="emoji">🔗</span>Полезные ссылки</h2>
+<h3 class="links-title">Полезные ссылки</h3>
+<div class="links-grid">
+<a class="link-card" href="https://flukeout.github.io/" target="_blank" rel="noopener"><span class="ico">🎮</span><span>Игра для изучения селекторов<small>flukeout.github.io</small></span></a>
+<a class="link-card" href="https://html5book.ru/edinicy-izmereniya-vh-vw-vmin-vmax/" target="_blank" rel="noopener"><span class="ico">📘</span><span>Единицы измерения vh, vw, vmin, vmax<small>html5book.ru</small></span></a>
+<a class="link-card" href="https://developer.mozilla.org/ru/docs/Web/CSS/CSS_%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B" target="_blank" rel="noopener"><span class="ico">📘</span><span>Селекторы<small>developer.mozilla.org</small></span></a>
+<a class="link-card" href="https://nikomedvedev.ru/other/vscodeshortcuts/hotkeys.html" target="_blank" rel="noopener"><span class="ico">🛠️</span><span>Горячие клавиши VS Code<small>nikomedvedev.ru</small></span></a>
+<a class="link-card" href="web_tests/lesson_4/index.html" target="_blank" rel="noopener"><span class="ico">📝</span><span>Тест для 4 урока<small>raferalston.github.io</small></span></a>
+</div>
+<h3 class="links-title">Где потренироваться</h3>
+<div class="links-grid">
+<a class="link-card" href="https://www.w3schools.com/html/exercise.asp?x=xrcise_classes1" target="_blank" rel="noopener"><span class="ico">🏋️</span><span>Селекторы — class<small>w3schools.com</small></span></a>
+<a class="link-card" href="https://www.w3schools.com/html/exercise.asp?x=xrcise_id1" target="_blank" rel="noopener"><span class="ico">🏋️</span><span>Селекторы — id<small>w3schools.com</small></span></a>
+<a class="link-card" href="https://www.w3schools.com/css/exercise.asp?filename=exercise_dimension1" target="_blank" rel="noopener"><span class="ico">🏋️</span><span>Ширина/высота #1<small>w3schools.com</small></span></a>
+<a class="link-card" href="https://www.w3schools.com/css/exercise.asp?filename=exercise_dimension2" target="_blank" rel="noopener"><span class="ico">🏋️</span><span>Ширина/высота #2<small>w3schools.com</small></span></a>
+<a class="link-card" href="https://www.w3schools.com/css/exercise.asp?filename=exercise_boxmodel1" target="_blank" rel="noopener"><span class="ico">🏋️</span><span>Блоковая модель #1<small>w3schools.com</small></span></a>
+<a class="link-card" href="https://www.w3schools.com/css/exercise.asp?filename=exercise_boxmodel2" target="_blank" rel="noopener"><span class="ico">🏋️</span><span>Блоковая модель #2<small>w3schools.com</small></span></a>
+<a class="link-card" href="https://www.w3schools.com/css/exercise.asp?filename=exercise_boxmodel3" target="_blank" rel="noopener"><span class="ico">🏋️</span><span>Блоковая модель #3<small>w3schools.com</small></span></a>
+<a class="link-card" href="https://www.w3schools.com/css/exercise.asp?filename=exercise_boxmodel4" target="_blank" rel="noopener"><span class="ico">🏋️</span><span>Блоковая модель #4<small>w3schools.com</small></span></a>
+</div>
+<nav class="pager" aria-label="Соседние уроки">
+<a class="prev" href="lesson_3.html"><small>← Предыдущий</small>Урок 3. Основы CSS</a>
+<a class="next" href="lesson_5.html"><small>Следующий →</small>Урок 5. Сайт в интернете и position</a>
+</nav>
+</div>
+</div>
+</main>
+<footer class="site-footer">
+    <div class="wrap">
+        <div>
+            <b>КИДКОД</b> — школа программирования для детей и подростков<br>
+            <span>Вопросы по домашке? Пиши преподавателю:</span>
+        </div>
+        <div class="socials">
+            <a href="https://t.me/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#29a9eb" d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24z"/><path fill="#fff" d="M5.4 11.8 16.9 7.4c.5-.2 1 .1.8 1l-2 9.3c-.1.7-.5.8-1.1.5l-3-2.2-1.4 1.4c-.2.2-.3.3-.6.3l.2-3.1 5.6-5c.2-.2 0-.3-.4-.1l-6.9 4.3-3-.9c-.6-.2-.7-.7.2-1z"/></svg> Telegram</a>
+            <a href="https://vk.com/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#0077ff"/><path fill="#fff" d="M12.8 17.3c-5.5 0-8.6-3.8-8.7-10h2.7c.1 4.6 2.1 6.5 3.7 6.9V7.3h2.6v4c1.6-.2 3.2-2 3.8-4h2.5a7.6 7.6 0 0 1-3.4 5 7.8 7.8 0 0 1 4 5h-2.8a4.9 4.9 0 0 0-4.1-3.6v3.6h-.3z"/></svg> ВКонтакте</a>
+            <a href="https://kidkod.ru" target="_blank" rel="noopener">🌐 kidkod.ru</a>
+        </div>
+    </div>
+</footer>
+<script src="assets/course-map.js?v=1"></script>
+<script src="assets/kk.js?v=1"></script>
+</body>
 </html>

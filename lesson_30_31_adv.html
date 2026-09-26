@@ -1,54 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Создание программы</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="css/style_lesson.css" rel="stylesheet">
-    <style>
-    table {
-        max-width: 1200px;
-    }
-    caption {
-        background-color: #fff;
-        padding: .5em;
-    }
-    </style>
+    <title>Урок 30–31. Создаём игру — домашнее задание · КИДКОД</title>
+    <meta name="description" content="Два урока на одну большую цель — свою игру на canvas.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%90%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link href="assets/kk.css?v=1" rel="stylesheet">
+    <script>try{var t=localStorage.getItem('kkw:theme');if(t)document.documentElement.setAttribute('data-theme',JSON.parse(t))}catch(e){}</script>
 </head>
-
 <body>
-    <h1 class="title">Создание программы</h1>
-    <ol>
-        <li>
-            <h2>Создайте игру</h2>
-            <h2>
-                <img src="img/l30_q1.gif" alt="" width="400">
-            </h2>
-            <h2>
 
-                <a href="lesson_30_ans_1.html" target="_blank" rel="noopener noreferrer">Ответ</a>
-            </h2>
-        </li>
-    </ol>  
+<header class="site-header">
+    <div class="wrap">
+        <a class="logo" href="index.html" aria-label="КИДКОД — на главную">
+            <span class="logo-mark">&lt;/&gt;</span>
+            <span>КИДКОД<small>домашние задания · Web</small></span>
+        </a>
+        <nav class="nav" aria-label="Основная навигация">
+            <a href="index.html#basic" class="hide-sm">HTML и CSS</a>
+            <a href="index.html#js" class="hide-sm">JavaScript</a>
+            <a href="index.html#project" class="hide-sm">Проект</a>
+            <button class="icon-btn theme-btn" type="button" aria-label="Сменить тему"><span class="moon">🌙</span><span class="sun">☀️</span></button>
+        </nav>
+    </div>
+</header>
 
-    <!-- <div class="additional">
-        <h2 class="important">Что почитать:</h2>
 
-    </div> -->
-    <div class="footer">
-        <h5>Связь с преподавателем:</h5>
-        <div class="links">
-            <a href="https://t.me/kidkodschool" target="_blank">
-                <img src="/img/telegram.png" class="social-icon" alt="телеграм">
-            </a>
-            <a href="https://vk.com/kidkodschool" target="_blank" class="vk-desktop">
-                <img src="/img/vk.png" class="social-icon" alt="вконтакте">
-            </a>
+<main>
+<section class="lesson-hero"><div class="wrap">
+<div class="crumbs"><a href="index.html">Главная</a><span>›</span><a href="index.html#js">Продвинутый web-дизайнер</a><span>›</span><span>Урок 30–31</span></div>
+<h1>Создание программы: игра на canvas</h1>
+<p class="lead">Два урока на одну большую цель — свою игру на canvas.</p>
+<div class="chips"><span class="chip">📋 Заданий: 2</span><span class="chip">✅ С автопроверкой: 1</span><span class="chip">✨ Новых: 1</span></div>
+</div></section>
+<div class="wrap lesson-layout">
+<aside class="side"><div class="side-card" data-lesson-progress><h4>Прогресс</h4><div class="bar"><i></i></div><span class="cnt">0 из 0</span> выполнено</div><div class="side-card"><h4>Содержание</h4><nav class="toc"><a class="sec" href="#sec-0">Задания</a><a href="#task-1"><span class="n">1</span><span>Игра «Арканоид»</span></a><a href="#task-2"><span class="n">2</span><span>Управление с клавиатуры</span></a></nav></div></aside>
+<div class="content">
+<h2 class="sec-title" id="sec-0"><span class="emoji">🕹️</span>Задания</h2>
+<article class="task" id="task-1" data-task="l30:1">
+<div class="task-head">
+<span class="task-num">1</span>
+<div class="task-title"><h3>Игра «Арканоид»</h3><div class="badges"><span class="badge lvl-3">сложно</span><span class="badge local">в VS Code</span></div></div>
+</div>
+<div class="task-body">
+<p>Создай игру, как на анимации: платформа управляется с клавиатуры, мячик отскакивает от стен, платформы и кирпичей.</p>
+<div class="shots single"><img class="zoomable" src="img/l30_q1.gif" alt="Игра" loading="lazy"></div>
+<p class="note info">🖥️ Это большое задание — делай его в <b>VS Code</b> на компьютере и открывай страницу в браузере. Не забудь выложить результат на свой сайт на GitHub!</p>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><p><a href="lesson_30_ans_1.html" target="_blank" rel="noopener">Открыть готовую страницу с ответом ↗</a></p></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<article class="task" id="task-2" data-task="l30:2">
+<div class="task-head">
+<span class="task-num">2</span>
+<div class="task-title"><h3>Управление с клавиатуры</h3><div class="badges"><span class="badge lvl-2">средне</span><span class="badge new">новое</span><span class="badge auto">автопроверка</span></div></div>
+</div>
+<div class="task-body">
+<p>Первый шаг к игре: квадрат <code>#player</code> должен двигаться стрелками. По нажатию <kbd>→</kbd> (<code>event.key === 'ArrowRight'</code>) он сдвигается вправо на 20px, по <kbd>←</kbd> — влево. Позицию храни в переменной <code>x</code> и меняй <code>player.style.left</code>.</p>
+
+<div class="web" data-mode="js" data-key="l30:2" data-tests="[{&quot;js&quot;: &quot;fire(document.body, \&quot;keydown\&quot;, { key: \&quot;ArrowRight\&quot; }); fire(document.body, \&quot;keydown\&quot;, { key: \&quot;ArrowRight\&quot; }); return Math.round($(\&quot;#player\&quot;).getBoundingClientRect().left) === 40 || \&quot;После двух нажатий → left = \&quot; + Math.round($(\&quot;#player\&quot;).getBoundingClientRect().left) + \&quot;px\&quot;;&quot;, &quot;label&quot;: &quot;Стрелка вправо сдвигает на 20px&quot;}, {&quot;js&quot;: &quot;const a = $(\&quot;#player\&quot;).getBoundingClientRect().left; fire(document.body, \&quot;keydown\&quot;, { key: \&quot;ArrowLeft\&quot; }); return Math.round(a - $(\&quot;#player\&quot;).getBoundingClientRect().left) === 20 || \&quot;Стрелка влево не сдвигает на 20px\&quot;;&quot;, &quot;label&quot;: &quot;Стрелка влево сдвигает обратно&quot;}, {&quot;js&quot;: &quot;const a = $(\&quot;#player\&quot;).getBoundingClientRect().left; fire(document.body, \&quot;keydown\&quot;, { key: \&quot;a\&quot; }); return $(\&quot;#player\&quot;).getBoundingClientRect().left === a || \&quot;Квадрат не должен двигаться от других клавиш\&quot;;&quot;, &quot;label&quot;: &quot;Другие клавиши не двигают&quot;}]"><textarea class="src" data-role="code" hidden>let player = document.querySelector(&#x27;#player&#x27;)
+let x = 0
+
+document.addEventListener(&#x27;keydown&#x27;, function (event) {
+    
+})
+</textarea><textarea class="src" data-role="fixture" hidden>&lt;div id=&quot;player&quot;&gt;&lt;/div&gt;
+&lt;style&gt;#player { position: absolute; top: 100px; left: 0; width: 40px; height: 40px; background-color: #ff4d8d; border-radius: 8px; }&lt;/style&gt;
+</textarea></div>
+<details class="answer"><summary>Показать ответ (сначала попробуй сам!)</summary><div class="inner"><pre class="code" data-solution>let player = document.querySelector(&#x27;#player&#x27;)
+let x = 0
+
+document.addEventListener(&#x27;keydown&#x27;, function (event) {
+    if (event.key === &#x27;ArrowRight&#x27;) {
+        x += 20
+    } else if (event.key === &#x27;ArrowLeft&#x27;) {
+        x -= 20
+    }
+    player.style.left = x + &#x27;px&#x27;
+})
+</pre></div></details>
+</div>
+<div class="task-foot"><button class="done-btn" type="button" aria-pressed="false"><span class="box"></span><span class="lbl">Отметить выполненным</span></button></div>
+</article>
+<nav class="pager" aria-label="Соседние уроки">
+<a class="prev" href="lesson_29_adv.html"><small>← Предыдущий</small>Урок 29. Canvas: рисуем кодом</a>
+<a class="next" href="lesson_32_adv.html"><small>Следующий →</small>Урок 32. Библиотеки и Figma</a>
+</nav>
+</div>
+</div>
+</main>
+<footer class="site-footer">
+    <div class="wrap">
+        <div>
+            <b>КИДКОД</b> — школа программирования для детей и подростков<br>
+            <span>Вопросы по домашке? Пиши преподавателю:</span>
+        </div>
+        <div class="socials">
+            <a href="https://t.me/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#29a9eb" d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24z"/><path fill="#fff" d="M5.4 11.8 16.9 7.4c.5-.2 1 .1.8 1l-2 9.3c-.1.7-.5.8-1.1.5l-3-2.2-1.4 1.4c-.2.2-.3.3-.6.3l.2-3.1 5.6-5c.2-.2 0-.3-.4-.1l-6.9 4.3-3-.9c-.6-.2-.7-.7.2-1z"/></svg> Telegram</a>
+            <a href="https://vk.com/kidkodschool" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#0077ff"/><path fill="#fff" d="M12.8 17.3c-5.5 0-8.6-3.8-8.7-10h2.7c.1 4.6 2.1 6.5 3.7 6.9V7.3h2.6v4c1.6-.2 3.2-2 3.8-4h2.5a7.6 7.6 0 0 1-3.4 5 7.8 7.8 0 0 1 4 5h-2.8a4.9 4.9 0 0 0-4.1-3.6v3.6h-.3z"/></svg> ВКонтакте</a>
+            <a href="https://kidkod.ru" target="_blank" rel="noopener">🌐 kidkod.ru</a>
         </div>
     </div>
+</footer>
+<script src="assets/course-map.js?v=1"></script>
+<script src="assets/kk.js?v=1"></script>
 </body>
-
 </html>
