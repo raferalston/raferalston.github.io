@@ -9,7 +9,7 @@
     { id: 'trains', label: 'Поезда и фазы', eyebrow: 'Развитие игры', heading: 'Поезда и фазы' },
     { id: 'end', label: 'Конец игры', eyebrow: 'Финал', heading: 'Конец игры' }
   ];
-  const GUIDE_ORDER = ['1860', '1849', '1822pnw', '1822ca', '1880', '1846'];
+  const GUIDE_ORDER = ['1860', '1849', '1822pnw', '1822ca', '1880', '1846', '1824'];
   const slug = document.body.dataset.game;
   const guides = window.GUIDES || {};
   const game = guides[slug];
