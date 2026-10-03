@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#163845">
+  <meta name="description" content="Интерактивная памятка по 18DO: Heat, Sweat & Beer и Expert">
+  <title>18DO — интерактивная памятка 18xx</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="18do.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#content">К содержанию</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="18xx Памятки — каталог">
+      <span class="brand-tile" aria-hidden="true">18</span>
+      <span>18xx <strong>Памятки</strong></span>
+    </a>
+    <a class="header-caption" href="index.html">← Каталог игр</a>
+    <a class="header-source" href="https://18xx-marflow-games.de/onewebmedia/18DO%20-%20Rules%20complete%20-%2006th%20January%202021.pdf" target="_blank" rel="noopener noreferrer">Официальные правила ↗</a>
+  </header>
+
+  <div class="app-shell" id="top">
+    <aside class="sidebar" aria-label="Каталог игр">
+      <p class="eyebrow">Каталог / 01</p>
+      <h2>Игры</h2>
+      <a class="game-link active" href="18do.html" aria-current="page"><span class="game-number">18</span><span><strong>18DO</strong><small>Dortmund · HSB / EXP</small></span><span aria-hidden="true">↗</span></a>
+      <a class="game-link" href="1862.html"><span class="game-number">62</span><span><strong>1862</strong><small>Eastern Counties</small></span><span aria-hidden="true">↗</span></a>
+      <p class="sidebar-note">Две разные экономики и два удобных маршрута по правилам для повторной партии.</p>
+      <div class="sidebar-line" aria-hidden="true"><span></span><span></span><span></span></div>
+      <a class="sidebar-pdf" href="18DO_HSB_EXP_pamyatka.pdf" download>↓ Печатная памятка PDF</a>
+    </aside>
+
+    <main id="content">
+      <div class="breadcrumb"><span>Каталог</span><span aria-hidden="true">/</span><strong>18DO</strong></div>
+      <section class="hero" aria-labelledby="game-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Интерактивная памятка · 3–5 игроков</p>
+          <h1 id="game-title">18DO <span>Dortmund</span></h1>
+          <p>Железные дороги создают спрос. Пивоварни продают его городу и грузят экспорт в поезда. Здесь — порядок действий для повторной партии.</p>
+          <div class="hero-tags"><span class="tag yellow">Heat, Sweat & Beer</span><span class="tag green">Expert</span><span class="tag neutral">6 наборов OR</span></div>
+        </div>
+        <div class="hero-rail" aria-hidden="true"><div class="rail-track"></div><span class="hex hex-one">SR</span><span class="hex hex-two">RR</span><span class="hex hex-three">BR</span></div>
+      </section>
+
+      <div class="control-bar" aria-label="Настройки памятки">
+        <label>Игроков <select id="player-count"><option value="3">3 игрока</option><option value="4">4 игрока</option><option value="5">5 игроков</option></select></label>
+        <label>Вариант <select id="variant"><option value="hsb">HSB</option><option value="exp" selected>EXP</option></select></label>
+        <label>Фаза <select id="phase"><option value="yellow">Жёлтая · 2</option><option value="green">Зелёная · 3–4</option><option value="brown">Коричневая · 5–6</option><option value="grey">Серая · 8</option></select></label>
+        <button id="reset-progress" class="text-button" type="button">↺ Сбросить отметки</button>
+      </div>
+
+      <section class="quick-strip" aria-label="Ключевые числа">
+        <div><span>На руки</span><strong>465 <small>M</small></strong></div>
+        <div><span>Сертификаты</span><strong id="certificate-limit">26</strong></div>
+        <div><span>Доля в компании</span><strong id="share-limit">70%</strong></div>
+        <div><span>Флотация</span><strong>50%</strong></div>
+      </section>
+
+      <nav class="tab-list" role="tablist" aria-label="Разделы памятки">
+        <button class="tab active" id="tab-overview" role="tab" aria-controls="overview" type="button" data-tab="overview" aria-selected="true">01 <span>Обзор</span></button>
+        <button class="tab" id="tab-stock" role="tab" aria-controls="stock" type="button" data-tab="stock" aria-selected="false">02 <span>Stock Round</span></button>
+        <button class="tab" id="tab-operating" role="tab" aria-controls="operating" type="button" data-tab="operating" aria-selected="false">03 <span>Operating Round</span></button>
+        <button class="tab" id="tab-market" role="tab" aria-controls="market" type="button" data-tab="market" aria-selected="false">04 <span>Рынок пива</span></button>
+        <button class="tab" id="tab-expert" role="tab" aria-controls="expert" type="button" data-tab="expert" aria-selected="false" data-exp-only>05 <span>Expert</span></button>
+      </nav>
+
+      <section id="overview" class="panel active" role="tabpanel" aria-labelledby="tab-overview">
+        <div class="section-head"><p class="eyebrow">Весь цикл / на одном экране</p><h2 id="overview-title">Порядок партии</h2></div>
+        <div class="route-timeline"><div><b>Старт</b><span>Аукцион малых пивоварен</span></div><div><b>SR</b><span>Торговля акциями</span></div><div><b>RR</b><span>Все железные дороги</span></div><div><b>BR</b><span>Все пивоварни и рынок</span></div><div><b>× 6</b><span>Шесть наборов операций</span></div></div>
+        <div class="two-col">
+          <article class="rule-card"><span class="card-index">01 / Старт</span><h3>Аукцион малых пивоварен</h3><p>Каждый получает одну малую пивоварню и платит банку напечатанную цену плюс ставку. Банк выдаёт ей указанный стартовый капитал. Первый SR начинает игрок с наибольшим остатком личных денег.</p><p data-exp-only class="detail-line"><b>EXP:</b> после аукциона каждый может купить один MCM своей малой пивоварне за личные деньги, по возрастанию номеров пивоварен.</p></article>
+          <article class="rule-card"><span class="card-index">02 / Финал</span><h3>После шестого набора OR</h3><p>Побеждает сумма личных денег и рыночной стоимости сертификатов. Оставшаяся малая пивоварня стоит свою напечатанную цену; её казна отдельно не считается.</p><p class="detail-line"><b>Важно:</b> исчерпание банка завершает Railway Game, но не HSB/EXP.</p></article>
+        </div>
+        <div class="notice subtle"><b>Банк HSB/EXP:</b> 13 000 M. Каждый игрок начинает с 465 M. Исчерпание банка не входит в триггеры конца этого варианта; партия продолжается до конца шестого набора OR.</div>
+        <div class="phase-key"><b>Цветные фазы</b><span class="phase-dot yellow"></span> старт <span class="phase-dot green"></span> первый Capex 3 <span class="phase-dot brown"></span> первый Capex 5 <span class="phase-dot grey"></span> первый Capex 8</div>
+      </section>
+
+      <section id="stock" class="panel" role="tabpanel" aria-labelledby="tab-stock" hidden>
+        <div class="section-head"><p class="eyebrow">Рынок акций</p><h2 id="stock-title">Stock Round</h2><p>Ход игрока: <b>продать сколько угодно → купить один</b>; либо только купить, либо спасовать. После продажи эту компанию нельзя покупать до следующего SR.</p></div>
+        <div class="notice">В первом SR продажи запрещены. Пивоваренные корпорации доступны только с зелёной фазы.</div>
+        <div class="step-list">
+          <article class="step"><span class="step-number">01</span><div><h3>Основание</h3><p>Купить директорский сертификат. Выбрать цену 10% акции на разрешённой цветной клетке текущей или более ранней фазы. Платёж за директорский пакет идёт <b>в казну компании</b>.</p></div></article>
+          <article class="step"><span class="step-number">02</span><div><h3>Дальнейшая продажа акций</h3><p>Акции из казны оплачиваются компании; из Bank Pool — банку. Компания флотируется, когда игроки приобрели 50% её акций. Это постепенная капитализация.</p></div></article>
+          <article class="step"><span class="step-number">03</span><div><h3>Продажи и курс</h3><p>Продавать можно после первого OR компании. Директорский сертификат нельзя поместить в пул; обычно в пуле не более 50%. Курс падает на клетку влево за каждые 10% <b>только при продаже директором</b>, включая акции компании.</p></div></article>
+          <article class="step"><span class="step-number">04</span><div><h3>Пивоваренные корпорации</h3><p>С зелёной фазы малую пивоварню можно обменять на акцию корпорации. При основании цена директорского пакета уменьшается на стоимость 10% (для Quellen — 20%), а имущество малой пивоварни переходит корпорации.</p></div></article>
+        </div>
+        <div class="notice subtle">Коричневая/серая фаза: при флотации директор может продать из казны до 20% в Bank Pool без снижения курса. SR заканчивается, когда все спасовали подряд.</div>
+      </section>
+
+      <section id="operating" class="panel" role="tabpanel" aria-labelledby="tab-operating" hidden>
+        <div class="section-head"><p class="eyebrow">Операционный цикл</p><h2 id="operating-title">Каждая пара: RR → BR</h2><p>Отмечайте шаги в партии. Отметки сохраняются в этом браузере до сброса.</p></div>
+        <div class="round-grid">
+          <div class="round-column"><div class="round-title railway"><span class="round-icon">RR</span><div><h3>Железные дороги</h3><p>Флотировавшиеся, по убыванию курса</p></div></div>
+            <label class="check-step"><input type="checkbox" data-check="rr-track"><span><b>01 · Путь и станция</b><small>Один жёлтый тайл или один апгрейд; затем по желанию одна станция.</small></span></label>
+            <label class="check-step"><input type="checkbox" data-check="rr-link"><span><b>02 · Шахта / завод</b><small>Одна связь за 30 M: маркер 10→20→30; убрать Capex и добавить показанный на нём спрос на пиво.</small></span></label>
+            <label class="check-step"><input type="checkbox" data-check="rr-run"><span><b>03 · Провести поезда</b><small>Пиво из предыдущего BR везти через Dortmund City к красному оффборду; дороге +40/50 M за кубик.</small></span></label>
+            <label class="check-step"><input type="checkbox" data-check="rr-income"><span><b>04 · Доход и курс</b><small>Выплатить всё или удержать всё; нет выплаты — влево, ≥ курса — вправо на 1, ≥ 3× курса — на 2.</small></span></label>
+            <label class="check-step"><input type="checkbox" data-check="rr-buy"><span><b>05 · Купить поезд</b><small>Если поезда нет — обязательно. Покупка обычно действует со следующего RR. Раз за ход можно купить или продать одну собственную акцию.</small></span></label>
+          </div>
+          <div class="round-column"><div class="round-title brewery"><span class="round-icon">BR</span><div><h3>Пивоварни</h3><p>Слева направо по Brewery Order</p></div></div>
+            <label class="check-step"><input type="checkbox" data-check="br-discard"><span><b>01 · Сброс BEC</b><small>BEC сегмента без спроса удаляются; добровольно в начале хода можно сбросить один.</small></span></label>
+            <label class="check-step"><input type="checkbox" data-check="br-local"><span><b>02 · Продать в Дортмунде</b><small>Спрос → предложение того же сегмента. Начать с высшего сегмента BEC; спускаться ниже после исчерпания спроса выше.</small></span></label>
+            <label class="check-step"><input type="checkbox" data-check="br-export"><span><b>03 · Загрузить экспорт</b><small>BEC 5/6/8, свободное место поезда, готовый маршрут, согласие директора. Пивоварне 100 M за кубик сейчас.</small></span></label>
+            <label class="check-step"><input type="checkbox" data-check="br-income"><span><b>04 · Доход и выплата</b><small>Малая: 50/50 владельцу и в казну либо всё удержать. Корпорация: выплатить всё либо удержать всё.</small></span></label>
+            <label class="check-step"><input type="checkbox" data-check="br-buy"><span><b>05 · Купить BEC</b><small>До двух типа 2 в жёлтой фазе; других типов — один. Малая может доплатить до 50% личными деньгами.</small></span></label>
+            <label class="check-step" data-exp-only><input type="checkbox" data-check="br-expert"><span><b>06 · EXP: MCM и SEM</b><small>Вместо BEC или дополнительно по правилам фазы — MCM; затем можно бесплатно взять один SEM.</small></span></label>
+          </div>
+        </div>
+        <div class="progress-line"><span id="progress-label">0 шагов отмечено</span><div class="progress-track"><span id="progress-fill"></span></div></div>
+        <p class="after-round">После <b>всех</b> пивоварен: переставить Brewery Order, затем обновить рынок пива. <button class="inline-link" type="button" data-go="market">Открыть порядок обновления →</button></p>
+      </section>
+
+      <section id="market" class="panel" role="tabpanel" aria-labelledby="tab-market" hidden>
+        <div class="section-head"><p class="eyebrow">После всех пивоварен</p><h2 id="market-title">Обновление пивного рынка</h2><p>Проводите шаги по порядку: именно проданные кубики станут постоянным спросом следующего BR.</p></div>
+        <div class="market-legend"><span class="demand-yellow">Жёлтый · постоянные</span><span class="demand-orange">Оранжевый · новые</span><span class="supply-white">Белый · продано</span><span class="stock-blue">Stock · запас</span></div>
+        <div class="market-stepper" aria-label="Шаги обновления рынка">
+          <button class="market-step active" type="button" data-market-step="0" aria-current="step">1 <span>Порядок</span></button><button class="market-step" type="button" data-market-step="1">2 <span>Остатки</span></button><button class="market-step" type="button" data-market-step="2">3 <span>Покупатели</span></button><button class="market-step" type="button" data-market-step="3">4 <span>No Demand</span></button><button class="market-step" type="button" data-market-step="4">5 <span>Пополнение</span></button>
+        </div>
+        <article class="market-detail" id="market-detail" tabindex="-1"></article>
+        <div class="market-actions"><button id="market-prev" type="button" class="secondary-button">← Назад</button><span id="market-position">Шаг 1 из 5</span><button id="market-next" type="button" class="primary-button">Далее →</button></div>
+        <div class="example-card"><b>Пример дефицита.</b> После шага 3 жёлтый спрос есть в сегментах 3, 4 и 5. Сегменты 1–2 получают No Demand. Для оранжевого спроса сегмента 4 нужны три кубика, в Stock один: ещё два можно взять из жёлтого спроса сегмента 3. Для пополнения оранжевого спроса сегмента 3 его же жёлтые кубики забирать нельзя.</div>
+      </section>
+
+      <section id="expert" class="panel" role="tabpanel" aria-labelledby="tab-expert" hidden data-exp-only>
+        <div class="section-head"><p class="eyebrow">Дополнение к HSB</p><h2 id="expert-title">Expert: вложения и события</h2><p>MCM покупаются, SEM берутся бесплатно после шага покупки. Цвет показывает первую фазу <b>применения</b>; взять раньше разрешено.</p></div>
+        <h3 class="subheading">MCM / малые вложения</h3>
+        <div class="mcm-grid"><article class="rule-card"><span class="card-index">A1—A4 · от жёлтой до серой</span><h4>Пабы</h4><p>В начале каждого BR банк платит в казну 5 / 10 / 20 / 40 M. Цена: 30 / 60 / 80 / 120 M.</p></article><article class="rule-card"><span class="card-index">B2—B4 · от зелёной до серой</span><h4>Линии розлива</h4><p>Прикрепить к одному BEC: +5 / +10 / +20 M за каждый его кубик, проданный в Дортмунде. Не действует на экспорт. Цена: 50 / 100 / 120 M.</p></article><article class="rule-card"><span class="card-index">C · коричневая</span><h4>Пивной вагон</h4><p>У пивоварни: одна обычная мощность BEC становится экспортной. У дороги: +1 экспортное место поезду, включая поезда 3/4. Цена: 100 M.</p></article></div>
+        <div class="notice subtle">MCM занимает слот на планшете и не устаревает. Купленный у другой пивоварни стоит 50–150% номинала. Дорога может купить вагон C вместо поезда из банка или у другой компании за 50–150 M.</div>
+        <h3 class="subheading">SEM / одноразовые события</h3>
+        <div class="event-filters" role="group" aria-label="Фильтр событий по фазе"><button type="button" class="filter active" data-filter="all" aria-pressed="true">Все</button><button type="button" class="filter" data-filter="yellow" aria-pressed="false">Жёлтая</button><button type="button" class="filter" data-filter="green" aria-pressed="false">Зелёная</button><button type="button" class="filter" data-filter="brown" aria-pressed="false">Коричневая</button></div>
+        <div class="event-list">
+          <article class="event" data-event-phase="yellow"><span>G</span><div><h4>Fair · Ярмарка</h4><p>10 M дохода прямо в казну пивоварни.</p></div></article>
+          <article class="event" data-event-phase="yellow"><span>H</span><div><h4>Advertising · Реклама</h4><p>В начале BR продать один кубик на местном рынке; не на экспорт. Кубик спроса положить на BEC, отметив занятую мощность.</p></div></article>
+          <article class="event" data-event-phase="yellow"><span>I</span><div><h4>BEC trade-in · Обмен оборудования</h4><p>При покупке нового BEC сдать BEC, не использованный в этом BR. Скидка: тип старого BEC × 20 M.</p></div></article>
+          <article class="event" data-event-phase="yellow"><span>J</span><div><h4>BEC upgrading · Замена оборудования</h4><p>Купить BEC при заполненном лимите, затем сбросить один. Сброшенный BEC мог поработать в этом BR.</p></div></article>
+          <article class="event" data-event-phase="yellow"><span>K</span><div><h4>Premium Beer · Премиальное пиво</h4><p>За один местный кубик получить цену следующего более высокого сегмента со спросом. Кубик остаётся в своём сегменте; экспорт исключён.</p></div></article>
+          <article class="event" data-event-phase="green"><span>L</span><div><h4>Marketing · Маркетинг</h4><p>После обновления Brewery Order передвинуться на одно место вперёд.</p></div></article>
+          <article class="event" data-event-phase="green"><span>M</span><div><h4>Investor · Инвестор</h4><p>В BR продать в Bank Pool 1–2 собственные акции пивоваренной корпорации без падения курса.</p></div></article>
+          <article class="event" data-event-phase="green"><span>N</span><div><h4>Tool Production · Подработка</h4><p>Получить половину цены за 1–2 мощности, не использованные для местной поставки. Кубики не двигать; сегмент с No Demand не подходит.</p></div></article>
+          <article class="event" data-event-phase="green"><span>O</span><div><h4>Second Shift · Вторая смена</h4><p>Одним BEC произвести дополнительный кубик для Дортмунда за половину цены: Stock → соответствующее предложение.</p></div></article>
+          <article class="event" data-event-phase="brown"><span>P</span><div><h4>Transport Contract · Контракт</h4><p>Загрузить экспорт на поезд одной дороги без согласия её директора. Остальные требования к погрузке сохраняются.</p></div></article>
+        </div>
+        <p class="expert-footnote">Держать можно один SEM. После применения вернуть его на рынок; в тот же ход повторно взять тот же SEM нельзя. Передавать другой компании нельзя.</p>
+      </section>
+
+      <footer class="footer"><p>Сводка по <a href="https://18xx-marflow-games.de/onewebmedia/18DO%20-%20Rules%20complete%20-%2006th%20January%202021.pdf" target="_blank" rel="noopener noreferrer">18DO Complete English Version, 06.01.2021</a>, §§4–7. При споре за столом сверяйтесь с полными правилами.</p><p>18xx Памятки · 18DO HSB / EXP</p></footer>
+    </main>
+  </div>
+</body></html>
