@@ -26,3 +26,27 @@ main{min-width:0}.breadcrumb{display:flex;gap:12px;color:#708078;font-size:12px;
 /* 1862 reference details use the same token, track, and charter vocabulary. */
 .eastern-hero{background:#264b50}.eastern-hero .hero-copy{max-width:720px}.eastern-hero h1{font-size:clamp(36px,4.5vw,58px)}.eastern-hero h1 span{display:block;font-size:.68em;letter-spacing:-.02em;margin-top:4px}.eastern-hero .hex-one{background:#a4b796}.eastern-hero .hex-two{background:#e1bd7a}.eastern-hero .hex-three{background:#b89c78}.breadcrumb a{text-decoration:none}.breadcrumb a:hover{text-decoration:underline}.minor-note{font-size:12px;line-height:1.65;color:#617477;margin:20px 0 0}.check-step em{font-style:normal;font-weight:700}.train-grid .rule-card{border-top-color:#768f80}.phase-card{display:grid;grid-template-columns:180px 1fr;gap:20px;align-items:center;background:#e6eeea;border-left:4px solid #6f9d83;padding:20px 25px;margin:28px 0 22px}.phase-card>div{display:flex;flex-direction:column;gap:4px}.phase-card strong{font-family:Fraunces,Georgia,serif;font-size:43px;line-height:1;color:#28555a}.phase-card div>span:last-child{font-size:11px;font-weight:700;color:#517774}.phase-card p{font-size:13px;line-height:1.6;margin:0;color:#3d5f63}.phase-table-wrap{overflow-x:auto}.phase-table{width:100%;border-collapse:collapse;font-size:12px}.phase-table th,.phase-table td{padding:11px 13px;text-align:left;border-bottom:1px solid #d7dfd7}.phase-table th{background:#214d56;color:white;font-weight:700}.phase-table tbody tr:nth-child(2n){background:#f0f3eb}.phase-table td:first-child{font-family:Fraunces,Georgia,serif;font-size:17px;font-weight:700}.phase-table td:nth-child(2),.phase-table td:nth-child(3){white-space:nowrap}
 @media(max-width:760px){.phase-card{grid-template-columns:1fr;gap:12px}.eastern-hero h1 span{font-size:.6em}}
+
+/* Shared data-driven guides retain the reference layout at every viewport. */
+.guide-quick-strip{grid-template-columns:repeat(3,minmax(0,1fr))}
+.guide-timeline{grid-template-columns:repeat(auto-fit,minmax(115px,1fr))}
+.guide-timeline>div{min-width:0}
+.guide-timeline>div span{margin-top:0;color:#31545b;font-weight:700}
+.guide-checklist{border:1px solid var(--line);background:#faf9f2;display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+.guide-checklist .check-step{border-right:1px solid #e3e3d9;min-width:0}
+.guide-checklist .check-step:nth-child(2n){border-right:0}
+.guide-card-grid:empty{display:none}
+.control-bar label[hidden]{display:none!important}
+@media(max-width:760px){
+  #guide-navigation{display:flex;gap:6px;overflow-x:auto;flex:1;min-width:0;padding-bottom:5px}
+  #guide-navigation .game-link{flex:none;min-width:128px;margin:0}
+  #guide-navigation .game-link small{max-width:100px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .guide-quick-strip{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .guide-quick-strip>div{display:block;padding:10px 8px;border-bottom:0!important;border-right:1px solid var(--line)!important}
+  .guide-quick-strip>div:last-child{border-right:0!important}
+  .guide-quick-strip strong{white-space:normal;overflow-wrap:anywhere;font-size:16px}
+  .guide-timeline{grid-template-columns:repeat(auto-fit,minmax(115px,1fr));overflow:visible}
+  .guide-checklist{grid-template-columns:1fr}
+  .guide-checklist .check-step{border-right:0}
+}
+@media print{.guide-checklist{grid-template-columns:1fr 1fr}}
